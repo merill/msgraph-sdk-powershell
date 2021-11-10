@@ -9,8 +9,8 @@ parameters:
     displayName: Build Agent
 
 variables:
-  Branch: "WeeklyOpenApiDocsDownload"
-  BaseBranch: "dev"
+  Branch: "test/Weekly"
+  BaseBranch: "po/testWeeklyGen"
   BUILDAGENT: ${{ parameters.BuildAgent }}
 
 pool: $(BUILDAGENT)

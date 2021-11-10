@@ -21,7 +21,7 @@ try {
 
     $openApiFiles = [ordered]@{}
     foreach ($api in (Get-ChildItem -Path $OpenApiDocsDirectory)) {
-        $openApiDocs = Get-ChildItem -File -Filter "*.yml" -Path $api.FullName
+        $openApiDocs = Get-ChildItem -File -Filter "*.yml" -Path $api.FullName | where name -eq "Compliance.yml"
         Write-Host "Parsing $($api.Name) openAPI docs..." -ForegroundColor Yellow
         foreach ($openApiDoc in $openApiDocs){
             $allPaths = @()

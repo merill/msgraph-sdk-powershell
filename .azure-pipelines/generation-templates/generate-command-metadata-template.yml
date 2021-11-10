@@ -1,6 +1,10 @@
 ﻿# Copyright (c) Microsoft Corporation. All rights reserved.
 # Licensed under the MIT License.
 
+parameters:
+  - name: Branch
+    type: string
+
 steps:
 - task: PowerShell@2
   displayName: Generate command metadata
@@ -21,5 +25,5 @@ steps:
       git status
       git add "$(System.DefaultWorkingDirectory)/src/Authentication/Authentication/custom/common/MgCommandMetadata.json"
       git commit -m 'Add generated MgCommandMetadata.json. [run ci]'
-      git push
+      git push --set-upstream origin $(Branch)
       git status

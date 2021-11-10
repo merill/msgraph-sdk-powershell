@@ -38,9 +38,9 @@ $ModuleMapping.Keys | ForEach-Object -Begin { $RequestCount = 0 } -End { Write-D
     $ModuleName = $_
     $ForceRefresh = $false
     # Check whether ForceRefresh is required, Only required for the First Request.
-    if ($RequestCount -eq 0) {
-        $ForceRefresh = $true
-    }
+    # if ($RequestCount -eq 0) {
+    #     $ForceRefresh = $true
+    # }
 
     try {
         # Download OpenAPI document for module.

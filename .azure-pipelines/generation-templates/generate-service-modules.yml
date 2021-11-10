@@ -154,6 +154,8 @@ jobs:
 
       - ${{ if eq(parameters.GenerateCommandMetadata, true) }}:
         - template: ./generate-command-metadata-template.yml
+          parameters:
+            Branch: $(Branch)
 
       - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
         displayName: ESRP DLL strong name (Service Modules)
