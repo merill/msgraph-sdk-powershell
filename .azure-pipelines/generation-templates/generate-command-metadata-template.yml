@@ -14,6 +14,14 @@ steps:
     script: |
       . $(System.DefaultWorkingDirectory)/tools/PostGeneration/NewCommandMetadata.ps1 -SourcePath "$(System.DefaultWorkingDirectory)/src/" -IncludePermissions -Debug
 
+- task: PowerShell@2
+  displayName: "Configure user"
+  inputs:
+    targetType: "inline"
+    script: |
+      git config --global user.email "GraphTooling@service.microsoft.com"
+      git config --global user.name "Microsoft Graph DevX Tooling"
+
 - task: Bash@3
   displayName: Push command metadata
   enabled: true
