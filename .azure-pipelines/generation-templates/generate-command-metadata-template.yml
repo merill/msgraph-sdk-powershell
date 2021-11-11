@@ -6,6 +6,9 @@ parameters:
     type: string
 
 steps:
+- checkout: self
+  persistCredentials: true
+
 - task: PowerShell@2
   displayName: Generate command metadata
   inputs:
