@@ -152,10 +152,45 @@ jobs:
               . $(System.DefaultWorkingDirectory)/tools/GenerateModules.ps1 -Build -UpdateAutoRest -EnableSigning:$EnableSigning -ExcludeExampleTemplates -ExcludeNotesSection
             }
 
-      - ${{ if eq(parameters.GenerateCommandMetadata, true) }}:
-        - template: ./generate-command-metadata-template.yml
-          parameters:
-            Branch: $(Branch)
+      # - ${{ if eq(parameters.GenerateCommandMetadata, true) }}:
+      #   - template: ./generate-command-metadata-template.yml
+      #     parameters:
+      #       Branch: $(Branch)
+
+      - task: PowerShell@2
+        condition: eq('${{ parameters.GenerateCommandMetadata }}', true)
+        displayName: Generate command metadata
+        inputs:
+          targetType: inline
+          pwsh: true
+          script: |
+            . $(System.DefaultWorkingDirectory)/tools/PostGeneration/NewCommandMetadata.ps1 -SourcePath "$(System.DefaultWorkingDirectory)/src/" -IncludePermissions -Debug
+
+      - task: PowerShell@2
+        displayName: "Configure user"
+        inputs:
+          targetType: "inline"
+          script: |
+            git config --global user.email "GraphTooling@service.microsoft.com"
+            git config --global user.name "Microsoft Graph DevX Tooling"
+
+      # - checkout: self
+      #   persistCredentials: true
+
+      - task: Bash@3
+        displayName: Push command metadata
+        condition: eq('${{ parameters.GenerateCommandMetadata }}', true)
+        env:
+          GITHUB_TOKEN: $(GITHUB_TOKEN)
+        inputs:
+          targetType: inline
+          script: |
+            $(GITHUB_TOKEN)
+            git status
+            git add "$(System.DefaultWorkingDirectory)/src/Authentication/Authentication/custom/common/MgCommandMetadata.json"
+            git commit -m 'Add generated MgCommandMetadata.json. [run ci]'
+            git push --set-upstream origin $(Branch)
+            git status
 
       - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
         displayName: ESRP DLL strong name (Service Modules)
