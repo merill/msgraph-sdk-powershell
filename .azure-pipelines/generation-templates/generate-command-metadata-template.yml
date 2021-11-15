@@ -6,9 +6,6 @@ parameters:
     type: string
 
 steps:
-- checkout: self
-  persistCredentials: true
-
 - task: PowerShell@2
   displayName: Generate command metadata
   inputs:
@@ -24,6 +21,9 @@ steps:
     script: |
       git config --global user.email "GraphTooling@service.microsoft.com"
       git config --global user.name "Microsoft Graph DevX Tooling"
+
+- checkout: self
+  persistCredentials: true
 
 - task: Bash@3
   displayName: Push command metadata
