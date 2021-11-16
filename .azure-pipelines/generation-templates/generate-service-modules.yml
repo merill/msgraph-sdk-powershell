@@ -174,9 +174,6 @@ jobs:
             git config --global user.email "GraphTooling@service.microsoft.com"
             git config --global user.name "Microsoft Graph DevX Tooling"
 
-      # - checkout: self
-      #   persistCredentials: true
-
       - task: Bash@3
         displayName: Push command metadata
         condition: eq('${{ parameters.GenerateCommandMetadata }}', true)
@@ -187,7 +184,7 @@ jobs:
           script: |
             $(GITHUB_TOKEN)
             git status
-            git add "$(System.DefaultWorkingDirectory)/src/Authentication/Authentication/custom/common/MgCommandMetadata.json"
+            git add .
             git commit -m 'Add generated MgCommandMetadata.json. [run ci]'
             git push --set-upstream origin $(Branch)
             git status
