@@ -37,10 +37,8 @@ jobs:
         inputs:
           targetType: inline
           script: |
-            git status
             git branch $(ComputeBranch.WeeklyBranch)
             git checkout $(ComputeBranch.WeeklyBranch)
-            git status
 
       - task: PowerShell@2
         displayName: Download v1.0 OpenApi docs
@@ -122,17 +120,12 @@ jobs:
       - task: Bash@3
         displayName: Commit downloaded files
         condition: and(succeeded(), ne(variables['OpenAPIDocDiff.ModulesWithChanges'], ''))
-        env:
-          GITHUB_TOKEN: $(GITHUB_TOKEN)
         inputs:
           targetType: inline
           script: |
-            git status
             git add .
             git commit -m 'Weekly OpenApiDocs Download'
-            git status
             git push --set-upstream origin $(ComputeBranch.WeeklyBranch)
-            git status
 
 # References
 # [0] https://help.github.com/en/actions/configuring-and-managing-workflows/using-environment-variables

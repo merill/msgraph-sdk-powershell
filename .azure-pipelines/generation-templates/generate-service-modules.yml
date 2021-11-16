@@ -53,6 +53,14 @@ jobs:
       - template: ../common-templates/install-tools-template.yml
       - template: ../common-templates/security-prechecks-template.yml
 
+      - task: Bash@3
+        displayName: "Create weekly branch"
+        inputs:
+          targetType: inline
+          script: |
+            git branch "po/testMetadata"
+            git checkout "po/testMetadata"
+
       - task: PowerShell@2
         displayName: Build auth module
         inputs:
@@ -166,30 +174,15 @@ jobs:
           script: |
             . $(System.DefaultWorkingDirectory)/tools/PostGeneration/NewCommandMetadata.ps1 -SourcePath "$(System.DefaultWorkingDirectory)/src/" -IncludePermissions -Debug
 
-      - task: PowerShell@2
-        displayName: "Configure user"
-        inputs:
-          targetType: "inline"
-          script: |
-            git config --global user.email "GraphTooling@service.microsoft.com"
-            git config --global user.name "Microsoft Graph DevX Tooling"
-
-      # - checkout: self
-      #   persistCredentials: true
-
       - task: Bash@3
         displayName: Push command metadata
         condition: eq('${{ parameters.GenerateCommandMetadata }}', true)
-        env:
-          GITHUB_TOKEN: $(GITHUB_TOKEN)
         inputs:
           targetType: inline
           script: |
-            $(GITHUB_TOKEN)
-            git status
             git add "$(System.DefaultWorkingDirectory)/src/Authentication/Authentication/custom/common/MgCommandMetadata.json"
             git commit -m 'Add generated MgCommandMetadata.json. [run ci]'
-            git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" push --set-upstream origin $(Branch)
+            git push --set-upstream origin $(Branch)
 
       - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
         displayName: ESRP DLL strong name (Service Modules)
