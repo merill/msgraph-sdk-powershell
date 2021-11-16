@@ -190,7 +190,6 @@ jobs:
             git add "$(System.DefaultWorkingDirectory)/src/Authentication/Authentication/custom/common/MgCommandMetadata.json"
             git commit -m 'Add generated MgCommandMetadata.json. [run ci]'
             git -c http.extraheader="AUTHORIZATION: bearer $(System.AccessToken)" push --set-upstream origin $(Branch)
-            git status
 
       - task: SFP.build-tasks.custom-build-task-1.EsrpCodeSigning@1
         displayName: ESRP DLL strong name (Service Modules)
