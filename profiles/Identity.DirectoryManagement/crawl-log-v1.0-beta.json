@@ -361,6 +361,30 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
     },
+    "/directory/impactedResources": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/impactedResources/{recommendationResource-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/impactedResources/{recommendationResource-id}/microsoft.graph.complete": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/impactedResources/{recommendationResource-id}/microsoft.graph.dismiss": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/impactedResources/{recommendationResource-id}/microsoft.graph.postpone": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/impactedResources/{recommendationResource-id}/microsoft.graph.reactivate": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
     "/directory/inboundSharedUserProfiles": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
@@ -382,6 +406,54 @@
       "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
     },
     "/directory/outboundSharedUserProfiles/{outboundSharedUserProfile-userId}/tenants/{tenantReference-tenantId}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/recommendations": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/recommendations/{recommendation-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/recommendations/{recommendation-id}/impactedResources": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/recommendations/{recommendation-id}/impactedResources/{recommendationResource-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/recommendations/{recommendation-id}/impactedResources/{recommendationResource-id}/microsoft.graph.complete": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/recommendations/{recommendation-id}/impactedResources/{recommendationResource-id}/microsoft.graph.dismiss": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/recommendations/{recommendation-id}/impactedResources/{recommendationResource-id}/microsoft.graph.postpone": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/recommendations/{recommendation-id}/impactedResources/{recommendationResource-id}/microsoft.graph.reactivate": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/recommendations/{recommendation-id}/microsoft.graph.complete": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/recommendations/{recommendation-id}/microsoft.graph.dismiss": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/recommendations/{recommendation-id}/microsoft.graph.postpone": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/directory/recommendations/{recommendation-id}/microsoft.graph.reactivate": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
     },
@@ -674,6 +746,302 @@
       "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
     },
     "/subscribedSkus/{subscribedSku-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/aggregatedPolicyCompliances": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/aggregatedPolicyCompliances/{aggregatedPolicyCompliance-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/cloudPcConnections": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/cloudPcConnections/{cloudPcConnection-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/cloudPcDevices": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/cloudPcDevices/{cloudPcDevice-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/cloudPcsOverview": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/cloudPcsOverview/{cloudPcOverview-tenantId}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/conditionalAccessPolicyCoverages": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/conditionalAccessPolicyCoverages/{conditionalAccessPolicyCoverage-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/credentialUserRegistrationsSummaries": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/credentialUserRegistrationsSummaries/{credentialUserRegistrationsSummary-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/deviceCompliancePolicySettingStateSummaries": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/deviceCompliancePolicySettingStateSummaries/{deviceCompliancePolicySettingStateSummary-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managedDeviceCompliances": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managedDeviceCompliances/{managedDeviceCompliance-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managedDeviceComplianceTrends": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managedDeviceComplianceTrends/{managedDeviceComplianceTrend-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementActions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementActions/{managementAction-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementActions/{managementAction-id}/microsoft.graph.managedTenants.apply": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementActionTenantDeploymentStatuses": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementActionTenantDeploymentStatuses/{managementActionTenantDeploymentStatus-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementActionTenantDeploymentStatuses/microsoft.graph.managedTenants.changeDeploymentStatus": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementIntents": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementIntents/{managementIntent-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateCollections": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateCollections/{managementTemplateCollection-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateCollections/{managementTemplateCollection-id}/managementTemplates": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateCollections/{managementTemplateCollection-id}/managementTemplates/$ref": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplates": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplates/{managementTemplate-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplates/{managementTemplate-id}/managementTemplateCollections": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplates/{managementTemplate-id}/managementTemplateCollections/$ref": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplates/{managementTemplate-id}/managementTemplateSteps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplates/{managementTemplate-id}/managementTemplateSteps/$ref": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateSteps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateSteps/{managementTemplateStep-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateSteps/{managementTemplateStep-id}/managementTemplate": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateSteps/{managementTemplateStep-id}/managementTemplate/$ref": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateSteps/{managementTemplateStep-id}/stepVersions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateSteps/{managementTemplateStep-id}/stepVersions/$ref": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateStepVersions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/deployments": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/deployments/{managementTemplateStepDeployment-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/deployments/{managementTemplateStepDeployment-id}/microsoft.graph.managedTenants.changeDeploymentStatus": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/deployments/{managementTemplateStepDeployment-id}/templateStepVersion": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/deployments/{managementTemplateStepDeployment-id}/templateStepVersion/$ref": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/deployments/{managementTemplateStepDeployment-id}/templateStepVersion/microsoft.graph.managedTenants.deploy": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/microsoft.graph.managedTenants.deploy": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/templateStep": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/managementTemplateStepVersions/{managementTemplateStepVersion-id}/templateStep/$ref": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/tenantGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/tenantGroups/{tenantGroup-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/tenantGroups/microsoft.graph.managedTenants.tenantSearch": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/tenants": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/tenants/{tenant-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/tenants/{tenant-id}/microsoft.graph.managedTenants.offboardTenant": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/tenants/{tenant-id}/microsoft.graph.managedTenants.resetTenantOnboardingStatus": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/tenantsCustomizedInformation": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/tenantsCustomizedInformation/{tenantCustomizedInformation-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/tenantsDetailedInformation": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/tenantsDetailedInformation/{tenantDetailedInformation-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/tenantTags": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/tenantTags/{tenantTag-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/tenantTags/{tenantTag-id}/microsoft.graph.managedTenants.assignTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/tenantTags/{tenantTag-id}/microsoft.graph.managedTenants.unassignTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/windowsDeviceMalwareStates": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/windowsDeviceMalwareStates/{windowsDeviceMalwareState-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/windowsProtectionStates": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
+    },
+    "/tenantRelationships/managedTenants/windowsProtectionStates/{windowsProtectionState-id}": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Identity.DirectoryManagement.yml"
     },
