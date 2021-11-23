@@ -38,6 +38,8 @@ subject-prefix: ''
 
 ``` yaml
 directive:
+# Remove invalid paths.
+  - remove-path-by-operation: ^tenantRelationships.managedTenants.managementTemplateStepVersions.deployments(_changeDeploymentStatus|.templateStepVersion_deploy)$
 # Remove cmdlets.
   - where:
       verb: Get
