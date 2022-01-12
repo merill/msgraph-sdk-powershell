@@ -16,7 +16,7 @@ function Set-NuSpecValues(
         Set-Dependencies -XmlDocument $XmlDocument -MetadataElement $MetadataElement -Dependencies $Dependencies
         Set-ElementValue -XmlDocument $XmlDocument -MetadataElement $MetadataElement -ElementName "version" -ElementValue $VersionNumber
         Set-ElementValue -XmlDocument $XmlDocument -MetadataElement $MetadataElement -ElementName "iconUrl" -ElementValue $IconUrl
-        
+
         if($ReleaseNotes){
             Set-ElementValue -XmlDocument $XmlDocument -MetadataElement $MetadataElement -ElementName "releaseNotes" -ElementValue $ReleaseNotes
         }
@@ -61,7 +61,7 @@ function Set-ElementValue(
     [string] $ElementName, [string] $ElementValue) {
     if(-not $MetadataElement[$ElementName]){
         $NewElement = $XmlDocument.CreateElement($ElementName, $XmlDocument.DocumentElement.NamespaceURI)
-        $MetadataElement.AppendChild($NewElement)
+        $MetadataElement.AppendChild($NewElement) | Out-Null
     }
     $MetadataElement[$ElementName].InnerText = $ElementValue
 }
@@ -72,9 +72,9 @@ function Set-Dependencies(
     [hashtable[]] $Dependencies) {
     if(-not $MetadataElement["dependencies"]){
         $NewDependenciesElement = $XmlDocument.CreateElement("dependencies", $XmlDocument.DocumentElement.NamespaceURI)
-        $MetadataElement.AppendChild($NewDependenciesElement)
+        $MetadataElement.AppendChild($NewDependenciesElement) | Out-Null
     } else {
-        $MetadataElement["dependencies"].RemoveAll()   
+        $MetadataElement["dependencies"].RemoveAll()
     }
 
     foreach($Dependency in $Dependencies){
@@ -82,7 +82,7 @@ function Set-Dependencies(
         $NewDependencyElement.SetAttribute("id", $Dependency.ModuleName)
         $NewDependencyElement.SetAttribute("version", $Dependency.ModuleVersion ?? $Dependency.RequiredVersion)
 
-        $MetadataElement["dependencies"].AppendChild($NewDependencyElement)
+        $MetadataElement["dependencies"].AppendChild($NewDependencyElement) | Out-Null
     }
 }
 
@@ -98,6 +98,6 @@ function Remove-MarkdownDocsElement(
     $XmlDocument = New-Object System.Xml.XmlDocument
     $XmlDocument.Load($NuSpecFilePath)
     $docsNode = $XmlDocument.DocumentElement.Files.ChildNodes | Where-Object { $_.target -eq 'docs'}
-    $XmlDocument.DocumentElement.Files.RemoveChild($docsNode) | Out-Null
+    $XmlDocument.DocumentElement.Files.RemoveChild($docsNode)
     $XmlDocument.Save($NuSpecFilePath)
 }

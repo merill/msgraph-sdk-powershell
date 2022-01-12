@@ -19,16 +19,16 @@ function Set-CSProjValues(
     } else {
         $ModuleProjElement = [System.Xml.XmlElement] $ModuleProjDoc.DocumentElement.PropertyGroup
     }
-    
+
     if (![string]::IsNullOrWhiteSpace($AssemblyOriginatorKeyFile)) {
-        Set-ElementValue -XmlDocument $ModuleProjDoc -MetadataElement $ModuleProjElement -ElementName "AssemblyOriginatorKeyFile" -ElementValue (Join-Path $PSScriptRoot $AssemblyOriginatorKeyFile)
-        Set-ElementValue -XmlDocument $ModuleProjDoc -MetadataElement $ModuleProjElement -ElementName "DelaySign" -ElementValue "true"
-        Set-ElementValue -XmlDocument $ModuleProjDoc -MetadataElement $ModuleProjElement -ElementName "SignAssembly" -ElementValue "true"
+        Set-ElementValue -XmlDocument $ModuleProjDoc -MetadataElement $ModuleProjElement -ElementName "AssemblyOriginatorKeyFile" -ElementValue (Join-Path $PSScriptRoot $AssemblyOriginatorKeyFile) | Out-Null
+        Set-ElementValue -XmlDocument $ModuleProjDoc -MetadataElement $ModuleProjElement -ElementName "DelaySign" -ElementValue "true" | Out-Null
+        Set-ElementValue -XmlDocument $ModuleProjDoc -MetadataElement $ModuleProjElement -ElementName "SignAssembly" -ElementValue "true" | Out-Null
     }
     if (![string]::IsNullOrWhiteSpace($Copyright)) {
-        Set-ElementValue -XmlDocument $ModuleProjDoc -MetadataElement $ModuleProjElement -ElementName "Copyright" -ElementValue $Copyright
+        Set-ElementValue -XmlDocument $ModuleProjDoc -MetadataElement $ModuleProjElement -ElementName "Copyright" -ElementValue $Copyright | Out-Null
     }
-    Set-ElementValue -XmlDocument $ModuleProjDoc -MetadataElement $ModuleProjElement -ElementName "Version" -ElementValue $ModuleVersion
+    Set-ElementValue -XmlDocument $ModuleProjDoc -MetadataElement $ModuleProjElement -ElementName "Version" -ElementValue $ModuleVersion | Out-Null
 
     $ModuleProjDoc.Save($ModuleCsProj)
     Write-Host "Updated the $ModuleCsProj."
