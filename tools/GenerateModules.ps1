@@ -104,7 +104,6 @@ if ($ModulesToGenerate.Count -eq 0) {
 # $NumberOfCores = ((Get-ComputerInfo -Property CsProcessors).CsProcessors.NumberOfCores)[0]
 # Write-Host -ForegroundColor Green "Using '$NumberOfCores' cores in parallel."
 
-$ModulesToGenerate = "Search"
 $Stopwatch = [system.diagnostics.stopwatch]::StartNew()
 $ModulesToGenerate | ForEach-Object {
     enum VersionState {
@@ -116,7 +115,7 @@ $ModulesToGenerate | ForEach-Object {
 
     $ModuleName = $_
 
-    @("beta") | ForEach-Object {
+    @("v1.0", "beta") | ForEach-Object {
         $ApiVersion = $_
         $ModuleProjectPath = Join-Path $ModulesOutputDir "$ModuleName\$ApiVersion"
         $ModuleOpenApiPath = Join-Path $OpenApiPath $ApiVersion "$ModuleName.yml"
