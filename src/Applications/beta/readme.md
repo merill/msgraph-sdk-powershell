@@ -36,5 +36,4 @@ prefix: MgBeta
 
 ``` yaml
 module-version: 1.9.2
-release-notes: See https://aka.ms/GraphPowerShell-Release.
 ```

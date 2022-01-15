@@ -1,6 +1,6 @@
-# Search
+# Security
 
-This directory contains common [AutoREST.PowerShell](https://github.com/Azure/autorest.powershell) configurations for Search v1.0 and/or beta modules.
+This directory contains common [AutoREST.PowerShell](https://github.com/Azure/autorest.powershell) configurations for Security v1.0 and/or beta modules.
 
 ## AutoRest Configuration
 

@@ -1,10 +1,10 @@
 <!-- region Generated -->
-# Microsoft.Graph.Search
-This directory contains the PowerShell module for the Search service.
+# Microsoft.Graph.Security
+This directory contains the PowerShell module for the Security service.
 
 ---
 ## Status
-[![Microsoft.Graph.Search](https://img.shields.io/powershellgallery/v/Microsoft.Graph.Search.svg?style=flat-square&label=Microsoft.Graph.Search "Microsoft.Graph.Search")](https://www.powershellgallery.com/packages/Microsoft.Graph.Search/)
+[![Microsoft.Graph.Security](https://img.shields.io/powershellgallery/v/Microsoft.Graph.Security.svg?style=flat-square&label=Microsoft.Graph.Security "Microsoft.Graph.Security")](https://www.powershellgallery.com/packages/Microsoft.Graph.Security/)
 
 ## Info
 - Modifiable: yes
@@ -17,7 +17,7 @@ This directory contains the PowerShell module for the Search service.
 This module was primarily generated via [AutoRest](https://github.com/Azure/autorest) using the [PowerShell](https://github.com/Azure/autorest.powershell) extension.
 
 ## Development
-For information on how to develop for `Microsoft.Graph.Search`, see [how-to.md](how-to.md).
+For information on how to develop for `Microsoft.Graph.Security`, see [how-to.md](how-to.md).
 <!-- endregion -->
 
 ### AutoRest Configuration
@@ -26,7 +26,7 @@ For information on how to develop for `Microsoft.Graph.Search`, see [how-to.md](
 
 ``` yaml
 require:
-  - $(this-folder)/../Search.md
+  - $(this-folder)/../Security.md
 title: $(service-name)
 subject-prefix: ''
 prefix: Mg

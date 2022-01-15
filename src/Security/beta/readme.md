@@ -1,10 +1,10 @@
 <!-- region Generated -->
-# Microsoft.Graph.Search.Beta
-This directory contains the PowerShell module for the SearchBeta service.
+# Microsoft.Graph.Security.Beta
+This directory contains the PowerShell module for the SecurityBeta service.
 
 ---
 ## Status
-[![Microsoft.Graph.Search.Beta](https://img.shields.io/powershellgallery/v/Microsoft.Graph.Search.Beta.svg?style=flat-square&label=Microsoft.Graph.Search.Beta "Microsoft.Graph.Search.Beta")](https://www.powershellgallery.com/packages/Microsoft.Graph.Search.Beta/)
+[![Microsoft.Graph.Security.Beta](https://img.shields.io/powershellgallery/v/Microsoft.Graph.Security.Beta.svg?style=flat-square&label=Microsoft.Graph.Security.Beta "Microsoft.Graph.Security.Beta")](https://www.powershellgallery.com/packages/Microsoft.Graph.Security.Beta/)
 
 ## Info
 - Modifiable: yes
@@ -17,7 +17,7 @@ This directory contains the PowerShell module for the SearchBeta service.
 This module was primarily generated via [AutoRest](https://github.com/Azure/autorest) using the [PowerShell](https://github.com/Azure/autorest.powershell) extension.
 
 ## Development
-For information on how to develop for `Microsoft.Graph.Search.Beta`, see [how-to.md](how-to.md).
+For information on how to develop for `Microsoft.Graph.Security.Beta`, see [how-to.md](how-to.md).
 <!-- endregion -->
 
 ### AutoRest Configuration
@@ -26,7 +26,7 @@ For information on how to develop for `Microsoft.Graph.Search.Beta`, see [how-to
 
 ``` yaml
 require:
-  - $(this-folder)/../Search.md
+  - $(this-folder)/../Security.md
 title: $(service-name)
 subject-prefix: ''
 prefix: MgBeta

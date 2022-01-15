@@ -9,9 +9,6 @@ This directory contains common [AutoREST.PowerShell](https://github.com/Azure/au
 ``` yaml
 require:
   - $(this-folder)/../readme.graph.md
-subject-prefix: ''
-prefix: Mg
-
 ```
 
 ### Directives
@@ -33,6 +30,7 @@ directive:
       verb: Get
       subject: (Application|ServicePrincipal)AvailableExtensionProperty
     remove: true
+# TODO: Update aliasing to consider MgBeta prefix.
 # Alias then rename cmdlets to avoid breaking change.
   - where:
       subject: ^(ServicePrincipal|Application)(Member|TransitiveMember|CreatedOnBehalf)$
