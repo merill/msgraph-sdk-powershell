@@ -1,6 +1,6 @@
 ---
 Module Name: Microsoft.Graph.DirectoryObjects
-Module Guid: f6891913-1aa0-4589-83fe-73cf201079d3
+Module Guid: f74384fe-f6d3-4456-9ad7-e1364c412d4a
 Download Help Link: https://docs.microsoft.com/en-us/powershell/module/microsoft.graph.directoryobjects
 Help Version: 1.0.0.0
 Locale: en-US
@@ -31,9 +31,6 @@ Invoke action getMemberGroups
 
 ### [Get-MgDirectoryObjectMemberObject](Get-MgDirectoryObjectMemberObject.md)
 Invoke action getMemberObjects
-
-### [Get-MgDirectoryObjectMicrosoftGraphAdministrativeUnitDelta](Get-MgDirectoryObjectMicrosoftGraphAdministrativeUnitDelta.md)
-Invoke function delta
 
 ### [New-MgDirectoryObject](New-MgDirectoryObject.md)
 Add new entity to directoryObjects
