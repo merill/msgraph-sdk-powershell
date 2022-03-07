@@ -420,21 +420,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Collection of user
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.user'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.userCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -1087,34 +1073,20 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.directoryObject'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
-  '/users/{user-id}/createdObjects/$ref':
+  '/users/{user-id}/createdObjects/{directoryObject-id}':
     get:
       tags:
         - users.directoryObject
-      summary: Get ref of createdObjects from users
+      summary: Get createdObjects from users
       description: Directory objects that were created by the user. Read-only. Nullable.
-      operationId: users_ListGraphRefCreatedObjects
+      operationId: users_GetCreatedObjects
       parameters:
         - name: user-id
           in: path
@@ -1123,14 +1095,16 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: user
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
           in: query
-          description: Order items by property values
+          description: Select properties to be returned
           style: form
           explode: false
           schema:
@@ -1139,65 +1113,27 @@ paths:
             items:
               enum:
                 - id
-                - id desc
                 - deletedDateTime
-                - deletedDateTime desc
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
+          description: Retrieved navigation property
           content:
             application/json:
               schema:
-                title: Collection of links of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - users.directoryObject
-      summary: Create new navigation property ref to createdObjects for users
-      description: Directory objects that were created by the user. Read-only. Nullable.
-      operationId: users_CreateGraphRefCreatedObjects
-      parameters:
-        - name: user-id
-          in: path
-          description: 'key: id of user'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: user
-      requestBody:
-        description: New navigation property ref value
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-        required: true
-      responses:
-        '201':
-          description: Created navigation property link.
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  type: object
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1263,34 +1199,20 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.directoryObject'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
-  '/users/{user-id}/directReports/$ref':
+  '/users/{user-id}/directReports/{directoryObject-id}':
     get:
       tags:
         - users.directoryObject
-      summary: Get ref of directReports from users
+      summary: Get directReports from users
       description: The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
-      operationId: users_ListGraphRefDirectReports
+      operationId: users_GetDirectReports
       parameters:
         - name: user-id
           in: path
@@ -1299,14 +1221,16 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: user
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
           in: query
-          description: Order items by property values
+          description: Select properties to be returned
           style: form
           explode: false
           schema:
@@ -1315,65 +1239,27 @@ paths:
             items:
               enum:
                 - id
-                - id desc
                 - deletedDateTime
-                - deletedDateTime desc
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
+          description: Retrieved navigation property
           content:
             application/json:
               schema:
-                title: Collection of links of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - users.directoryObject
-      summary: Create new navigation property ref to directReports for users
-      description: The users and contacts that report to the user. (The users and contacts that have their manager property set to this user.) Read-only. Nullable. Supports $expand.
-      operationId: users_CreateGraphRefDirectReports
-      parameters:
-        - name: user-id
-          in: path
-          description: 'key: id of user'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: user
-      requestBody:
-        description: New navigation property ref value
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-        required: true
-      responses:
-        '201':
-          description: Created navigation property link.
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  type: object
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1436,21 +1322,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of extension
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.extension'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.extensionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -1461,7 +1333,6 @@ paths:
       tags:
         - users.extension
       summary: Create new navigation property to extensions for users
-      description: The collection of open extensions defined for the user. Read-only. Nullable.
       operationId: users_CreateExtensions
       parameters:
         - name: user-id
@@ -1548,7 +1419,6 @@ paths:
       tags:
         - users.extension
       summary: Update the navigation property extensions in users
-      description: The collection of open extensions defined for the user. Read-only. Nullable.
       operationId: users_UpdateExtensions
       parameters:
         - name: user-id
@@ -1582,7 +1452,6 @@ paths:
       tags:
         - users.extension
       summary: Delete navigation property extensions for users
-      description: The collection of open extensions defined for the user. Read-only. Nullable.
       operationId: users_DeleteExtensions
       parameters:
         - name: user-id
@@ -1678,21 +1547,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of licenseDetails
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.licenseDetails'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.licenseDetailsCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -1703,7 +1558,6 @@ paths:
       tags:
         - users.licenseDetails
       summary: Create new navigation property to licenseDetails for users
-      description: A collection of this user's license details. Read-only.
       operationId: users_CreateLicenseDetails
       parameters:
         - name: user-id
@@ -1793,7 +1647,6 @@ paths:
       tags:
         - users.licenseDetails
       summary: Update the navigation property licenseDetails in users
-      description: A collection of this user's license details. Read-only.
       operationId: users_UpdateLicenseDetails
       parameters:
         - name: user-id
@@ -1827,7 +1680,6 @@ paths:
       tags:
         - users.licenseDetails
       summary: Delete navigation property licenseDetails for users
-      description: A collection of this user's license details. Read-only.
       operationId: users_DeleteLicenseDetails
       parameters:
         - name: user-id
@@ -1905,85 +1757,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  '/users/{user-id}/manager/$ref':
-    get:
-      tags:
-        - users.directoryObject
-      summary: Get ref of manager from users
-      description: 'The user or contact that is this user''s manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.'
-      operationId: users_GetGraphRefManager
-      parameters:
-        - name: user-id
-          in: path
-          description: 'key: id of user'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: user
-      responses:
-        '200':
-          description: Retrieved navigation property link
-          content:
-            application/json:
-              schema:
-                type: string
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-    put:
-      tags:
-        - users.directoryObject
-      summary: Update the ref of navigation property manager in users
-      description: 'The user or contact that is this user''s manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.'
-      operationId: users_SetGraphRefManager
-      parameters:
-        - name: user-id
-          in: path
-          description: 'key: id of user'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: user
-      requestBody:
-        description: New navigation property ref values
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-        required: true
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-    delete:
-      tags:
-        - users.directoryObject
-      summary: Delete ref of navigation property manager for users
-      description: 'The user or contact that is this user''s manager. Read-only. (HTTP Methods: GET, PUT, DELETE.). Supports $expand.'
-      operationId: users_DeleteGraphRefManager
-      parameters:
-        - name: user-id
-          in: path
-          description: 'key: id of user'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: user
-        - name: If-Match
-          in: header
-          description: ETag
-          schema:
-            type: string
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
   '/users/{user-id}/memberOf':
     get:
       tags:
@@ -2046,34 +1819,20 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.directoryObject'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
-  '/users/{user-id}/memberOf/$ref':
+  '/users/{user-id}/memberOf/{directoryObject-id}':
     get:
       tags:
         - users.directoryObject
-      summary: Get ref of memberOf from users
+      summary: Get memberOf from users
       description: The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
-      operationId: users_ListGraphRefMemberOf
+      operationId: users_GetMemberOf
       parameters:
         - name: user-id
           in: path
@@ -2082,14 +1841,16 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: user
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
           in: query
-          description: Order items by property values
+          description: Select properties to be returned
           style: form
           explode: false
           schema:
@@ -2098,65 +1859,27 @@ paths:
             items:
               enum:
                 - id
-                - id desc
                 - deletedDateTime
-                - deletedDateTime desc
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
+          description: Retrieved navigation property
           content:
             application/json:
               schema:
-                title: Collection of links of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - users.directoryObject
-      summary: Create new navigation property ref to memberOf for users
-      description: The groups and directory roles that the user is a member of. Read-only. Nullable. Supports $expand.
-      operationId: users_CreateGraphRefMemberOf
-      parameters:
-        - name: user-id
-          in: path
-          description: 'key: id of user'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: user
-      requestBody:
-        description: New navigation property ref value
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-        required: true
-      responses:
-        '201':
-          description: Created navigation property link.
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  type: object
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2239,21 +1962,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of notification
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.notification'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.notificationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -2495,33 +2204,19 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of oAuth2PermissionGrant
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.oAuth2PermissionGrant'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.oAuth2PermissionGrantCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
-  '/users/{user-id}/oauth2PermissionGrants/$ref':
+  '/users/{user-id}/oauth2PermissionGrants/{oAuth2PermissionGrant-id}':
     get:
       tags:
         - users.oAuth2PermissionGrant
-      summary: Get ref of oauth2PermissionGrants from users
-      operationId: users_ListGraphRefOauth2PermissionGrants
+      summary: Get oauth2PermissionGrants from users
+      operationId: users_GetOauth2PermissionGrants
       parameters:
         - name: user-id
           in: path
@@ -2530,14 +2225,16 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: user
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
+        - name: oAuth2PermissionGrant-id
+          in: path
+          description: 'key: id of oAuth2PermissionGrant'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: oAuth2PermissionGrant
+        - name: $select
           in: query
-          description: Order items by property values
+          description: Select properties to be returned
           style: form
           explode: false
           schema:
@@ -2546,76 +2243,33 @@ paths:
             items:
               enum:
                 - id
-                - id desc
                 - clientId
-                - clientId desc
                 - consentType
-                - consentType desc
                 - expiryTime
-                - expiryTime desc
                 - principalId
-                - principalId desc
                 - resourceId
-                - resourceId desc
                 - scope
-                - scope desc
                 - startTime
-                - startTime desc
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
+          description: Retrieved navigation property
           content:
             application/json:
               schema:
-                title: Collection of links of oAuth2PermissionGrant
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - users.oAuth2PermissionGrant
-      summary: Create new navigation property ref to oauth2PermissionGrants for users
-      operationId: users_CreateGraphRefOauth2PermissionGrants
-      parameters:
-        - name: user-id
-          in: path
-          description: 'key: id of user'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: user
-      requestBody:
-        description: New navigation property ref value
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-        required: true
-      responses:
-        '201':
-          description: Created navigation property link.
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  type: object
+                $ref: '#/components/schemas/microsoft.graph.oAuth2PermissionGrant'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2681,7 +2335,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property outlook in users
-      description: Read-only.
       operationId: users_UpdateOutlook
       parameters:
         - name: user-id
@@ -2708,7 +2361,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property outlook for users
-      description: Read-only.
       operationId: users_DeleteOutlook
       parameters:
         - name: user-id
@@ -2781,21 +2433,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of outlookCategory
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.outlookCategory'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.outlookCategoryCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -2806,7 +2444,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to masterCategories for users
-      description: A list of categories defined for the user.
       operationId: users.outlook_CreateMasterCategories
       parameters:
         - name: user-id
@@ -2883,7 +2520,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property masterCategories in users
-      description: A list of categories defined for the user.
       operationId: users.outlook_UpdateMasterCategories
       parameters:
         - name: user-id
@@ -2917,7 +2553,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property masterCategories for users
-      description: A list of categories defined for the user.
       operationId: users.outlook_DeleteMasterCategories
       parameters:
         - name: user-id
@@ -3005,21 +2640,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of outlookTaskFolder
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.outlookTaskFolder'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.outlookTaskFolderCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -3255,21 +2876,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of multiValueLegacyExtendedProperty
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.multiValueLegacyExtendedProperty'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.multiValueLegacyExtendedPropertyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -3280,7 +2887,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the task folder. Read-only. Nullable.
       operationId: users.outlook.taskFolders_CreateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -3382,7 +2988,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property multiValueExtendedProperties in users
-      description: The collection of multi-value extended properties defined for the task folder. Read-only. Nullable.
       operationId: users.outlook.taskFolders_UpdateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -3423,7 +3028,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the task folder. Read-only. Nullable.
       operationId: users.outlook.taskFolders_DeleteMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -3527,21 +3131,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of singleValueLegacyExtendedProperty
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.singleValueLegacyExtendedProperty'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.singleValueLegacyExtendedPropertyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -3552,7 +3142,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the task folder. Read-only. Nullable.
       operationId: users.outlook.taskFolders_CreateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -3654,7 +3243,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property singleValueExtendedProperties in users
-      description: The collection of single-value extended properties defined for the task folder. Read-only. Nullable.
       operationId: users.outlook.taskFolders_UpdateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -3695,7 +3283,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the task folder. Read-only. Nullable.
       operationId: users.outlook.taskFolders_DeleteSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -3843,21 +3430,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of outlookTask
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.outlookTask'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.outlookTaskCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -3868,7 +3441,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to tasks for users
-      description: The tasks in this task folder. Read-only. Nullable.
       operationId: users.outlook.taskFolders_CreateTasks
       parameters:
         - name: user-id
@@ -3998,7 +3570,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property tasks in users
-      description: The tasks in this task folder. Read-only. Nullable.
       operationId: users.outlook.taskFolders_UpdateTasks
       parameters:
         - name: user-id
@@ -4039,7 +3610,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property tasks for users
-      description: The tasks in this task folder. Read-only. Nullable.
       operationId: users.outlook.taskFolders_DeleteTasks
       parameters:
         - name: user-id
@@ -4161,21 +3731,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of attachment
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.attachment'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.attachmentCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4186,7 +3742,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to attachments for users
-      description: 'The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.'
       operationId: users.outlook.taskFolders.tasks_CreateAttachments
       parameters:
         - name: user-id
@@ -4306,7 +3861,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property attachments in users
-      description: 'The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.'
       operationId: users.outlook.taskFolders.tasks_UpdateAttachments
       parameters:
         - name: user-id
@@ -4354,7 +3908,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property attachments for users
-      description: 'The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.'
       operationId: users.outlook.taskFolders.tasks_DeleteAttachments
       parameters:
         - name: user-id
@@ -4472,21 +4025,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of multiValueLegacyExtendedProperty
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.multiValueLegacyExtendedProperty'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.multiValueLegacyExtendedPropertyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4497,7 +4036,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.taskFolders.tasks_CreateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -4613,7 +4151,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property multiValueExtendedProperties in users
-      description: The collection of multi-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.taskFolders.tasks_UpdateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -4661,7 +4198,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.taskFolders.tasks_DeleteMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -4779,21 +4315,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of singleValueLegacyExtendedProperty
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.singleValueLegacyExtendedProperty'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.singleValueLegacyExtendedPropertyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4804,7 +4326,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.taskFolders.tasks_CreateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -4920,7 +4441,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property singleValueExtendedProperties in users
-      description: The collection of single-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.taskFolders.tasks_UpdateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -4968,7 +4488,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.taskFolders.tasks_DeleteSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -5068,21 +4587,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of outlookTaskGroup
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.outlookTaskGroup'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.outlookTaskGroupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5305,21 +4810,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of outlookTaskFolder
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.outlookTaskFolder'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.outlookTaskFolderCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5330,7 +4821,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to taskFolders for users
-      description: The collection of task folders in the task group. Read-only. Nullable.
       operationId: users.outlook.taskGroups_CreateTaskFolders
       parameters:
         - name: user-id
@@ -5445,7 +4935,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property taskFolders in users
-      description: The collection of task folders in the task group. Read-only. Nullable.
       operationId: users.outlook.taskGroups_UpdateTaskFolders
       parameters:
         - name: user-id
@@ -5486,7 +4975,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property taskFolders for users
-      description: The collection of task folders in the task group. Read-only. Nullable.
       operationId: users.outlook.taskGroups_DeleteTaskFolders
       parameters:
         - name: user-id
@@ -5597,21 +5085,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of multiValueLegacyExtendedProperty
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.multiValueLegacyExtendedProperty'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.multiValueLegacyExtendedPropertyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5622,7 +5096,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the task folder. Read-only. Nullable.
       operationId: users.outlook.taskGroups.taskFolders_CreateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -5738,7 +5211,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property multiValueExtendedProperties in users
-      description: The collection of multi-value extended properties defined for the task folder. Read-only. Nullable.
       operationId: users.outlook.taskGroups.taskFolders_UpdateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -5786,7 +5258,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the task folder. Read-only. Nullable.
       operationId: users.outlook.taskGroups.taskFolders_DeleteMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -5904,21 +5375,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of singleValueLegacyExtendedProperty
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.singleValueLegacyExtendedProperty'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.singleValueLegacyExtendedPropertyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5929,7 +5386,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the task folder. Read-only. Nullable.
       operationId: users.outlook.taskGroups.taskFolders_CreateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -6045,7 +5501,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property singleValueExtendedProperties in users
-      description: The collection of single-value extended properties defined for the task folder. Read-only. Nullable.
       operationId: users.outlook.taskGroups.taskFolders_UpdateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -6093,7 +5548,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the task folder. Read-only. Nullable.
       operationId: users.outlook.taskGroups.taskFolders_DeleteSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -6255,21 +5709,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of outlookTask
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.outlookTask'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.outlookTaskCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -6280,7 +5720,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to tasks for users
-      description: The tasks in this task folder. Read-only. Nullable.
       operationId: users.outlook.taskGroups.taskFolders_CreateTasks
       parameters:
         - name: user-id
@@ -6427,7 +5866,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property tasks in users
-      description: The tasks in this task folder. Read-only. Nullable.
       operationId: users.outlook.taskGroups.taskFolders_UpdateTasks
       parameters:
         - name: user-id
@@ -6475,7 +5913,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property tasks for users
-      description: The tasks in this task folder. Read-only. Nullable.
       operationId: users.outlook.taskGroups.taskFolders_DeleteTasks
       parameters:
         - name: user-id
@@ -6611,21 +6048,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of attachment
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.attachment'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.attachmentCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -6636,7 +6059,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to attachments for users
-      description: 'The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.'
       operationId: users.outlook.taskGroups.taskFolders.tasks_CreateAttachments
       parameters:
         - name: user-id
@@ -6770,7 +6192,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property attachments in users
-      description: 'The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.'
       operationId: users.outlook.taskGroups.taskFolders.tasks_UpdateAttachments
       parameters:
         - name: user-id
@@ -6825,7 +6246,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property attachments for users
-      description: 'The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.'
       operationId: users.outlook.taskGroups.taskFolders.tasks_DeleteAttachments
       parameters:
         - name: user-id
@@ -6957,21 +6377,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of multiValueLegacyExtendedProperty
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.multiValueLegacyExtendedProperty'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.multiValueLegacyExtendedPropertyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -6982,7 +6388,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.taskGroups.taskFolders.tasks_CreateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -7112,7 +6517,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property multiValueExtendedProperties in users
-      description: The collection of multi-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.taskGroups.taskFolders.tasks_UpdateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -7167,7 +6571,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.taskGroups.taskFolders.tasks_DeleteMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -7299,21 +6702,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of singleValueLegacyExtendedProperty
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.singleValueLegacyExtendedProperty'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.singleValueLegacyExtendedPropertyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -7324,7 +6713,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.taskGroups.taskFolders.tasks_CreateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -7454,7 +6842,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property singleValueExtendedProperties in users
-      description: The collection of single-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.taskGroups.taskFolders.tasks_UpdateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -7509,7 +6896,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.taskGroups.taskFolders.tasks_DeleteSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -7663,21 +7049,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of outlookTask
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.outlookTask'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.outlookTaskCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -7939,21 +7311,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of attachment
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.attachment'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.attachmentCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -7964,7 +7322,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to attachments for users
-      description: 'The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.'
       operationId: users.outlook.tasks_CreateAttachments
       parameters:
         - name: user-id
@@ -8070,7 +7427,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property attachments in users
-      description: 'The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.'
       operationId: users.outlook.tasks_UpdateAttachments
       parameters:
         - name: user-id
@@ -8111,7 +7467,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property attachments for users
-      description: 'The collection of fileAttachment, itemAttachment, and referenceAttachment attachments for the task.  Read-only. Nullable.'
       operationId: users.outlook.tasks_DeleteAttachments
       parameters:
         - name: user-id
@@ -8215,21 +7570,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of multiValueLegacyExtendedProperty
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.multiValueLegacyExtendedProperty'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.multiValueLegacyExtendedPropertyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -8240,7 +7581,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.tasks_CreateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -8342,7 +7682,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property multiValueExtendedProperties in users
-      description: The collection of multi-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.tasks_UpdateMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -8383,7 +7722,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property multiValueExtendedProperties for users
-      description: The collection of multi-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.tasks_DeleteMultiValueExtendedProperties
       parameters:
         - name: user-id
@@ -8487,21 +7825,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of singleValueLegacyExtendedProperty
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.singleValueLegacyExtendedProperty'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.singleValueLegacyExtendedPropertyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -8512,7 +7836,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Create new navigation property to singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.tasks_CreateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -8614,7 +7937,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Update the navigation property singleValueExtendedProperties in users
-      description: The collection of single-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.tasks_UpdateSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -8655,7 +7977,6 @@ paths:
       tags:
         - users.outlookUser
       summary: Delete navigation property singleValueExtendedProperties for users
-      description: The collection of single-value extended properties defined for the task. Read-only. Nullable.
       operationId: users.outlook.tasks_DeleteSingleValueExtendedProperties
       parameters:
         - name: user-id
@@ -8752,34 +8073,20 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.directoryObject'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
-  '/users/{user-id}/ownedDevices/$ref':
+  '/users/{user-id}/ownedDevices/{directoryObject-id}':
     get:
       tags:
         - users.directoryObject
-      summary: Get ref of ownedDevices from users
+      summary: Get ownedDevices from users
       description: Devices that are owned by the user. Read-only. Nullable. Supports $expand.
-      operationId: users_ListGraphRefOwnedDevices
+      operationId: users_GetOwnedDevices
       parameters:
         - name: user-id
           in: path
@@ -8788,14 +8095,16 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: user
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
           in: query
-          description: Order items by property values
+          description: Select properties to be returned
           style: form
           explode: false
           schema:
@@ -8804,65 +8113,27 @@ paths:
             items:
               enum:
                 - id
-                - id desc
                 - deletedDateTime
-                - deletedDateTime desc
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
+          description: Retrieved navigation property
           content:
             application/json:
               schema:
-                title: Collection of links of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - users.directoryObject
-      summary: Create new navigation property ref to ownedDevices for users
-      description: Devices that are owned by the user. Read-only. Nullable. Supports $expand.
-      operationId: users_CreateGraphRefOwnedDevices
-      parameters:
-        - name: user-id
-          in: path
-          description: 'key: id of user'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: user
-      requestBody:
-        description: New navigation property ref value
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-        required: true
-      responses:
-        '201':
-          description: Created navigation property link.
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  type: object
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -8928,34 +8199,20 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.directoryObject'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
-  '/users/{user-id}/ownedObjects/$ref':
+  '/users/{user-id}/ownedObjects/{directoryObject-id}':
     get:
       tags:
         - users.directoryObject
-      summary: Get ref of ownedObjects from users
+      summary: Get ownedObjects from users
       description: Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
-      operationId: users_ListGraphRefOwnedObjects
+      operationId: users_GetOwnedObjects
       parameters:
         - name: user-id
           in: path
@@ -8964,14 +8221,16 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: user
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
           in: query
-          description: Order items by property values
+          description: Select properties to be returned
           style: form
           explode: false
           schema:
@@ -8980,65 +8239,27 @@ paths:
             items:
               enum:
                 - id
-                - id desc
                 - deletedDateTime
-                - deletedDateTime desc
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
+          description: Retrieved navigation property
           content:
             application/json:
               schema:
-                title: Collection of links of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - users.directoryObject
-      summary: Create new navigation property ref to ownedObjects for users
-      description: Directory objects that are owned by the user. Read-only. Nullable. Supports $expand.
-      operationId: users_CreateGraphRefOwnedObjects
-      parameters:
-        - name: user-id
-          in: path
-          description: 'key: id of user'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: user
-      requestBody:
-        description: New navigation property ref value
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-        required: true
-      responses:
-        '201':
-          description: Created navigation property link.
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  type: object
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9085,7 +8306,6 @@ paths:
       tags:
         - users.profilePhoto
       summary: Update the navigation property photo in users
-      description: The user's profile photo. Read-only.
       operationId: users_UpdatePhoto
       parameters:
         - name: user-id
@@ -9112,7 +8332,6 @@ paths:
       tags:
         - users.profilePhoto
       summary: Delete navigation property photo for users
-      description: The user's profile photo. Read-only.
       operationId: users_DeletePhoto
       parameters:
         - name: user-id
@@ -9138,7 +8357,6 @@ paths:
       tags:
         - users.profilePhoto
       summary: Get media content for the navigation property photo from users
-      description: The user's profile photo. Read-only.
       operationId: users_GetPhotoContent
       parameters:
         - name: user-id
@@ -9163,7 +8381,6 @@ paths:
       tags:
         - users.profilePhoto
       summary: Update media content for the navigation property photo in users
-      description: The user's profile photo. Read-only.
       operationId: users_SetPhotoContent
       parameters:
         - name: user-id
@@ -9239,21 +8456,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of profilePhoto
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.profilePhoto'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.profilePhotoCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -9264,7 +8467,6 @@ paths:
       tags:
         - users.profilePhoto
       summary: Create new navigation property to photos for users
-      description: Read-only. Nullable.
       operationId: users_CreatePhotos
       parameters:
         - name: user-id
@@ -9341,7 +8543,6 @@ paths:
       tags:
         - users.profilePhoto
       summary: Update the navigation property photos in users
-      description: Read-only. Nullable.
       operationId: users_UpdatePhotos
       parameters:
         - name: user-id
@@ -9375,7 +8576,6 @@ paths:
       tags:
         - users.profilePhoto
       summary: Delete navigation property photos for users
-      description: Read-only. Nullable.
       operationId: users_DeletePhotos
       parameters:
         - name: user-id
@@ -9531,34 +8731,20 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.directoryObject'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
-  '/users/{user-id}/registeredDevices/$ref':
+  '/users/{user-id}/registeredDevices/{directoryObject-id}':
     get:
       tags:
         - users.directoryObject
-      summary: Get ref of registeredDevices from users
+      summary: Get registeredDevices from users
       description: Devices that are registered for the user. Read-only. Nullable. Supports $expand.
-      operationId: users_ListGraphRefRegisteredDevices
+      operationId: users_GetRegisteredDevices
       parameters:
         - name: user-id
           in: path
@@ -9567,14 +8753,16 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: user
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
           in: query
-          description: Order items by property values
+          description: Select properties to be returned
           style: form
           explode: false
           schema:
@@ -9583,65 +8771,27 @@ paths:
             items:
               enum:
                 - id
-                - id desc
                 - deletedDateTime
-                - deletedDateTime desc
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
+          description: Retrieved navigation property
           content:
             application/json:
               schema:
-                title: Collection of links of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - users.directoryObject
-      summary: Create new navigation property ref to registeredDevices for users
-      description: Devices that are registered for the user. Read-only. Nullable. Supports $expand.
-      operationId: users_CreateGraphRefRegisteredDevices
-      parameters:
-        - name: user-id
-          in: path
-          description: 'key: id of user'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: user
-      requestBody:
-        description: New navigation property ref value
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-        required: true
-      responses:
-        '201':
-          description: Created navigation property link.
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  type: object
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9725,7 +8875,6 @@ paths:
       tags:
         - users.userSettings
       summary: Update the navigation property settings in users
-      description: Read-only. Nullable.
       operationId: users_UpdateSettings
       parameters:
         - name: user-id
@@ -9752,7 +8901,6 @@ paths:
       tags:
         - users.userSettings
       summary: Delete navigation property settings for users
-      description: Read-only. Nullable.
       operationId: users_DeleteSettings
       parameters:
         - name: user-id
@@ -9926,7 +9074,6 @@ paths:
       tags:
         - users.userSettings
       summary: Update the navigation property itemInsights in users
-      description: 'The user''s settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.'
       operationId: users.settings_UpdateItemInsights
       parameters:
         - name: user-id
@@ -9953,7 +9100,6 @@ paths:
       tags:
         - users.userSettings
       summary: Delete navigation property itemInsights for users
-      description: 'The user''s settings for the visibility of meeting hour insights, and insights derived between a user and other items in Microsoft 365, such as documents or sites. Get userInsightsSettings through this navigation property.'
       operationId: users.settings_DeleteItemInsights
       parameters:
         - name: user-id
@@ -10034,7 +9180,6 @@ paths:
       tags:
         - users.userSettings
       summary: Update the navigation property regionalAndLanguageSettings in users
-      description: 'The user''s preferences for languages, regional locale and date/time formatting.'
       operationId: users.settings_UpdateRegionalAndLanguageSettings
       parameters:
         - name: user-id
@@ -10061,7 +9206,6 @@ paths:
       tags:
         - users.userSettings
       summary: Delete navigation property regionalAndLanguageSettings for users
-      description: 'The user''s preferences for languages, regional locale and date/time formatting.'
       operationId: users.settings_DeleteRegionalAndLanguageSettings
       parameters:
         - name: user-id
@@ -10140,7 +9284,6 @@ paths:
       tags:
         - users.userSettings
       summary: Update the navigation property shiftPreferences in users
-      description: The shift preferences for the user.
       operationId: users.settings_UpdateShiftPreferences
       parameters:
         - name: user-id
@@ -10167,7 +9310,6 @@ paths:
       tags:
         - users.userSettings
       summary: Delete navigation property shiftPreferences for users
-      description: The shift preferences for the user.
       operationId: users.settings_DeleteShiftPreferences
       parameters:
         - name: user-id
@@ -10248,7 +9390,6 @@ paths:
       tags:
         - users.todo
       summary: Update the navigation property todo in users
-      description: Represents the To Do services available to a user.
       operationId: users_UpdateTodo
       parameters:
         - name: user-id
@@ -10275,7 +9416,6 @@ paths:
       tags:
         - users.todo
       summary: Delete navigation property todo for users
-      description: Represents the To Do services available to a user.
       operationId: users_DeleteTodo
       parameters:
         - name: user-id
@@ -10371,21 +9511,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of todoTaskList
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.todoTaskList'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.todoTaskListCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -10396,7 +9522,6 @@ paths:
       tags:
         - users.todo
       summary: Create new navigation property to lists for users
-      description: The task lists in the users mailbox.
       operationId: users.todo_CreateLists
       parameters:
         - name: user-id
@@ -10502,7 +9627,6 @@ paths:
       tags:
         - users.todo
       summary: Update the navigation property lists in users
-      description: The task lists in the users mailbox.
       operationId: users.todo_UpdateLists
       parameters:
         - name: user-id
@@ -10536,7 +9660,6 @@ paths:
       tags:
         - users.todo
       summary: Delete navigation property lists for users
-      description: The task lists in the users mailbox.
       operationId: users.todo_DeleteLists
       parameters:
         - name: user-id
@@ -10630,21 +9753,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of extension
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.extension'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.extensionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -10655,7 +9764,6 @@ paths:
       tags:
         - users.todo
       summary: Create new navigation property to extensions for users
-      description: The collection of open extensions defined for the task list. Nullable.
       operationId: users.todo.lists_CreateExtensions
       parameters:
         - name: user-id
@@ -10756,7 +9864,6 @@ paths:
       tags:
         - users.todo
       summary: Update the navigation property extensions in users
-      description: The collection of open extensions defined for the task list. Nullable.
       operationId: users.todo.lists_UpdateExtensions
       parameters:
         - name: user-id
@@ -10797,7 +9904,6 @@ paths:
       tags:
         - users.todo
       summary: Delete navigation property extensions for users
-      description: The collection of open extensions defined for the task list. Nullable.
       operationId: users.todo.lists_DeleteExtensions
       parameters:
         - name: user-id
@@ -10938,21 +10044,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of todoTask
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.todoTask'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.todoTaskCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -10963,7 +10055,6 @@ paths:
       tags:
         - users.todo
       summary: Create new navigation property to tasks for users
-      description: The tasks in this task list. Read-only. Nullable.
       operationId: users.todo.lists_CreateTasks
       parameters:
         - name: user-id
@@ -11093,7 +10184,6 @@ paths:
       tags:
         - users.todo
       summary: Update the navigation property tasks in users
-      description: The tasks in this task list. Read-only. Nullable.
       operationId: users.todo.lists_UpdateTasks
       parameters:
         - name: user-id
@@ -11134,7 +10224,6 @@ paths:
       tags:
         - users.todo
       summary: Delete navigation property tasks for users
-      description: The tasks in this task list. Read-only. Nullable.
       operationId: users.todo.lists_DeleteTasks
       parameters:
         - name: user-id
@@ -11242,21 +10331,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of extension
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.extension'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.extensionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -11267,7 +10342,6 @@ paths:
       tags:
         - users.todo
       summary: Create new navigation property to extensions for users
-      description: The collection of open extensions defined for the task. Nullable.
       operationId: users.todo.lists.tasks_CreateExtensions
       parameters:
         - name: user-id
@@ -11382,7 +10456,6 @@ paths:
       tags:
         - users.todo
       summary: Update the navigation property extensions in users
-      description: The collection of open extensions defined for the task. Nullable.
       operationId: users.todo.lists.tasks_UpdateExtensions
       parameters:
         - name: user-id
@@ -11430,7 +10503,6 @@ paths:
       tags:
         - users.todo
       summary: Delete navigation property extensions for users
-      description: The collection of open extensions defined for the task. Nullable.
       operationId: users.todo.lists.tasks_DeleteExtensions
       parameters:
         - name: user-id
@@ -11557,21 +10629,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of linkedResource
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.linkedResource'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.linkedResourceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -11582,7 +10640,6 @@ paths:
       tags:
         - users.todo
       summary: Create new navigation property to linkedResources for users
-      description: A collection of resources linked to the task.
       operationId: users.todo.lists.tasks_CreateLinkedResources
       parameters:
         - name: user-id
@@ -11701,7 +10758,6 @@ paths:
       tags:
         - users.todo
       summary: Update the navigation property linkedResources in users
-      description: A collection of resources linked to the task.
       operationId: users.todo.lists.tasks_UpdateLinkedResources
       parameters:
         - name: user-id
@@ -11749,7 +10805,6 @@ paths:
       tags:
         - users.todo
       summary: Delete navigation property linkedResources for users
-      description: A collection of resources linked to the task.
       operationId: users.todo.lists.tasks_DeleteLinkedResources
       parameters:
         - name: user-id
@@ -11852,33 +10907,19 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.directoryObject'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
-  '/users/{user-id}/transitiveMemberOf/$ref':
+  '/users/{user-id}/transitiveMemberOf/{directoryObject-id}':
     get:
       tags:
         - users.directoryObject
-      summary: Get ref of transitiveMemberOf from users
-      operationId: users_ListGraphRefTransitiveMemberOf
+      summary: Get transitiveMemberOf from users
+      operationId: users_GetTransitiveMemberOf
       parameters:
         - name: user-id
           in: path
@@ -11887,14 +10928,16 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: user
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
           in: query
-          description: Order items by property values
+          description: Select properties to be returned
           style: form
           explode: false
           schema:
@@ -11903,64 +10946,27 @@ paths:
             items:
               enum:
                 - id
-                - id desc
                 - deletedDateTime
-                - deletedDateTime desc
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
+          description: Retrieved navigation property
           content:
             application/json:
               schema:
-                title: Collection of links of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - users.directoryObject
-      summary: Create new navigation property ref to transitiveMemberOf for users
-      operationId: users_CreateGraphRefTransitiveMemberOf
-      parameters:
-        - name: user-id
-          in: path
-          description: 'key: id of user'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: user
-      requestBody:
-        description: New navigation property ref value
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-        required: true
-      responses:
-        '201':
-          description: Created navigation property link.
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  type: object
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -12026,34 +11032,20 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.directoryObject'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
-  '/users/{user-id}/transitiveReports/$ref':
+  '/users/{user-id}/transitiveReports/{directoryObject-id}':
     get:
       tags:
         - users.directoryObject
-      summary: Get ref of transitiveReports from users
+      summary: Get transitiveReports from users
       description: The transitive reports for a user. Read-only.
-      operationId: users_ListGraphRefTransitiveReports
+      operationId: users_GetTransitiveReports
       parameters:
         - name: user-id
           in: path
@@ -12062,14 +11054,16 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: user
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
           in: query
-          description: Order items by property values
+          description: Select properties to be returned
           style: form
           explode: false
           schema:
@@ -12078,65 +11072,27 @@ paths:
             items:
               enum:
                 - id
-                - id desc
                 - deletedDateTime
-                - deletedDateTime desc
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
+          description: Retrieved navigation property
           content:
             application/json:
               schema:
-                title: Collection of links of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - users.directoryObject
-      summary: Create new navigation property ref to transitiveReports for users
-      description: The transitive reports for a user. Read-only.
-      operationId: users_CreateGraphRefTransitiveReports
-      parameters:
-        - name: user-id
-          in: path
-          description: 'key: id of user'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: user
-      requestBody:
-        description: New navigation property ref value
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-        required: true
-      responses:
-        '201':
-          description: Created navigation property link.
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  type: object
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16887,13 +15843,217 @@ components:
         - flaggedEmails
         - unknownFutureValue
       type: string
-    odata.error:
+    microsoft.graph.userCollectionResponse:
+      title: Collection of user
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.user'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.ODataErrors.ODataError:
       required:
         - error
       type: object
       properties:
         error:
-          $ref: '#/components/schemas/odata.error.main'
+          $ref: '#/components/schemas/microsoft.graph.ODataErrors.MainError'
+      additionalProperties:
+        type: object
+    microsoft.graph.directoryObjectCollectionResponse:
+      title: Collection of directoryObject
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.extensionCollectionResponse:
+      title: Collection of extension
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.extension'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.licenseDetailsCollectionResponse:
+      title: Collection of licenseDetails
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.licenseDetails'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.notificationCollectionResponse:
+      title: Collection of notification
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.notification'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.oAuth2PermissionGrantCollectionResponse:
+      title: Collection of oAuth2PermissionGrant
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.oAuth2PermissionGrant'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.outlookCategoryCollectionResponse:
+      title: Collection of outlookCategory
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.outlookCategory'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.outlookTaskFolderCollectionResponse:
+      title: Collection of outlookTaskFolder
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.outlookTaskFolder'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.multiValueLegacyExtendedPropertyCollectionResponse:
+      title: Collection of multiValueLegacyExtendedProperty
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.multiValueLegacyExtendedProperty'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.singleValueLegacyExtendedPropertyCollectionResponse:
+      title: Collection of singleValueLegacyExtendedProperty
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.singleValueLegacyExtendedProperty'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.outlookTaskCollectionResponse:
+      title: Collection of outlookTask
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.outlookTask'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.attachmentCollectionResponse:
+      title: Collection of attachment
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.attachment'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.outlookTaskGroupCollectionResponse:
+      title: Collection of outlookTaskGroup
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.outlookTaskGroup'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.profilePhotoCollectionResponse:
+      title: Collection of profilePhoto
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.profilePhoto'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.todoTaskListCollectionResponse:
+      title: Collection of todoTaskList
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.todoTaskList'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.todoTaskCollectionResponse:
+      title: Collection of todoTask
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.todoTask'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.linkedResourceCollectionResponse:
+      title: Collection of linkedResource
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.linkedResource'
+        '@odata.nextLink':
+          type: string
       additionalProperties:
         type: object
     microsoft.graph.automaticRepliesSetting:
@@ -22445,7 +21605,7 @@ components:
           nullable: true
       additionalProperties:
         type: object
-    odata.error.main:
+    microsoft.graph.ODataErrors.MainError:
       required:
         - code
         - message
@@ -22457,15 +21617,13 @@ components:
           type: string
         target:
           type: string
+          nullable: true
         details:
           type: array
           items:
-            $ref: '#/components/schemas/odata.error.detail'
+            $ref: '#/components/schemas/microsoft.graph.ODataErrors.ErrorDetails'
         innererror:
-          type: object
-          additionalProperties:
-            type: object
-          description: The structure of this object is service-specific
+          $ref: '#/components/schemas/microsoft.graph.ODataErrors.InnerError'
       additionalProperties:
         type: object
     microsoft.graph.externalAudienceScope:
@@ -26647,7 +25805,7 @@ components:
         - noEnd
         - numbered
       type: string
-    odata.error.detail:
+    microsoft.graph.ODataErrors.ErrorDetails:
       required:
         - code
         - message
@@ -26659,8 +25817,14 @@ components:
           type: string
         target:
           type: string
+          nullable: true
       additionalProperties:
         type: object
+    microsoft.graph.ODataErrors.InnerError:
+      type: object
+      additionalProperties:
+        type: object
+      description: The structure of this object is service-specific
     microsoft.graph.volumeType:
       title: volumeType
       enum:
@@ -29118,12 +28282,114 @@ components:
           additionalProperties:
             type: object
   responses:
+    microsoft.graph.userCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.userCollectionResponse'
     error:
       description: error
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/odata.error'
+            $ref: '#/components/schemas/microsoft.graph.ODataErrors.ODataError'
+    microsoft.graph.directoryObjectCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.directoryObjectCollectionResponse'
+    microsoft.graph.extensionCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.extensionCollectionResponse'
+    microsoft.graph.licenseDetailsCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.licenseDetailsCollectionResponse'
+    microsoft.graph.notificationCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.notificationCollectionResponse'
+    microsoft.graph.oAuth2PermissionGrantCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.oAuth2PermissionGrantCollectionResponse'
+    microsoft.graph.outlookCategoryCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.outlookCategoryCollectionResponse'
+    microsoft.graph.outlookTaskFolderCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.outlookTaskFolderCollectionResponse'
+    microsoft.graph.multiValueLegacyExtendedPropertyCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.multiValueLegacyExtendedPropertyCollectionResponse'
+    microsoft.graph.singleValueLegacyExtendedPropertyCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.singleValueLegacyExtendedPropertyCollectionResponse'
+    microsoft.graph.outlookTaskCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.outlookTaskCollectionResponse'
+    microsoft.graph.attachmentCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.attachmentCollectionResponse'
+    microsoft.graph.outlookTaskGroupCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.outlookTaskGroupCollectionResponse'
+    microsoft.graph.profilePhotoCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.profilePhotoCollectionResponse'
+    microsoft.graph.todoTaskListCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.todoTaskListCollectionResponse'
+    microsoft.graph.todoTaskCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.todoTaskCollectionResponse'
+    microsoft.graph.linkedResourceCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.linkedResourceCollectionResponse'
   parameters:
     top:
       name: $top

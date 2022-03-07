@@ -75,21 +75,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Collection of dataPolicyOperation
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.dataPolicyOperation'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.dataPolicyOperationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -277,7 +263,6 @@ paths:
       tags:
         - identity.conditionalAccessRoot
       summary: Update the navigation property conditionalAccess in identity
-      description: the entry point for the Conditional Access (CA) object model.
       operationId: identity_UpdateConditionalAccess
       requestBody:
         description: New navigation property values
@@ -296,7 +281,6 @@ paths:
       tags:
         - identity.conditionalAccessRoot
       summary: Delete navigation property conditionalAccess for identity
-      description: the entry point for the Conditional Access (CA) object model.
       operationId: identity_DeleteConditionalAccess
       parameters:
         - name: If-Match
@@ -371,21 +355,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of namedLocation
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.namedLocation'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.namedLocationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -396,7 +366,6 @@ paths:
       tags:
         - identity.conditionalAccessRoot
       summary: Create new navigation property to namedLocations for identity
-      description: Read-only. Nullable. Returns a collection of the specified named locations.
       operationId: identity.conditionalAccess_CreateNamedLocations
       requestBody:
         description: New navigation property
@@ -471,7 +440,6 @@ paths:
       tags:
         - identity.conditionalAccessRoot
       summary: Update the navigation property namedLocations in identity
-      description: Read-only. Nullable. Returns a collection of the specified named locations.
       operationId: identity.conditionalAccess_UpdateNamedLocations
       parameters:
         - name: namedLocation-id
@@ -498,7 +466,6 @@ paths:
       tags:
         - identity.conditionalAccessRoot
       summary: Delete navigation property namedLocations for identity
-      description: Read-only. Nullable. Returns a collection of the specified named locations.
       operationId: identity.conditionalAccess_DeleteNamedLocations
       parameters:
         - name: namedLocation-id
@@ -595,21 +562,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of conditionalAccessPolicy
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.conditionalAccessPolicy'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.conditionalAccessPolicyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -620,7 +573,6 @@ paths:
       tags:
         - identity.conditionalAccessRoot
       summary: Create new navigation property to policies for identity
-      description: Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
       operationId: identity.conditionalAccess_CreatePolicies
       requestBody:
         description: New navigation property
@@ -700,7 +652,6 @@ paths:
       tags:
         - identity.conditionalAccessRoot
       summary: Update the navigation property policies in identity
-      description: Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
       operationId: identity.conditionalAccess_UpdatePolicies
       parameters:
         - name: conditionalAccessPolicy-id
@@ -727,7 +678,6 @@ paths:
       tags:
         - identity.conditionalAccessRoot
       summary: Delete navigation property policies for identity
-      description: Read-only. Nullable. Returns a collection of the specified Conditional Access (CA) policies.
       operationId: identity.conditionalAccess_DeletePolicies
       parameters:
         - name: conditionalAccessPolicy-id
@@ -811,23 +761,15 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Collection of identityProvider
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.identityProvider'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.identityProviderCollectionResponse'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2023-03-15T00:00:00.0000000+00:00'
+        date: '2021-08-24T00:00:00.0000000+00:00'
+        version: 2021-05/identityProvider
+        description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
@@ -853,6 +795,12 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.identityProvider'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2023-03-15T00:00:00.0000000+00:00'
+        date: '2021-08-24T00:00:00.0000000+00:00'
+        version: 2021-05/identityProvider
+        description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
       x-ms-docs-operation-type: operation
   '/identityProviders/{identityProvider-id}':
     get:
@@ -905,6 +853,12 @@ paths:
                 $ref: '#/components/schemas/microsoft.graph.identityProvider'
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2023-03-15T00:00:00.0000000+00:00'
+        date: '2021-08-24T00:00:00.0000000+00:00'
+        version: 2021-05/identityProvider
+        description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
       x-ms-docs-operation-type: operation
     patch:
       tags:
@@ -931,6 +885,12 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2023-03-15T00:00:00.0000000+00:00'
+        date: '2021-08-24T00:00:00.0000000+00:00'
+        version: 2021-05/identityProvider
+        description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
       x-ms-docs-operation-type: operation
     delete:
       tags:
@@ -955,6 +915,12 @@ paths:
           description: Success
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2023-03-15T00:00:00.0000000+00:00'
+        date: '2021-08-24T00:00:00.0000000+00:00'
+        version: 2021-05/identityProvider
+        description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
       x-ms-docs-operation-type: operation
   /identityProviders/microsoft.graph.availableProviderTypes():
     get:
@@ -968,12 +934,24 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  type: string
-                  nullable: true
+                title: Collection of identityProvider
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                      nullable: true
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
+      deprecated: true
+      x-ms-deprecation:
+        removalDate: '2023-03-15T00:00:00.0000000+00:00'
+        date: '2021-08-24T00:00:00.0000000+00:00'
+        version: 2021-05/identityProvider
+        description: The identityProvider API is deprecated and will stop returning data on March 2023. Please use the new identityProviderBase API.
       x-ms-docs-operation-type: function
   /informationProtection:
     get:
@@ -1188,21 +1166,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of bitlockerRecoveryKey
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.bitlockerRecoveryKey'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.bitlockerRecoveryKeyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -1213,7 +1177,6 @@ paths:
       tags:
         - informationProtection.bitlocker
       summary: Create new navigation property to recoveryKeys for informationProtection
-      description: The recovery keys associated with the bitlocker entity.
       operationId: informationProtection.bitlocker_CreateRecoveryKeys
       requestBody:
         description: New navigation property
@@ -1289,7 +1252,6 @@ paths:
       tags:
         - informationProtection.bitlocker
       summary: Update the navigation property recoveryKeys in informationProtection
-      description: The recovery keys associated with the bitlocker entity.
       operationId: informationProtection.bitlocker_UpdateRecoveryKeys
       parameters:
         - name: bitlockerRecoveryKey-id
@@ -1316,7 +1278,6 @@ paths:
       tags:
         - informationProtection.bitlocker
       summary: Delete navigation property recoveryKeys for informationProtection
-      description: The recovery keys associated with the bitlocker entity.
       operationId: informationProtection.bitlocker_DeleteRecoveryKeys
       parameters:
         - name: bitlockerRecoveryKey-id
@@ -1411,21 +1372,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of threatAssessmentRequest
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.threatAssessmentRequest'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.threatAssessmentRequestCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -1634,21 +1581,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of threatAssessmentResult
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.threatAssessmentResult'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.threatAssessmentResultCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -1659,7 +1592,6 @@ paths:
       tags:
         - informationProtection.threatAssessmentRequest
       summary: Create new navigation property to results for informationProtection
-      description: 'A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.'
       operationId: informationProtection.threatAssessmentRequests_CreateResults
       parameters:
         - name: threatAssessmentRequest-id
@@ -1749,7 +1681,6 @@ paths:
       tags:
         - informationProtection.threatAssessmentRequest
       summary: Update the navigation property results in informationProtection
-      description: 'A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.'
       operationId: informationProtection.threatAssessmentRequests_UpdateResults
       parameters:
         - name: threatAssessmentRequest-id
@@ -1783,7 +1714,6 @@ paths:
       tags:
         - informationProtection.threatAssessmentRequest
       summary: Delete navigation property results for informationProtection
-      description: 'A collection of threat assessment results. Read-only. By default, a GET /threatAssessmentRequests/{id} does not return this property unless you apply $expand on it.'
       operationId: informationProtection.threatAssessmentRequests_DeleteResults
       parameters:
         - name: threatAssessmentRequest-id
@@ -1888,21 +1818,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Collection of invitation
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.invitation'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.invitationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -2440,270 +2356,6 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
-  '/invitations/{invitation-id}/invitedUser/$ref':
-    get:
-      tags:
-        - invitations.user
-      summary: Get ref of invitedUser from invitations
-      description: The user created as part of the invitation creation. Read-Only
-      operationId: invitations_GetGraphRefInvitedUser
-      parameters:
-        - name: invitation-id
-          in: path
-          description: 'key: id of invitation'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: invitation
-      responses:
-        '200':
-          description: Retrieved navigation property link
-          content:
-            application/json:
-              schema:
-                type: string
-          links:
-            appRoleAssignments:
-              operationId: invitations.InvitedUser.ListAppRoleAssignments
-              parameters:
-                invitation-id: $request.path.invitation-id
-            createdObjects:
-              operationId: invitations.InvitedUser.ListCreatedObjects
-              parameters:
-                invitation-id: $request.path.invitation-id
-            directReports:
-              operationId: invitations.InvitedUser.ListDirectReports
-              parameters:
-                invitation-id: $request.path.invitation-id
-            licenseDetails:
-              operationId: invitations.InvitedUser.ListLicenseDetails
-              parameters:
-                invitation-id: $request.path.invitation-id
-            manager:
-              operationId: invitations.InvitedUser.GetManager
-              parameters:
-                invitation-id: $request.path.invitation-id
-            memberOf:
-              operationId: invitations.InvitedUser.ListMemberOf
-              parameters:
-                invitation-id: $request.path.invitation-id
-            oauth2PermissionGrants:
-              operationId: invitations.InvitedUser.ListOauth2PermissionGrants
-              parameters:
-                invitation-id: $request.path.invitation-id
-            ownedDevices:
-              operationId: invitations.InvitedUser.ListOwnedDevices
-              parameters:
-                invitation-id: $request.path.invitation-id
-            ownedObjects:
-              operationId: invitations.InvitedUser.ListOwnedObjects
-              parameters:
-                invitation-id: $request.path.invitation-id
-            registeredDevices:
-              operationId: invitations.InvitedUser.ListRegisteredDevices
-              parameters:
-                invitation-id: $request.path.invitation-id
-            scopedRoleMemberOf:
-              operationId: invitations.InvitedUser.ListScopedRoleMemberOf
-              parameters:
-                invitation-id: $request.path.invitation-id
-            transitiveMemberOf:
-              operationId: invitations.InvitedUser.ListTransitiveMemberOf
-              parameters:
-                invitation-id: $request.path.invitation-id
-            calendar:
-              operationId: invitations.InvitedUser.GetCalendar
-              parameters:
-                invitation-id: $request.path.invitation-id
-            calendarGroups:
-              operationId: invitations.InvitedUser.ListCalendarGroups
-              parameters:
-                invitation-id: $request.path.invitation-id
-            calendars:
-              operationId: invitations.InvitedUser.ListCalendars
-              parameters:
-                invitation-id: $request.path.invitation-id
-            calendarView:
-              operationId: invitations.InvitedUser.ListCalendarView
-              parameters:
-                invitation-id: $request.path.invitation-id
-            contactFolders:
-              operationId: invitations.InvitedUser.ListContactFolders
-              parameters:
-                invitation-id: $request.path.invitation-id
-            contacts:
-              operationId: invitations.InvitedUser.ListContacts
-              parameters:
-                invitation-id: $request.path.invitation-id
-            events:
-              operationId: invitations.InvitedUser.ListEvents
-              parameters:
-                invitation-id: $request.path.invitation-id
-            inferenceClassification:
-              operationId: invitations.InvitedUser.GetInferenceClassification
-              parameters:
-                invitation-id: $request.path.invitation-id
-            mailFolders:
-              operationId: invitations.InvitedUser.ListMailFolders
-              parameters:
-                invitation-id: $request.path.invitation-id
-            messages:
-              operationId: invitations.InvitedUser.ListMessages
-              parameters:
-                invitation-id: $request.path.invitation-id
-            outlook:
-              operationId: invitations.InvitedUser.GetOutlook
-              parameters:
-                invitation-id: $request.path.invitation-id
-            people:
-              operationId: invitations.InvitedUser.ListPeople
-              parameters:
-                invitation-id: $request.path.invitation-id
-            drive:
-              operationId: invitations.InvitedUser.GetDrive
-              parameters:
-                invitation-id: $request.path.invitation-id
-            drives:
-              operationId: invitations.InvitedUser.ListDrives
-              parameters:
-                invitation-id: $request.path.invitation-id
-            followedSites:
-              operationId: invitations.InvitedUser.ListFollowedSites
-              parameters:
-                invitation-id: $request.path.invitation-id
-            extensions:
-              operationId: invitations.InvitedUser.ListExtensions
-              parameters:
-                invitation-id: $request.path.invitation-id
-            agreementAcceptances:
-              operationId: invitations.InvitedUser.ListAgreementAcceptances
-              parameters:
-                invitation-id: $request.path.invitation-id
-            managedDevices:
-              operationId: invitations.InvitedUser.ListManagedDevices
-              parameters:
-                invitation-id: $request.path.invitation-id
-            managedAppRegistrations:
-              operationId: invitations.InvitedUser.ListManagedAppRegistrations
-              parameters:
-                invitation-id: $request.path.invitation-id
-            deviceManagementTroubleshootingEvents:
-              operationId: invitations.InvitedUser.ListDeviceManagementTroubleshootingEvents
-              parameters:
-                invitation-id: $request.path.invitation-id
-            planner:
-              operationId: invitations.InvitedUser.GetPlanner
-              parameters:
-                invitation-id: $request.path.invitation-id
-            insights:
-              operationId: invitations.InvitedUser.GetInsights
-              parameters:
-                invitation-id: $request.path.invitation-id
-            settings:
-              operationId: invitations.InvitedUser.GetSettings
-              parameters:
-                invitation-id: $request.path.invitation-id
-            onenote:
-              operationId: invitations.InvitedUser.GetOnenote
-              parameters:
-                invitation-id: $request.path.invitation-id
-            photo:
-              operationId: invitations.InvitedUser.GetPhoto
-              parameters:
-                invitation-id: $request.path.invitation-id
-            photos:
-              operationId: invitations.InvitedUser.ListPhotos
-              parameters:
-                invitation-id: $request.path.invitation-id
-            activities:
-              operationId: invitations.InvitedUser.ListActivities
-              parameters:
-                invitation-id: $request.path.invitation-id
-            onlineMeetings:
-              operationId: invitations.InvitedUser.ListOnlineMeetings
-              parameters:
-                invitation-id: $request.path.invitation-id
-            presence:
-              operationId: invitations.InvitedUser.GetPresence
-              parameters:
-                invitation-id: $request.path.invitation-id
-            authentication:
-              operationId: invitations.InvitedUser.GetAuthentication
-              parameters:
-                invitation-id: $request.path.invitation-id
-            chats:
-              operationId: invitations.InvitedUser.ListChats
-              parameters:
-                invitation-id: $request.path.invitation-id
-            joinedTeams:
-              operationId: invitations.InvitedUser.ListJoinedTeams
-              parameters:
-                invitation-id: $request.path.invitation-id
-            teamwork:
-              operationId: invitations.InvitedUser.GetTeamwork
-              parameters:
-                invitation-id: $request.path.invitation-id
-            todo:
-              operationId: invitations.InvitedUser.GetTodo
-              parameters:
-                invitation-id: $request.path.invitation-id
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-    put:
-      tags:
-        - invitations.user
-      summary: Update the ref of navigation property invitedUser in invitations
-      description: The user created as part of the invitation creation. Read-Only
-      operationId: invitations_SetGraphRefInvitedUser
-      parameters:
-        - name: invitation-id
-          in: path
-          description: 'key: id of invitation'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: invitation
-      requestBody:
-        description: New navigation property ref values
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-        required: true
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
-    delete:
-      tags:
-        - invitations.user
-      summary: Delete ref of navigation property invitedUser for invitations
-      description: The user created as part of the invitation creation. Read-Only
-      operationId: invitations_DeleteGraphRefInvitedUser
-      parameters:
-        - name: invitation-id
-          in: path
-          description: 'key: id of invitation'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: invitation
-        - name: If-Match
-          in: header
-          description: ETag
-          schema:
-            type: string
-      responses:
-        '204':
-          description: Success
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-docs-operation-type: operation
   /oauth2PermissionGrants:
     get:
       tags:
@@ -2770,21 +2422,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved entities
-          content:
-            application/json:
-              schema:
-                title: Collection of oAuth2PermissionGrant
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.oAuth2PermissionGrant'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.oAuth2PermissionGrantCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -2928,9 +2566,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.oAuth2PermissionGrant'
+                title: Collection of oAuth2PermissionGrant
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.oAuth2PermissionGrant'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: function
@@ -2996,34 +2640,20 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of certificateBasedAuthConfiguration
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.certificateBasedAuthConfiguration'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.certificateBasedAuthConfigurationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
         nextLinkName: '@odata.nextLink'
         operationName: listMore
       x-ms-docs-operation-type: operation
-  '/organization/{organization-id}/certificateBasedAuthConfiguration/$ref':
+  '/organization/{organization-id}/certificateBasedAuthConfiguration/{certificateBasedAuthConfiguration-id}':
     get:
       tags:
         - organization.certificateBasedAuthConfiguration
-      summary: Get ref of certificateBasedAuthConfiguration from organization
+      summary: Get certificateBasedAuthConfiguration from organization
       description: Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
-      operationId: organization_ListGraphRefCertificateBasedAuthConfiguration
+      operationId: organization_GetCertificateBasedAuthConfiguration
       parameters:
         - name: organization-id
           in: path
@@ -3032,14 +2662,16 @@ paths:
           schema:
             type: string
           x-ms-docs-key-type: organization
-        - $ref: '#/components/parameters/top'
-        - $ref: '#/components/parameters/skip'
-        - $ref: '#/components/parameters/search'
-        - $ref: '#/components/parameters/filter'
-        - $ref: '#/components/parameters/count'
-        - name: $orderby
+        - name: certificateBasedAuthConfiguration-id
+          in: path
+          description: 'key: id of certificateBasedAuthConfiguration'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: certificateBasedAuthConfiguration
+        - name: $select
           in: query
-          description: Order items by property values
+          description: Select properties to be returned
           style: form
           explode: false
           schema:
@@ -3048,65 +2680,27 @@ paths:
             items:
               enum:
                 - id
-                - id desc
                 - certificateAuthorities
-                - certificateAuthorities desc
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
               type: string
       responses:
         '200':
-          description: Retrieved navigation property links
+          description: Retrieved navigation property
           content:
             application/json:
               schema:
-                title: Collection of links of certificateBasedAuthConfiguration
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      type: string
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
-        default:
-          $ref: '#/components/responses/error'
-      x-ms-pageable:
-        nextLinkName: '@odata.nextLink'
-        operationName: listMore
-      x-ms-docs-operation-type: operation
-    post:
-      tags:
-        - organization.certificateBasedAuthConfiguration
-      summary: Create new navigation property ref to certificateBasedAuthConfiguration for organization
-      description: Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
-      operationId: organization_CreateGraphRefCertificateBasedAuthConfiguration
-      parameters:
-        - name: organization-id
-          in: path
-          description: 'key: id of organization'
-          required: true
-          schema:
-            type: string
-          x-ms-docs-key-type: organization
-      requestBody:
-        description: New navigation property ref value
-        content:
-          application/json:
-            schema:
-              type: object
-              additionalProperties:
-                type: object
-        required: true
-      responses:
-        '201':
-          description: Created navigation property link.
-          content:
-            application/json:
-              schema:
-                type: object
-                additionalProperties:
-                  type: object
+                $ref: '#/components/schemas/microsoft.graph.certificateBasedAuthConfiguration'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3291,21 +2885,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of activityBasedTimeoutPolicy
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.activityBasedTimeoutPolicy'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.activityBasedTimeoutPolicyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -3316,7 +2896,6 @@ paths:
       tags:
         - policies.activityBasedTimeoutPolicy
       summary: Create new navigation property to activityBasedTimeoutPolicies for policies
-      description: The policy that controls the idle time out for web sessions for applications.
       operationId: policies_CreateActivityBasedTimeoutPolicies
       requestBody:
         description: New navigation property
@@ -3400,7 +2979,6 @@ paths:
       tags:
         - policies.activityBasedTimeoutPolicy
       summary: Update the navigation property activityBasedTimeoutPolicies in policies
-      description: The policy that controls the idle time out for web sessions for applications.
       operationId: policies_UpdateActivityBasedTimeoutPolicies
       parameters:
         - name: activityBasedTimeoutPolicy-id
@@ -3427,7 +3005,6 @@ paths:
       tags:
         - policies.activityBasedTimeoutPolicy
       summary: Delete navigation property activityBasedTimeoutPolicies for policies
-      description: The policy that controls the idle time out for web sessions for applications.
       operationId: policies_DeleteActivityBasedTimeoutPolicies
       parameters:
         - name: activityBasedTimeoutPolicy-id
@@ -3500,7 +3077,6 @@ paths:
       tags:
         - policies.adminConsentRequestPolicy
       summary: Update the navigation property adminConsentRequestPolicy in policies
-      description: The policy by which consent requests are created and managed for the entire tenant.
       operationId: policies_UpdateAdminConsentRequestPolicy
       requestBody:
         description: New navigation property values
@@ -3519,7 +3095,6 @@ paths:
       tags:
         - policies.adminConsentRequestPolicy
       summary: Delete navigation property adminConsentRequestPolicy for policies
-      description: The policy by which consent requests are created and managed for the entire tenant.
       operationId: policies_DeleteAdminConsentRequestPolicy
       parameters:
         - name: If-Match
@@ -3582,7 +3157,6 @@ paths:
       tags:
         - policies.authenticationFlowsPolicy
       summary: Update the navigation property authenticationFlowsPolicy in policies
-      description: The policy configuration of the self-service sign-up experience of external users.
       operationId: policies_UpdateAuthenticationFlowsPolicy
       requestBody:
         description: New navigation property values
@@ -3601,7 +3175,6 @@ paths:
       tags:
         - policies.authenticationFlowsPolicy
       summary: Delete navigation property authenticationFlowsPolicy for policies
-      description: The policy configuration of the self-service sign-up experience of external users.
       operationId: policies_DeleteAuthenticationFlowsPolicy
       parameters:
         - name: If-Match
@@ -3672,7 +3245,6 @@ paths:
       tags:
         - policies.authenticationMethodsPolicy
       summary: Update the navigation property authenticationMethodsPolicy in policies
-      description: The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
       operationId: policies_UpdateAuthenticationMethodsPolicy
       requestBody:
         description: New navigation property values
@@ -3691,9 +3263,192 @@ paths:
       tags:
         - policies.authenticationMethodsPolicy
       summary: Delete navigation property authenticationMethodsPolicy for policies
-      description: The authentication methods and the users that are allowed to use them to sign in and perform multi-factor authentication (MFA) in Azure Active Directory (Azure AD).
       operationId: policies_DeleteAuthenticationMethodsPolicy
       parameters:
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  /policies/authenticationMethodsPolicy/authenticationMethodConfigurations:
+    get:
+      tags:
+        - policies.authenticationMethodsPolicy
+      summary: Get authenticationMethodConfigurations from policies
+      description: Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
+      operationId: policies.authenticationMethodsPolicy_ListAuthenticationMethodConfigurations
+      parameters:
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - state
+                - state desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - state
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.authenticationMethodConfigurationCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+    post:
+      tags:
+        - policies.authenticationMethodsPolicy
+      summary: Create new navigation property to authenticationMethodConfigurations for policies
+      operationId: policies.authenticationMethodsPolicy_CreateAuthenticationMethodConfigurations
+      requestBody:
+        description: New navigation property
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.authenticationMethodConfiguration'
+        required: true
+      responses:
+        '201':
+          description: Created navigation property.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.authenticationMethodConfiguration'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/policies/authenticationMethodsPolicy/authenticationMethodConfigurations/{authenticationMethodConfiguration-id}':
+    get:
+      tags:
+        - policies.authenticationMethodsPolicy
+      summary: Get authenticationMethodConfigurations from policies
+      description: Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
+      operationId: policies.authenticationMethodsPolicy_GetAuthenticationMethodConfigurations
+      parameters:
+        - name: authenticationMethodConfiguration-id
+          in: path
+          description: 'key: id of authenticationMethodConfiguration'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: authenticationMethodConfiguration
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - state
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.authenticationMethodConfiguration'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    patch:
+      tags:
+        - policies.authenticationMethodsPolicy
+      summary: Update the navigation property authenticationMethodConfigurations in policies
+      operationId: policies.authenticationMethodsPolicy_UpdateAuthenticationMethodConfigurations
+      parameters:
+        - name: authenticationMethodConfiguration-id
+          in: path
+          description: 'key: id of authenticationMethodConfiguration'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: authenticationMethodConfiguration
+      requestBody:
+        description: New navigation property values
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.authenticationMethodConfiguration'
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    delete:
+      tags:
+        - policies.authenticationMethodsPolicy
+      summary: Delete navigation property authenticationMethodConfigurations for policies
+      operationId: policies.authenticationMethodsPolicy_DeleteAuthenticationMethodConfigurations
+      parameters:
+        - name: authenticationMethodConfiguration-id
+          in: path
+          description: 'key: id of authenticationMethodConfiguration'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: authenticationMethodConfiguration
         - name: If-Match
           in: header
           description: ETag
@@ -3761,7 +3516,6 @@ paths:
       tags:
         - policies.authorizationPolicy
       summary: Update the navigation property authorizationPolicy in policies
-      description: The policy that controls Azure AD authorization settings.
       operationId: policies_UpdateAuthorizationPolicy
       requestBody:
         description: New navigation property values
@@ -3780,7 +3534,6 @@ paths:
       tags:
         - policies.authorizationPolicy
       summary: Delete navigation property authorizationPolicy for policies
-      description: The policy that controls Azure AD authorization settings.
       operationId: policies_DeleteAuthorizationPolicy
       parameters:
         - name: If-Match
@@ -3863,21 +3616,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of claimsMappingPolicy
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.claimsMappingPolicy'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.claimsMappingPolicyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -3888,7 +3627,6 @@ paths:
       tags:
         - policies.claimsMappingPolicy
       summary: Create new navigation property to claimsMappingPolicies for policies
-      description: 'The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.'
       operationId: policies_CreateClaimsMappingPolicies
       requestBody:
         description: New navigation property
@@ -3972,7 +3710,6 @@ paths:
       tags:
         - policies.claimsMappingPolicy
       summary: Update the navigation property claimsMappingPolicies in policies
-      description: 'The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.'
       operationId: policies_UpdateClaimsMappingPolicies
       parameters:
         - name: claimsMappingPolicy-id
@@ -3999,7 +3736,6 @@ paths:
       tags:
         - policies.claimsMappingPolicy
       summary: Delete navigation property claimsMappingPolicies for policies
-      description: 'The claim-mapping policies for WS-Fed, SAML, OAuth 2.0, and OpenID Connect protocols, for tokens issued to a specific application.'
       operationId: policies_DeleteClaimsMappingPolicies
       parameters:
         - name: claimsMappingPolicy-id
@@ -4096,21 +3832,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of conditionalAccessPolicy
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.conditionalAccessPolicy'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.conditionalAccessPolicyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4121,7 +3843,6 @@ paths:
       tags:
         - policies.conditionalAccessPolicy
       summary: Create new navigation property to conditionalAccessPolicies for policies
-      description: The custom rules that define an access scenario.
       operationId: policies_CreateConditionalAccessPolicies
       requestBody:
         description: New navigation property
@@ -4201,7 +3922,6 @@ paths:
       tags:
         - policies.conditionalAccessPolicy
       summary: Update the navigation property conditionalAccessPolicies in policies
-      description: The custom rules that define an access scenario.
       operationId: policies_UpdateConditionalAccessPolicies
       parameters:
         - name: conditionalAccessPolicy-id
@@ -4228,7 +3948,6 @@ paths:
       tags:
         - policies.conditionalAccessPolicy
       summary: Delete navigation property conditionalAccessPolicies for policies
-      description: The custom rules that define an access scenario.
       operationId: policies_DeleteConditionalAccessPolicies
       parameters:
         - name: conditionalAccessPolicy-id
@@ -4318,21 +4037,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of featureRolloutPolicy
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.featureRolloutPolicy'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.featureRolloutPolicyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4343,7 +4048,6 @@ paths:
       tags:
         - policies.featureRolloutPolicy
       summary: Create new navigation property to featureRolloutPolicies for policies
-      description: The feature rollout policy associated with a directory object.
       operationId: policies_CreateFeatureRolloutPolicies
       requestBody:
         description: New navigation property
@@ -4427,7 +4131,6 @@ paths:
       tags:
         - policies.featureRolloutPolicy
       summary: Update the navigation property featureRolloutPolicies in policies
-      description: The feature rollout policy associated with a directory object.
       operationId: policies_UpdateFeatureRolloutPolicies
       parameters:
         - name: featureRolloutPolicy-id
@@ -4454,7 +4157,6 @@ paths:
       tags:
         - policies.featureRolloutPolicy
       summary: Delete navigation property featureRolloutPolicies for policies
-      description: The feature rollout policy associated with a directory object.
       operationId: policies_DeleteFeatureRolloutPolicies
       parameters:
         - name: featureRolloutPolicy-id
@@ -4537,21 +4239,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of directoryObject
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.directoryObject'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4562,7 +4250,6 @@ paths:
       tags:
         - policies.featureRolloutPolicy
       summary: Create new navigation property to appliesTo for policies
-      description: Nullable. Specifies a list of directoryObjects that feature is enabled for.
       operationId: policies.featureRolloutPolicies_CreateAppliesTo
       parameters:
         - name: featureRolloutPolicy-id
@@ -4650,7 +4337,6 @@ paths:
       tags:
         - policies.featureRolloutPolicy
       summary: Update the navigation property appliesTo in policies
-      description: Nullable. Specifies a list of directoryObjects that feature is enabled for.
       operationId: policies.featureRolloutPolicies_UpdateAppliesTo
       parameters:
         - name: featureRolloutPolicy-id
@@ -4684,7 +4370,6 @@ paths:
       tags:
         - policies.featureRolloutPolicy
       summary: Delete navigation property appliesTo for policies
-      description: Nullable. Specifies a list of directoryObjects that feature is enabled for.
       operationId: policies.featureRolloutPolicies_DeleteAppliesTo
       parameters:
         - name: featureRolloutPolicy-id
@@ -4781,21 +4466,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of homeRealmDiscoveryPolicy
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.homeRealmDiscoveryPolicy'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.homeRealmDiscoveryPolicyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4806,7 +4477,6 @@ paths:
       tags:
         - policies.homeRealmDiscoveryPolicy
       summary: Create new navigation property to homeRealmDiscoveryPolicies for policies
-      description: The policy to control Azure AD authentication behavior for federated users.
       operationId: policies_CreateHomeRealmDiscoveryPolicies
       requestBody:
         description: New navigation property
@@ -4890,7 +4560,6 @@ paths:
       tags:
         - policies.homeRealmDiscoveryPolicy
       summary: Update the navigation property homeRealmDiscoveryPolicies in policies
-      description: The policy to control Azure AD authentication behavior for federated users.
       operationId: policies_UpdateHomeRealmDiscoveryPolicies
       parameters:
         - name: homeRealmDiscoveryPolicy-id
@@ -4917,7 +4586,6 @@ paths:
       tags:
         - policies.homeRealmDiscoveryPolicy
       summary: Delete navigation property homeRealmDiscoveryPolicies for policies
-      description: The policy to control Azure AD authentication behavior for federated users.
       operationId: policies_DeleteHomeRealmDiscoveryPolicies
       parameters:
         - name: homeRealmDiscoveryPolicy-id
@@ -4988,7 +4656,6 @@ paths:
       tags:
         - policies.identitySecurityDefaultsEnforcementPolicy
       summary: Update the navigation property identitySecurityDefaultsEnforcementPolicy in policies
-      description: The policy that represents the security defaults that protect against common attacks.
       operationId: policies_UpdateIdentitySecurityDefaultsEnforcementPolicy
       requestBody:
         description: New navigation property values
@@ -5007,7 +4674,6 @@ paths:
       tags:
         - policies.identitySecurityDefaultsEnforcementPolicy
       summary: Delete navigation property identitySecurityDefaultsEnforcementPolicy for policies
-      description: The policy that represents the security defaults that protect against common attacks.
       operationId: policies_DeleteIdentitySecurityDefaultsEnforcementPolicy
       parameters:
         - name: If-Match
@@ -5086,21 +4752,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of permissionGrantPolicy
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.permissionGrantPolicy'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.permissionGrantPolicyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5111,7 +4763,6 @@ paths:
       tags:
         - policies.permissionGrantPolicy
       summary: Create new navigation property to permissionGrantPolicies for policies
-      description: The policy that specifies the conditions under which consent can be granted.
       operationId: policies_CreatePermissionGrantPolicies
       requestBody:
         description: New navigation property
@@ -5199,7 +4850,6 @@ paths:
       tags:
         - policies.permissionGrantPolicy
       summary: Update the navigation property permissionGrantPolicies in policies
-      description: The policy that specifies the conditions under which consent can be granted.
       operationId: policies_UpdatePermissionGrantPolicies
       parameters:
         - name: permissionGrantPolicy-id
@@ -5226,7 +4876,6 @@ paths:
       tags:
         - policies.permissionGrantPolicy
       summary: Delete navigation property permissionGrantPolicies for policies
-      description: The policy that specifies the conditions under which consent can be granted.
       operationId: policies_DeletePermissionGrantPolicies
       parameters:
         - name: permissionGrantPolicy-id
@@ -5330,21 +4979,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of permissionGrantConditionSet
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.permissionGrantConditionSet'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.permissionGrantConditionSetCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5355,7 +4990,6 @@ paths:
       tags:
         - policies.permissionGrantPolicy
       summary: Create new navigation property to excludes for policies
-      description: Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
       operationId: policies.permissionGrantPolicies_CreateExcludes
       parameters:
         - name: permissionGrantPolicy-id
@@ -5450,7 +5084,6 @@ paths:
       tags:
         - policies.permissionGrantPolicy
       summary: Update the navigation property excludes in policies
-      description: Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
       operationId: policies.permissionGrantPolicies_UpdateExcludes
       parameters:
         - name: permissionGrantPolicy-id
@@ -5484,7 +5117,6 @@ paths:
       tags:
         - policies.permissionGrantPolicy
       summary: Delete navigation property excludes for policies
-      description: Condition sets which are excluded in this permission grant policy. Automatically expanded on GET.
       operationId: policies.permissionGrantPolicies_DeleteExcludes
       parameters:
         - name: permissionGrantPolicy-id
@@ -5595,21 +5227,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of permissionGrantConditionSet
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.permissionGrantConditionSet'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.permissionGrantConditionSetCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5620,7 +5238,6 @@ paths:
       tags:
         - policies.permissionGrantPolicy
       summary: Create new navigation property to includes for policies
-      description: Condition sets which are included in this permission grant policy. Automatically expanded on GET.
       operationId: policies.permissionGrantPolicies_CreateIncludes
       parameters:
         - name: permissionGrantPolicy-id
@@ -5715,7 +5332,6 @@ paths:
       tags:
         - policies.permissionGrantPolicy
       summary: Update the navigation property includes in policies
-      description: Condition sets which are included in this permission grant policy. Automatically expanded on GET.
       operationId: policies.permissionGrantPolicies_UpdateIncludes
       parameters:
         - name: permissionGrantPolicy-id
@@ -5749,7 +5365,6 @@ paths:
       tags:
         - policies.permissionGrantPolicy
       summary: Delete navigation property includes for policies
-      description: Condition sets which are included in this permission grant policy. Automatically expanded on GET.
       operationId: policies.permissionGrantPolicies_DeleteIncludes
       parameters:
         - name: permissionGrantPolicy-id
@@ -5846,21 +5461,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of tokenIssuancePolicy
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.tokenIssuancePolicy'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.tokenIssuancePolicyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5871,7 +5472,6 @@ paths:
       tags:
         - policies.tokenIssuancePolicy
       summary: Create new navigation property to tokenIssuancePolicies for policies
-      description: The policy that specifies the characteristics of SAML tokens issued by Azure AD.
       operationId: policies_CreateTokenIssuancePolicies
       requestBody:
         description: New navigation property
@@ -5955,7 +5555,6 @@ paths:
       tags:
         - policies.tokenIssuancePolicy
       summary: Update the navigation property tokenIssuancePolicies in policies
-      description: The policy that specifies the characteristics of SAML tokens issued by Azure AD.
       operationId: policies_UpdateTokenIssuancePolicies
       parameters:
         - name: tokenIssuancePolicy-id
@@ -5982,7 +5581,6 @@ paths:
       tags:
         - policies.tokenIssuancePolicy
       summary: Delete navigation property tokenIssuancePolicies for policies
-      description: The policy that specifies the characteristics of SAML tokens issued by Azure AD.
       operationId: policies_DeleteTokenIssuancePolicies
       parameters:
         - name: tokenIssuancePolicy-id
@@ -6072,21 +5670,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of tokenLifetimePolicy
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.tokenLifetimePolicy'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.tokenLifetimePolicyCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -6097,7 +5681,6 @@ paths:
       tags:
         - policies.tokenLifetimePolicy
       summary: Create new navigation property to tokenLifetimePolicies for policies
-      description: 'The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.'
       operationId: policies_CreateTokenLifetimePolicies
       requestBody:
         description: New navigation property
@@ -6181,7 +5764,6 @@ paths:
       tags:
         - policies.tokenLifetimePolicy
       summary: Update the navigation property tokenLifetimePolicies in policies
-      description: 'The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.'
       operationId: policies_UpdateTokenLifetimePolicies
       parameters:
         - name: tokenLifetimePolicy-id
@@ -6208,7 +5790,6 @@ paths:
       tags:
         - policies.tokenLifetimePolicy
       summary: Delete navigation property tokenLifetimePolicies for policies
-      description: 'The policy that controls the lifetime of a JWT access token, an ID token, or a SAML 1.1/2.0 token issued by Azure AD.'
       operationId: policies_DeleteTokenLifetimePolicies
       parameters:
         - name: tokenLifetimePolicy-id
@@ -6428,21 +6009,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of fido2AuthenticationMethod
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.fido2AuthenticationMethod'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.fido2AuthenticationMethodCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -6662,21 +6229,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of authenticationMethod
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.authenticationMethod'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.authenticationMethodCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -6904,21 +6457,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of microsoftAuthenticatorAuthenticationMethod
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.microsoftAuthenticatorAuthenticationMethod'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.microsoftAuthenticatorAuthenticationMethodCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -7202,7 +6741,6 @@ paths:
       tags:
         - users.authentication
       summary: Update the navigation property device in users
-      description: The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
       operationId: users.authentication.microsoftAuthenticatorMethods_UpdateDevice
       parameters:
         - name: user-id
@@ -7236,7 +6774,6 @@ paths:
       tags:
         - users.authentication
       summary: Delete navigation property device for users
-      description: The registered device on which Microsoft Authenticator resides. This property is null if the device is not registered for passwordless Phone Sign-In.
       operationId: users.authentication.microsoftAuthenticatorMethods_DeleteDevice
       parameters:
         - name: user-id
@@ -7261,6 +6798,817 @@ paths:
       responses:
         '204':
           description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/extensions':
+    get:
+      tags:
+        - users.authentication
+      summary: Get extensions from users
+      description: The collection of open extensions defined for the device. Read-only. Nullable.
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListExtensions
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: microsoftAuthenticatorAuthenticationMethod-id
+          in: path
+          description: 'key: id of microsoftAuthenticatorAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: microsoftAuthenticatorAuthenticationMethod
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.extensionCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+    post:
+      tags:
+        - users.authentication
+      summary: Create new navigation property to extensions for users
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_CreateExtensions
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: microsoftAuthenticatorAuthenticationMethod-id
+          in: path
+          description: 'key: id of microsoftAuthenticatorAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: microsoftAuthenticatorAuthenticationMethod
+      requestBody:
+        description: New navigation property
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.extension'
+        required: true
+      responses:
+        '201':
+          description: Created navigation property.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.extension'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/extensions/{extension-id}':
+    get:
+      tags:
+        - users.authentication
+      summary: Get extensions from users
+      description: The collection of open extensions defined for the device. Read-only. Nullable.
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_GetExtensions
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: microsoftAuthenticatorAuthenticationMethod-id
+          in: path
+          description: 'key: id of microsoftAuthenticatorAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: microsoftAuthenticatorAuthenticationMethod
+        - name: extension-id
+          in: path
+          description: 'key: id of extension'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: extension
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.extension'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    patch:
+      tags:
+        - users.authentication
+      summary: Update the navigation property extensions in users
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_UpdateExtensions
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: microsoftAuthenticatorAuthenticationMethod-id
+          in: path
+          description: 'key: id of microsoftAuthenticatorAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: microsoftAuthenticatorAuthenticationMethod
+        - name: extension-id
+          in: path
+          description: 'key: id of extension'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: extension
+      requestBody:
+        description: New navigation property values
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.extension'
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    delete:
+      tags:
+        - users.authentication
+      summary: Delete navigation property extensions for users
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_DeleteExtensions
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: microsoftAuthenticatorAuthenticationMethod-id
+          in: path
+          description: 'key: id of microsoftAuthenticatorAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: microsoftAuthenticatorAuthenticationMethod
+        - name: extension-id
+          in: path
+          description: 'key: id of extension'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: extension
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf':
+    get:
+      tags:
+        - users.authentication
+      summary: Get memberOf from users
+      description: Groups that this device is a member of. Read-only. Nullable. Supports $expand.
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListMemberOf
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: microsoftAuthenticatorAuthenticationMethod-id
+          in: path
+          description: 'key: id of microsoftAuthenticatorAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: microsoftAuthenticatorAuthenticationMethod
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - deletedDateTime
+                - deletedDateTime desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}':
+    get:
+      tags:
+        - users.authentication
+      summary: Get memberOf from users
+      description: Groups that this device is a member of. Read-only. Nullable. Supports $expand.
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_GetMemberOf
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: microsoftAuthenticatorAuthenticationMethod-id
+          in: path
+          description: 'key: id of microsoftAuthenticatorAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: microsoftAuthenticatorAuthenticationMethod
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners':
+    get:
+      tags:
+        - users.authentication
+      summary: Get registeredOwners from users
+      description: 'The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.'
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListRegisteredOwners
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: microsoftAuthenticatorAuthenticationMethod-id
+          in: path
+          description: 'key: id of microsoftAuthenticatorAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: microsoftAuthenticatorAuthenticationMethod
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - deletedDateTime
+                - deletedDateTime desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}':
+    get:
+      tags:
+        - users.authentication
+      summary: Get registeredOwners from users
+      description: 'The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.'
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_GetRegisteredOwners
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: microsoftAuthenticatorAuthenticationMethod-id
+          in: path
+          description: 'key: id of microsoftAuthenticatorAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: microsoftAuthenticatorAuthenticationMethod
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers':
+    get:
+      tags:
+        - users.authentication
+      summary: Get registeredUsers from users
+      description: 'Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.'
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListRegisteredUsers
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: microsoftAuthenticatorAuthenticationMethod-id
+          in: path
+          description: 'key: id of microsoftAuthenticatorAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: microsoftAuthenticatorAuthenticationMethod
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - deletedDateTime
+                - deletedDateTime desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}':
+    get:
+      tags:
+        - users.authentication
+      summary: Get registeredUsers from users
+      description: 'Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.'
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_GetRegisteredUsers
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: microsoftAuthenticatorAuthenticationMethod-id
+          in: path
+          description: 'key: id of microsoftAuthenticatorAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: microsoftAuthenticatorAuthenticationMethod
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf':
+    get:
+      tags:
+        - users.authentication
+      summary: Get transitiveMemberOf from users
+      description: Groups that the device is a member of. This operation is transitive. Supports $expand.
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_ListTransitiveMemberOf
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: microsoftAuthenticatorAuthenticationMethod-id
+          in: path
+          description: 'key: id of microsoftAuthenticatorAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: microsoftAuthenticatorAuthenticationMethod
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - deletedDateTime
+                - deletedDateTime desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}':
+    get:
+      tags:
+        - users.authentication
+      summary: Get transitiveMemberOf from users
+      description: Groups that the device is a member of. This operation is transitive. Supports $expand.
+      operationId: users.authentication.microsoftAuthenticatorMethods.device_GetTransitiveMemberOf
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: microsoftAuthenticatorAuthenticationMethod-id
+          in: path
+          description: 'key: id of microsoftAuthenticatorAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: microsoftAuthenticatorAuthenticationMethod
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7333,21 +7681,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of windowsHelloForBusinessAuthenticationMethod
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.windowsHelloForBusinessAuthenticationMethod'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.windowsHelloForBusinessAuthenticationMethodCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -7630,7 +7964,6 @@ paths:
       tags:
         - users.authentication
       summary: Update the navigation property device in users
-      description: 'The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user''s Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.'
       operationId: users.authentication.windowsHelloForBusinessMethods_UpdateDevice
       parameters:
         - name: user-id
@@ -7664,7 +7997,6 @@ paths:
       tags:
         - users.authentication
       summary: Delete navigation property device for users
-      description: 'The registered device on which this Windows Hello for Business key resides. Supports $expand. When you get a user''s Windows Hello for Business registration information, this property is returned only on a single GET and when you specify ?$expand. For example, GET /users/admin@contoso.com/authentication/windowsHelloForBusinessMethods/_jpuR-TGZtk6aQCLF3BQjA2?$expand=device.'
       operationId: users.authentication.windowsHelloForBusinessMethods_DeleteDevice
       parameters:
         - name: user-id
@@ -7689,6 +8021,817 @@ paths:
       responses:
         '204':
           description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/extensions':
+    get:
+      tags:
+        - users.authentication
+      summary: Get extensions from users
+      description: The collection of open extensions defined for the device. Read-only. Nullable.
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListExtensions
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: windowsHelloForBusinessAuthenticationMethod-id
+          in: path
+          description: 'key: id of windowsHelloForBusinessAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: windowsHelloForBusinessAuthenticationMethod
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.extensionCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+    post:
+      tags:
+        - users.authentication
+      summary: Create new navigation property to extensions for users
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_CreateExtensions
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: windowsHelloForBusinessAuthenticationMethod-id
+          in: path
+          description: 'key: id of windowsHelloForBusinessAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: windowsHelloForBusinessAuthenticationMethod
+      requestBody:
+        description: New navigation property
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.extension'
+        required: true
+      responses:
+        '201':
+          description: Created navigation property.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.extension'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/extensions/{extension-id}':
+    get:
+      tags:
+        - users.authentication
+      summary: Get extensions from users
+      description: The collection of open extensions defined for the device. Read-only. Nullable.
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_GetExtensions
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: windowsHelloForBusinessAuthenticationMethod-id
+          in: path
+          description: 'key: id of windowsHelloForBusinessAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: windowsHelloForBusinessAuthenticationMethod
+        - name: extension-id
+          in: path
+          description: 'key: id of extension'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: extension
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.extension'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    patch:
+      tags:
+        - users.authentication
+      summary: Update the navigation property extensions in users
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_UpdateExtensions
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: windowsHelloForBusinessAuthenticationMethod-id
+          in: path
+          description: 'key: id of windowsHelloForBusinessAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: windowsHelloForBusinessAuthenticationMethod
+        - name: extension-id
+          in: path
+          description: 'key: id of extension'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: extension
+      requestBody:
+        description: New navigation property values
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/microsoft.graph.extension'
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+    delete:
+      tags:
+        - users.authentication
+      summary: Delete navigation property extensions for users
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_DeleteExtensions
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: windowsHelloForBusinessAuthenticationMethod-id
+          in: path
+          description: 'key: id of windowsHelloForBusinessAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: windowsHelloForBusinessAuthenticationMethod
+        - name: extension-id
+          in: path
+          description: 'key: id of extension'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: extension
+        - name: If-Match
+          in: header
+          description: ETag
+          schema:
+            type: string
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf':
+    get:
+      tags:
+        - users.authentication
+      summary: Get memberOf from users
+      description: Groups that this device is a member of. Read-only. Nullable. Supports $expand.
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListMemberOf
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: windowsHelloForBusinessAuthenticationMethod-id
+          in: path
+          description: 'key: id of windowsHelloForBusinessAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: windowsHelloForBusinessAuthenticationMethod
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - deletedDateTime
+                - deletedDateTime desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}':
+    get:
+      tags:
+        - users.authentication
+      summary: Get memberOf from users
+      description: Groups that this device is a member of. Read-only. Nullable. Supports $expand.
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_GetMemberOf
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: windowsHelloForBusinessAuthenticationMethod-id
+          in: path
+          description: 'key: id of windowsHelloForBusinessAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: windowsHelloForBusinessAuthenticationMethod
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners':
+    get:
+      tags:
+        - users.authentication
+      summary: Get registeredOwners from users
+      description: 'The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.'
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListRegisteredOwners
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: windowsHelloForBusinessAuthenticationMethod-id
+          in: path
+          description: 'key: id of windowsHelloForBusinessAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: windowsHelloForBusinessAuthenticationMethod
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - deletedDateTime
+                - deletedDateTime desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}':
+    get:
+      tags:
+        - users.authentication
+      summary: Get registeredOwners from users
+      description: 'The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.'
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_GetRegisteredOwners
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: windowsHelloForBusinessAuthenticationMethod-id
+          in: path
+          description: 'key: id of windowsHelloForBusinessAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: windowsHelloForBusinessAuthenticationMethod
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers':
+    get:
+      tags:
+        - users.authentication
+      summary: Get registeredUsers from users
+      description: 'Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.'
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListRegisteredUsers
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: windowsHelloForBusinessAuthenticationMethod-id
+          in: path
+          description: 'key: id of windowsHelloForBusinessAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: windowsHelloForBusinessAuthenticationMethod
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - deletedDateTime
+                - deletedDateTime desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}':
+    get:
+      tags:
+        - users.authentication
+      summary: Get registeredUsers from users
+      description: 'Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.'
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_GetRegisteredUsers
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: windowsHelloForBusinessAuthenticationMethod-id
+          in: path
+          description: 'key: id of windowsHelloForBusinessAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: windowsHelloForBusinessAuthenticationMethod
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf':
+    get:
+      tags:
+        - users.authentication
+      summary: Get transitiveMemberOf from users
+      description: Groups that the device is a member of. This operation is transitive. Supports $expand.
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_ListTransitiveMemberOf
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: windowsHelloForBusinessAuthenticationMethod-id
+          in: path
+          description: 'key: id of windowsHelloForBusinessAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: windowsHelloForBusinessAuthenticationMethod
+        - $ref: '#/components/parameters/top'
+        - $ref: '#/components/parameters/skip'
+        - $ref: '#/components/parameters/search'
+        - $ref: '#/components/parameters/filter'
+        - $ref: '#/components/parameters/count'
+        - name: $orderby
+          in: query
+          description: Order items by property values
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - id desc
+                - deletedDateTime
+                - deletedDateTime desc
+              type: string
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          $ref: '#/components/responses/microsoft.graph.directoryObjectCollectionResponse'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-pageable:
+        nextLinkName: '@odata.nextLink'
+        operationName: listMore
+      x-ms-docs-operation-type: operation
+  '/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}':
+    get:
+      tags:
+        - users.authentication
+      summary: Get transitiveMemberOf from users
+      description: Groups that the device is a member of. This operation is transitive. Supports $expand.
+      operationId: users.authentication.windowsHelloForBusinessMethods.device_GetTransitiveMemberOf
+      parameters:
+        - name: user-id
+          in: path
+          description: 'key: id of user'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: user
+        - name: windowsHelloForBusinessAuthenticationMethod-id
+          in: path
+          description: 'key: id of windowsHelloForBusinessAuthenticationMethod'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: windowsHelloForBusinessAuthenticationMethod
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+        - name: $select
+          in: query
+          description: Select properties to be returned
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - id
+                - deletedDateTime
+              type: string
+        - name: $expand
+          in: query
+          description: Expand related entities
+          style: form
+          explode: false
+          schema:
+            uniqueItems: true
+            type: array
+            items:
+              enum:
+                - '*'
+              type: string
+      responses:
+        '200':
+          description: Retrieved navigation property
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -8655,6 +9798,16 @@ components:
               description: Represents the settings for each authentication method. Automatically expanded on GET /policies/authenticationMethodsPolicy.
           additionalProperties:
             type: object
+    microsoft.graph.authenticationMethodConfiguration:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: authenticationMethodConfiguration
+          type: object
+          properties:
+            state:
+              $ref: '#/components/schemas/microsoft.graph.authenticationMethodState'
+          additionalProperties:
+            type: object
     microsoft.graph.authorizationPolicy:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.policyBase'
@@ -9042,6 +10195,13 @@ components:
               items:
                 $ref: '#/components/schemas/microsoft.graph.extension'
               description: The collection of open extensions defined for the device. Read-only. Nullable.
+          additionalProperties:
+            type: object
+    microsoft.graph.extension:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: extension
+          type: object
           additionalProperties:
             type: object
     microsoft.graph.windowsHelloForBusinessAuthenticationMethod:
@@ -10442,13 +11602,6 @@ components:
               $ref: '#/components/schemas/microsoft.graph.onenote'
           additionalProperties:
             type: object
-    microsoft.graph.extension:
-      allOf:
-        - $ref: '#/components/schemas/microsoft.graph.entity'
-        - title: extension
-          type: object
-          additionalProperties:
-            type: object
     microsoft.graph.agreementAcceptance:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'
@@ -11340,16 +12493,12 @@ components:
           $ref: '#/components/schemas/microsoft.graph.authenticationMethodsRegistrationCampaign'
       additionalProperties:
         type: object
-    microsoft.graph.authenticationMethodConfiguration:
-      allOf:
-        - $ref: '#/components/schemas/microsoft.graph.entity'
-        - title: authenticationMethodConfiguration
-          type: object
-          properties:
-            state:
-              $ref: '#/components/schemas/microsoft.graph.authenticationMethodState'
-          additionalProperties:
-            type: object
+    microsoft.graph.authenticationMethodState:
+      title: authenticationMethodState
+      enum:
+        - enabled
+        - disabled
+      type: string
     microsoft.graph.policyBase:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.directoryObject'
@@ -11450,13 +12599,313 @@ components:
         - weak
         - unknown
       type: string
-    odata.error:
+    microsoft.graph.dataPolicyOperationCollectionResponse:
+      title: Collection of dataPolicyOperation
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.dataPolicyOperation'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.ODataErrors.ODataError:
       required:
         - error
       type: object
       properties:
         error:
-          $ref: '#/components/schemas/odata.error.main'
+          $ref: '#/components/schemas/microsoft.graph.ODataErrors.MainError'
+      additionalProperties:
+        type: object
+    microsoft.graph.namedLocationCollectionResponse:
+      title: Collection of namedLocation
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.namedLocation'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.conditionalAccessPolicyCollectionResponse:
+      title: Collection of conditionalAccessPolicy
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.conditionalAccessPolicy'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.identityProviderCollectionResponse:
+      title: Collection of identityProvider
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.identityProvider'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.bitlockerRecoveryKeyCollectionResponse:
+      title: Collection of bitlockerRecoveryKey
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.bitlockerRecoveryKey'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.threatAssessmentRequestCollectionResponse:
+      title: Collection of threatAssessmentRequest
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.threatAssessmentRequest'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.threatAssessmentResultCollectionResponse:
+      title: Collection of threatAssessmentResult
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.threatAssessmentResult'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.invitationCollectionResponse:
+      title: Collection of invitation
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.invitation'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.oAuth2PermissionGrantCollectionResponse:
+      title: Collection of oAuth2PermissionGrant
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.oAuth2PermissionGrant'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.certificateBasedAuthConfigurationCollectionResponse:
+      title: Collection of certificateBasedAuthConfiguration
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.certificateBasedAuthConfiguration'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.activityBasedTimeoutPolicyCollectionResponse:
+      title: Collection of activityBasedTimeoutPolicy
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.activityBasedTimeoutPolicy'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.authenticationMethodConfigurationCollectionResponse:
+      title: Collection of authenticationMethodConfiguration
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.authenticationMethodConfiguration'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.claimsMappingPolicyCollectionResponse:
+      title: Collection of claimsMappingPolicy
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.claimsMappingPolicy'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.featureRolloutPolicyCollectionResponse:
+      title: Collection of featureRolloutPolicy
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.featureRolloutPolicy'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.directoryObjectCollectionResponse:
+      title: Collection of directoryObject
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.homeRealmDiscoveryPolicyCollectionResponse:
+      title: Collection of homeRealmDiscoveryPolicy
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.homeRealmDiscoveryPolicy'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.permissionGrantPolicyCollectionResponse:
+      title: Collection of permissionGrantPolicy
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.permissionGrantPolicy'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.permissionGrantConditionSetCollectionResponse:
+      title: Collection of permissionGrantConditionSet
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.permissionGrantConditionSet'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.tokenIssuancePolicyCollectionResponse:
+      title: Collection of tokenIssuancePolicy
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.tokenIssuancePolicy'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.tokenLifetimePolicyCollectionResponse:
+      title: Collection of tokenLifetimePolicy
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.tokenLifetimePolicy'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.fido2AuthenticationMethodCollectionResponse:
+      title: Collection of fido2AuthenticationMethod
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.fido2AuthenticationMethod'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.authenticationMethodCollectionResponse:
+      title: Collection of authenticationMethod
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.authenticationMethod'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.microsoftAuthenticatorAuthenticationMethodCollectionResponse:
+      title: Collection of microsoftAuthenticatorAuthenticationMethod
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.microsoftAuthenticatorAuthenticationMethod'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.extensionCollectionResponse:
+      title: Collection of extension
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.extension'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.windowsHelloForBusinessAuthenticationMethodCollectionResponse:
+      title: Collection of windowsHelloForBusinessAuthenticationMethod
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.windowsHelloForBusinessAuthenticationMethod'
+        '@odata.nextLink':
+          type: string
       additionalProperties:
         type: object
     microsoft.graph.conditionalAccessApplications:
@@ -14739,13 +16188,7 @@ components:
           $ref: '#/components/schemas/microsoft.graph.advancedConfigState'
       additionalProperties:
         type: object
-    microsoft.graph.authenticationMethodState:
-      title: authenticationMethodState
-      enum:
-        - enabled
-        - disabled
-      type: string
-    odata.error.main:
+    microsoft.graph.ODataErrors.MainError:
       required:
         - code
         - message
@@ -14757,15 +16200,13 @@ components:
           type: string
         target:
           type: string
+          nullable: true
         details:
           type: array
           items:
-            $ref: '#/components/schemas/odata.error.detail'
+            $ref: '#/components/schemas/microsoft.graph.ODataErrors.ErrorDetails'
         innererror:
-          type: object
-          additionalProperties:
-            type: object
-          description: The structure of this object is service-specific
+          $ref: '#/components/schemas/microsoft.graph.ODataErrors.InnerError'
       additionalProperties:
         type: object
     microsoft.graph.conditionalAccessFilter:
@@ -17862,7 +19303,7 @@ components:
         - disabled
         - unknownFutureValue
       type: string
-    odata.error.detail:
+    microsoft.graph.ODataErrors.ErrorDetails:
       required:
         - code
         - message
@@ -17874,8 +19315,14 @@ components:
           type: string
         target:
           type: string
+          nullable: true
       additionalProperties:
         type: object
+    microsoft.graph.ODataErrors.InnerError:
+      type: object
+      additionalProperties:
+        type: object
+      description: The structure of this object is service-specific
     microsoft.graph.filterMode:
       title: filterMode
       enum:
@@ -19706,12 +21153,162 @@ components:
           additionalProperties:
             type: object
   responses:
+    microsoft.graph.dataPolicyOperationCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.dataPolicyOperationCollectionResponse'
     error:
       description: error
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/odata.error'
+            $ref: '#/components/schemas/microsoft.graph.ODataErrors.ODataError'
+    microsoft.graph.namedLocationCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.namedLocationCollectionResponse'
+    microsoft.graph.conditionalAccessPolicyCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.conditionalAccessPolicyCollectionResponse'
+    microsoft.graph.identityProviderCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.identityProviderCollectionResponse'
+    microsoft.graph.bitlockerRecoveryKeyCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.bitlockerRecoveryKeyCollectionResponse'
+    microsoft.graph.threatAssessmentRequestCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.threatAssessmentRequestCollectionResponse'
+    microsoft.graph.threatAssessmentResultCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.threatAssessmentResultCollectionResponse'
+    microsoft.graph.invitationCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.invitationCollectionResponse'
+    microsoft.graph.oAuth2PermissionGrantCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.oAuth2PermissionGrantCollectionResponse'
+    microsoft.graph.certificateBasedAuthConfigurationCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.certificateBasedAuthConfigurationCollectionResponse'
+    microsoft.graph.activityBasedTimeoutPolicyCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.activityBasedTimeoutPolicyCollectionResponse'
+    microsoft.graph.authenticationMethodConfigurationCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.authenticationMethodConfigurationCollectionResponse'
+    microsoft.graph.claimsMappingPolicyCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.claimsMappingPolicyCollectionResponse'
+    microsoft.graph.featureRolloutPolicyCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.featureRolloutPolicyCollectionResponse'
+    microsoft.graph.directoryObjectCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.directoryObjectCollectionResponse'
+    microsoft.graph.homeRealmDiscoveryPolicyCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.homeRealmDiscoveryPolicyCollectionResponse'
+    microsoft.graph.permissionGrantPolicyCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.permissionGrantPolicyCollectionResponse'
+    microsoft.graph.permissionGrantConditionSetCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.permissionGrantConditionSetCollectionResponse'
+    microsoft.graph.tokenIssuancePolicyCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.tokenIssuancePolicyCollectionResponse'
+    microsoft.graph.tokenLifetimePolicyCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.tokenLifetimePolicyCollectionResponse'
+    microsoft.graph.fido2AuthenticationMethodCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.fido2AuthenticationMethodCollectionResponse'
+    microsoft.graph.authenticationMethodCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.authenticationMethodCollectionResponse'
+    microsoft.graph.microsoftAuthenticatorAuthenticationMethodCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.microsoftAuthenticatorAuthenticationMethodCollectionResponse'
+    microsoft.graph.extensionCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.extensionCollectionResponse'
+    microsoft.graph.windowsHelloForBusinessAuthenticationMethodCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.windowsHelloForBusinessAuthenticationMethodCollectionResponse'
   parameters:
     top:
       name: $top

@@ -162,21 +162,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of callRecord
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.callRecords.callRecord'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.callRecords.callRecordCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -398,21 +384,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of session
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.callRecords.session'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.callRecords.sessionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -423,7 +395,6 @@ paths:
       tags:
         - communications.callRecord
       summary: Create new navigation property to sessions for communications
-      description: 'List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.'
       operationId: communications.callRecords_CreateSessions
       parameters:
         - name: callRecord-id
@@ -524,7 +495,6 @@ paths:
       tags:
         - communications.callRecord
       summary: Update the navigation property sessions in communications
-      description: 'List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.'
       operationId: communications.callRecords_UpdateSessions
       parameters:
         - name: callRecord-id
@@ -558,7 +528,6 @@ paths:
       tags:
         - communications.callRecord
       summary: Delete navigation property sessions for communications
-      description: 'List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.'
       operationId: communications.callRecords_DeleteSessions
       parameters:
         - name: callRecord-id
@@ -670,21 +639,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of segment
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.callRecords.segment'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.callRecords.segmentCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -695,7 +650,6 @@ paths:
       tags:
         - communications.callRecord
       summary: Create new navigation property to segments for communications
-      description: The list of segments involved in the session. Read-only. Nullable.
       operationId: communications.callRecords.sessions_CreateSegments
       parameters:
         - name: callRecord-id
@@ -802,7 +756,6 @@ paths:
       tags:
         - communications.callRecord
       summary: Update the navigation property segments in communications
-      description: The list of segments involved in the session. Read-only. Nullable.
       operationId: communications.callRecords.sessions_UpdateSegments
       parameters:
         - name: callRecord-id
@@ -843,7 +796,6 @@ paths:
       tags:
         - communications.callRecord
       summary: Delete navigation property segments for communications
-      description: The list of segments involved in the session. Read-only. Nullable.
       operationId: communications.callRecords.sessions_DeleteSegments
       parameters:
         - name: callRecord-id
@@ -1013,21 +965,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of call
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.call'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.callCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -1267,21 +1205,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of audioRoutingGroup
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.audioRoutingGroup'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.audioRoutingGroupCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -1292,7 +1216,6 @@ paths:
       tags:
         - communications.call
       summary: Create new navigation property to audioRoutingGroups for communications
-      description: Read-only. Nullable.
       operationId: communications.calls_CreateAudioRoutingGroups
       parameters:
         - name: call-id
@@ -1382,7 +1305,6 @@ paths:
       tags:
         - communications.call
       summary: Update the navigation property audioRoutingGroups in communications
-      description: Read-only. Nullable.
       operationId: communications.calls_UpdateAudioRoutingGroups
       parameters:
         - name: call-id
@@ -1416,7 +1338,6 @@ paths:
       tags:
         - communications.call
       summary: Delete navigation property audioRoutingGroups for communications
-      description: Read-only. Nullable.
       operationId: communications.calls_DeleteAudioRoutingGroups
       parameters:
         - name: call-id
@@ -2116,21 +2037,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of commsOperation
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.commsOperation'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.commsOperationCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -2141,7 +2048,6 @@ paths:
       tags:
         - communications.call
       summary: Create new navigation property to operations for communications
-      description: Read-only. Nullable.
       operationId: communications.calls_CreateOperations
       parameters:
         - name: call-id
@@ -2231,7 +2137,6 @@ paths:
       tags:
         - communications.call
       summary: Update the navigation property operations in communications
-      description: Read-only. Nullable.
       operationId: communications.calls_UpdateOperations
       parameters:
         - name: call-id
@@ -2265,7 +2170,6 @@ paths:
       tags:
         - communications.call
       summary: Delete navigation property operations for communications
-      description: Read-only. Nullable.
       operationId: communications.calls_DeleteOperations
       parameters:
         - name: call-id
@@ -2370,21 +2274,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of participant
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.participant'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.participantCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -2395,7 +2285,6 @@ paths:
       tags:
         - communications.call
       summary: Create new navigation property to participants for communications
-      description: Read-only. Nullable.
       operationId: communications.calls_CreateParticipants
       parameters:
         - name: call-id
@@ -2488,7 +2377,6 @@ paths:
       tags:
         - communications.call
       summary: Update the navigation property participants in communications
-      description: Read-only. Nullable.
       operationId: communications.calls_UpdateParticipants
       parameters:
         - name: call-id
@@ -2522,7 +2410,6 @@ paths:
       tags:
         - communications.call
       summary: Delete navigation property participants for communications
-      description: Read-only. Nullable.
       operationId: communications.calls_DeleteParticipants
       parameters:
         - name: call-id
@@ -2817,9 +2704,15 @@ paths:
           content:
             application/json:
               schema:
-                type: array
-                items:
-                  $ref: '#/components/schemas/microsoft.graph.presence'
+                title: Collection of cloudCommunications
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.presence'
+                additionalProperties:
+                  type: object
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: action
@@ -2973,21 +2866,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of onlineMeeting
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.onlineMeeting'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.onlineMeetingCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -3168,7 +3047,8 @@ paths:
     get:
       tags:
         - communications.onlineMeeting
-      summary: Get media content for the navigation property onlineMeetings from communications
+      summary: Get alternativeRecording for the navigation property onlineMeetings from communications
+      description: The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
       operationId: communications_GetOnlineMeetingsAlternativeRecording
       parameters:
         - name: onlineMeeting-id
@@ -3192,7 +3072,8 @@ paths:
     put:
       tags:
         - communications.onlineMeeting
-      summary: Update media content for the navigation property onlineMeetings in communications
+      summary: Update alternativeRecording for the navigation property onlineMeetings in communications
+      description: The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
       operationId: communications_SetOnlineMeetingsAlternativeRecording
       parameters:
         - name: onlineMeeting-id
@@ -3286,21 +3167,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of meetingAttendanceReport
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.meetingAttendanceReport'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.meetingAttendanceReportCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -3311,7 +3178,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Create new navigation property to attendanceReports for communications
-      description: The attendance reports of an online meeting. Read-only.
       operationId: communications.onlineMeetings_CreateAttendanceReports
       parameters:
         - name: onlineMeeting-id
@@ -3409,7 +3275,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Update the navigation property attendanceReports in communications
-      description: The attendance reports of an online meeting. Read-only.
       operationId: communications.onlineMeetings_UpdateAttendanceReports
       parameters:
         - name: onlineMeeting-id
@@ -3443,7 +3308,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Delete navigation property attendanceReports for communications
-      description: The attendance reports of an online meeting. Read-only.
       operationId: communications.onlineMeetings_DeleteAttendanceReports
       parameters:
         - name: onlineMeeting-id
@@ -3552,21 +3416,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of attendanceRecord
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.attendanceRecord'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.attendanceRecordCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -3577,7 +3427,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Create new navigation property to attendanceRecords for communications
-      description: List of attendance records of an attendance report. Read-only.
       operationId: communications.onlineMeetings.attendanceReports_CreateAttendanceRecords
       parameters:
         - name: onlineMeeting-id
@@ -3683,7 +3532,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Update the navigation property attendanceRecords in communications
-      description: List of attendance records of an attendance report. Read-only.
       operationId: communications.onlineMeetings.attendanceReports_UpdateAttendanceRecords
       parameters:
         - name: onlineMeeting-id
@@ -3724,7 +3572,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Delete navigation property attendanceRecords for communications
-      description: List of attendance records of an attendance report. Read-only.
       operationId: communications.onlineMeetings.attendanceReports_DeleteAttendanceRecords
       parameters:
         - name: onlineMeeting-id
@@ -3763,7 +3610,8 @@ paths:
     get:
       tags:
         - communications.onlineMeeting
-      summary: Get media content for the navigation property onlineMeetings from communications
+      summary: Get attendeeReport for the navigation property onlineMeetings from communications
+      description: The content stream of the attendee report of a Microsoft Teams live event. Read-only.
       operationId: communications_GetOnlineMeetingsAttendeeReport
       parameters:
         - name: onlineMeeting-id
@@ -3787,7 +3635,8 @@ paths:
     put:
       tags:
         - communications.onlineMeeting
-      summary: Update media content for the navigation property onlineMeetings in communications
+      summary: Update attendeeReport for the navigation property onlineMeetings in communications
+      description: The content stream of the attendee report of a Microsoft Teams live event. Read-only.
       operationId: communications_SetOnlineMeetingsAttendeeReport
       parameters:
         - name: onlineMeeting-id
@@ -3993,21 +3842,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of attendanceRecord
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.attendanceRecord'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.attendanceRecordCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4018,7 +3853,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Create new navigation property to attendanceRecords for communications
-      description: List of attendance records of an attendance report. Read-only.
       operationId: communications.onlineMeetings.meetingAttendanceReport_CreateAttendanceRecords
       parameters:
         - name: onlineMeeting-id
@@ -4110,7 +3944,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Update the navigation property attendanceRecords in communications
-      description: List of attendance records of an attendance report. Read-only.
       operationId: communications.onlineMeetings.meetingAttendanceReport_UpdateAttendanceRecords
       parameters:
         - name: onlineMeeting-id
@@ -4144,7 +3977,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Delete navigation property attendanceRecords for communications
-      description: List of attendance records of an attendance report. Read-only.
       operationId: communications.onlineMeetings.meetingAttendanceReport_DeleteAttendanceRecords
       parameters:
         - name: onlineMeeting-id
@@ -4176,7 +4008,8 @@ paths:
     get:
       tags:
         - communications.onlineMeeting
-      summary: Get media content for the navigation property onlineMeetings from communications
+      summary: Get recording for the navigation property onlineMeetings from communications
+      description: The content stream of the recording of a Teams live event. Read-only.
       operationId: communications_GetOnlineMeetingsRecording
       parameters:
         - name: onlineMeeting-id
@@ -4200,7 +4033,8 @@ paths:
     put:
       tags:
         - communications.onlineMeeting
-      summary: Update media content for the navigation property onlineMeetings in communications
+      summary: Update recording for the navigation property onlineMeetings in communications
+      description: The content stream of the recording of a Teams live event. Read-only.
       operationId: communications_SetOnlineMeetingsRecording
       parameters:
         - name: onlineMeeting-id
@@ -4298,7 +4132,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Update the navigation property registration in communications
-      description: The registration that has been enabled for an online meeting. One online meeting can only have one registration enabled.
       operationId: communications.onlineMeetings_UpdateRegistration
       parameters:
         - name: onlineMeeting-id
@@ -4325,7 +4158,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Delete navigation property registration for communications
-      description: The registration that has been enabled for an online meeting. One online meeting can only have one registration enabled.
       operationId: communications.onlineMeetings_DeleteRegistration
       parameters:
         - name: onlineMeeting-id
@@ -4417,21 +4249,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of meetingRegistrationQuestion
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.meetingRegistrationQuestion'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.meetingRegistrationQuestionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -4442,7 +4260,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Create new navigation property to customQuestions for communications
-      description: Custom registration questions.
       operationId: communications.onlineMeetings.registration_CreateCustomQuestions
       parameters:
         - name: onlineMeeting-id
@@ -4533,7 +4350,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Update the navigation property customQuestions in communications
-      description: Custom registration questions.
       operationId: communications.onlineMeetings.registration_UpdateCustomQuestions
       parameters:
         - name: onlineMeeting-id
@@ -4567,7 +4383,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Delete navigation property customQuestions for communications
-      description: Custom registration questions.
       operationId: communications.onlineMeetings.registration_DeleteCustomQuestions
       parameters:
         - name: onlineMeeting-id
@@ -4700,21 +4515,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of presence
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.presence'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.presenceCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5137,21 +4938,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of onlineMeeting
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.onlineMeeting'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.onlineMeetingCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5364,7 +5151,8 @@ paths:
     get:
       tags:
         - users.onlineMeeting
-      summary: Get media content for the navigation property onlineMeetings from users
+      summary: Get alternativeRecording for the navigation property onlineMeetings from users
+      description: The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
       operationId: users_GetOnlineMeetingsAlternativeRecording
       parameters:
         - name: user-id
@@ -5395,7 +5183,8 @@ paths:
     put:
       tags:
         - users.onlineMeeting
-      summary: Update media content for the navigation property onlineMeetings in users
+      summary: Update alternativeRecording for the navigation property onlineMeetings in users
+      description: The content stream of the alternative recording of a Microsoft Teams live event. Read-only.
       operationId: users_SetOnlineMeetingsAlternativeRecording
       parameters:
         - name: user-id
@@ -5503,21 +5292,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of meetingAttendanceReport
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.meetingAttendanceReport'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.meetingAttendanceReportCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5528,7 +5303,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Create new navigation property to attendanceReports for users
-      description: The attendance reports of an online meeting. Read-only.
       operationId: users.onlineMeetings_CreateAttendanceReports
       parameters:
         - name: user-id
@@ -5641,7 +5415,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Update the navigation property attendanceReports in users
-      description: The attendance reports of an online meeting. Read-only.
       operationId: users.onlineMeetings_UpdateAttendanceReports
       parameters:
         - name: user-id
@@ -5682,7 +5455,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Delete navigation property attendanceReports for users
-      description: The attendance reports of an online meeting. Read-only.
       operationId: users.onlineMeetings_DeleteAttendanceReports
       parameters:
         - name: user-id
@@ -5805,21 +5577,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of attendanceRecord
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.attendanceRecord'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.attendanceRecordCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -5830,7 +5588,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Create new navigation property to attendanceRecords for users
-      description: List of attendance records of an attendance report. Read-only.
       operationId: users.onlineMeetings.attendanceReports_CreateAttendanceRecords
       parameters:
         - name: user-id
@@ -5950,7 +5707,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Update the navigation property attendanceRecords in users
-      description: List of attendance records of an attendance report. Read-only.
       operationId: users.onlineMeetings.attendanceReports_UpdateAttendanceRecords
       parameters:
         - name: user-id
@@ -5998,7 +5754,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Delete navigation property attendanceRecords for users
-      description: List of attendance records of an attendance report. Read-only.
       operationId: users.onlineMeetings.attendanceReports_DeleteAttendanceRecords
       parameters:
         - name: user-id
@@ -6044,7 +5799,8 @@ paths:
     get:
       tags:
         - users.onlineMeeting
-      summary: Get media content for the navigation property onlineMeetings from users
+      summary: Get attendeeReport for the navigation property onlineMeetings from users
+      description: The content stream of the attendee report of a Microsoft Teams live event. Read-only.
       operationId: users_GetOnlineMeetingsAttendeeReport
       parameters:
         - name: user-id
@@ -6075,7 +5831,8 @@ paths:
     put:
       tags:
         - users.onlineMeeting
-      summary: Update media content for the navigation property onlineMeetings in users
+      summary: Update attendeeReport for the navigation property onlineMeetings in users
+      description: The content stream of the attendee report of a Microsoft Teams live event. Read-only.
       operationId: users_SetOnlineMeetingsAttendeeReport
       parameters:
         - name: user-id
@@ -6317,21 +6074,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of attendanceRecord
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.attendanceRecord'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.attendanceRecordCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -6342,7 +6085,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Create new navigation property to attendanceRecords for users
-      description: List of attendance records of an attendance report. Read-only.
       operationId: users.onlineMeetings.meetingAttendanceReport_CreateAttendanceRecords
       parameters:
         - name: user-id
@@ -6448,7 +6190,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Update the navigation property attendanceRecords in users
-      description: List of attendance records of an attendance report. Read-only.
       operationId: users.onlineMeetings.meetingAttendanceReport_UpdateAttendanceRecords
       parameters:
         - name: user-id
@@ -6489,7 +6230,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Delete navigation property attendanceRecords for users
-      description: List of attendance records of an attendance report. Read-only.
       operationId: users.onlineMeetings.meetingAttendanceReport_DeleteAttendanceRecords
       parameters:
         - name: user-id
@@ -6528,7 +6268,8 @@ paths:
     get:
       tags:
         - users.onlineMeeting
-      summary: Get media content for the navigation property onlineMeetings from users
+      summary: Get recording for the navigation property onlineMeetings from users
+      description: The content stream of the recording of a Teams live event. Read-only.
       operationId: users_GetOnlineMeetingsRecording
       parameters:
         - name: user-id
@@ -6559,7 +6300,8 @@ paths:
     put:
       tags:
         - users.onlineMeeting
-      summary: Update media content for the navigation property onlineMeetings in users
+      summary: Update recording for the navigation property onlineMeetings in users
+      description: The content stream of the recording of a Teams live event. Read-only.
       operationId: users_SetOnlineMeetingsRecording
       parameters:
         - name: user-id
@@ -6673,7 +6415,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Update the navigation property registration in users
-      description: The registration that has been enabled for an online meeting. One online meeting can only have one registration enabled.
       operationId: users.onlineMeetings_UpdateRegistration
       parameters:
         - name: user-id
@@ -6707,7 +6448,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Delete navigation property registration for users
-      description: The registration that has been enabled for an online meeting. One online meeting can only have one registration enabled.
       operationId: users.onlineMeetings_DeleteRegistration
       parameters:
         - name: user-id
@@ -6813,21 +6553,7 @@ paths:
               type: string
       responses:
         '200':
-          description: Retrieved navigation property
-          content:
-            application/json:
-              schema:
-                title: Collection of meetingRegistrationQuestion
-                type: object
-                properties:
-                  value:
-                    type: array
-                    items:
-                      $ref: '#/components/schemas/microsoft.graph.meetingRegistrationQuestion'
-                  '@odata.nextLink':
-                    type: string
-                additionalProperties:
-                  type: object
+          $ref: '#/components/responses/microsoft.graph.meetingRegistrationQuestionCollectionResponse'
         default:
           $ref: '#/components/responses/error'
       x-ms-pageable:
@@ -6838,7 +6564,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Create new navigation property to customQuestions for users
-      description: Custom registration questions.
       operationId: users.onlineMeetings.registration_CreateCustomQuestions
       parameters:
         - name: user-id
@@ -6943,7 +6668,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Update the navigation property customQuestions in users
-      description: Custom registration questions.
       operationId: users.onlineMeetings.registration_UpdateCustomQuestions
       parameters:
         - name: user-id
@@ -6984,7 +6708,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Delete navigation property customQuestions for users
-      description: Custom registration questions.
       operationId: users.onlineMeetings.registration_DeleteCustomQuestions
       parameters:
         - name: user-id
@@ -8670,13 +8393,157 @@ components:
           nullable: true
       additionalProperties:
         type: object
-    odata.error:
+    microsoft.graph.ODataErrors.ODataError:
       required:
         - error
       type: object
       properties:
         error:
-          $ref: '#/components/schemas/odata.error.main'
+          $ref: '#/components/schemas/microsoft.graph.ODataErrors.MainError'
+      additionalProperties:
+        type: object
+    microsoft.graph.callRecords.callRecordCollectionResponse:
+      title: Collection of callRecord
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.callRecords.callRecord'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.callRecords.sessionCollectionResponse:
+      title: Collection of session
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.callRecords.session'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.callRecords.segmentCollectionResponse:
+      title: Collection of segment
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.callRecords.segment'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.callCollectionResponse:
+      title: Collection of call
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.call'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.audioRoutingGroupCollectionResponse:
+      title: Collection of audioRoutingGroup
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.audioRoutingGroup'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.commsOperationCollectionResponse:
+      title: Collection of commsOperation
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.commsOperation'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.participantCollectionResponse:
+      title: Collection of participant
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.participant'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.onlineMeetingCollectionResponse:
+      title: Collection of onlineMeeting
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.onlineMeeting'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.meetingAttendanceReportCollectionResponse:
+      title: Collection of meetingAttendanceReport
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.meetingAttendanceReport'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.attendanceRecordCollectionResponse:
+      title: Collection of attendanceRecord
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.attendanceRecord'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.meetingRegistrationQuestionCollectionResponse:
+      title: Collection of meetingRegistrationQuestion
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.meetingRegistrationQuestion'
+        '@odata.nextLink':
+          type: string
+      additionalProperties:
+        type: object
+    microsoft.graph.presenceCollectionResponse:
+      title: Collection of presence
+      type: object
+      properties:
+        value:
+          type: array
+          items:
+            $ref: '#/components/schemas/microsoft.graph.presence'
+        '@odata.nextLink':
+          type: string
       additionalProperties:
         type: object
     microsoft.graph.callRecords.userAgent:
@@ -9198,7 +9065,7 @@ components:
         - unknownFutureValue
         - producer
       type: string
-    odata.error.main:
+    microsoft.graph.ODataErrors.MainError:
       required:
         - code
         - message
@@ -9210,15 +9077,13 @@ components:
           type: string
         target:
           type: string
+          nullable: true
         details:
           type: array
           items:
-            $ref: '#/components/schemas/odata.error.detail'
+            $ref: '#/components/schemas/microsoft.graph.ODataErrors.ErrorDetails'
         innererror:
-          type: object
-          additionalProperties:
-            type: object
-          description: The structure of this object is service-specific
+          $ref: '#/components/schemas/microsoft.graph.ODataErrors.InnerError'
       additionalProperties:
         type: object
     microsoft.graph.callRecords.networkConnectionType:
@@ -9258,7 +9123,7 @@ components:
         - callerToCallee
         - calleeToCaller
       type: string
-    odata.error.detail:
+    microsoft.graph.ODataErrors.ErrorDetails:
       required:
         - code
         - message
@@ -9270,15 +9135,93 @@ components:
           type: string
         target:
           type: string
+          nullable: true
       additionalProperties:
         type: object
+    microsoft.graph.ODataErrors.InnerError:
+      type: object
+      additionalProperties:
+        type: object
+      description: The structure of this object is service-specific
   responses:
     error:
       description: error
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/odata.error'
+            $ref: '#/components/schemas/microsoft.graph.ODataErrors.ODataError'
+    microsoft.graph.callRecords.callRecordCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.callRecords.callRecordCollectionResponse'
+    microsoft.graph.callRecords.sessionCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.callRecords.sessionCollectionResponse'
+    microsoft.graph.callRecords.segmentCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.callRecords.segmentCollectionResponse'
+    microsoft.graph.callCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.callCollectionResponse'
+    microsoft.graph.audioRoutingGroupCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.audioRoutingGroupCollectionResponse'
+    microsoft.graph.commsOperationCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.commsOperationCollectionResponse'
+    microsoft.graph.participantCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.participantCollectionResponse'
+    microsoft.graph.onlineMeetingCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.onlineMeetingCollectionResponse'
+    microsoft.graph.meetingAttendanceReportCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.meetingAttendanceReportCollectionResponse'
+    microsoft.graph.attendanceRecordCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.attendanceRecordCollectionResponse'
+    microsoft.graph.meetingRegistrationQuestionCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.meetingRegistrationQuestionCollectionResponse'
+    microsoft.graph.presenceCollectionResponse:
+      description: Retrieved collection
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/microsoft.graph.presenceCollectionResponse'
   parameters:
     top:
       name: $top
