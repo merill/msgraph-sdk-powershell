@@ -38,7 +38,7 @@ subject-prefix: ''
 
 ``` yaml
 directive:
-  - remove-path-by-operation: .*_(Create|Get|Update|Set|Delete)Activities$|.*\.activities.*$|shares\..*_createLink|^drives.(bundles|following|special).*$
+  - remove-path-by-operation: .*_(Create|Get|Update|Set|Delete)Activities$|.*\.activities.*$|shares\..*_createLink|.*drives\.(bundles|following|special).*$
 ```
 ### Versioning
 
