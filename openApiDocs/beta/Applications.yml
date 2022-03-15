@@ -420,7 +420,6 @@ paths:
       tags:
         - applications.appManagementPolicy
       summary: Get appManagementPolicies from applications
-      description: The appManagementPolicy applied to this application.
       operationId: applications_ListAppManagementPolicies
       parameters:
         - name: application-id
@@ -503,7 +502,6 @@ paths:
       tags:
         - applications.appManagementPolicy
       summary: Get appManagementPolicies from applications
-      description: The appManagementPolicy applied to this application.
       operationId: applications_GetAppManagementPolicies
       parameters:
         - name: application-id
@@ -572,7 +570,6 @@ paths:
       tags:
         - applications.connectorGroup
       summary: Get connectorGroup from applications
-      description: The connectorGroup the application is using with Azure AD Application Proxy. Nullable.
       operationId: applications_GetConnectorGroup
       parameters:
         - name: application-id
@@ -638,7 +635,6 @@ paths:
       tags:
         - applications.directoryObject
       summary: Get createdOnBehalfOf from applications
-      description: Read-only.
       operationId: applications_GetCreatedOnBehalfOf
       parameters:
         - name: application-id
@@ -688,7 +684,6 @@ paths:
       tags:
         - applications.extensionProperty
       summary: Get extensionProperties from applications
-      description: Read-only. Nullable.
       operationId: applications_ListExtensionProperties
       parameters:
         - name: application-id
@@ -802,7 +797,6 @@ paths:
       tags:
         - applications.extensionProperty
       summary: Get extensionProperties from applications
-      description: Read-only. Nullable.
       operationId: applications_GetExtensionProperties
       parameters:
         - name: application-id
@@ -928,7 +922,6 @@ paths:
       tags:
         - applications.federatedIdentityCredential
       summary: Get federatedIdentityCredentials from applications
-      description: 'Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).'
       operationId: applications_ListFederatedIdentityCredentials
       parameters:
         - name: application-id
@@ -1039,7 +1032,6 @@ paths:
       tags:
         - applications.federatedIdentityCredential
       summary: Get federatedIdentityCredentials from applications
-      description: 'Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).'
       operationId: applications_GetFederatedIdentityCredentials
       parameters:
         - name: application-id
@@ -1314,7 +1306,6 @@ paths:
       tags:
         - applications.application
       summary: Get logo for application from applications
-      description: The main logo for the application. Not nullable.
       operationId: applications.application_GetLogo
       parameters:
         - name: application-id
@@ -1339,7 +1330,6 @@ paths:
       tags:
         - applications.application
       summary: Update logo for application in applications
-      description: The main logo for the application. Not nullable.
       operationId: applications.application_SetLogo
       parameters:
         - name: application-id
@@ -1774,7 +1764,6 @@ paths:
       tags:
         - applications.directoryObject
       summary: Get owners from applications
-      description: Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
       operationId: applications_ListOwners
       parameters:
         - name: application-id
@@ -1843,7 +1832,6 @@ paths:
       tags:
         - applications.directoryObject
       summary: Get owners from applications
-      description: Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
       operationId: applications_GetOwners
       parameters:
         - name: application-id
@@ -2012,7 +2000,6 @@ paths:
       tags:
         - applications.synchronization
       summary: Get jobs from applications
-      description: 'Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.'
       operationId: applications.synchronization_ListJobs
       parameters:
         - name: application-id
@@ -2122,7 +2109,6 @@ paths:
       tags:
         - applications.synchronization
       summary: Get jobs from applications
-      description: 'Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.'
       operationId: applications.synchronization_GetJobs
       parameters:
         - name: application-id
@@ -2470,7 +2456,6 @@ paths:
       tags:
         - applications.synchronization
       summary: Get schema from applications
-      description: The synchronization schema configured for the job.
       operationId: applications.synchronization.jobs_GetSchema
       parameters:
         - name: application-id
@@ -2600,7 +2585,6 @@ paths:
       tags:
         - applications.synchronization
       summary: Get directories from applications
-      description: Contains the collection of directories and all of their objects.
       operationId: applications.synchronization.jobs.schema_ListDirectories
       parameters:
         - name: application-id
@@ -2728,7 +2712,6 @@ paths:
       tags:
         - applications.synchronization
       summary: Get directories from applications
-      description: Contains the collection of directories and all of their objects.
       operationId: applications.synchronization.jobs.schema_GetDirectories
       parameters:
         - name: application-id
@@ -3147,7 +3130,6 @@ paths:
       tags:
         - applications.synchronization
       summary: Get templates from applications
-      description: Pre-configured synchronization settings for a particular application.
       operationId: applications.synchronization_ListTemplates
       parameters:
         - name: application-id
@@ -3263,7 +3245,6 @@ paths:
       tags:
         - applications.synchronization
       summary: Get templates from applications
-      description: Pre-configured synchronization settings for a particular application.
       operationId: applications.synchronization_GetTemplates
       parameters:
         - name: application-id
@@ -3397,7 +3378,6 @@ paths:
       tags:
         - applications.synchronization
       summary: Get schema from applications
-      description: Default synchronization schema for the jobs based on this template.
       operationId: applications.synchronization.templates_GetSchema
       parameters:
         - name: application-id
@@ -3527,7 +3507,6 @@ paths:
       tags:
         - applications.synchronization
       summary: Get directories from applications
-      description: Contains the collection of directories and all of their objects.
       operationId: applications.synchronization.templates.schema_ListDirectories
       parameters:
         - name: application-id
@@ -3655,7 +3634,6 @@ paths:
       tags:
         - applications.synchronization
       summary: Get directories from applications
-      description: Contains the collection of directories and all of their objects.
       operationId: applications.synchronization.templates.schema_GetDirectories
       parameters:
         - name: application-id
@@ -4116,7 +4094,6 @@ paths:
       tags:
         - applications.tokenLifetimePolicy
       summary: Get tokenLifetimePolicies from applications
-      description: The tokenLifetimePolicies assigned to this application. Supports $expand.
       operationId: applications_ListTokenLifetimePolicies
       parameters:
         - name: application-id
@@ -4199,7 +4176,6 @@ paths:
       tags:
         - applications.tokenLifetimePolicy
       summary: Get tokenLifetimePolicies from applications
-      description: The tokenLifetimePolicies assigned to this application. Supports $expand.
       operationId: applications_GetTokenLifetimePolicies
       parameters:
         - name: application-id
@@ -4650,7 +4626,6 @@ paths:
       tags:
         - groups.appRoleAssignment
       summary: Get appRoleAssignments from groups
-      description: Represents the app roles a group has been granted for an application. Supports $expand.
       operationId: groups_ListAppRoleAssignments
       parameters:
         - name: group-id
@@ -4767,7 +4742,6 @@ paths:
       tags:
         - groups.appRoleAssignment
       summary: Get appRoleAssignments from groups
-      description: Represents the app roles a group has been granted for an application. Supports $expand.
       operationId: groups_GetAppRoleAssignments
       parameters:
         - name: group-id
@@ -5121,7 +5095,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of existing onPremisesAgentGroup objects. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles_ListAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -5230,7 +5203,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of existing onPremisesAgentGroup objects. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles_GetAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -5368,7 +5340,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get agents from onPremisesPublishingProfiles
-      description: List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups_ListAgents
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -5492,7 +5463,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get agents from onPremisesPublishingProfiles
-      description: List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups_GetAgents
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -5646,7 +5616,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups.agents_ListAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -5783,7 +5752,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups.agents_GetAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -5967,7 +5935,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get publishedResources from onPremisesPublishingProfiles
-      description: List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups.agents.agentGroups_ListPublishedResources
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -6116,7 +6083,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get publishedResources from onPremisesPublishingProfiles
-      description: List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups.agents.agentGroups_GetPublishedResources
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -6313,7 +6279,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups.agents.agentGroups.publishedResources_ListAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -6478,7 +6443,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups.agents.agentGroups.publishedResources_GetAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -6708,7 +6672,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get publishedResources from onPremisesPublishingProfiles
-      description: List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups_ListPublishedResources
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -6829,7 +6792,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get publishedResources from onPremisesPublishingProfiles
-      description: List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups_GetPublishedResources
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -6982,7 +6944,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups.publishedResources_ListAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -7119,7 +7080,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups.publishedResources_GetAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -7303,7 +7263,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get agents from onPremisesPublishingProfiles
-      description: List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups.publishedResources.agentGroups_ListAgents
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -7455,7 +7414,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get agents from onPremisesPublishingProfiles
-      description: List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups.publishedResources.agentGroups_GetAgents
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -7653,7 +7611,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups.publishedResources.agentGroups.agents_ListAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -7818,7 +7775,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgentGroup
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agentGroups.publishedResources.agentGroups.agents_GetAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -8048,7 +8004,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgent
       summary: Get agents from onPremisesPublishingProfiles
-      description: List of existing onPremisesAgent objects. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles_ListAgents
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -8158,7 +8113,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgent
       summary: Get agents from onPremisesPublishingProfiles
-      description: List of existing onPremisesAgent objects. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles_GetAgents
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -8290,7 +8244,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgent
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agents_ListAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -8413,7 +8366,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgent
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agents_GetAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -8574,7 +8526,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgent
       summary: Get agents from onPremisesPublishingProfiles
-      description: List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agents.agentGroups_ListAgents
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -8712,7 +8663,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgent
       summary: Get agents from onPremisesPublishingProfiles
-      description: List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agents.agentGroups_GetAgents
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -8888,7 +8838,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgent
       summary: Get publishedResources from onPremisesPublishingProfiles
-      description: List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agents.agentGroups_ListPublishedResources
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -9023,7 +8972,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgent
       summary: Get publishedResources from onPremisesPublishingProfiles
-      description: List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agents.agentGroups_GetPublishedResources
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -9198,7 +9146,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgent
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agents.agentGroups.publishedResources_ListAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -9349,7 +9296,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgent
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agents.agentGroups.publishedResources_GetAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -9556,7 +9502,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgent
       summary: Get agents from onPremisesPublishingProfiles
-      description: List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agents.agentGroups.publishedResources.agentGroups_ListAgents
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -9722,7 +9667,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.onPremisesAgent
       summary: Get agents from onPremisesPublishingProfiles
-      description: List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.agents.agentGroups.publishedResources.agentGroups_GetAgents
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -9942,7 +9886,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Get connectorGroups from onPremisesPublishingProfiles
-      description: List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles_ListConnectorGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -10054,7 +9997,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Get connectorGroups from onPremisesPublishingProfiles
-      description: List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles_GetConnectorGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -10193,7 +10135,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Get applications from onPremisesPublishingProfiles
-      description: Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.connectorGroups_ListApplications
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -10385,7 +10326,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Get applications from onPremisesPublishingProfiles
-      description: Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.connectorGroups_GetApplications
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -10562,7 +10502,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Get logo for the navigation property applications from onPremisesPublishingProfiles
-      description: The main logo for the application. Not nullable.
       operationId: onPremisesPublishingProfiles.connectorGroups_GetApplicationsLogo
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -10601,7 +10540,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Update logo for the navigation property applications in onPremisesPublishingProfiles
-      description: The main logo for the application. Not nullable.
       operationId: onPremisesPublishingProfiles.connectorGroups_SetApplicationsLogo
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -10644,7 +10582,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Get members from onPremisesPublishingProfiles
-      description: Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.connectorGroups_ListMembers
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -10765,7 +10702,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Get members from onPremisesPublishingProfiles
-      description: Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.connectorGroups_GetMembers
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -10918,7 +10854,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Get memberOf from onPremisesPublishingProfiles
-      description: The connectorGroup that the connector is a member of. Read-only.
       operationId: onPremisesPublishingProfiles.connectorGroups.members_ListMemberOf
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -11058,7 +10993,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Get memberOf from onPremisesPublishingProfiles
-      description: The connectorGroup that the connector is a member of. Read-only.
       operationId: onPremisesPublishingProfiles.connectorGroups.members_GetMemberOf
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -11243,7 +11177,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Get applications from onPremisesPublishingProfiles
-      description: Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.connectorGroups.members.memberOf_ListApplications
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -11449,7 +11382,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Get applications from onPremisesPublishingProfiles
-      description: Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.connectorGroups.members.memberOf_GetApplications
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -11660,7 +11592,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Get logo for the navigation property applications from onPremisesPublishingProfiles
-      description: The main logo for the application. Not nullable.
       operationId: onPremisesPublishingProfiles.connectorGroups.members.memberOf_GetApplicationsLogo
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -11713,7 +11644,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connectorGroup
       summary: Update logo for the navigation property applications in onPremisesPublishingProfiles
-      description: The main logo for the application. Not nullable.
       operationId: onPremisesPublishingProfiles.connectorGroups.members.memberOf_SetApplicationsLogo
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -11770,7 +11700,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connector
       summary: Get connectors from onPremisesPublishingProfiles
-      description: List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles_ListConnectors
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -11877,7 +11806,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connector
       summary: Get connectors from onPremisesPublishingProfiles
-      description: List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles_GetConnectors
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -12008,7 +11936,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connector
       summary: Get memberOf from onPremisesPublishingProfiles
-      description: The connectorGroup that the connector is a member of. Read-only.
       operationId: onPremisesPublishingProfiles.connectors_ListMemberOf
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -12134,7 +12061,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connector
       summary: Get memberOf from onPremisesPublishingProfiles
-      description: The connectorGroup that the connector is a member of. Read-only.
       operationId: onPremisesPublishingProfiles.connectors_GetMemberOf
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -12296,7 +12222,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connector
       summary: Get applications from onPremisesPublishingProfiles
-      description: Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.connectors.memberOf_ListApplications
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -12495,7 +12420,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connector
       summary: Get applications from onPremisesPublishingProfiles
-      description: Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.connectors.memberOf_GetApplications
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -12689,7 +12613,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connector
       summary: Get logo for the navigation property applications from onPremisesPublishingProfiles
-      description: The main logo for the application. Not nullable.
       operationId: onPremisesPublishingProfiles.connectors.memberOf_GetApplicationsLogo
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -12735,7 +12658,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connector
       summary: Update logo for the navigation property applications in onPremisesPublishingProfiles
-      description: The main logo for the application. Not nullable.
       operationId: onPremisesPublishingProfiles.connectors.memberOf_SetApplicationsLogo
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -12785,7 +12707,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connector
       summary: Get members from onPremisesPublishingProfiles
-      description: Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.connectors.memberOf_ListMembers
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -12920,7 +12841,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.connector
       summary: Get members from onPremisesPublishingProfiles
-      description: Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.connectors.memberOf_GetMembers
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -13095,7 +13015,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.publishedResource
       summary: Get publishedResources from onPremisesPublishingProfiles
-      description: List of existing publishedResource objects. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles_ListPublishedResources
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -13202,7 +13121,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.publishedResource
       summary: Get publishedResources from onPremisesPublishingProfiles
-      description: List of existing publishedResource objects. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles_GetPublishedResources
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -13333,7 +13251,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.publishedResource
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.publishedResources_ListAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -13456,7 +13373,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.publishedResource
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.publishedResources_GetAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -13617,7 +13533,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.publishedResource
       summary: Get agents from onPremisesPublishingProfiles
-      description: List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.publishedResources.agentGroups_ListAgents
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -13755,7 +13670,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.publishedResource
       summary: Get agents from onPremisesPublishingProfiles
-      description: List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.publishedResources.agentGroups_GetAgents
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -13931,7 +13845,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.publishedResource
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.publishedResources.agentGroups.agents_ListAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -14082,7 +13995,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.publishedResource
       summary: Get agentGroups from onPremisesPublishingProfiles
-      description: List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.publishedResources.agentGroups.agents_GetAgentGroups
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -14289,7 +14201,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.publishedResource
       summary: Get publishedResources from onPremisesPublishingProfiles
-      description: List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.publishedResources.agentGroups.agents.agentGroups_ListPublishedResources
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -14452,7 +14363,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.publishedResource
       summary: Get publishedResources from onPremisesPublishingProfiles
-      description: List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.publishedResources.agentGroups.agents.agentGroups_GetPublishedResources
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -14671,7 +14581,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.publishedResource
       summary: Get publishedResources from onPremisesPublishingProfiles
-      description: List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.publishedResources.agentGroups_ListPublishedResources
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -14806,7 +14715,6 @@ paths:
       tags:
         - onPremisesPublishingProfiles.publishedResource
       summary: Get publishedResources from onPremisesPublishingProfiles
-      description: List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
       operationId: onPremisesPublishingProfiles.publishedResources.agentGroups_GetPublishedResources
       parameters:
         - name: onPremisesPublishingProfile-id
@@ -15474,7 +15382,6 @@ paths:
       tags:
         - servicePrincipals.appManagementPolicy
       summary: Get appManagementPolicies from servicePrincipals
-      description: The appManagementPolicy applied to this service principal.
       operationId: servicePrincipals_ListAppManagementPolicies
       parameters:
         - name: servicePrincipal-id
@@ -15557,7 +15464,6 @@ paths:
       tags:
         - servicePrincipals.appManagementPolicy
       summary: Get appManagementPolicies from servicePrincipals
-      description: The appManagementPolicy applied to this service principal.
       operationId: servicePrincipals_GetAppManagementPolicies
       parameters:
         - name: servicePrincipal-id
@@ -15626,7 +15532,6 @@ paths:
       tags:
         - servicePrincipals.appRoleAssignment
       summary: Get appRoleAssignedTo from servicePrincipals
-      description: 'App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.'
       operationId: servicePrincipals_ListAppRoleAssignedTo
       parameters:
         - name: servicePrincipal-id
@@ -15743,7 +15648,6 @@ paths:
       tags:
         - servicePrincipals.appRoleAssignment
       summary: Get appRoleAssignedTo from servicePrincipals
-      description: 'App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.'
       operationId: servicePrincipals_GetAppRoleAssignedTo
       parameters:
         - name: servicePrincipal-id
@@ -15870,7 +15774,6 @@ paths:
       tags:
         - servicePrincipals.appRoleAssignment
       summary: Get appRoleAssignments from servicePrincipals
-      description: 'App role assignment for another app or service, granted to this service principal. Supports $expand.'
       operationId: servicePrincipals_ListAppRoleAssignments
       parameters:
         - name: servicePrincipal-id
@@ -15987,7 +15890,6 @@ paths:
       tags:
         - servicePrincipals.appRoleAssignment
       summary: Get appRoleAssignments from servicePrincipals
-      description: 'App role assignment for another app or service, granted to this service principal. Supports $expand.'
       operationId: servicePrincipals_GetAppRoleAssignments
       parameters:
         - name: servicePrincipal-id
@@ -16114,7 +16016,6 @@ paths:
       tags:
         - servicePrincipals.claimsMappingPolicy
       summary: Get claimsMappingPolicies from servicePrincipals
-      description: The claimsMappingPolicies assigned to this service principal. Supports $expand.
       operationId: servicePrincipals_ListClaimsMappingPolicies
       parameters:
         - name: servicePrincipal-id
@@ -16197,7 +16098,6 @@ paths:
       tags:
         - servicePrincipals.claimsMappingPolicy
       summary: Get claimsMappingPolicies from servicePrincipals
-      description: The claimsMappingPolicies assigned to this service principal. Supports $expand.
       operationId: servicePrincipals_GetClaimsMappingPolicies
       parameters:
         - name: servicePrincipal-id
@@ -16266,7 +16166,6 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get createdObjects from servicePrincipals
-      description: Directory objects created by this service principal. Read-only. Nullable.
       operationId: servicePrincipals_ListCreatedObjects
       parameters:
         - name: servicePrincipal-id
@@ -16335,7 +16234,6 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get createdObjects from servicePrincipals
-      description: Directory objects created by this service principal. Read-only. Nullable.
       operationId: servicePrincipals_GetCreatedObjects
       parameters:
         - name: servicePrincipal-id
@@ -16392,7 +16290,6 @@ paths:
       tags:
         - servicePrincipals.delegatedPermissionClassification
       summary: Get delegatedPermissionClassifications from servicePrincipals
-      description: The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
       operationId: servicePrincipals_ListDelegatedPermissionClassifications
       parameters:
         - name: servicePrincipal-id
@@ -16497,7 +16394,6 @@ paths:
       tags:
         - servicePrincipals.delegatedPermissionClassification
       summary: Get delegatedPermissionClassifications from servicePrincipals
-      description: The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
       operationId: servicePrincipals_GetDelegatedPermissionClassifications
       parameters:
         - name: servicePrincipal-id
@@ -16620,7 +16516,6 @@ paths:
       tags:
         - servicePrincipals.endpoint
       summary: Get endpoints from servicePrincipals
-      description: Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
       operationId: servicePrincipals_ListEndpoints
       parameters:
         - name: servicePrincipal-id
@@ -16734,7 +16629,6 @@ paths:
       tags:
         - servicePrincipals.endpoint
       summary: Get endpoints from servicePrincipals
-      description: Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
       operationId: servicePrincipals_GetEndpoints
       parameters:
         - name: servicePrincipal-id
@@ -17094,7 +16988,6 @@ paths:
       tags:
         - servicePrincipals.homeRealmDiscoveryPolicy
       summary: Get homeRealmDiscoveryPolicies from servicePrincipals
-      description: The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
       operationId: servicePrincipals_ListHomeRealmDiscoveryPolicies
       parameters:
         - name: servicePrincipal-id
@@ -17177,7 +17070,6 @@ paths:
       tags:
         - servicePrincipals.homeRealmDiscoveryPolicy
       summary: Get homeRealmDiscoveryPolicies from servicePrincipals
-      description: The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
       operationId: servicePrincipals_GetHomeRealmDiscoveryPolicies
       parameters:
         - name: servicePrincipal-id
@@ -17472,7 +17364,6 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get memberOf from servicePrincipals
-      description: 'Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.'
       operationId: servicePrincipals_ListMemberOf
       parameters:
         - name: servicePrincipal-id
@@ -17541,7 +17432,6 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get memberOf from servicePrincipals
-      description: 'Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.'
       operationId: servicePrincipals_GetMemberOf
       parameters:
         - name: servicePrincipal-id
@@ -17992,7 +17882,6 @@ paths:
       tags:
         - servicePrincipals.oAuth2PermissionGrant
       summary: Get oauth2PermissionGrants from servicePrincipals
-      description: Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.
       operationId: servicePrincipals_ListOauth2PermissionGrants
       parameters:
         - name: servicePrincipal-id
@@ -18079,7 +17968,6 @@ paths:
       tags:
         - servicePrincipals.oAuth2PermissionGrant
       summary: Get oauth2PermissionGrants from servicePrincipals
-      description: Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.
       operationId: servicePrincipals_GetOauth2PermissionGrants
       parameters:
         - name: servicePrincipal-id
@@ -18142,7 +18030,6 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get ownedObjects from servicePrincipals
-      description: Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
       operationId: servicePrincipals_ListOwnedObjects
       parameters:
         - name: servicePrincipal-id
@@ -18211,7 +18098,6 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get ownedObjects from servicePrincipals
-      description: Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
       operationId: servicePrincipals_GetOwnedObjects
       parameters:
         - name: servicePrincipal-id
@@ -18268,7 +18154,6 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get owners from servicePrincipals
-      description: Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
       operationId: servicePrincipals_ListOwners
       parameters:
         - name: servicePrincipal-id
@@ -18337,7 +18222,6 @@ paths:
       tags:
         - servicePrincipals.directoryObject
       summary: Get owners from servicePrincipals
-      description: Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
       operationId: servicePrincipals_GetOwners
       parameters:
         - name: servicePrincipal-id
@@ -18506,7 +18390,6 @@ paths:
       tags:
         - servicePrincipals.synchronization
       summary: Get jobs from servicePrincipals
-      description: 'Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.'
       operationId: servicePrincipals.synchronization_ListJobs
       parameters:
         - name: servicePrincipal-id
@@ -18616,7 +18499,6 @@ paths:
       tags:
         - servicePrincipals.synchronization
       summary: Get jobs from servicePrincipals
-      description: 'Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.'
       operationId: servicePrincipals.synchronization_GetJobs
       parameters:
         - name: servicePrincipal-id
@@ -18964,7 +18846,6 @@ paths:
       tags:
         - servicePrincipals.synchronization
       summary: Get schema from servicePrincipals
-      description: The synchronization schema configured for the job.
       operationId: servicePrincipals.synchronization.jobs_GetSchema
       parameters:
         - name: servicePrincipal-id
@@ -19094,7 +18975,6 @@ paths:
       tags:
         - servicePrincipals.synchronization
       summary: Get directories from servicePrincipals
-      description: Contains the collection of directories and all of their objects.
       operationId: servicePrincipals.synchronization.jobs.schema_ListDirectories
       parameters:
         - name: servicePrincipal-id
@@ -19222,7 +19102,6 @@ paths:
       tags:
         - servicePrincipals.synchronization
       summary: Get directories from servicePrincipals
-      description: Contains the collection of directories and all of their objects.
       operationId: servicePrincipals.synchronization.jobs.schema_GetDirectories
       parameters:
         - name: servicePrincipal-id
@@ -19641,7 +19520,6 @@ paths:
       tags:
         - servicePrincipals.synchronization
       summary: Get templates from servicePrincipals
-      description: Pre-configured synchronization settings for a particular application.
       operationId: servicePrincipals.synchronization_ListTemplates
       parameters:
         - name: servicePrincipal-id
@@ -19757,7 +19635,6 @@ paths:
       tags:
         - servicePrincipals.synchronization
       summary: Get templates from servicePrincipals
-      description: Pre-configured synchronization settings for a particular application.
       operationId: servicePrincipals.synchronization_GetTemplates
       parameters:
         - name: servicePrincipal-id
@@ -19891,7 +19768,6 @@ paths:
       tags:
         - servicePrincipals.synchronization
       summary: Get schema from servicePrincipals
-      description: Default synchronization schema for the jobs based on this template.
       operationId: servicePrincipals.synchronization.templates_GetSchema
       parameters:
         - name: servicePrincipal-id
@@ -20021,7 +19897,6 @@ paths:
       tags:
         - servicePrincipals.synchronization
       summary: Get directories from servicePrincipals
-      description: Contains the collection of directories and all of their objects.
       operationId: servicePrincipals.synchronization.templates.schema_ListDirectories
       parameters:
         - name: servicePrincipal-id
@@ -20149,7 +20024,6 @@ paths:
       tags:
         - servicePrincipals.synchronization
       summary: Get directories from servicePrincipals
-      description: Contains the collection of directories and all of their objects.
       operationId: servicePrincipals.synchronization.templates.schema_GetDirectories
       parameters:
         - name: servicePrincipal-id
@@ -20460,7 +20334,6 @@ paths:
       tags:
         - servicePrincipals.tokenIssuancePolicy
       summary: Get tokenIssuancePolicies from servicePrincipals
-      description: The tokenIssuancePolicies assigned to this service principal.
       operationId: servicePrincipals_ListTokenIssuancePolicies
       parameters:
         - name: servicePrincipal-id
@@ -20543,7 +20416,6 @@ paths:
       tags:
         - servicePrincipals.tokenIssuancePolicy
       summary: Get tokenIssuancePolicies from servicePrincipals
-      description: The tokenIssuancePolicies assigned to this service principal.
       operationId: servicePrincipals_GetTokenIssuancePolicies
       parameters:
         - name: servicePrincipal-id
@@ -20612,7 +20484,6 @@ paths:
       tags:
         - servicePrincipals.tokenLifetimePolicy
       summary: Get tokenLifetimePolicies from servicePrincipals
-      description: The tokenLifetimePolicies assigned to this service principal.
       operationId: servicePrincipals_ListTokenLifetimePolicies
       parameters:
         - name: servicePrincipal-id
@@ -20695,7 +20566,6 @@ paths:
       tags:
         - servicePrincipals.tokenLifetimePolicy
       summary: Get tokenLifetimePolicies from servicePrincipals
-      description: The tokenLifetimePolicies assigned to this service principal.
       operationId: servicePrincipals_GetTokenLifetimePolicies
       parameters:
         - name: servicePrincipal-id
@@ -21023,7 +20893,6 @@ paths:
       tags:
         - users.appRoleAssignment
       summary: Get appRoleAssignments from users
-      description: Represents the app roles a user has been granted for an application. Supports $expand.
       operationId: users_ListAppRoleAssignments
       parameters:
         - name: user-id
@@ -21140,7 +21009,6 @@ paths:
       tags:
         - users.appRoleAssignment
       summary: Get appRoleAssignments from users
-      description: Represents the app roles a user has been granted for an application. Supports $expand.
       operationId: users_GetAppRoleAssignments
       parameters:
         - name: user-id
@@ -21274,68 +21142,54 @@ components:
               $ref: '#/components/schemas/microsoft.graph.apiApplication'
             appId:
               type: string
-              description: The unique identifier for the application that is assigned to an application by Azure AD. Not nullable. Read-only.
               nullable: true
             appRoles:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.appRole'
-              description: 'The collection of roles assigned to the application. With app role assignments, these roles can be assigned to users, groups, or service principals associated with other applications. Not nullable.'
             certification:
               $ref: '#/components/schemas/microsoft.graph.certification'
             createdDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The date and time the application was registered. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.  Supports $filter (eq, ne, not, ge, le, in, and eq on null values) and $orderBy.'
               format: date-time
               nullable: true
             defaultRedirectUri:
               type: string
-              description: 'The default redirect URI. If specified and there is no explicit redirect URI in the sign-in request for SAML and OIDC flows, Azure AD sends the token to this redirect URI. Azure AD also sends the token to this default URI in SAML IdP-initiated single sign-on. The value must match one of the configured redirect URIs for the application.'
               nullable: true
             description:
               type: string
-              description: 'Free text field to provide a description of the application object to end users. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.'
               nullable: true
             disabledByMicrosoftStatus:
               type: string
-              description: 'Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).'
               nullable: true
             displayName:
               type: string
-              description: 'The display name for the application. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.'
               nullable: true
             groupMembershipClaims:
               type: string
-              description: 'Configures the groups claim issued in a user or OAuth 2.0 access token that the application expects. To set this attribute, use one of the following valid string values: None, SecurityGroup (for security groups and Azure AD roles), All (this gets all of the security groups, distribution groups, and Azure AD directory roles that the signed-in user is a member of).'
               nullable: true
             identifierUris:
               type: array
               items:
                 type: string
-              description: 'Also known as App ID URI, this value is set when an application is used as a resource app. The identifierUris acts as the prefix for the scopes you''ll reference in your API''s code, and it must be globally unique. You can use the default value provided, which is in the form api://<application-client-id>, or specify a more readable URI like https://contoso.com/api. For more information on valid identifierUris patterns and best practices, see Azure AD application registration security best practices. Not nullable. Supports $filter (eq, ne, ge, le, startsWith).'
             info:
               $ref: '#/components/schemas/microsoft.graph.informationalUrl'
             isDeviceOnlyAuthSupported:
               type: boolean
-              description: Specifies whether this application supports device authentication without a user. The default is false.
               nullable: true
             isFallbackPublicClient:
               type: boolean
-              description: 'Specifies the fallback application type as public client, such as an installed application running on a mobile device. The default value is false which means the fallback application type is confidential client such as a web app. There are certain scenarios where Azure AD cannot determine the client application type. For example, the ROPC flow where it is configured without specifying a redirect URI. In those cases Azure AD interprets the application type based on the value of this property.'
               nullable: true
             keyCredentials:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.keyCredential'
-              description: 'The collection of key credentials associated with the application. Not nullable. Supports $filter (eq, not, ge, le).'
             logo:
               type: string
-              description: The main logo for the application. Not nullable.
               format: base64url
             notes:
               type: string
-              description: Notes relevant for the management of the application.
               nullable: true
             optionalClaims:
               $ref: '#/components/schemas/microsoft.graph.optionalClaims'
@@ -21345,21 +21199,17 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.passwordCredential'
-              description: The collection of password credentials associated with the application. Not nullable.
             publicClient:
               $ref: '#/components/schemas/microsoft.graph.publicClientApplication'
             publisherDomain:
               type: string
-              description: 'The verified publisher domain for the application. Read-only. For more information, see How to: Configure an application''s publisher domain. Supports $filter (eq, ne, ge, le, startsWith).'
               nullable: true
             requiredResourceAccess:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.requiredResourceAccess'
-              description: 'Specifies the resources that the application needs to access. This property also specifies the set of delegated permissions and application roles that it needs for each of those resources. This configuration of access to the required resources drives the consent experience. No more than 50 resource services (APIs) can be configured. Beginning mid-October 2021, the total number of required permissions must not exceed 400. Not nullable. Supports $filter (eq, not, ge, le).'
             signInAudience:
               type: string
-              description: 'Specifies the Microsoft accounts that are supported for the current application. The possible values are: AzureADMyOrg, AzureADMultipleOrgs, AzureADandPersonalMicrosoftAccount (default), and PersonalMicrosoftAccount. See more in the table below. Supports $filter (eq, ne, not).'
               nullable: true
             spa:
               $ref: '#/components/schemas/microsoft.graph.spaApplication'
@@ -21367,16 +21217,13 @@ components:
               type: array
               items:
                 type: string
-              description: 'Custom strings that can be used to categorize and identify the application. Not nullable. Supports $filter (eq, not, ge, le, startsWith).'
             tokenEncryptionKeyId:
               pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
               type: string
-              description: 'Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD encrypts all the tokens it emits by using the key this property points to. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.'
               format: uuid
               nullable: true
             uniqueName:
               type: string
-              description: The unique identifier that can be assigned to an application as an alternative identifier. Immutable. Read-only.
               nullable: true
             verifiedPublisher:
               $ref: '#/components/schemas/microsoft.graph.verifiedPublisher'
@@ -21390,19 +21237,16 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.appManagementPolicy'
-              description: The appManagementPolicy applied to this application.
             createdOnBehalfOf:
               $ref: '#/components/schemas/microsoft.graph.directoryObject'
             extensionProperties:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.extensionProperty'
-              description: Read-only. Nullable.
             federatedIdentityCredentials:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.federatedIdentityCredential'
-              description: 'Federated identities for applications. This object can only be retrieved on a single GET request (GET /applications/{id}/federatedIdentityCredentials).'
             homeRealmDiscoveryPolicies:
               type: array
               items:
@@ -21411,7 +21255,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: Directory objects that are owners of the application. Read-only. Nullable. Supports $expand.
             tokenIssuancePolicies:
               type: array
               items:
@@ -21420,7 +21263,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.tokenLifetimePolicy'
-              description: The tokenLifetimePolicies assigned to this application. Supports $expand.
             connectorGroup:
               $ref: '#/components/schemas/microsoft.graph.connectorGroup'
             synchronization:
@@ -21453,22 +21295,18 @@ components:
               $ref: '#/components/schemas/microsoft.graph.connectorGroupType'
             isDefault:
               type: boolean
-              description: Indicates if the connectorGroup is the default connectorGroup. Only a single connector group can be the default connectorGroup and this is pre-set by the system. Read-only.
             name:
               type: string
-              description: The name associated with the connectorGroup.
             region:
               $ref: '#/components/schemas/microsoft.graph.connectorGroupRegion'
             applications:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.application'
-              description: Read-only. Nullable.
             members:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.connector'
-              description: Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.directoryObject:
@@ -21480,7 +21318,6 @@ components:
             deletedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Date and time when this object was deleted. Always null when the object hasn't been deleted.
               format: date-time
               nullable: true
           additionalProperties:
@@ -21493,23 +21330,18 @@ components:
           properties:
             appDisplayName:
               type: string
-              description: Display name of the application object on which this extension property is defined. Read-only.
               nullable: true
             dataType:
               type: string
-              description: Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
             isSyncedFromOnPremises:
               type: boolean
-              description: Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
               nullable: true
             name:
               type: string
-              description: Name of the extension property. Not nullable.
             targetObjects:
               type: array
               items:
                 type: string
-              description: Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
           additionalProperties:
             type: object
     microsoft.graph.federatedIdentityCredential:
@@ -21522,20 +21354,15 @@ components:
               type: array
               items:
                 type: string
-              description: 'Lists the audiences that can appear in the external token. This field is mandatory, and defaults to ''api://AzureADTokenExchange''. It says what Microsoft identity platform should accept in the aud claim in the incoming token. This value represents Azure AD in your external identity provider and has no fixed value across identity providers - you may need to create a new application registration in your identity provider to serve as the audience of this token. Required.'
             description:
               type: string
-              description: 'The un-validated, user-provided description of the federated identity credential. Optional.'
               nullable: true
             issuer:
               type: string
-              description: The URL of the external identity provider and must match the issuer claim of the external token being exchanged. The combination of the values of issuer and subject must be unique on the app. Required.
             name:
               type: string
-              description: 'is the unique identifier for the federated identity credential, which has a character limit of 120 characters and must be URL friendly. It is immutable once created. Required. Not nullable. Supports $filter (eq).'
             subject:
               type: string
-              description: 'Required. The identifier of the external software workload within the external identity provider. Like the audience value, it has no fixed format, as each identity provider uses their own - sometimes a GUID, sometimes a colon delimited identifier, sometimes arbitrary strings. The value here must match the sub claim within the token presented to Azure AD. The combination of issuer and subject must be unique on the app. Supports $filter (eq).'
           additionalProperties:
             type: object
     microsoft.graph.homeRealmDiscoveryPolicy:
@@ -21551,43 +21378,35 @@ components:
       properties:
         customKeyIdentifier:
           type: string
-          description: Custom key identifier
           format: base64url
           nullable: true
         displayName:
           type: string
-          description: Friendly name for the key. Optional.
           nullable: true
         endDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The date and time at which the credential expires. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
           format: date-time
           nullable: true
         key:
           type: string
-          description: 'The certificate''s raw data in byte array converted to Base64 string. Returned only on $select for a single object, that is, GET applications/{applicationId}?$select=keyCredentials or GET servicePrincipals/{servicePrincipalId}?$select=keyCredentials; otherwise, it is always null.'
           format: base64url
           nullable: true
         keyId:
           pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
           type: string
-          description: The unique identifier (GUID) for the key.
           format: uuid
           nullable: true
         startDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The date and time at which the credential becomes valid.The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
           format: date-time
           nullable: true
         type:
           type: string
-          description: 'The type of key credential; for example, Symmetric, AsymmetricX509Cert.'
           nullable: true
         usage:
           type: string
-          description: 'A string that describes the purpose for which the key can be used; for example, Verify.'
           nullable: true
       additionalProperties:
         type: object
@@ -21597,37 +21416,30 @@ components:
       properties:
         customKeyIdentifier:
           type: string
-          description: Do not use.
           format: base64url
           nullable: true
         displayName:
           type: string
-          description: Friendly name for the password. Optional.
           nullable: true
         endDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The date and time at which the password expires represented using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.'
           format: date-time
           nullable: true
         hint:
           type: string
-          description: Contains the first three characters of the password. Read-only.
           nullable: true
         keyId:
           pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
           type: string
-          description: The unique identifier for the password.
           format: uuid
           nullable: true
         secretText:
           type: string
-          description: Read-only; Contains the strong passwords generated by Azure AD that are 16-64 characters in length. The generated password value is only returned during the initial POST request to addPassword. There is no way to retrieve this password in the future.
           nullable: true
         startDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The date and time at which the password becomes valid. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Optional.'
           format: date-time
           nullable: true
       additionalProperties:
@@ -21642,17 +21454,14 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.synchronizationSecretKeyStringValuePair'
-              description: Represents a collection of credentials to access provisioned cloud applications.
             jobs:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.synchronizationJob'
-              description: 'Performs synchronization by periodically running in the background, polling for changes in one directory, and pushing them to another directory.'
             templates:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.synchronizationTemplate'
-              description: Pre-configured synchronization settings for a particular application.
           additionalProperties:
             type: object
     microsoft.graph.synchronizationJob:
@@ -21669,10 +21478,8 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.keyValuePair'
-              description: Settings associated with the job. Some settings are inherited from the template.
             templateId:
               type: string
-              description: Identifier of the synchronization template this job is based on.
               nullable: true
             schema:
               $ref: '#/components/schemas/microsoft.graph.synchronizationSchema'
@@ -21684,13 +21491,11 @@ components:
       properties:
         ruleId:
           type: string
-          description: The identifier of a the synchronizationRule to be applied.
           nullable: true
         subjects:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.synchronizationJobSubject'
-          description: The identifiers of one or more objects to which a synchronizationJob is to be applied.
       additionalProperties:
         type: object
     microsoft.graph.stringKeyStringValuePair:
@@ -21699,11 +21504,9 @@ components:
       properties:
         key:
           type: string
-          description: Key.
           nullable: true
         value:
           type: string
-          description: Value.
           nullable: true
       additionalProperties:
         type: object
@@ -21723,7 +21526,6 @@ components:
           $ref: '#/components/schemas/microsoft.graph.synchronizationSecret'
         value:
           type: string
-          description: The value of the secret.
           nullable: true
       additionalProperties:
         type: object
@@ -21737,16 +21539,13 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.synchronizationRule'
-              description: A collection of synchronization rules configured for the synchronizationJob or synchronizationTemplate.
             version:
               type: string
-              description: 'The version of the schema, updated automatically with every schema change.'
               nullable: true
             directories:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryDefinition'
-              description: Contains the collection of directories and all of their objects.
           additionalProperties:
             type: object
     microsoft.graph.directoryDefinition:
@@ -21760,23 +21559,19 @@ components:
             discoveryDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'Represents the discovery date and time using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
               format: date-time
               nullable: true
             name:
               type: string
-              description: Name of the directory. Must be unique within the synchronization schema. Not nullable.
               nullable: true
             objects:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.objectDefinition'
-              description: Collection of objects supported by the directory.
             readOnly:
               type: boolean
             version:
               type: string
-              description: Read only value that indicates version discovered. null if discovery has not yet occurred.
               nullable: true
           additionalProperties:
             type: object
@@ -21794,7 +21589,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.attributeType'
-              description: 'Attribute types supported by the operator. Possible values are: Boolean, Binary, Reference, Integer, String.'
           additionalProperties:
             type: object
     microsoft.graph.attributeMappingFunctionSchema:
@@ -21807,7 +21601,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.attributeMappingParameterSchema'
-              description: Collection of function parameters.
           additionalProperties:
             type: object
     microsoft.graph.expressionInputObject:
@@ -21820,7 +21613,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.stringKeyObjectValuePair'
-          description: Property values of the test object.
       additionalProperties:
         type: object
     microsoft.graph.attributeDefinition:
@@ -21829,42 +21621,34 @@ components:
       properties:
         anchor:
           type: boolean
-          description: 'true if the attribute should be used as the anchor for the object. Anchor attributes must have a unique value identifying an object, and must be immutable. Default is false. One, and only one, of the object''s attributes must be designated as the anchor to support synchronization.'
         apiExpressions:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.stringKeyStringValuePair'
         caseExact:
           type: boolean
-          description: true if value of this attribute should be treated as case-sensitive. This setting affects how the synchronization engine detects changes for the attribute.
         defaultValue:
           type: string
           nullable: true
         flowNullValues:
           type: boolean
-          description: '''true'' to allow null values for attributes.'
         metadata:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.metadataEntry'
-          description: 'Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.'
         multivalued:
           type: boolean
-          description: true if an attribute can have multiple values. Default is false.
         mutability:
           $ref: '#/components/schemas/microsoft.graph.mutability'
         name:
           type: string
-          description: Name of the attribute. Must be unique within the object definition. Not nullable.
           nullable: true
         referencedObjects:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.referencedObject'
-          description: 'For attributes with reference type, lists referenced objects (for example, the manager attribute would list User as the referenced object).'
         required:
           type: boolean
-          description: 'true if attribute is required. Object can not be created if any of the required attributes are missing. If during synchronization, the required attribute has no value, the default value will be used. If default the value was not set, synchronization will record an error.'
         type:
           $ref: '#/components/schemas/microsoft.graph.attributeType'
       additionalProperties:
@@ -21880,15 +21664,12 @@ components:
           items:
             type: string
             nullable: true
-          description: A collection of values produced by the evaluation of the expression.
         evaluationSucceeded:
           type: boolean
-          description: true if the evaluation was successful.
         parsedExpression:
           $ref: '#/components/schemas/microsoft.graph.attributeMappingSource'
         parsingSucceeded:
           type: boolean
-          description: true if the expression was parsed successfully.
       additionalProperties:
         type: object
     microsoft.graph.synchronizationTemplate:
@@ -21900,27 +21681,21 @@ components:
             applicationId:
               pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
               type: string
-              description: Identifier of the application this template belongs to.
               format: uuid
             default:
               type: boolean
-              description: true if this template is recommended to be the default for the application.
             description:
               type: string
-              description: Description of the template.
               nullable: true
             discoverable:
               type: boolean
-              description: true if this template should appear in the collection of templates available for the application instance (service principal).
             factoryTag:
               type: string
-              description: One of the well-known factory tags supported by the synchronization engine. The factoryTag tells the synchronization engine which implementation to use when processing jobs based on this template.
               nullable: true
             metadata:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.metadataEntry'
-              description: 'Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.'
             schema:
               $ref: '#/components/schemas/microsoft.graph.synchronizationSchema'
           additionalProperties:
@@ -21950,39 +21725,31 @@ components:
               items:
                 type: string
                 nullable: true
-              description: 'The list of categories for the application. Supported values can be: Collaboration, Business Management, Consumer, Content management, CRM, Data services, Developer services, E-commerce, Education, ERP, Finance, Health, Human resources, IT infrastructure, Mail, Management, Marketing, Media, Productivity, Project management, Telecommunications, Tools, Travel, and Web design & hosting.'
             description:
               type: string
-              description: A description of the application.
               nullable: true
             displayName:
               type: string
-              description: The name of the application.
               nullable: true
             homePageUrl:
               type: string
-              description: The home page URL of the application.
               nullable: true
             logoUrl:
               type: string
-              description: The URL to get the logo for this application.
               nullable: true
             publisher:
               type: string
-              description: The name of the publisher for this application.
               nullable: true
             supportedProvisioningTypes:
               type: array
               items:
                 type: string
                 nullable: true
-              description: The list of provisioning modes supported by this application. The only valid value is sync.
             supportedSingleSignOnModes:
               type: array
               items:
                 type: string
                 nullable: true
-              description: 'The list of single sign-on modes supported by this application. The supported values are oidc, password, saml, and notSupported.'
           additionalProperties:
             type: object
     microsoft.graph.applicationServicePrincipal:
@@ -22004,36 +21771,29 @@ components:
             appRoleId:
               pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
               type: string
-              description: 'The identifier (id) for the app role which is assigned to the principal. This app role must be exposed in the appRoles property on the resource application''s service principal (resourceId). If the resource application has not declared any app roles, a default app role ID of 00000000-0000-0000-0000-000000000000 can be specified to signal that the principal is assigned to the resource app without any specific app roles. Required on create.'
               format: uuid
             creationTimestamp:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The time when the app role assignment was created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.'
               format: date-time
               nullable: true
             principalDisplayName:
               type: string
-              description: 'The display name of the user, group, or service principal that was granted the app role assignment. Read-only. Supports $filter (eq and startswith).'
               nullable: true
             principalId:
               pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
               type: string
-              description: 'The unique identifier (id) for the user, group, or service principal being granted the app role. Required on create.'
               format: uuid
               nullable: true
             principalType:
               type: string
-              description: 'The type of the assigned principal. This can either be User, Group, or ServicePrincipal. Read-only.'
               nullable: true
             resourceDisplayName:
               type: string
-              description: The display name of the resource app's service principal to which the assignment is made.
               nullable: true
             resourceId:
               pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
               type: string
-              description: The unique identifier (id) for the resource service principal for which the assignment is made. Required on create. Supports $filter (eq only).
               format: uuid
               nullable: true
           additionalProperties:
@@ -22048,33 +21808,27 @@ components:
               $ref: '#/components/schemas/microsoft.graph.hybridAgentUpdaterConfiguration'
             isEnabled:
               type: boolean
-              description: Represents if Azure AD Application Proxy is enabled for the tenant.
               nullable: true
             agentGroups:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.onPremisesAgentGroup'
-              description: List of existing onPremisesAgentGroup objects. Read-only. Nullable.
             agents:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.onPremisesAgent'
-              description: List of existing onPremisesAgent objects. Read-only. Nullable.
             connectorGroups:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.connectorGroup'
-              description: List of existing connectorGroup objects for applications published through Application Proxy. Read-only. Nullable.
             connectors:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.connector'
-              description: List of existing connector objects for applications published through Application Proxy. Read-only. Nullable.
             publishedResources:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.publishedResource'
-              description: List of existing publishedResource objects. Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.onPremisesAgentGroup:
@@ -22085,22 +21839,18 @@ components:
           properties:
             displayName:
               type: string
-              description: Display name of the onPremisesAgentGroup.
             isDefault:
               type: boolean
-              description: Indicates if the onPremisesAgentGroup is the default agent group. Only a single agent group can be the default onPremisesAgentGroup and is set by the system.
             publishingType:
               $ref: '#/components/schemas/microsoft.graph.onPremisesPublishingType'
             agents:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.onPremisesAgent'
-              description: List of onPremisesAgent that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
             publishedResources:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.publishedResource'
-              description: List of publishedResource that are assigned to an onPremisesAgentGroup. Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.onPremisesAgent:
@@ -22111,10 +21861,8 @@ components:
           properties:
             externalIp:
               type: string
-              description: The external IP address as detected by the service for the agent machine. Read-only
             machineName:
               type: string
-              description: The name of the machine that the aggent is running on. Read-only
             status:
               $ref: '#/components/schemas/microsoft.graph.agentStatus'
             supportedPublishingTypes:
@@ -22125,7 +21873,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.onPremisesAgentGroup'
-              description: List of onPremisesAgentGroups that an onPremisesAgent is assigned to. Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.publishedResource:
@@ -22136,19 +21883,16 @@ components:
           properties:
             displayName:
               type: string
-              description: Display Name of the publishedResource.
               nullable: true
             publishingType:
               $ref: '#/components/schemas/microsoft.graph.onPremisesPublishingType'
             resourceName:
               type: string
-              description: Name of the publishedResource.
               nullable: true
             agentGroups:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.onPremisesAgentGroup'
-              description: List of onPremisesAgentGroups that a publishedResource is assigned to. Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.connector:
@@ -22159,17 +21903,14 @@ components:
           properties:
             externalIp:
               type: string
-              description: The external IP address as detected by the the connector server. Read-only.
             machineName:
               type: string
-              description: The machine name the connector is installed and running on.
             status:
               $ref: '#/components/schemas/microsoft.graph.connectorStatus'
             memberOf:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.connectorGroup'
-              description: The connectorGroup that the connector is a member of. Read-only.
           additionalProperties:
             type: object
     microsoft.graph.servicePrincipal:
@@ -22182,69 +21923,54 @@ components:
               $ref: '#/components/schemas/microsoft.graph.passwordSingleSignOnSettings'
             accountEnabled:
               type: boolean
-              description: 'true if the service principal account is enabled; otherwise, false. Supports $filter (eq, ne, not, in).'
               nullable: true
             addIns:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.addIn'
-              description: 'Defines custom behavior that a consuming service can use to call an app in specific contexts. For example, applications that can render file streams may set the addIns property for its ''FileHandler'' functionality. This will let services like Microsoft 365 call the application in the context of a document the user is working on.'
             alternativeNames:
               type: array
               items:
                 type: string
-              description: 'Used to retrieve service principals by subscription, identify resource group and full resource ids for managed identities. Supports $filter (eq, not, ge, le, startsWith).'
             appDescription:
               type: string
-              description: The description exposed by the associated application.
               nullable: true
             appDisplayName:
               type: string
-              description: The display name exposed by the associated application.
               nullable: true
             appId:
               type: string
-              description: 'The unique identifier for the associated application (its appId property). Supports $filter (eq, ne, not, in, startsWith).'
               nullable: true
             applicationTemplateId:
               type: string
-              description: 'Unique identifier of the applicationTemplate that the servicePrincipal was created from. Read-only. Supports $filter (eq, ne, NOT, startsWith).'
               nullable: true
             appOwnerOrganizationId:
               pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
               type: string
-              description: 'Contains the tenant id where the application is registered. This is applicable only to service principals backed by applications. Supports $filter (eq, ne, NOT, ge, le).'
               format: uuid
               nullable: true
             appRoleAssignmentRequired:
               type: boolean
-              description: 'Specifies whether users or other service principals need to be granted an app role assignment for this service principal before users can sign in or apps can get tokens. The default value is false. Not nullable. Supports $filter (eq, ne, NOT).'
             appRoles:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.appRole'
-              description: The roles exposed by the application which this service principal represents. For more information see the appRoles property definition on the application entity. Not nullable.
             customSecurityAttributes:
               $ref: '#/components/schemas/microsoft.graph.customSecurityAttributeValue'
             description:
               type: string
-              description: 'Free text field to provide an internal end-user facing description of the service principal. End-user portals such MyApps will display the application description in this field. The maximum allowed size is 1024 characters. Supports $filter (eq, ne, not, ge, le, startsWith) and $search.'
               nullable: true
             disabledByMicrosoftStatus:
               type: string
-              description: 'Specifies whether Microsoft has disabled the registered application. Possible values are: null (default value), NotDisabled, and DisabledDueToViolationOfServicesAgreement (reasons may include suspicious, abusive, or malicious activity, or a violation of the Microsoft Services Agreement).  Supports $filter (eq, ne, not).'
               nullable: true
             displayName:
               type: string
-              description: 'The display name for the service principal. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.'
               nullable: true
             errorUrl:
               type: string
-              description: Deprecated. Don't use.
               nullable: true
             homepage:
               type: string
-              description: Home page or landing page of the application.
               nullable: true
             info:
               $ref: '#/components/schemas/microsoft.graph.informationalUrl'
@@ -22252,48 +21978,38 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.keyCredential'
-              description: 'The collection of key credentials associated with the service principal. Not nullable. Supports $filter (eq, not, ge, le).'
             loginUrl:
               type: string
-              description: 'Specifies the URL where the service provider redirects the user to Azure AD to authenticate. Azure AD uses the URL to launch the application from Microsoft 365 or the Azure AD My Apps. When blank, Azure AD performs IdP-initiated sign-on for applications configured with SAML-based single sign-on. The user launches the application from Microsoft 365, the Azure AD My Apps, or the Azure AD SSO URL.'
               nullable: true
             logoutUrl:
               type: string
-              description: 'Specifies the URL that will be used by Microsoft''s authorization service to logout an user using OpenId Connect front-channel, back-channel or SAML logout protocols.'
               nullable: true
             notes:
               type: string
-              description: 'Free text field to capture information about the service principal, typically used for operational purposes. Maximum allowed size is 1024 characters.'
               nullable: true
             notificationEmailAddresses:
               type: array
               items:
                 type: string
-              description: Specifies the list of email addresses where Azure AD sends a notification when the active certificate is near the expiration date. This is only for the certificates used to sign the SAML token issued for Azure AD Gallery applications.
             passwordCredentials:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.passwordCredential'
-              description: The collection of password credentials associated with the application. Not nullable.
             preferredSingleSignOnMode:
               type: string
-              description: 'Specifies the single sign-on mode configured for this application. Azure AD uses the preferred single sign-on mode to launch the application from Microsoft 365 or the Azure AD My Apps. The supported values are password, saml, notSupported, and oidc.'
               nullable: true
             preferredTokenSigningKeyEndDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'Specifies the expiration date of the keyCredential used for token signing, marked by preferredTokenSigningKeyThumbprint.'
               format: date-time
               nullable: true
             preferredTokenSigningKeyThumbprint:
               type: string
-              description: Reserved for internal use only. Do not write or otherwise rely on this property. May be removed in future versions.
               nullable: true
             publishedPermissionScopes:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.permissionScope'
-              description: 'The delegated permissions exposed by the application. For more information see the oauth2PermissionScopes property on the application entity''s api property. Not nullable. Note: This property is named oauth2PermissionScopes in v1.0.'
             publisherName:
               type: string
               nullable: true
@@ -22301,10 +22017,8 @@ components:
               type: array
               items:
                 type: string
-              description: 'The URLs that user tokens are sent to for sign in with the associated application, or the redirect URIs that OAuth 2.0 authorization codes and access tokens are sent to for the associated application. Not nullable.'
             samlMetadataUrl:
               type: string
-              description: The url where the service exposes SAML metadata for federation.
               nullable: true
             samlSingleSignOnSettings:
               $ref: '#/components/schemas/microsoft.graph.samlSingleSignOnSettings'
@@ -22312,61 +22026,49 @@ components:
               type: array
               items:
                 type: string
-              description: 'Contains the list of identifiersUris, copied over from the associated application. Additional values can be added to hybrid applications. These values can be used to identify the permissions exposed by this app within Azure AD. For example,Client apps can specify a resource URI which is based on the values of this property to acquire an access token, which is the URI returned in the ''aud'' claim.The any operator is required for filter expressions on multi-valued properties. Not nullable.  Supports $filter (eq, not, ge, le, startsWith).'
             servicePrincipalType:
               type: string
-              description: 'Identifies whether the service principal represents an application, a managed identity, or a legacy application. This is set by Azure AD internally. The servicePrincipalType property can be set to three different values: __Application - A service principal that represents an application or service. The appId property identifies the associated app registration, and matches the appId of an application, possibly from a different tenant. If the associated app registration is missing, tokens are not issued for the service principal.__ManagedIdentity - A service principal that represents a managed identity. Service principals representing managed identities can be granted access and permissions, but cannot be updated or modified directly.__Legacy - A service principal that represents an app created before app registrations, or through legacy experiences. Legacy service principal can have credentials, service principal names, reply URLs, and other properties which are editable by an authorized user, but does not have an associated app registration. The appId value does not associate the service principal with an app registration. The service principal can only be used in the tenant where it was created.__SocialIdp - For internal use.'
               nullable: true
             signInAudience:
               type: string
-              description: 'Specifies the Microsoft accounts that are supported for the current application. Read-only. Supported values are:AzureADMyOrg: Users with a Microsoft work or school account in my organization’s Azure AD tenant (single-tenant).AzureADMultipleOrgs: Users with a Microsoft work or school account in any organization’s Azure AD tenant (multi-tenant).AzureADandPersonalMicrosoftAccount: Users with a personal Microsoft account, or a work or school account in any organization’s Azure AD tenant.PersonalMicrosoftAccount: Users with a personal Microsoft account only.'
               nullable: true
             tags:
               type: array
               items:
                 type: string
-              description: 'Custom strings that can be used to categorize and identify the service principal. Not nullable. Supports $filter (eq, not, ge, le, startsWith).'
             tokenEncryptionKeyId:
               pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
               type: string
-              description: 'Specifies the keyId of a public key from the keyCredentials collection. When configured, Azure AD issues tokens for this application encrypted using the key specified by this property. The application code that receives the encrypted token must use the matching private key to decrypt the token before it can be used for the signed-in user.'
               format: uuid
               nullable: true
             appManagementPolicies:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.appManagementPolicy'
-              description: The appManagementPolicy applied to this service principal.
             appRoleAssignedTo:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.appRoleAssignment'
-              description: 'App role assignments for this app or service, granted to users, groups, and other service principals. Supports $expand.'
             appRoleAssignments:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.appRoleAssignment'
-              description: 'App role assignment for another app or service, granted to this service principal. Supports $expand.'
             claimsMappingPolicies:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.claimsMappingPolicy'
-              description: The claimsMappingPolicies assigned to this service principal. Supports $expand.
             createdObjects:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: Directory objects created by this service principal. Read-only. Nullable.
             delegatedPermissionClassifications:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.delegatedPermissionClassification'
-              description: The permission classifications for delegated permissions exposed by the app that this service principal represents. Supports $expand.
             endpoints:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.endpoint'
-              description: Endpoints available for discovery. Services like Sharepoint populate this property with a tenant specific SharePoint endpoints that other applications can discover and use in their experiences.
             federatedIdentityCredentials:
               type: array
               items:
@@ -22375,7 +22077,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.homeRealmDiscoveryPolicy'
-              description: The homeRealmDiscoveryPolicies assigned to this service principal. Supports $expand.
             licenseDetails:
               type: array
               items:
@@ -22384,32 +22085,26 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: 'Roles that this service principal is a member of. HTTP Methods: GET Read-only. Nullable. Supports $expand.'
             oauth2PermissionGrants:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.oAuth2PermissionGrant'
-              description: Delegated permission grants authorizing this service principal to access an API on behalf of a signed-in user. Read-only. Nullable.
             ownedObjects:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: Directory objects that are owned by this service principal. Read-only. Nullable. Supports $expand.
             owners:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: Directory objects that are owners of this servicePrincipal. The owners are a set of non-admin users or servicePrincipals who are allowed to modify this object. Read-only. Nullable. Supports $expand.
             tokenIssuancePolicies:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.tokenIssuancePolicy'
-              description: The tokenIssuancePolicies assigned to this service principal.
             tokenLifetimePolicies:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.tokenLifetimePolicy'
-              description: The tokenLifetimePolicies assigned to this service principal.
             transitiveMemberOf:
               type: array
               items:
@@ -22435,11 +22130,9 @@ components:
               $ref: '#/components/schemas/microsoft.graph.permissionClassificationType'
             permissionId:
               type: string
-              description: The unique identifier (id) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
               nullable: true
             permissionName:
               type: string
-              description: The claim value (value) for the delegated permission listed in the oauth2PermissionScopes collection of the servicePrincipal. Does not support $filter.
               nullable: true
           additionalProperties:
             type: object
@@ -22451,22 +22144,17 @@ components:
           properties:
             capability:
               type: string
-              description: 'Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.)  Not nullable. Read-only.'
             providerId:
               type: string
-              description: Application id of the publishing underlying service. Not nullable. Read-only.
               nullable: true
             providerName:
               type: string
-              description: Name of the publishing underlying service. Read-only.
               nullable: true
             providerResourceId:
               type: string
-              description: 'For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.'
               nullable: true
             uri:
               type: string
-              description: URL of the published resource. Not nullable. Read-only.
           additionalProperties:
             type: object
     microsoft.graph.licenseDetails:
@@ -22479,16 +22167,13 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.servicePlanInfo'
-              description: 'Information about the service plans assigned with the license. Read-only, Not nullable'
             skuId:
               pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
               type: string
-              description: Unique identifier (GUID) for the service SKU. Equal to the skuId property on the related SubscribedSku object. Read-only
               format: uuid
               nullable: true
             skuPartNumber:
               type: string
-              description: 'Unique SKU display name. Equal to the skuPartNumber on the related SubscribedSku object; for example: ''AAD_Premium''. Read-only'
               nullable: true
           additionalProperties:
             type: object
@@ -22539,15 +22224,12 @@ components:
       properties:
         fieldId:
           type: string
-          description: 'The name of the field for this credential. e.g, username or password or phoneNumber. This is defined by the application. Must match what is in the html field on singleSignOnSettings/password object.'
           nullable: true
         type:
           type: string
-          description: 'The type for this credential. Valid values: username, password, or other.'
           nullable: true
         value:
           type: string
-          description: 'The value for this credential. e.g, mysuperhiddenpassword. Note the value for passwords is write-only, the value can never be read back.'
           nullable: true
       additionalProperties:
         type: object
@@ -22559,10 +22241,8 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.credential'
-          description: A list of credential objects that define the complete sign in flow.
         id:
           type: string
-          description: The ID of the user or group this credential set belongs to.
       additionalProperties:
         type: object
     microsoft.graph.oAuth2PermissionGrant:
@@ -22573,32 +22253,25 @@ components:
           properties:
             clientId:
               type: string
-              description: The id of the client service principal for the application which is authorized to act on behalf of a signed-in user when accessing an API. Required. Supports $filter (eq only).
             consentType:
               type: string
-              description: 'Indicates if authorization is granted for the client application to impersonate all users or only a specific user. AllPrincipals indicates authorization to impersonate all users. Principal indicates authorization to impersonate a specific user. Consent on behalf of all users can be granted by an administrator. Non-admin users may be authorized to consent on behalf of themselves in some cases, for some delegated permissions. Required. Supports $filter (eq only).'
               nullable: true
             expiryTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'Currently, the end time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.'
               format: date-time
               nullable: true
             principalId:
               type: string
-              description: 'The id of the user on behalf of whom the client is authorized to access the resource, when consentType is Principal. If consentType is AllPrincipals this value is null. Required when consentType is Principal.'
               nullable: true
             resourceId:
               type: string
-              description: The id of the resource service principal to which access is authorized. This identifies the API which the client is authorized to attempt to call on behalf of a signed-in user.
             scope:
               type: string
-              description: 'A space-separated list of the claim values for delegated permissions which should be included in access tokens for the resource application (the API). For example, openid User.Read GroupMember.Read.All. Each claim value should match the value field of one of the delegated permissions defined by the API, listed in the publishedPermissionScopes property of the resource service principal.'
               nullable: true
             startTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'Currently, the start time value is ignored, but a value is required when creating an oAuth2PermissionGrant. Required.'
               format: date-time
               nullable: true
           additionalProperties:
@@ -22609,7 +22282,6 @@ components:
       properties:
         acceptMappedClaims:
           type: boolean
-          description: 'When true, allows an application to use claims mapping without specifying a custom signing key.'
           nullable: true
         knownClientApplications:
           type: array
@@ -22618,22 +22290,18 @@ components:
             type: string
             format: uuid
             nullable: true
-          description: 'Used for bundling consent if you have a solution that contains two parts: a client app and a custom web API app. If you set the appID of the client app to this value, the user only consents once to the client app. Azure AD knows that consenting to the client means implicitly consenting to the web API and automatically provisions service principals for both APIs at the same time. Both the client and the web API app must be registered in the same tenant.'
         oauth2PermissionScopes:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.permissionScope'
-          description: 'The definition of the delegated permissions exposed by the web API represented by this application registration. These delegated permissions may be requested by a client application, and may be granted by users or administrators during consent. Delegated permissions are sometimes referred to as OAuth 2.0 scopes.'
         preAuthorizedApplications:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.preAuthorizedApplication'
-          description: 'Lists the client applications that are pre-authorized with the specified delegated permissions to access this application''s APIs. Users are not required to consent to any pre-authorized application (for the permissions specified). However, any additional permissions not listed in preAuthorizedApplications (requested through incremental consent for example) will require user consent.'
         requestedAccessTokenVersion:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: 'Specifies the access token version expected by this resource. This changes the version and format of the JWT produced independent of the endpoint or client used to request the access token.  The endpoint used, v1.0 or v2.0, is chosen by the client and only impacts the version of id_tokens. Resources need to explicitly configure requestedAccessTokenVersion to indicate the supported access token format.  Possible values for requestedAccessTokenVersion are 1, 2, or null. If the value is null, this defaults to 1, which corresponds to the v1.0 endpoint.  If signInAudience on the application is configured as AzureADandPersonalMicrosoftAccount, the value for this property must be 2'
           format: int32
           nullable: true
       additionalProperties:
@@ -22646,30 +22314,23 @@ components:
           type: array
           items:
             type: string
-          description: 'Specifies whether this app role can be assigned to users and groups (by setting to [''User'']), to other application''s (by setting to [''Application''], or both (by setting to [''User'', ''Application'']). App roles supporting assignment to other applications'' service principals are also known as application permissions. The ''Application'' value is only supported for app roles defined on application entities.'
         description:
           type: string
-          description: 'The description for the app role. This is displayed when the app role is being assigned and, if the app role functions as an application permission, during  consent experiences.'
           nullable: true
         displayName:
           type: string
-          description: Display name for the permission that appears in the app role assignment and consent experiences.
           nullable: true
         id:
           pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
           type: string
-          description: 'Unique role identifier inside the appRoles collection. When creating a new app role, a new GUID identifier must be provided.'
           format: uuid
         isEnabled:
           type: boolean
-          description: 'When creating or updating an app role, this must be set to true (which is the default). To delete a role, this must first be set to false.  At that point, in a subsequent call, this role may be removed.'
         origin:
           type: string
-          description: Specifies if the app role is defined on the application object or on the servicePrincipal entity. Must not be included in any POST or PATCH requests. Read-only.
           nullable: true
         value:
           type: string
-          description: 'Specifies the value to include in the roles claim in ID tokens and access tokens authenticating an assigned user or service principal. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & '' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..'
           nullable: true
       additionalProperties:
         type: object
@@ -22679,26 +22340,21 @@ components:
       properties:
         certificationDetailsUrl:
           type: string
-          description: URL that shows certification details for the application.
           nullable: true
         certificationExpirationDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: The timestamp when the current certification for the application will expire.
           format: date-time
           nullable: true
         isCertifiedByMicrosoft:
           type: boolean
-          description: Indicates whether the application is certified by Microsoft.
           nullable: true
         isPublisherAttested:
           type: boolean
-          description: Indicates whether the application has been self-attested by the application developer or the publisher.
           nullable: true
         lastCertificationDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: The timestamp when the certification for the application was most recently added or updated.
           format: date-time
           nullable: true
       additionalProperties:
@@ -22709,23 +22365,18 @@ components:
       properties:
         logoUrl:
           type: string
-          description: 'CDN URL to the application''s logo, Read-only.'
           nullable: true
         marketingUrl:
           type: string
-          description: 'Link to the application''s marketing page. For example, https://www.contoso.com/app/marketing'
           nullable: true
         privacyStatementUrl:
           type: string
-          description: 'Link to the application''s privacy statement. For example, https://www.contoso.com/app/privacy'
           nullable: true
         supportUrl:
           type: string
-          description: 'Link to the application''s support page. For example, https://www.contoso.com/app/support'
           nullable: true
         termsOfServiceUrl:
           type: string
-          description: 'Link to the application''s terms of service statement. For example, https://www.contoso.com/app/termsofservice'
           nullable: true
       additionalProperties:
         type: object
@@ -22737,17 +22388,14 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.optionalClaim'
-          description: The optional claims returned in the JWT access token.
         idToken:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.optionalClaim'
-          description: The optional claims returned in the JWT ID token.
         saml2Token:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.optionalClaim'
-          description: The optional claims returned in the SAML token.
       additionalProperties:
         type: object
     microsoft.graph.parentalControlSettings:
@@ -22759,10 +22407,8 @@ components:
           items:
             type: string
             nullable: true
-          description: Specifies the two-letter ISO country codes. Access to the application will be blocked for minors from the countries specified in this list.
         legalAgeGroupRule:
           type: string
-          description: 'Specifies the legal age group rule that applies to users of the app. Can be set to one of the following values: ValueDescriptionAllowDefault. Enforces the legal minimum. This means parental consent is required for minors in the European Union and Korea.RequireConsentForPrivacyServicesEnforces the user to specify date of birth to comply with COPPA rules. RequireConsentForMinorsRequires parental consent for ages below 18, regardless of country minor rules.RequireConsentForKidsRequires parental consent for ages below 14, regardless of country minor rules.BlockMinorsBlocks minors from using the app.'
           nullable: true
       additionalProperties:
         type: object
@@ -22774,7 +22420,6 @@ components:
           type: array
           items:
             type: string
-          description: 'Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.'
       additionalProperties:
         type: object
     microsoft.graph.requiredResourceAccess:
@@ -22785,10 +22430,8 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.resourceAccess'
-          description: The list of OAuth2.0 permission scopes and app roles that the application requires from the specified resource.
         resourceAppId:
           type: string
-          description: The unique identifier for the resource that the application requires access to. This should be equal to the appId declared on the target resource application.
       additionalProperties:
         type: object
     microsoft.graph.spaApplication:
@@ -22799,7 +22442,6 @@ components:
           type: array
           items:
             type: string
-          description: 'Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.'
       additionalProperties:
         type: object
     microsoft.graph.verifiedPublisher:
@@ -22809,16 +22451,13 @@ components:
         addedDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: The timestamp when the verified publisher was first added or most recently updated.
           format: date-time
           nullable: true
         displayName:
           type: string
-          description: The verified publisher name from the app publisher's Partner Center account.
           nullable: true
         verifiedPublisherId:
           type: string
-          description: The ID of the verified publisher from the app publisher's Partner Center account.
           nullable: true
       additionalProperties:
         type: object
@@ -22828,13 +22467,11 @@ components:
       properties:
         homePageUrl:
           type: string
-          description: Home page or landing page of the application.
           nullable: true
         implicitGrantSettings:
           $ref: '#/components/schemas/microsoft.graph.implicitGrantSettings'
         logoutUrl:
           type: string
-          description: 'Specifies the URL that will be used by Microsoft''s authorization service to logout an user using front-channel, back-channel or SAML logout protocols.'
           nullable: true
         oauth2AllowImplicitFlow:
           type: boolean
@@ -22843,12 +22480,10 @@ components:
           type: array
           items:
             type: string
-          description: 'Specifies the URLs where user tokens are sent for sign-in, or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent.'
         redirectUriSettings:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.redirectUriSettings'
-          description: Specifies the index of the URLs where user tokens are sent for sign-in. This is only valid for applications using SAML.
       additionalProperties:
         type: object
     microsoft.graph.windowsApplication:
@@ -22857,13 +22492,11 @@ components:
       properties:
         packageSid:
           type: string
-          description: The package security identifier that Microsoft has assigned the application. Optional. Read-only.
           nullable: true
         redirectUris:
           type: array
           items:
             type: string
-          description: Specifies the URLs where user tokens are sent for sign-in or the redirect URIs where OAuth 2.0 authorization codes and access tokens are sent. Only available for applications that support the PersonalMicrosoftAccount signInAudience.
       additionalProperties:
         type: object
     microsoft.graph.onPremisesPublishing:
@@ -22872,53 +22505,41 @@ components:
       properties:
         alternateUrl:
           type: string
-          description: 'If you are configuring a traffic manager in front of multiple App Proxy applications, the alternateUrl is the user-friendly URL that will point to the traffic manager.'
           nullable: true
         applicationServerTimeout:
           type: string
-          description: 'The duration the connector will wait for a response from the backend application before closing the connection. Possible values are default, long. When set to default, the backend application timeout has a length of 85 seconds. When set to long, the backend timeout is increased to 180 seconds. Use long if your server takes more than 85 seconds to respond to requests or if you are unable to access the application and the error status is ''Backend Timeout''. Default value is default.'
           nullable: true
         applicationType:
           type: string
-          description: Indicates if this application is an Application Proxy configured application. This is pre-set by the system. Read-only.
           nullable: true
         externalAuthenticationType:
           $ref: '#/components/schemas/microsoft.graph.externalAuthenticationType'
         externalUrl:
           type: string
-          description: 'The published external url for the application. For example, https://intranet-contoso.msappproxy.net/.'
           nullable: true
         internalUrl:
           type: string
-          description: 'The internal url of the application. For example, https://intranet/.'
           nullable: true
         isBackendCertificateValidationEnabled:
           type: boolean
-          description: 'Indicates whether backend SSL certificate validation is enabled for the application. For all new Application Proxy apps, the property will be set to true by default. For all existing apps, the property will be set to false.'
           nullable: true
         isHttpOnlyCookieEnabled:
           type: boolean
-          description: 'Indicates if the HTTPOnly cookie flag should be set in the HTTP response headers. Set this value to true to have Application Proxy cookies include the HTTPOnly flag in the HTTP response headers. If using Remote Desktop Services, set this value to False. Default value is false.'
           nullable: true
         isOnPremPublishingEnabled:
           type: boolean
-          description: Indicates if the application is currently being published via Application Proxy or not. This is pre-set by the system. Read-only.
           nullable: true
         isPersistentCookieEnabled:
           type: boolean
-          description: 'Indicates if the Persistent cookie flag should be set in the HTTP response headers. Keep this value set to false. Only use this setting for applications that can''t share cookies between processes. For more information about cookie settings, see Cookie settings for accessing on-premises applications in Azure Active Directory. Default value is false.'
           nullable: true
         isSecureCookieEnabled:
           type: boolean
-          description: Indicates if the Secure cookie flag should be set in the HTTP response headers. Set this value to true to transmit cookies over a secure channel such as an encrypted HTTPS request. Default value is true.
           nullable: true
         isTranslateHostHeaderEnabled:
           type: boolean
-          description: Indicates if the application should translate urls in the reponse headers. Keep this value as true unless your application required the original host header in the authentication request. Default value is true.
           nullable: true
         isTranslateLinksInBodyEnabled:
           type: boolean
-          description: 'Indicates if the application should translate urls in the application body. Keep this value as false unless you have hardcoded HTML links to other on-premises applications and don''t use custom domains. For more information, see Link translation with Application Proxy. Default value is false.'
           nullable: true
         singleSignOnSettings:
           $ref: '#/components/schemas/microsoft.graph.onPremisesPublishingSingleSignOn'
@@ -22941,10 +22562,8 @@ components:
           properties:
             description:
               type: string
-              description: Description for this policy. Required.
             displayName:
               type: string
-              description: Display name for this policy. Required.
           additionalProperties:
             type: object
     microsoft.graph.appManagementConfiguration:
@@ -22955,12 +22574,10 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.keyCredentialConfiguration'
-          description: Collection of keyCredential restrictions settings to be applied to an application or service principal.
         passwordCredentials:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.passwordCredentialConfiguration'
-          description: Collection of password restrictions settings to be applied to an application or service principal.
       additionalProperties:
         type: object
     microsoft.graph.entity:
@@ -22969,7 +22586,6 @@ components:
       properties:
         id:
           type: string
-          description: Read-only.
       additionalProperties:
         type: object
     microsoft.graph.connectorGroupType:
@@ -22997,10 +22613,8 @@ components:
               type: array
               items:
                 type: string
-              description: A string collection containing a JSON string that defines the rules and settings for a policy. The syntax for the definition differs for each derived policy type. Required.
             isOrganizationDefault:
               type: boolean
-              description: 'If set to true, activates this policy. There can be many policies for the same policy type, but only one can be activated as the organization default. Optional, default value is false.'
               nullable: true
             appliesTo:
               type: array
@@ -23015,13 +22629,11 @@ components:
         expiration:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'Date and time when this job will expire. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
           format: date-time
           nullable: true
         interval:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: The interval between synchronization iterations.
           format: duration
         state:
           $ref: '#/components/schemas/microsoft.graph.synchronizationScheduleState'
@@ -23035,11 +22647,9 @@ components:
           $ref: '#/components/schemas/microsoft.graph.synchronizationStatusCode'
         countSuccessiveCompleteFailures:
           type: integer
-          description: Number of consecutive times this job failed.
           format: int64
         escrowsPruned:
           type: boolean
-          description: 'true if the job''s escrows (object-level errors) were pruned during initial synchronization. Escrows can be pruned if during the initial synchronization, you reach the threshold of errors that would normally put the job in quarantine. Instead of going into quarantine, the synchronization process clears the job''s errors and continues until the initial synchronization is completed. When the initial synchronization is completed, the job will pause and wait for the customer to clean up the errors.'
         lastExecution:
           $ref: '#/components/schemas/microsoft.graph.synchronizationTaskExecution'
         lastSuccessfulExecution:
@@ -23050,27 +22660,22 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.synchronizationProgress'
-          description: Details of the progress of a job toward completion.
         quarantine:
           $ref: '#/components/schemas/microsoft.graph.synchronizationQuarantine'
         steadyStateFirstAchievedTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The time when steady state (no more changes to the process) was first achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
           format: date-time
         steadyStateLastAchievedTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The time when steady state (no more changes to the process) was last achieved. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
           format: date-time
         synchronizedEntryCountByType:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.stringKeyLongValuePair'
-          description: 'Count of synchronized objects, listed by object type.'
         troubleshootingUrl:
           type: string
-          description: 'In the event of an error, the URL with the troubleshooting steps for the issue.'
           nullable: true
       additionalProperties:
         type: object
@@ -23080,10 +22685,8 @@ components:
       properties:
         name:
           type: string
-          description: Name for this key-value pair
         value:
           type: string
-          description: Value for this key-value pair
           nullable: true
       additionalProperties:
         type: object
@@ -23095,11 +22698,9 @@ components:
           $ref: '#/components/schemas/microsoft.graph.synchronizationLinkedObjects'
         objectId:
           type: string
-          description: The identifier of an object to which a synchronizationJob  is to be applied.
           nullable: true
         objectTypeName:
           type: string
-          description: The type of the object to which a synchronizationJob  is to be applied.
           nullable: true
       additionalProperties:
         type: object
@@ -23169,38 +22770,30 @@ components:
       properties:
         editable:
           type: boolean
-          description: true if the synchronization rule can be customized; false if this rule is read-only and should not be changed.
         id:
           type: string
-          description: Synchronization rule identifier. Must be one of the identifiers recognized by the synchronization engine. Supported rule identifiers can be found in the synchronization template returned by the API.
           nullable: true
         metadata:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.stringKeyStringValuePair'
-          description: 'Additional extension properties. Unless instructed explicitly by the support team, metadata values should not be changed.'
         name:
           type: string
-          description: Human-readable name of the synchronization rule. Not nullable.
           nullable: true
         objectMappings:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.objectMapping'
-          description: Collection of object mappings supported by the rule. Tells the synchronization engine which objects should be synchronized.
         priority:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Priority relative to other rules in the synchronizationSchema. Rules with the lowest priority number will be processed first.
           format: int32
         sourceDirectoryName:
           type: string
-          description: Name of the source directory. Must match one of the directory definitions in synchronizationSchema.
           nullable: true
         targetDirectoryName:
           type: string
-          description: Name of the target directory. Must match one of the directory definitions in synchronizationSchema.
           nullable: true
       additionalProperties:
         type: object
@@ -23264,14 +22857,11 @@ components:
       properties:
         allowMultipleOccurrences:
           type: boolean
-          description: 'The given parameter can be provided multiple times (for example, multiple input strings in the Concatenate(string,string,...) function).'
         name:
           type: string
-          description: Parameter name.
           nullable: true
         required:
           type: boolean
-          description: true if the parameter is required; otherwise false.
         type:
           $ref: '#/components/schemas/microsoft.graph.attributeType'
       additionalProperties:
@@ -23282,7 +22872,6 @@ components:
       properties:
         key:
           type: string
-          description: Key.
           nullable: true
       additionalProperties:
         type: object
@@ -23292,11 +22881,9 @@ components:
       properties:
         key:
           type: string
-          description: Name of the metadata property.
           nullable: true
         value:
           type: string
-          description: Value of the metadata property.
           nullable: true
       additionalProperties:
         type: object
@@ -23314,11 +22901,9 @@ components:
       properties:
         referencedObjectName:
           type: string
-          description: Name of the referenced object. Must match one of the objects in the directory definition.
           nullable: true
         referencedProperty:
           type: string
-          description: 'Currently not supported. Name of the property in the referenced object, the value for which is used as the reference.'
           nullable: true
       additionalProperties:
         type: object
@@ -23328,22 +22913,18 @@ components:
       properties:
         code:
           type: string
-          description: Represents the error code.
           nullable: true
         details:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.publicErrorDetail'
-          description: Details of the error.
         innerError:
           $ref: '#/components/schemas/microsoft.graph.publicInnerError'
         message:
           type: string
-          description: A non-localized message for the developer.
           nullable: true
         target:
           type: string
-          description: The target of the error.
           nullable: true
       additionalProperties:
         type: object
@@ -23371,11 +22952,9 @@ components:
       properties:
         allowUpdateConfigurationOverride:
           type: boolean
-          description: Indicates if updater configuration will be skipped and the agent will receive an update when the next version of the agent is available.
         deferUpdateDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
           format: date-time
           nullable: true
         updateWindow:
@@ -23443,38 +23022,30 @@ components:
       properties:
         adminConsentDescription:
           type: string
-          description: 'A description of the delegated permissions, intended to be read by an administrator granting the permission on behalf of all users. This text appears in tenant-wide admin consent experiences.'
           nullable: true
         adminConsentDisplayName:
           type: string
-          description: 'The permission''s title, intended to be read by an administrator granting the permission on behalf of all users.'
           nullable: true
         id:
           pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
           type: string
-          description: Unique delegated permission identifier inside the collection of delegated permissions defined for a resource application.
           format: uuid
         isEnabled:
           type: boolean
-          description: 'When creating or updating a permission, this property must be set to true (which is the default). To delete a permission, this property must first be set to false.  At that point, in a subsequent call, the permission may be removed.'
         origin:
           type: string
           nullable: true
         type:
           type: string
-          description: 'The possible values are: User and Admin. Specifies whether this delegated permission should be considered safe for non-admin users to consent to on behalf of themselves, or whether an administrator consent should always be required. While Microsoft Graph defines the default consent requirement for each permission, the tenant administrator may override the behavior in their organization (by allowing, restricting, or limiting user consent to this delegated permission). For more information, see Configure how users consent to applications.'
           nullable: true
         userConsentDescription:
           type: string
-          description: 'A description of the delegated permissions, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.'
           nullable: true
         userConsentDisplayName:
           type: string
-          description: 'A title for the permission, intended to be read by a user granting the permission on their own behalf. This text appears in consent experiences where the user is consenting only on behalf of themselves.'
           nullable: true
         value:
           type: string
-          description: 'Specifies the value to include in the scp (scope) claim in access tokens. Must not exceed 120 characters in length. Allowed characters are : ! # $ % & '' ( ) * + , - . / : ;  =  ? @ [ ] ^ + _  {  } ~, as well as characters in the ranges 0-9, A-Z and a-z. Any other character, including the space character, are not allowed. May not begin with ..'
           nullable: true
       additionalProperties:
         type: object
@@ -23484,7 +23055,6 @@ components:
       properties:
         relayState:
           type: string
-          description: The relative URI the service provider would redirect to after completion of the single sign-on flow.
           nullable: true
       additionalProperties:
         type: object
@@ -23502,21 +23072,17 @@ components:
       properties:
         appliesTo:
           type: string
-          description: The object the service plan can be assigned to. The possible values are:User - service plan can be assigned to individual users.Company - service plan can be assigned to the entire tenant.
           nullable: true
         provisioningStatus:
           type: string
-          description: 'The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet.'
           nullable: true
         servicePlanId:
           pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
           type: string
-          description: The unique identifier of the service plan.
           format: uuid
           nullable: true
         servicePlanName:
           type: string
-          description: The name of the service plan.
           nullable: true
       additionalProperties:
         type: object
@@ -23835,13 +23401,11 @@ components:
       properties:
         appId:
           type: string
-          description: The unique identifier for the application.
         permissionIds:
           type: array
           items:
             type: string
             nullable: true
-          description: The unique identifier for the oauth2PermissionScopes the application requires.
       additionalProperties:
         type: object
     microsoft.graph.optionalClaim:
@@ -23853,16 +23417,12 @@ components:
           items:
             type: string
             nullable: true
-          description: 'Additional properties of the claim. If a property exists in this collection, it modifies the behavior of the optional claim specified in the name property.'
         essential:
           type: boolean
-          description: 'If the value is true, the claim specified by the client is necessary to ensure a smooth authorization experience for the specific task requested by the end user. The default value is false.'
         name:
           type: string
-          description: The name of the optional claim.
         source:
           type: string
-          description: 'The source (directory object) of the claim. There are predefined claims and user-defined claims from extension properties. If the source value is null, the claim is a predefined optional claim. If the source value is user, the value in the name property is the extension property from the user object.'
           nullable: true
       additionalProperties:
         type: object
@@ -23873,11 +23433,9 @@ components:
         id:
           pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
           type: string
-          description: 'The unique identifier of an app role or delegated permission exposed by the resource application. For delegated permissions, this should match the id property of one of the delegated permissions in the oauth2PermissionScopes collection of the resource application''s service principal. For app roles (application permissions), this should match the id property of an app role in the appRoles collection of the resource application''s service principal.'
           format: uuid
         type:
           type: string
-          description: 'Specifies whether the id property references a delegated permission or an app role (application permission). The possible values are: Scope (for delegated permissions) or Role (for app roles).'
           nullable: true
       additionalProperties:
         type: object
@@ -23887,11 +23445,9 @@ components:
       properties:
         enableAccessTokenIssuance:
           type: boolean
-          description: Specifies whether this web application can request an access token using the OAuth 2.0 implicit flow.
           nullable: true
         enableIdTokenIssuance:
           type: boolean
-          description: Specifies whether this web application can request an ID token using the OAuth 2.0 implicit flow.
           nullable: true
       additionalProperties:
         type: object
@@ -23903,12 +23459,10 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Identifies the specific URI within the redirectURIs collection in SAML SSO flows. Defaults to null. The index is unique across all the redirectUris for the application.
           format: int32
           nullable: true
         uri:
           type: string
-          description: Specifies the URI that tokens are sent to.
           nullable: true
       additionalProperties:
         type: object
@@ -23935,26 +23489,21 @@ components:
         expiryDate:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The expiry date of the custom domain certificate. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
           format: date-time
           nullable: true
         issueDate:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The issue date of the custom domain. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
           format: date-time
           nullable: true
         issuerName:
           type: string
-          description: The issuer name of the custom domain certificate.
           nullable: true
         subjectName:
           type: string
-          description: The subject name of the custom domain certificate.
           nullable: true
         thumbprint:
           type: string
-          description: The thumbprint associated with the custom domain certificate.
           nullable: true
       additionalProperties:
         type: object
@@ -23970,7 +23519,6 @@ components:
         restrictForAppsCreatedAfterDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'Timestamp when the policy is enforced for all apps created on or after the specified date. For existing applications, the enforcement date would be back dated. To apply to all applications regardless of their creation date, this property would be null. Nullable.'
           format: date-time
           nullable: true
         restrictionType:
@@ -23989,7 +23537,6 @@ components:
         restrictForAppsCreatedAfterDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'Enforces the policy for an app created on or after the enforcement date. For existing applications, the enforcement date would be backdated. To apply to all applications, this date would be null.'
           format: date-time
           nullable: true
         restrictionType:
@@ -24018,43 +23565,33 @@ components:
       properties:
         activityIdentifier:
           type: string
-          description: Identifier of the job run.
           nullable: true
         countEntitled:
           type: integer
-          description: Count of processed entries that were assigned for this application.
           format: int64
         countEntitledForProvisioning:
           type: integer
-          description: Count of processed entries that were assigned for provisioning.
           format: int64
         countEscrowed:
           type: integer
-          description: Count of entries that were escrowed (errors).
           format: int64
         countEscrowedRaw:
           type: integer
-          description: 'Count of entries that were escrowed, including system-generated escrows.'
           format: int64
         countExported:
           type: integer
-          description: Count of exported entries.
           format: int64
         countExports:
           type: integer
-          description: Count of entries that were expected to be exported.
           format: int64
         countImported:
           type: integer
-          description: Count of imported entries.
           format: int64
         countImportedDeltas:
           type: integer
-          description: Count of imported delta-changes.
           format: int64
         countImportedReferenceDeltas:
           type: integer
-          description: Count of imported delta-changes pertaining to reference changes.
           format: int64
         error:
           $ref: '#/components/schemas/microsoft.graph.synchronizationError'
@@ -24063,12 +23600,10 @@ components:
         timeBegan:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'Time when this job run began. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
           format: date-time
         timeEnded:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'Time when this job run ended. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
           format: date-time
       additionalProperties:
         type: object
@@ -24078,20 +23613,16 @@ components:
       properties:
         completedUnits:
           type: integer
-          description: The numerator of a progress ratio; the number of units of changes already processed.
           format: int64
         progressObservationDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: The time of a progress observation as an offset in minutes from UTC.
           format: date-time
         totalUnits:
           type: integer
-          description: The denominator of a progress ratio; a number of units of changes to be processed to accomplish synchronization.
           format: int64
         units:
           type: string
-          description: An optional description of the units.
           nullable: true
       additionalProperties:
         type: object
@@ -24102,25 +23633,21 @@ components:
         currentBegan:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'Date and time when the quarantine was last evaluated and imposed. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
           format: date-time
         error:
           $ref: '#/components/schemas/microsoft.graph.synchronizationError'
         nextAttempt:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'Date and time when the next attempt to re-evaluate the quarantine will be made. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
           format: date-time
         reason:
           $ref: '#/components/schemas/microsoft.graph.quarantineReason'
         seriesBegan:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'Date and time when the quarantine was first imposed in this series (a series starts when a quarantine is first imposed, and is reset as soon as the quarantine is lifted). The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
           format: date-time
         seriesCount:
           type: integer
-          description: 'Number of times in this series the quarantine was re-evaluated and left in effect (a series starts when quarantine is first imposed, and is reset as soon as quarantine is lifted).'
           format: int64
       additionalProperties:
         type: object
@@ -24130,11 +23657,9 @@ components:
       properties:
         key:
           type: string
-          description: Key.
           nullable: true
         value:
           type: integer
-          description: Value.
           format: int64
       additionalProperties:
         type: object
@@ -24162,30 +23687,24 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.attributeMapping'
-          description: Attribute mappings define which attributes to map from the source object into the target object and how they should flow. A number of functions are available to support the transformation of the original source values.
         enabled:
           type: boolean
-          description: 'When true, this object mapping will be processed during synchronization. When false, this object mapping will be skipped.'
         flowTypes:
           $ref: '#/components/schemas/microsoft.graph.objectFlowTypes'
         metadata:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.metadataEntry'
-          description: 'Additional extension properties. Unless mentioned explicitly, metadata values should not be changed.'
         name:
           type: string
-          description: Human-friendly name of the object mapping.
           nullable: true
         scope:
           $ref: '#/components/schemas/microsoft.graph.filter'
         sourceObjectName:
           type: string
-          description: Name of the object in the source directory. Must match the object name from the source directory definition.
           nullable: true
         targetObjectName:
           type: string
-          description: Name of the object in target directory. Must match the object name from the target directory definition.
           nullable: true
       additionalProperties:
         type: object
@@ -24195,15 +23714,12 @@ components:
       properties:
         code:
           type: string
-          description: The error code.
           nullable: true
         message:
           type: string
-          description: The error message.
           nullable: true
         target:
           type: string
-          description: The target of the error.
           nullable: true
       additionalProperties:
         type: object
@@ -24213,20 +23729,16 @@ components:
       properties:
         code:
           type: string
-          description: The error code.
           nullable: true
         details:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.publicErrorDetail'
-          description: A collection of error details.
         message:
           type: string
-          description: The error message.
           nullable: true
         target:
           type: string
-          description: The target of the error.
           nullable: true
       additionalProperties:
         type: object
@@ -24236,7 +23748,6 @@ components:
       properties:
         key:
           type: string
-          description: The name of the parameter.
           nullable: true
         value:
           $ref: '#/components/schemas/microsoft.graph.attributeMappingSource'
@@ -24256,13 +23767,11 @@ components:
         updateWindowEndTime:
           pattern: '^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?$'
           type: string
-          description: End of a time window during which agents can receive updates
           format: time
           nullable: true
         updateWindowStartTime:
           pattern: '^([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?$'
           type: string
-          description: Start of a time window during which agents can receive updates
           format: time
           nullable: true
       additionalProperties:
@@ -24273,19 +23782,15 @@ components:
       properties:
         customizedLabel:
           type: string
-          description: Title/label override for customization.
           nullable: true
         defaultLabel:
           type: string
-          description: Label that would be used if no customizedLabel is provided. Read only.
           nullable: true
         fieldId:
           type: string
-          description: 'Id used to identity the field type. This is an internal id and possible values are param_1, param_2, param_userName, param_password.'
           nullable: true
         type:
           type: string
-          description: 'Type of the credential. The values can be text, password.'
           nullable: true
       additionalProperties:
         type: object
@@ -24295,11 +23800,9 @@ components:
       properties:
         key:
           type: string
-          description: Key for the key-value pair.
           nullable: true
         value:
           type: string
-          description: Value for the key-value pair.
           nullable: true
       additionalProperties:
         type: object
@@ -24330,7 +23833,6 @@ components:
       properties:
         kerberosServicePrincipalName:
           type: string
-          description: The Internal Application SPN of the application server. This SPN needs to be in the list of services to which the connector can present delegated credentials.
           nullable: true
         kerberosSignOnMappingAttributeType:
           $ref: '#/components/schemas/microsoft.graph.kerberosSignOnMappingAttributeType'
@@ -24401,11 +23903,9 @@ components:
       properties:
         defaultValue:
           type: string
-          description: Default value to be used in case the source property was evaluated to null. Optional.
           nullable: true
         exportMissingReferences:
           type: boolean
-          description: For internal use only.
         flowBehavior:
           $ref: '#/components/schemas/microsoft.graph.attributeFlowBehavior'
         flowType:
@@ -24414,13 +23914,11 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: 'If higher than 0, this attribute will be used to perform an initial match of the objects between source and target directories. The synchronization engine will try to find the matching object using attribute with lowest value of matching priority first. If not found, the attribute with the next matching priority will be used, and so on a until match is found or no more matching attributes are left. Only attributes that are expected to have unique values, such as email, should be used as matching attributes.'
           format: int32
         source:
           $ref: '#/components/schemas/microsoft.graph.attributeMappingSource'
         targetAttributeName:
           type: string
-          description: Name of the attribute on the target object.
           nullable: true
       additionalProperties:
         type: object
@@ -24440,17 +23938,14 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.filterGroup'
-          description: '*Experimental* Filter group set used to decide whether given object belongs and should be processed as part of this object mapping. An object is considered in scope if ANY of the groups in the collection is evaluated to true.'
         groups:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.filterGroup'
-          description: 'Filter group set used to decide whether given object is in scope for provisioning. This is the filter which should be used in most cases. If an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is not satisfied any longer, such object will get de-provisioned''. An object is considered in scope if ANY of the groups in the collection is evaluated to true.'
         inputFilterGroups:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.filterGroup'
-          description: '*Experimental* Filter group set used to filter out objects at the early stage of reading them from the directory. If an object doesn''t satisfy this filter it will not be processed further. Important to understand is that if an object used to satisfy this filter at a given moment, and then the object or the filter was changed so that filter is no longer satisfied, such object will NOT get de-provisioned. An object is considered in scope if ANY of the groups in the collection is evaluated to true.'
       additionalProperties:
         type: object
     microsoft.graph.ODataErrors.ErrorDetails:
@@ -24505,10 +24000,8 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.filterClause'
-          description: Filter clauses (conditions) of this group. All clauses in a group must be satisfied in order for the filter group to evaluate to true.
         name:
           type: string
-          description: Human-readable name of the filter group.
           nullable: true
       additionalProperties:
         type: object
@@ -24518,11 +24011,9 @@ components:
       properties:
         operatorName:
           type: string
-          description: Name of the operator to be applied to the source and target operands. Must be one of the supported operators. Supported operators can be discovered.
           nullable: true
         sourceOperandName:
           type: string
-          description: Name of source operand (the operand being tested). The source operand name must match one of the attribute names on the source object.
           nullable: true
         targetOperand:
           $ref: '#/components/schemas/microsoft.graph.filterOperand'
@@ -24537,7 +24028,6 @@ components:
           items:
             type: string
             nullable: true
-          description: Collection of values.
       additionalProperties:
         type: object
   responses:

@@ -1446,28 +1446,23 @@ components:
       properties:
         actionName:
           type: string
-          description: 'The specified action. Supported values in the Microsoft Endpoint Manager portal are: Reprovision, Resize, Restore. Supported values in enterprise Cloud PC devices are: Reboot, Rename, Reprovision, Troubleshoot.'
           nullable: true
         actionState:
           $ref: '#/components/schemas/microsoft.graph.actionState'
         cloudPcId:
           type: string
-          description: The ID of the Cloud PC device on which the remote action is performed. Read-only.
           nullable: true
         lastUpdatedDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'Last update time for action. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as ''2014-01-01T00:00:00Z''.'
           format: date-time
           nullable: true
         managedDeviceId:
           type: string
-          description: The ID of the Intune managed device on which the remote action is performed. Read-only.
           nullable: true
         startDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'Time the action was initiated. The Timestamp is shown in ISO 8601 format and Coordinated Universal Time (UTC). For example, midnight UTC on Jan 1, 2014 appears as ''2014-01-01T00:00:00Z''.'
           format: date-time
           nullable: true
         statusDetails:
@@ -2325,11 +2320,9 @@ components:
       properties:
         displayName:
           type: string
-          description: The display name for the source image.
           nullable: true
         id:
           type: string
-          description: The ID of the source image.
           nullable: true
       additionalProperties:
         type: object
@@ -2368,14 +2361,11 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.keyValuePair'
-          description: Any additional information about the Cloud PC status.
         code:
           type: string
-          description: The code associated with the Cloud PC status.
           nullable: true
         message:
           type: string
-          description: The status message.
           nullable: true
       additionalProperties:
         type: object
@@ -2385,11 +2375,9 @@ components:
       properties:
         displayName:
           type: string
-          description: Not yet documented
           nullable: true
         id:
           type: string
-          description: Not yet documented
           nullable: true
         sourceType:
           $ref: '#/components/schemas/microsoft.graph.settingSourceType'
@@ -2470,7 +2458,6 @@ components:
       properties:
         id:
           type: string
-          description: Read-only.
       additionalProperties:
         type: object
     microsoft.graph.managementConditionExpression:
@@ -2633,10 +2620,8 @@ components:
       properties:
         name:
           type: string
-          description: Name for this key-value pair
         value:
           type: string
-          description: Value for this key-value pair
           nullable: true
       additionalProperties:
         type: object

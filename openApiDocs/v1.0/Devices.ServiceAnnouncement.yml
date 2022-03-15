@@ -11,7 +11,6 @@ paths:
       tags:
         - admin.serviceAnnouncement
       summary: Get serviceAnnouncement from admin
-      description: A container for service communications resources. Read-only.
       operationId: admin_GetServiceAnnouncement
       parameters:
         - name: $select
@@ -101,7 +100,6 @@ paths:
       tags:
         - admin.serviceAnnouncement
       summary: Get healthOverviews from admin
-      description: 'A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.'
       operationId: admin.serviceAnnouncement_ListHealthOverviews
       parameters:
         - $ref: '#/components/parameters/top'
@@ -190,7 +188,6 @@ paths:
       tags:
         - admin.serviceAnnouncement
       summary: Get healthOverviews from admin
-      description: 'A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.'
       operationId: admin.serviceAnnouncement_GetHealthOverviews
       parameters:
         - name: serviceHealth-id
@@ -298,7 +295,6 @@ paths:
       tags:
         - admin.serviceAnnouncement
       summary: Get issues from admin
-      description: 'A collection of issues that happened on the service, with detailed information for each issue.'
       operationId: admin.serviceAnnouncement.healthOverviews_ListIssues
       parameters:
         - name: serviceHealth-id
@@ -436,7 +432,6 @@ paths:
       tags:
         - admin.serviceAnnouncement
       summary: Get issues from admin
-      description: 'A collection of issues that happened on the service, with detailed information for each issue.'
       operationId: admin.serviceAnnouncement.healthOverviews_GetIssues
       parameters:
         - name: serviceHealth-id
@@ -608,7 +603,6 @@ paths:
       tags:
         - admin.serviceAnnouncement
       summary: Get issues from admin
-      description: 'A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.'
       operationId: admin.serviceAnnouncement_ListIssues
       parameters:
         - $ref: '#/components/parameters/top'
@@ -731,7 +725,6 @@ paths:
       tags:
         - admin.serviceAnnouncement
       summary: Get issues from admin
-      description: 'A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.'
       operationId: admin.serviceAnnouncement_GetIssues
       parameters:
         - name: serviceHealthIssue-id
@@ -875,7 +868,6 @@ paths:
       tags:
         - admin.serviceAnnouncement
       summary: Get messages from admin
-      description: 'A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.'
       operationId: admin.serviceAnnouncement_ListMessages
       parameters:
         - $ref: '#/components/parameters/top'
@@ -1003,7 +995,6 @@ paths:
       tags:
         - admin.serviceAnnouncement
       summary: Get messages from admin
-      description: 'A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.'
       operationId: admin.serviceAnnouncement_GetMessages
       parameters:
         - name: serviceUpdateMessage-id
@@ -1124,7 +1115,6 @@ paths:
       tags:
         - admin.serviceAnnouncement
       summary: Get attachments from admin
-      description: A collection of serviceAnnouncementAttachments.
       operationId: admin.serviceAnnouncement.messages_ListAttachments
       parameters:
         - name: serviceUpdateMessage-id
@@ -1235,7 +1225,6 @@ paths:
       tags:
         - admin.serviceAnnouncement
       summary: Get attachments from admin
-      description: A collection of serviceAnnouncementAttachments.
       operationId: admin.serviceAnnouncement.messages_GetAttachments
       parameters:
         - name: serviceUpdateMessage-id
@@ -1360,7 +1349,6 @@ paths:
       tags:
         - admin.serviceAnnouncement
       summary: Get content for the navigation property attachments from admin
-      description: The attachment content.
       operationId: admin.serviceAnnouncement.messages_GetAttachmentsContent
       parameters:
         - name: serviceUpdateMessage-id
@@ -1392,7 +1380,6 @@ paths:
       tags:
         - admin.serviceAnnouncement
       summary: Update content for the navigation property attachments in admin
-      description: The attachment content.
       operationId: admin.serviceAnnouncement.messages_SetAttachmentsContent
       parameters:
         - name: serviceUpdateMessage-id
@@ -1428,7 +1415,6 @@ paths:
       tags:
         - admin.serviceAnnouncement
       summary: Get attachmentsArchive for the navigation property messages from admin
-      description: The zip file that contains all attachments for a message.
       operationId: admin.serviceAnnouncement_GetMessagesAttachmentsArchive
       parameters:
         - name: serviceUpdateMessage-id
@@ -1453,7 +1439,6 @@ paths:
       tags:
         - admin.serviceAnnouncement
       summary: Update attachmentsArchive for the navigation property messages in admin
-      description: The zip file that contains all attachments for a message.
       operationId: admin.serviceAnnouncement_SetMessagesAttachmentsArchive
       parameters:
         - name: serviceUpdateMessage-id
@@ -1717,17 +1702,14 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.serviceHealth'
-              description: 'A collection of service health information for tenant. This property is a contained navigation property, it is nullable and readonly.'
             issues:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.serviceHealthIssue'
-              description: 'A collection of service issues for tenant. This property is a contained navigation property, it is nullable and readonly.'
             messages:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.serviceUpdateMessage'
-              description: 'A collection of service messages for tenant. This property is a contained navigation property, it is nullable and readonly.'
           additionalProperties:
             type: object
     microsoft.graph.serviceHealth:
@@ -1738,14 +1720,12 @@ components:
           properties:
             service:
               type: string
-              description: The service name. Use the list healthOverviews operation to get exact string names for services subscribed by the tenant.
             status:
               $ref: '#/components/schemas/microsoft.graph.serviceHealthStatus'
             issues:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.serviceHealthIssue'
-              description: 'A collection of issues that happened on the service, with detailed information for each issue.'
           additionalProperties:
             type: object
     microsoft.graph.serviceHealthIssue:
@@ -1758,28 +1738,22 @@ components:
               $ref: '#/components/schemas/microsoft.graph.serviceHealthClassificationType'
             feature:
               type: string
-              description: The feature name of the service issue.
               nullable: true
             featureGroup:
               type: string
-              description: The feature group name of the service issue.
               nullable: true
             impactDescription:
               type: string
-              description: The description of the service issue impact.
             isResolved:
               type: boolean
-              description: Indicates whether the issue is resolved.
             origin:
               $ref: '#/components/schemas/microsoft.graph.serviceHealthOrigin'
             posts:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.serviceHealthIssuePost'
-              description: Collection of historical posts for the service issue.
             service:
               type: string
-              description: Indicates the service affected by the issue.
             status:
               $ref: '#/components/schemas/microsoft.graph.serviceHealthStatus'
           additionalProperties:
@@ -1793,12 +1767,10 @@ components:
             actionRequiredByDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: The expected deadline of the action for the message.
               format: date-time
               nullable: true
             attachmentsArchive:
               type: string
-              description: The zip file that contains all attachments for a message.
               format: base64url
               nullable: true
             body:
@@ -1807,17 +1779,14 @@ components:
               $ref: '#/components/schemas/microsoft.graph.serviceUpdateCategory'
             hasAttachments:
               type: boolean
-              description: Indicates whether the message has any attachment.
             isMajorChange:
               type: boolean
-              description: Indicates whether the message describes a major update for the service.
               nullable: true
             services:
               type: array
               items:
                 type: string
                 nullable: true
-              description: The affected services by the service message.
             severity:
               $ref: '#/components/schemas/microsoft.graph.serviceUpdateSeverity'
             tags:
@@ -1825,14 +1794,12 @@ components:
               items:
                 type: string
                 nullable: true
-              description: 'A collection of tags for the service message. Tags are provided by the service team/support team who post the message to tell whether this message contains privacy data, or whether this message is for a service new feature update, and so on.'
             viewPoint:
               $ref: '#/components/schemas/microsoft.graph.serviceUpdateMessageViewpoint'
             attachments:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.serviceAnnouncementAttachment'
-              description: A collection of serviceAnnouncementAttachments.
           additionalProperties:
             type: object
     microsoft.graph.serviceAnnouncementAttachment:
@@ -1843,7 +1810,6 @@ components:
           properties:
             content:
               type: string
-              description: The attachment content.
               format: base64url
               nullable: true
             contentType:
@@ -1870,7 +1836,6 @@ components:
       properties:
         id:
           type: string
-          description: Read-only.
       additionalProperties:
         type: object
     microsoft.graph.serviceHealthStatus:
@@ -1905,26 +1870,21 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.keyValuePair'
-              description: Additional details about service event. This property doesn't support filters.
             endDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: The end time of the service event.
               format: date-time
               nullable: true
             lastModifiedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: The last modified time of the service event.
               format: date-time
             startDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: The start time of the service event.
               format: date-time
             title:
               type: string
-              description: The title of the service event.
           additionalProperties:
             type: object
     microsoft.graph.serviceHealthClassificationType:
@@ -1949,7 +1909,6 @@ components:
         createdDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: The published time of the post.
           format: date-time
         description:
           $ref: '#/components/schemas/microsoft.graph.itemBody'
@@ -1963,7 +1922,6 @@ components:
       properties:
         content:
           type: string
-          description: The content of the item.
           nullable: true
         contentType:
           $ref: '#/components/schemas/microsoft.graph.bodyType'
@@ -1991,15 +1949,12 @@ components:
       properties:
         isArchived:
           type: boolean
-          description: Indicates whether the user archived the message.
           nullable: true
         isFavorited:
           type: boolean
-          description: Indicates whether the user marked the message as favorite.
           nullable: true
         isRead:
           type: boolean
-          description: Indicates whether the user read the message.
           nullable: true
       additionalProperties:
         type: object
@@ -2066,10 +2021,8 @@ components:
       properties:
         name:
           type: string
-          description: Name for this key-value pair
         value:
           type: string
-          description: Value for this key-value pair
           nullable: true
       additionalProperties:
         type: object

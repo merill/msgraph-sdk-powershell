@@ -11,7 +11,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get onenote from groups
-      description: Read-only.
       operationId: groups_GetOnenote
       parameters:
         - name: group-id
@@ -147,7 +146,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get notebooks from groups
-      description: The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
       operationId: groups.onenote_ListNotebooks
       parameters:
         - name: group-id
@@ -283,7 +281,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get notebooks from groups
-      description: The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
       operationId: groups.onenote_GetNotebooks
       parameters:
         - name: group-id
@@ -430,7 +427,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sectionGroups from groups
-      description: The section groups in the notebook. Read-only. Nullable.
       operationId: groups.onenote.notebooks_ListSectionGroups
       parameters:
         - name: group-id
@@ -572,7 +568,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sectionGroups from groups
-      description: The section groups in the notebook. Read-only. Nullable.
       operationId: groups.onenote.notebooks_GetSectionGroups
       parameters:
         - name: group-id
@@ -754,7 +749,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentNotebook from groups
-      description: The notebook that contains the section group. Read-only.
       operationId: groups.onenote.notebooks.sectionGroups_GetParentNotebook
       parameters:
         - name: group-id
@@ -846,7 +840,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentSectionGroup from groups
-      description: The section group that contains the section group. Read-only.
       operationId: groups.onenote.notebooks.sectionGroups_GetParentSectionGroup
       parameters:
         - name: group-id
@@ -950,7 +943,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sectionGroups from groups
-      description: The section groups in the section. Read-only. Nullable.
       operationId: groups.onenote.notebooks.sectionGroups_ListSectionGroups
       parameters:
         - name: group-id
@@ -1062,7 +1054,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sectionGroups from groups
-      description: The section groups in the section. Read-only. Nullable.
       operationId: groups.onenote.notebooks.sectionGroups_GetSectionGroups
       parameters:
         - name: group-id
@@ -1177,7 +1168,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sections from groups
-      description: The sections in the section group. Read-only. Nullable.
       operationId: groups.onenote.notebooks.sectionGroups_ListSections
       parameters:
         - name: group-id
@@ -1334,7 +1324,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sections from groups
-      description: The sections in the section group. Read-only. Nullable.
       operationId: groups.onenote.notebooks.sectionGroups_GetSections
       parameters:
         - name: group-id
@@ -1533,7 +1522,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get pages from groups
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: groups.onenote.notebooks.sectionGroups.sections_ListPages
       parameters:
         - name: group-id
@@ -1708,7 +1696,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get pages from groups
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: groups.onenote.notebooks.sectionGroups.sections_GetPages
       parameters:
         - name: group-id
@@ -1923,7 +1910,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get content for the navigation property pages from groups
-      description: The page's HTML content.
       operationId: groups.onenote.notebooks.sectionGroups.sections_GetPagesContent
       parameters:
         - name: group-id
@@ -1976,7 +1962,6 @@ paths:
       tags:
         - groups.onenote
       summary: Update content for the navigation property pages in groups
-      description: The page's HTML content.
       operationId: groups.onenote.notebooks.sectionGroups.sections_SetPagesContent
       parameters:
         - name: group-id
@@ -2033,7 +2018,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentNotebook from groups
-      description: The notebook that contains the page.  Read-only.
       operationId: groups.onenote.notebooks.sectionGroups.sections.pages_GetParentNotebook
       parameters:
         - name: group-id
@@ -2143,7 +2127,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentSection from groups
-      description: The section that contains the page. Read-only.
       operationId: groups.onenote.notebooks.sectionGroups.sections.pages_GetParentSection
       parameters:
         - name: group-id
@@ -2260,7 +2243,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentNotebook from groups
-      description: The notebook that contains the section.  Read-only.
       operationId: groups.onenote.notebooks.sectionGroups.sections_GetParentNotebook
       parameters:
         - name: group-id
@@ -2361,7 +2343,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentSectionGroup from groups
-      description: The section group that contains the section.  Read-only.
       operationId: groups.onenote.notebooks.sectionGroups.sections_GetParentSectionGroup
       parameters:
         - name: group-id
@@ -2476,7 +2457,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sections from groups
-      description: The sections in the notebook. Read-only. Nullable.
       operationId: groups.onenote.notebooks_ListSections
       parameters:
         - name: group-id
@@ -2619,7 +2599,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sections from groups
-      description: The sections in the notebook. Read-only. Nullable.
       operationId: groups.onenote.notebooks_GetSections
       parameters:
         - name: group-id
@@ -2794,7 +2773,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get pages from groups
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: groups.onenote.notebooks.sections_ListPages
       parameters:
         - name: group-id
@@ -2955,7 +2933,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get pages from groups
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: groups.onenote.notebooks.sections_GetPages
       parameters:
         - name: group-id
@@ -3147,7 +3124,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get content for the navigation property pages from groups
-      description: The page's HTML content.
       operationId: groups.onenote.notebooks.sections_GetPagesContent
       parameters:
         - name: group-id
@@ -3193,7 +3169,6 @@ paths:
       tags:
         - groups.onenote
       summary: Update content for the navigation property pages in groups
-      description: The page's HTML content.
       operationId: groups.onenote.notebooks.sections_SetPagesContent
       parameters:
         - name: group-id
@@ -3243,7 +3218,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentNotebook from groups
-      description: The notebook that contains the page.  Read-only.
       operationId: groups.onenote.notebooks.sections.pages_GetParentNotebook
       parameters:
         - name: group-id
@@ -3344,7 +3318,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentSection from groups
-      description: The section that contains the page. Read-only.
       operationId: groups.onenote.notebooks.sections.pages_GetParentSection
       parameters:
         - name: group-id
@@ -3451,7 +3424,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentNotebook from groups
-      description: The notebook that contains the section.  Read-only.
       operationId: groups.onenote.notebooks.sections_GetParentNotebook
       parameters:
         - name: group-id
@@ -3543,7 +3515,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentSectionGroup from groups
-      description: The section group that contains the section.  Read-only.
       operationId: groups.onenote.notebooks.sections_GetParentSectionGroup
       parameters:
         - name: group-id
@@ -3647,7 +3618,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get operations from groups
-      description: 'The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.'
       operationId: groups.onenote_ListOperations
       parameters:
         - name: group-id
@@ -3764,7 +3734,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get operations from groups
-      description: 'The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.'
       operationId: groups.onenote_GetOperations
       parameters:
         - name: group-id
@@ -3891,7 +3860,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get pages from groups
-      description: The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: groups.onenote_ListPages
       parameters:
         - name: group-id
@@ -4024,7 +3992,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get pages from groups
-      description: The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: groups.onenote_GetPages
       parameters:
         - name: group-id
@@ -4170,7 +4137,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get content for the navigation property pages from groups
-      description: The page's HTML content.
       operationId: groups.onenote_GetPagesContent
       parameters:
         - name: group-id
@@ -4202,7 +4168,6 @@ paths:
       tags:
         - groups.onenote
       summary: Update content for the navigation property pages in groups
-      description: The page's HTML content.
       operationId: groups.onenote_SetPagesContent
       parameters:
         - name: group-id
@@ -4238,7 +4203,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentNotebook from groups
-      description: The notebook that contains the page.  Read-only.
       operationId: groups.onenote.pages_GetParentNotebook
       parameters:
         - name: group-id
@@ -4321,7 +4285,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentSection from groups
-      description: The section that contains the page. Read-only.
       operationId: groups.onenote.pages_GetParentSection
       parameters:
         - name: group-id
@@ -4408,7 +4371,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get resources from groups
-      description: 'The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.'
       operationId: groups.onenote_ListResources
       parameters:
         - name: group-id
@@ -4513,7 +4475,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get resources from groups
-      description: 'The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.'
       operationId: groups.onenote_GetResources
       parameters:
         - name: group-id
@@ -4636,7 +4597,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get content for the navigation property resources from groups
-      description: The content stream
       operationId: groups.onenote_GetResourcesContent
       parameters:
         - name: group-id
@@ -4668,7 +4628,6 @@ paths:
       tags:
         - groups.onenote
       summary: Update content for the navigation property resources in groups
-      description: The content stream
       operationId: groups.onenote_SetResourcesContent
       parameters:
         - name: group-id
@@ -4704,7 +4663,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sectionGroups from groups
-      description: The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: groups.onenote_ListSectionGroups
       parameters:
         - name: group-id
@@ -4832,7 +4790,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sectionGroups from groups
-      description: The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: groups.onenote_GetSectionGroups
       parameters:
         - name: group-id
@@ -4989,7 +4946,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentNotebook from groups
-      description: The notebook that contains the section group. Read-only.
       operationId: groups.onenote.sectionGroups_GetParentNotebook
       parameters:
         - name: group-id
@@ -5072,7 +5028,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentSectionGroup from groups
-      description: The section group that contains the section group. Read-only.
       operationId: groups.onenote.sectionGroups_GetParentSectionGroup
       parameters:
         - name: group-id
@@ -5165,7 +5120,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sectionGroups from groups
-      description: The section groups in the section. Read-only. Nullable.
       operationId: groups.onenote.sectionGroups_ListSectionGroups
       parameters:
         - name: group-id
@@ -5270,7 +5224,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sectionGroups from groups
-      description: The section groups in the section. Read-only. Nullable.
       operationId: groups.onenote.sectionGroups_GetSectionGroups
       parameters:
         - name: group-id
@@ -5374,7 +5327,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sections from groups
-      description: The sections in the section group. Read-only. Nullable.
       operationId: groups.onenote.sectionGroups_ListSections
       parameters:
         - name: group-id
@@ -5517,7 +5469,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sections from groups
-      description: The sections in the section group. Read-only. Nullable.
       operationId: groups.onenote.sectionGroups_GetSections
       parameters:
         - name: group-id
@@ -5692,7 +5643,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get pages from groups
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: groups.onenote.sectionGroups.sections_ListPages
       parameters:
         - name: group-id
@@ -5853,7 +5803,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get pages from groups
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: groups.onenote.sectionGroups.sections_GetPages
       parameters:
         - name: group-id
@@ -6045,7 +5994,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get content for the navigation property pages from groups
-      description: The page's HTML content.
       operationId: groups.onenote.sectionGroups.sections_GetPagesContent
       parameters:
         - name: group-id
@@ -6091,7 +6039,6 @@ paths:
       tags:
         - groups.onenote
       summary: Update content for the navigation property pages in groups
-      description: The page's HTML content.
       operationId: groups.onenote.sectionGroups.sections_SetPagesContent
       parameters:
         - name: group-id
@@ -6141,7 +6088,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentNotebook from groups
-      description: The notebook that contains the page.  Read-only.
       operationId: groups.onenote.sectionGroups.sections.pages_GetParentNotebook
       parameters:
         - name: group-id
@@ -6242,7 +6188,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentSection from groups
-      description: The section that contains the page. Read-only.
       operationId: groups.onenote.sectionGroups.sections.pages_GetParentSection
       parameters:
         - name: group-id
@@ -6349,7 +6294,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentNotebook from groups
-      description: The notebook that contains the section.  Read-only.
       operationId: groups.onenote.sectionGroups.sections_GetParentNotebook
       parameters:
         - name: group-id
@@ -6441,7 +6385,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentSectionGroup from groups
-      description: The section group that contains the section.  Read-only.
       operationId: groups.onenote.sectionGroups.sections_GetParentSectionGroup
       parameters:
         - name: group-id
@@ -6545,7 +6488,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sections from groups
-      description: The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: groups.onenote_ListSections
       parameters:
         - name: group-id
@@ -6674,7 +6616,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get sections from groups
-      description: The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: groups.onenote_GetSections
       parameters:
         - name: group-id
@@ -6825,7 +6766,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get pages from groups
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: groups.onenote.sections_ListPages
       parameters:
         - name: group-id
@@ -6972,7 +6912,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get pages from groups
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: groups.onenote.sections_GetPages
       parameters:
         - name: group-id
@@ -7141,7 +7080,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get content for the navigation property pages from groups
-      description: The page's HTML content.
       operationId: groups.onenote.sections_GetPagesContent
       parameters:
         - name: group-id
@@ -7180,7 +7118,6 @@ paths:
       tags:
         - groups.onenote
       summary: Update content for the navigation property pages in groups
-      description: The page's HTML content.
       operationId: groups.onenote.sections_SetPagesContent
       parameters:
         - name: group-id
@@ -7223,7 +7160,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentNotebook from groups
-      description: The notebook that contains the page.  Read-only.
       operationId: groups.onenote.sections.pages_GetParentNotebook
       parameters:
         - name: group-id
@@ -7315,7 +7251,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentSection from groups
-      description: The section that contains the page. Read-only.
       operationId: groups.onenote.sections.pages_GetParentSection
       parameters:
         - name: group-id
@@ -7412,7 +7347,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentNotebook from groups
-      description: The notebook that contains the section.  Read-only.
       operationId: groups.onenote.sections_GetParentNotebook
       parameters:
         - name: group-id
@@ -7495,7 +7429,6 @@ paths:
       tags:
         - groups.onenote
       summary: Get parentSectionGroup from groups
-      description: The section group that contains the section.  Read-only.
       operationId: groups.onenote.sections_GetParentSectionGroup
       parameters:
         - name: group-id
@@ -7588,7 +7521,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get onenote from sites
-      description: Calls the OneNote service for notebook related operations.
       operationId: sites_GetOnenote
       parameters:
         - name: site-id
@@ -7724,7 +7656,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get notebooks from sites
-      description: The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
       operationId: sites.onenote_ListNotebooks
       parameters:
         - name: site-id
@@ -7860,7 +7791,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get notebooks from sites
-      description: The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
       operationId: sites.onenote_GetNotebooks
       parameters:
         - name: site-id
@@ -8007,7 +7937,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sectionGroups from sites
-      description: The section groups in the notebook. Read-only. Nullable.
       operationId: sites.onenote.notebooks_ListSectionGroups
       parameters:
         - name: site-id
@@ -8149,7 +8078,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sectionGroups from sites
-      description: The section groups in the notebook. Read-only. Nullable.
       operationId: sites.onenote.notebooks_GetSectionGroups
       parameters:
         - name: site-id
@@ -8331,7 +8259,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentNotebook from sites
-      description: The notebook that contains the section group. Read-only.
       operationId: sites.onenote.notebooks.sectionGroups_GetParentNotebook
       parameters:
         - name: site-id
@@ -8423,7 +8350,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentSectionGroup from sites
-      description: The section group that contains the section group. Read-only.
       operationId: sites.onenote.notebooks.sectionGroups_GetParentSectionGroup
       parameters:
         - name: site-id
@@ -8527,7 +8453,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sectionGroups from sites
-      description: The section groups in the section. Read-only. Nullable.
       operationId: sites.onenote.notebooks.sectionGroups_ListSectionGroups
       parameters:
         - name: site-id
@@ -8639,7 +8564,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sectionGroups from sites
-      description: The section groups in the section. Read-only. Nullable.
       operationId: sites.onenote.notebooks.sectionGroups_GetSectionGroups
       parameters:
         - name: site-id
@@ -8754,7 +8678,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sections from sites
-      description: The sections in the section group. Read-only. Nullable.
       operationId: sites.onenote.notebooks.sectionGroups_ListSections
       parameters:
         - name: site-id
@@ -8911,7 +8834,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sections from sites
-      description: The sections in the section group. Read-only. Nullable.
       operationId: sites.onenote.notebooks.sectionGroups_GetSections
       parameters:
         - name: site-id
@@ -9110,7 +9032,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get pages from sites
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: sites.onenote.notebooks.sectionGroups.sections_ListPages
       parameters:
         - name: site-id
@@ -9285,7 +9206,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get pages from sites
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: sites.onenote.notebooks.sectionGroups.sections_GetPages
       parameters:
         - name: site-id
@@ -9500,7 +9420,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get content for the navigation property pages from sites
-      description: The page's HTML content.
       operationId: sites.onenote.notebooks.sectionGroups.sections_GetPagesContent
       parameters:
         - name: site-id
@@ -9553,7 +9472,6 @@ paths:
       tags:
         - sites.onenote
       summary: Update content for the navigation property pages in sites
-      description: The page's HTML content.
       operationId: sites.onenote.notebooks.sectionGroups.sections_SetPagesContent
       parameters:
         - name: site-id
@@ -9610,7 +9528,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentNotebook from sites
-      description: The notebook that contains the page.  Read-only.
       operationId: sites.onenote.notebooks.sectionGroups.sections.pages_GetParentNotebook
       parameters:
         - name: site-id
@@ -9720,7 +9637,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentSection from sites
-      description: The section that contains the page. Read-only.
       operationId: sites.onenote.notebooks.sectionGroups.sections.pages_GetParentSection
       parameters:
         - name: site-id
@@ -9837,7 +9753,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentNotebook from sites
-      description: The notebook that contains the section.  Read-only.
       operationId: sites.onenote.notebooks.sectionGroups.sections_GetParentNotebook
       parameters:
         - name: site-id
@@ -9938,7 +9853,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentSectionGroup from sites
-      description: The section group that contains the section.  Read-only.
       operationId: sites.onenote.notebooks.sectionGroups.sections_GetParentSectionGroup
       parameters:
         - name: site-id
@@ -10053,7 +9967,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sections from sites
-      description: The sections in the notebook. Read-only. Nullable.
       operationId: sites.onenote.notebooks_ListSections
       parameters:
         - name: site-id
@@ -10196,7 +10109,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sections from sites
-      description: The sections in the notebook. Read-only. Nullable.
       operationId: sites.onenote.notebooks_GetSections
       parameters:
         - name: site-id
@@ -10371,7 +10283,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get pages from sites
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: sites.onenote.notebooks.sections_ListPages
       parameters:
         - name: site-id
@@ -10532,7 +10443,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get pages from sites
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: sites.onenote.notebooks.sections_GetPages
       parameters:
         - name: site-id
@@ -10724,7 +10634,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get content for the navigation property pages from sites
-      description: The page's HTML content.
       operationId: sites.onenote.notebooks.sections_GetPagesContent
       parameters:
         - name: site-id
@@ -10770,7 +10679,6 @@ paths:
       tags:
         - sites.onenote
       summary: Update content for the navigation property pages in sites
-      description: The page's HTML content.
       operationId: sites.onenote.notebooks.sections_SetPagesContent
       parameters:
         - name: site-id
@@ -10820,7 +10728,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentNotebook from sites
-      description: The notebook that contains the page.  Read-only.
       operationId: sites.onenote.notebooks.sections.pages_GetParentNotebook
       parameters:
         - name: site-id
@@ -10921,7 +10828,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentSection from sites
-      description: The section that contains the page. Read-only.
       operationId: sites.onenote.notebooks.sections.pages_GetParentSection
       parameters:
         - name: site-id
@@ -11028,7 +10934,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentNotebook from sites
-      description: The notebook that contains the section.  Read-only.
       operationId: sites.onenote.notebooks.sections_GetParentNotebook
       parameters:
         - name: site-id
@@ -11120,7 +11025,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentSectionGroup from sites
-      description: The section group that contains the section.  Read-only.
       operationId: sites.onenote.notebooks.sections_GetParentSectionGroup
       parameters:
         - name: site-id
@@ -11224,7 +11128,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get operations from sites
-      description: 'The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.'
       operationId: sites.onenote_ListOperations
       parameters:
         - name: site-id
@@ -11341,7 +11244,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get operations from sites
-      description: 'The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.'
       operationId: sites.onenote_GetOperations
       parameters:
         - name: site-id
@@ -11468,7 +11370,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get pages from sites
-      description: The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: sites.onenote_ListPages
       parameters:
         - name: site-id
@@ -11601,7 +11502,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get pages from sites
-      description: The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: sites.onenote_GetPages
       parameters:
         - name: site-id
@@ -11747,7 +11647,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get content for the navigation property pages from sites
-      description: The page's HTML content.
       operationId: sites.onenote_GetPagesContent
       parameters:
         - name: site-id
@@ -11779,7 +11678,6 @@ paths:
       tags:
         - sites.onenote
       summary: Update content for the navigation property pages in sites
-      description: The page's HTML content.
       operationId: sites.onenote_SetPagesContent
       parameters:
         - name: site-id
@@ -11815,7 +11713,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentNotebook from sites
-      description: The notebook that contains the page.  Read-only.
       operationId: sites.onenote.pages_GetParentNotebook
       parameters:
         - name: site-id
@@ -11898,7 +11795,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentSection from sites
-      description: The section that contains the page. Read-only.
       operationId: sites.onenote.pages_GetParentSection
       parameters:
         - name: site-id
@@ -11985,7 +11881,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get resources from sites
-      description: 'The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.'
       operationId: sites.onenote_ListResources
       parameters:
         - name: site-id
@@ -12090,7 +11985,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get resources from sites
-      description: 'The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.'
       operationId: sites.onenote_GetResources
       parameters:
         - name: site-id
@@ -12213,7 +12107,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get content for the navigation property resources from sites
-      description: The content stream
       operationId: sites.onenote_GetResourcesContent
       parameters:
         - name: site-id
@@ -12245,7 +12138,6 @@ paths:
       tags:
         - sites.onenote
       summary: Update content for the navigation property resources in sites
-      description: The content stream
       operationId: sites.onenote_SetResourcesContent
       parameters:
         - name: site-id
@@ -12281,7 +12173,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sectionGroups from sites
-      description: The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: sites.onenote_ListSectionGroups
       parameters:
         - name: site-id
@@ -12409,7 +12300,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sectionGroups from sites
-      description: The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: sites.onenote_GetSectionGroups
       parameters:
         - name: site-id
@@ -12566,7 +12456,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentNotebook from sites
-      description: The notebook that contains the section group. Read-only.
       operationId: sites.onenote.sectionGroups_GetParentNotebook
       parameters:
         - name: site-id
@@ -12649,7 +12538,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentSectionGroup from sites
-      description: The section group that contains the section group. Read-only.
       operationId: sites.onenote.sectionGroups_GetParentSectionGroup
       parameters:
         - name: site-id
@@ -12742,7 +12630,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sectionGroups from sites
-      description: The section groups in the section. Read-only. Nullable.
       operationId: sites.onenote.sectionGroups_ListSectionGroups
       parameters:
         - name: site-id
@@ -12847,7 +12734,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sectionGroups from sites
-      description: The section groups in the section. Read-only. Nullable.
       operationId: sites.onenote.sectionGroups_GetSectionGroups
       parameters:
         - name: site-id
@@ -12951,7 +12837,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sections from sites
-      description: The sections in the section group. Read-only. Nullable.
       operationId: sites.onenote.sectionGroups_ListSections
       parameters:
         - name: site-id
@@ -13094,7 +12979,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sections from sites
-      description: The sections in the section group. Read-only. Nullable.
       operationId: sites.onenote.sectionGroups_GetSections
       parameters:
         - name: site-id
@@ -13269,7 +13153,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get pages from sites
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: sites.onenote.sectionGroups.sections_ListPages
       parameters:
         - name: site-id
@@ -13430,7 +13313,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get pages from sites
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: sites.onenote.sectionGroups.sections_GetPages
       parameters:
         - name: site-id
@@ -13622,7 +13504,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get content for the navigation property pages from sites
-      description: The page's HTML content.
       operationId: sites.onenote.sectionGroups.sections_GetPagesContent
       parameters:
         - name: site-id
@@ -13668,7 +13549,6 @@ paths:
       tags:
         - sites.onenote
       summary: Update content for the navigation property pages in sites
-      description: The page's HTML content.
       operationId: sites.onenote.sectionGroups.sections_SetPagesContent
       parameters:
         - name: site-id
@@ -13718,7 +13598,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentNotebook from sites
-      description: The notebook that contains the page.  Read-only.
       operationId: sites.onenote.sectionGroups.sections.pages_GetParentNotebook
       parameters:
         - name: site-id
@@ -13819,7 +13698,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentSection from sites
-      description: The section that contains the page. Read-only.
       operationId: sites.onenote.sectionGroups.sections.pages_GetParentSection
       parameters:
         - name: site-id
@@ -13926,7 +13804,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentNotebook from sites
-      description: The notebook that contains the section.  Read-only.
       operationId: sites.onenote.sectionGroups.sections_GetParentNotebook
       parameters:
         - name: site-id
@@ -14018,7 +13895,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentSectionGroup from sites
-      description: The section group that contains the section.  Read-only.
       operationId: sites.onenote.sectionGroups.sections_GetParentSectionGroup
       parameters:
         - name: site-id
@@ -14122,7 +13998,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sections from sites
-      description: The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: sites.onenote_ListSections
       parameters:
         - name: site-id
@@ -14251,7 +14126,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get sections from sites
-      description: The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: sites.onenote_GetSections
       parameters:
         - name: site-id
@@ -14402,7 +14276,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get pages from sites
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: sites.onenote.sections_ListPages
       parameters:
         - name: site-id
@@ -14549,7 +14422,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get pages from sites
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: sites.onenote.sections_GetPages
       parameters:
         - name: site-id
@@ -14718,7 +14590,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get content for the navigation property pages from sites
-      description: The page's HTML content.
       operationId: sites.onenote.sections_GetPagesContent
       parameters:
         - name: site-id
@@ -14757,7 +14628,6 @@ paths:
       tags:
         - sites.onenote
       summary: Update content for the navigation property pages in sites
-      description: The page's HTML content.
       operationId: sites.onenote.sections_SetPagesContent
       parameters:
         - name: site-id
@@ -14800,7 +14670,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentNotebook from sites
-      description: The notebook that contains the page.  Read-only.
       operationId: sites.onenote.sections.pages_GetParentNotebook
       parameters:
         - name: site-id
@@ -14892,7 +14761,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentSection from sites
-      description: The section that contains the page. Read-only.
       operationId: sites.onenote.sections.pages_GetParentSection
       parameters:
         - name: site-id
@@ -14989,7 +14857,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentNotebook from sites
-      description: The notebook that contains the section.  Read-only.
       operationId: sites.onenote.sections_GetParentNotebook
       parameters:
         - name: site-id
@@ -15072,7 +14939,6 @@ paths:
       tags:
         - sites.onenote
       summary: Get parentSectionGroup from sites
-      description: The section group that contains the section.  Read-only.
       operationId: sites.onenote.sections_GetParentSectionGroup
       parameters:
         - name: site-id
@@ -15165,7 +15031,6 @@ paths:
       tags:
         - users.onenote
       summary: Get onenote from users
-      description: Read-only.
       operationId: users_GetOnenote
       parameters:
         - name: user-id
@@ -15301,7 +15166,6 @@ paths:
       tags:
         - users.onenote
       summary: Get notebooks from users
-      description: The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
       operationId: users.onenote_ListNotebooks
       parameters:
         - name: user-id
@@ -15437,7 +15301,6 @@ paths:
       tags:
         - users.onenote
       summary: Get notebooks from users
-      description: The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
       operationId: users.onenote_GetNotebooks
       parameters:
         - name: user-id
@@ -15584,7 +15447,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sectionGroups from users
-      description: The section groups in the notebook. Read-only. Nullable.
       operationId: users.onenote.notebooks_ListSectionGroups
       parameters:
         - name: user-id
@@ -15726,7 +15588,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sectionGroups from users
-      description: The section groups in the notebook. Read-only. Nullable.
       operationId: users.onenote.notebooks_GetSectionGroups
       parameters:
         - name: user-id
@@ -15908,7 +15769,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentNotebook from users
-      description: The notebook that contains the section group. Read-only.
       operationId: users.onenote.notebooks.sectionGroups_GetParentNotebook
       parameters:
         - name: user-id
@@ -16000,7 +15860,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentSectionGroup from users
-      description: The section group that contains the section group. Read-only.
       operationId: users.onenote.notebooks.sectionGroups_GetParentSectionGroup
       parameters:
         - name: user-id
@@ -16104,7 +15963,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sectionGroups from users
-      description: The section groups in the section. Read-only. Nullable.
       operationId: users.onenote.notebooks.sectionGroups_ListSectionGroups
       parameters:
         - name: user-id
@@ -16216,7 +16074,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sectionGroups from users
-      description: The section groups in the section. Read-only. Nullable.
       operationId: users.onenote.notebooks.sectionGroups_GetSectionGroups
       parameters:
         - name: user-id
@@ -16331,7 +16188,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sections from users
-      description: The sections in the section group. Read-only. Nullable.
       operationId: users.onenote.notebooks.sectionGroups_ListSections
       parameters:
         - name: user-id
@@ -16488,7 +16344,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sections from users
-      description: The sections in the section group. Read-only. Nullable.
       operationId: users.onenote.notebooks.sectionGroups_GetSections
       parameters:
         - name: user-id
@@ -16687,7 +16542,6 @@ paths:
       tags:
         - users.onenote
       summary: Get pages from users
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: users.onenote.notebooks.sectionGroups.sections_ListPages
       parameters:
         - name: user-id
@@ -16862,7 +16716,6 @@ paths:
       tags:
         - users.onenote
       summary: Get pages from users
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: users.onenote.notebooks.sectionGroups.sections_GetPages
       parameters:
         - name: user-id
@@ -17077,7 +16930,6 @@ paths:
       tags:
         - users.onenote
       summary: Get content for the navigation property pages from users
-      description: The page's HTML content.
       operationId: users.onenote.notebooks.sectionGroups.sections_GetPagesContent
       parameters:
         - name: user-id
@@ -17130,7 +16982,6 @@ paths:
       tags:
         - users.onenote
       summary: Update content for the navigation property pages in users
-      description: The page's HTML content.
       operationId: users.onenote.notebooks.sectionGroups.sections_SetPagesContent
       parameters:
         - name: user-id
@@ -17187,7 +17038,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentNotebook from users
-      description: The notebook that contains the page.  Read-only.
       operationId: users.onenote.notebooks.sectionGroups.sections.pages_GetParentNotebook
       parameters:
         - name: user-id
@@ -17297,7 +17147,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentSection from users
-      description: The section that contains the page. Read-only.
       operationId: users.onenote.notebooks.sectionGroups.sections.pages_GetParentSection
       parameters:
         - name: user-id
@@ -17414,7 +17263,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentNotebook from users
-      description: The notebook that contains the section.  Read-only.
       operationId: users.onenote.notebooks.sectionGroups.sections_GetParentNotebook
       parameters:
         - name: user-id
@@ -17515,7 +17363,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentSectionGroup from users
-      description: The section group that contains the section.  Read-only.
       operationId: users.onenote.notebooks.sectionGroups.sections_GetParentSectionGroup
       parameters:
         - name: user-id
@@ -17630,7 +17477,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sections from users
-      description: The sections in the notebook. Read-only. Nullable.
       operationId: users.onenote.notebooks_ListSections
       parameters:
         - name: user-id
@@ -17773,7 +17619,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sections from users
-      description: The sections in the notebook. Read-only. Nullable.
       operationId: users.onenote.notebooks_GetSections
       parameters:
         - name: user-id
@@ -17948,7 +17793,6 @@ paths:
       tags:
         - users.onenote
       summary: Get pages from users
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: users.onenote.notebooks.sections_ListPages
       parameters:
         - name: user-id
@@ -18109,7 +17953,6 @@ paths:
       tags:
         - users.onenote
       summary: Get pages from users
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: users.onenote.notebooks.sections_GetPages
       parameters:
         - name: user-id
@@ -18301,7 +18144,6 @@ paths:
       tags:
         - users.onenote
       summary: Get content for the navigation property pages from users
-      description: The page's HTML content.
       operationId: users.onenote.notebooks.sections_GetPagesContent
       parameters:
         - name: user-id
@@ -18347,7 +18189,6 @@ paths:
       tags:
         - users.onenote
       summary: Update content for the navigation property pages in users
-      description: The page's HTML content.
       operationId: users.onenote.notebooks.sections_SetPagesContent
       parameters:
         - name: user-id
@@ -18397,7 +18238,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentNotebook from users
-      description: The notebook that contains the page.  Read-only.
       operationId: users.onenote.notebooks.sections.pages_GetParentNotebook
       parameters:
         - name: user-id
@@ -18498,7 +18338,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentSection from users
-      description: The section that contains the page. Read-only.
       operationId: users.onenote.notebooks.sections.pages_GetParentSection
       parameters:
         - name: user-id
@@ -18605,7 +18444,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentNotebook from users
-      description: The notebook that contains the section.  Read-only.
       operationId: users.onenote.notebooks.sections_GetParentNotebook
       parameters:
         - name: user-id
@@ -18697,7 +18535,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentSectionGroup from users
-      description: The section group that contains the section.  Read-only.
       operationId: users.onenote.notebooks.sections_GetParentSectionGroup
       parameters:
         - name: user-id
@@ -18801,7 +18638,6 @@ paths:
       tags:
         - users.onenote
       summary: Get operations from users
-      description: 'The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.'
       operationId: users.onenote_ListOperations
       parameters:
         - name: user-id
@@ -18918,7 +18754,6 @@ paths:
       tags:
         - users.onenote
       summary: Get operations from users
-      description: 'The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.'
       operationId: users.onenote_GetOperations
       parameters:
         - name: user-id
@@ -19045,7 +18880,6 @@ paths:
       tags:
         - users.onenote
       summary: Get pages from users
-      description: The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: users.onenote_ListPages
       parameters:
         - name: user-id
@@ -19178,7 +19012,6 @@ paths:
       tags:
         - users.onenote
       summary: Get pages from users
-      description: The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: users.onenote_GetPages
       parameters:
         - name: user-id
@@ -19324,7 +19157,6 @@ paths:
       tags:
         - users.onenote
       summary: Get content for the navigation property pages from users
-      description: The page's HTML content.
       operationId: users.onenote_GetPagesContent
       parameters:
         - name: user-id
@@ -19356,7 +19188,6 @@ paths:
       tags:
         - users.onenote
       summary: Update content for the navigation property pages in users
-      description: The page's HTML content.
       operationId: users.onenote_SetPagesContent
       parameters:
         - name: user-id
@@ -19392,7 +19223,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentNotebook from users
-      description: The notebook that contains the page.  Read-only.
       operationId: users.onenote.pages_GetParentNotebook
       parameters:
         - name: user-id
@@ -19475,7 +19305,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentSection from users
-      description: The section that contains the page. Read-only.
       operationId: users.onenote.pages_GetParentSection
       parameters:
         - name: user-id
@@ -19562,7 +19391,6 @@ paths:
       tags:
         - users.onenote
       summary: Get resources from users
-      description: 'The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.'
       operationId: users.onenote_ListResources
       parameters:
         - name: user-id
@@ -19667,7 +19495,6 @@ paths:
       tags:
         - users.onenote
       summary: Get resources from users
-      description: 'The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.'
       operationId: users.onenote_GetResources
       parameters:
         - name: user-id
@@ -19790,7 +19617,6 @@ paths:
       tags:
         - users.onenote
       summary: Get content for the navigation property resources from users
-      description: The content stream
       operationId: users.onenote_GetResourcesContent
       parameters:
         - name: user-id
@@ -19822,7 +19648,6 @@ paths:
       tags:
         - users.onenote
       summary: Update content for the navigation property resources in users
-      description: The content stream
       operationId: users.onenote_SetResourcesContent
       parameters:
         - name: user-id
@@ -19858,7 +19683,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sectionGroups from users
-      description: The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: users.onenote_ListSectionGroups
       parameters:
         - name: user-id
@@ -19986,7 +19810,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sectionGroups from users
-      description: The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: users.onenote_GetSectionGroups
       parameters:
         - name: user-id
@@ -20143,7 +19966,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentNotebook from users
-      description: The notebook that contains the section group. Read-only.
       operationId: users.onenote.sectionGroups_GetParentNotebook
       parameters:
         - name: user-id
@@ -20226,7 +20048,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentSectionGroup from users
-      description: The section group that contains the section group. Read-only.
       operationId: users.onenote.sectionGroups_GetParentSectionGroup
       parameters:
         - name: user-id
@@ -20319,7 +20140,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sectionGroups from users
-      description: The section groups in the section. Read-only. Nullable.
       operationId: users.onenote.sectionGroups_ListSectionGroups
       parameters:
         - name: user-id
@@ -20424,7 +20244,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sectionGroups from users
-      description: The section groups in the section. Read-only. Nullable.
       operationId: users.onenote.sectionGroups_GetSectionGroups
       parameters:
         - name: user-id
@@ -20528,7 +20347,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sections from users
-      description: The sections in the section group. Read-only. Nullable.
       operationId: users.onenote.sectionGroups_ListSections
       parameters:
         - name: user-id
@@ -20671,7 +20489,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sections from users
-      description: The sections in the section group. Read-only. Nullable.
       operationId: users.onenote.sectionGroups_GetSections
       parameters:
         - name: user-id
@@ -20846,7 +20663,6 @@ paths:
       tags:
         - users.onenote
       summary: Get pages from users
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: users.onenote.sectionGroups.sections_ListPages
       parameters:
         - name: user-id
@@ -21007,7 +20823,6 @@ paths:
       tags:
         - users.onenote
       summary: Get pages from users
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: users.onenote.sectionGroups.sections_GetPages
       parameters:
         - name: user-id
@@ -21199,7 +21014,6 @@ paths:
       tags:
         - users.onenote
       summary: Get content for the navigation property pages from users
-      description: The page's HTML content.
       operationId: users.onenote.sectionGroups.sections_GetPagesContent
       parameters:
         - name: user-id
@@ -21245,7 +21059,6 @@ paths:
       tags:
         - users.onenote
       summary: Update content for the navigation property pages in users
-      description: The page's HTML content.
       operationId: users.onenote.sectionGroups.sections_SetPagesContent
       parameters:
         - name: user-id
@@ -21295,7 +21108,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentNotebook from users
-      description: The notebook that contains the page.  Read-only.
       operationId: users.onenote.sectionGroups.sections.pages_GetParentNotebook
       parameters:
         - name: user-id
@@ -21396,7 +21208,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentSection from users
-      description: The section that contains the page. Read-only.
       operationId: users.onenote.sectionGroups.sections.pages_GetParentSection
       parameters:
         - name: user-id
@@ -21503,7 +21314,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentNotebook from users
-      description: The notebook that contains the section.  Read-only.
       operationId: users.onenote.sectionGroups.sections_GetParentNotebook
       parameters:
         - name: user-id
@@ -21595,7 +21405,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentSectionGroup from users
-      description: The section group that contains the section.  Read-only.
       operationId: users.onenote.sectionGroups.sections_GetParentSectionGroup
       parameters:
         - name: user-id
@@ -21699,7 +21508,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sections from users
-      description: The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: users.onenote_ListSections
       parameters:
         - name: user-id
@@ -21828,7 +21636,6 @@ paths:
       tags:
         - users.onenote
       summary: Get sections from users
-      description: The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
       operationId: users.onenote_GetSections
       parameters:
         - name: user-id
@@ -21979,7 +21786,6 @@ paths:
       tags:
         - users.onenote
       summary: Get pages from users
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: users.onenote.sections_ListPages
       parameters:
         - name: user-id
@@ -22126,7 +21932,6 @@ paths:
       tags:
         - users.onenote
       summary: Get pages from users
-      description: The collection of pages in the section.  Read-only. Nullable.
       operationId: users.onenote.sections_GetPages
       parameters:
         - name: user-id
@@ -22295,7 +22100,6 @@ paths:
       tags:
         - users.onenote
       summary: Get content for the navigation property pages from users
-      description: The page's HTML content.
       operationId: users.onenote.sections_GetPagesContent
       parameters:
         - name: user-id
@@ -22334,7 +22138,6 @@ paths:
       tags:
         - users.onenote
       summary: Update content for the navigation property pages in users
-      description: The page's HTML content.
       operationId: users.onenote.sections_SetPagesContent
       parameters:
         - name: user-id
@@ -22377,7 +22180,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentNotebook from users
-      description: The notebook that contains the page.  Read-only.
       operationId: users.onenote.sections.pages_GetParentNotebook
       parameters:
         - name: user-id
@@ -22469,7 +22271,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentSection from users
-      description: The section that contains the page. Read-only.
       operationId: users.onenote.sections.pages_GetParentSection
       parameters:
         - name: user-id
@@ -22566,7 +22367,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentNotebook from users
-      description: The notebook that contains the section.  Read-only.
       operationId: users.onenote.sections_GetParentNotebook
       parameters:
         - name: user-id
@@ -22649,7 +22449,6 @@ paths:
       tags:
         - users.onenote
       summary: Get parentSectionGroup from users
-      description: The section group that contains the section.  Read-only.
       operationId: users.onenote.sections_GetParentSectionGroup
       parameters:
         - name: user-id
@@ -22749,32 +22548,26 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.notebook'
-              description: The collection of OneNote notebooks that are owned by the user or group. Read-only. Nullable.
             operations:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.onenoteOperation'
-              description: 'The status of OneNote operations. Getting an operations collection is not supported, but you can get the status of long-running operations if the Operation-Location header is returned in the response. Read-only. Nullable.'
             pages:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.onenotePage'
-              description: The pages in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
             resources:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.onenoteResource'
-              description: 'The image and other file resources in OneNote pages. Getting a resources collection is not supported, but you can get the binary content of a specific resource. Read-only. Nullable.'
             sectionGroups:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.sectionGroup'
-              description: The section groups in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
             sections:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.onenoteSection'
-              description: The sections in all OneNote notebooks that are owned by the user or group.  Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.notebook:
@@ -22785,21 +22578,17 @@ components:
           properties:
             isDefault:
               type: boolean
-              description: Indicates whether this is the user's default notebook. Read-only.
               nullable: true
             isShared:
               type: boolean
-              description: 'Indicates whether the notebook is shared. If true, the contents of the notebook can be seen by people other than the owner. Read-only.'
               nullable: true
             links:
               $ref: '#/components/schemas/microsoft.graph.notebookLinks'
             sectionGroupsUrl:
               type: string
-              description: 'The URL for the sectionGroups navigation property, which returns all the section groups in the notebook. Read-only.'
               nullable: true
             sectionsUrl:
               type: string
-              description: 'The URL for the sections navigation property, which returns all the sections in the notebook. Read-only.'
               nullable: true
             userRole:
               $ref: '#/components/schemas/microsoft.graph.onenoteUserRole'
@@ -22807,12 +22596,10 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.sectionGroup'
-              description: The section groups in the notebook. Read-only. Nullable.
             sections:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.onenoteSection'
-              description: The sections in the notebook. Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.sectionGroup:
@@ -22823,11 +22610,9 @@ components:
           properties:
             sectionGroupsUrl:
               type: string
-              description: 'The URL for the sectionGroups navigation property, which returns all the section groups in the section group. Read-only.'
               nullable: true
             sectionsUrl:
               type: string
-              description: 'The URL for the sections navigation property, which returns all the sections in the section group. Read-only.'
               nullable: true
             parentNotebook:
               $ref: '#/components/schemas/microsoft.graph.notebook'
@@ -22837,12 +22622,10 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.sectionGroup'
-              description: The section groups in the section. Read-only. Nullable.
             sections:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.onenoteSection'
-              description: The sections in the section group. Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.onenoteSection:
@@ -22853,19 +22636,16 @@ components:
           properties:
             isDefault:
               type: boolean
-              description: Indicates whether this is the user's default section. Read-only.
               nullable: true
             links:
               $ref: '#/components/schemas/microsoft.graph.sectionLinks'
             pagesUrl:
               type: string
-              description: The pages endpoint where you can get details for all the pages in the section. Read-only.
               nullable: true
             pages:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.onenotePage'
-              description: The collection of pages in the section.  Read-only. Nullable.
             parentNotebook:
               $ref: '#/components/schemas/microsoft.graph.notebook'
             parentSectionGroup:
@@ -22880,28 +22660,23 @@ components:
           properties:
             content:
               type: string
-              description: The page's HTML content.
               format: base64url
               nullable: true
             contentUrl:
               type: string
-              description: The URL for the page's HTML content.  Read-only.
               nullable: true
             createdByAppId:
               type: string
-              description: The unique identifier of the application that created the page. Read-only.
               nullable: true
             lastModifiedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The date and time when the page was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.'
               format: date-time
               nullable: true
             level:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: The indentation level of the page. Read-only.
               format: int32
               nullable: true
             links:
@@ -22910,12 +22685,10 @@ components:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: The order of the page within its parent section. Read-only.
               format: int32
               nullable: true
             title:
               type: string
-              description: The title of the page.
               nullable: true
             userTags:
               type: array
@@ -22938,15 +22711,12 @@ components:
               $ref: '#/components/schemas/microsoft.graph.onenoteOperationError'
             percentComplete:
               type: string
-              description: The operation percent complete if the operation is still in running status.
               nullable: true
             resourceId:
               type: string
-              description: The resource id.
               nullable: true
             resourceLocation:
               type: string
-              description: 'The resource URI for the object. For example, the resource URI for a copied page or section.'
               nullable: true
           additionalProperties:
             type: object
@@ -22958,12 +22728,10 @@ components:
           properties:
             content:
               type: string
-              description: The content stream
               format: base64url
               nullable: true
             contentUrl:
               type: string
-              description: The URL for downloading the content
               nullable: true
           additionalProperties:
             type: object
@@ -22973,7 +22741,6 @@ components:
       properties:
         id:
           type: string
-          description: Read-only.
       additionalProperties:
         type: object
     microsoft.graph.onenoteEntityHierarchyModel:
@@ -22986,14 +22753,12 @@ components:
               $ref: '#/components/schemas/microsoft.graph.identitySet'
             displayName:
               type: string
-              description: The name of the notebook.
               nullable: true
             lastModifiedBy:
               $ref: '#/components/schemas/microsoft.graph.identitySet'
             lastModifiedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The date and time when the notebook was last modified. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.'
               format: date-time
               nullable: true
           additionalProperties:
@@ -23035,7 +22800,6 @@ components:
             createdDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The date and time when the page was created. The timestamp represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.'
               format: date-time
               nullable: true
           additionalProperties:
@@ -23059,13 +22823,11 @@ components:
             createdDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: The start time of the operation.
               format: date-time
               nullable: true
             lastActionDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: The time of the last action of the operation.
               format: date-time
               nullable: true
             status:
@@ -23078,11 +22840,9 @@ components:
       properties:
         code:
           type: string
-          description: The error code.
           nullable: true
         message:
           type: string
-          description: The error message.
           nullable: true
       additionalProperties:
         type: object
@@ -23094,7 +22854,6 @@ components:
           properties:
             self:
               type: string
-              description: The endpoint where you can get details about the page. Read-only.
               nullable: true
           additionalProperties:
             type: object
@@ -23197,7 +22956,6 @@ components:
       properties:
         href:
           type: string
-          description: The url of the link.
           nullable: true
       additionalProperties:
         type: object
@@ -23236,11 +22994,9 @@ components:
       properties:
         displayName:
           type: string
-          description: 'The identity''s display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won''t show up as having changed when using delta.'
           nullable: true
         id:
           type: string
-          description: Unique identifier for the identity.
           nullable: true
       additionalProperties:
         type: object

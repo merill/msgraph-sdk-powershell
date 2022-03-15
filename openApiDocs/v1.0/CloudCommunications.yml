@@ -310,7 +310,6 @@ paths:
       tags:
         - communications.callRecord
       summary: Get sessions from communications
-      description: 'List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.'
       operationId: communications.callRecords_ListSessions
       parameters:
         - name: callRecord-id
@@ -426,7 +425,6 @@ paths:
       tags:
         - communications.callRecord
       summary: Get sessions from communications
-      description: 'List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.'
       operationId: communications.callRecords_GetSessions
       parameters:
         - name: callRecord-id
@@ -560,7 +558,6 @@ paths:
       tags:
         - communications.callRecord
       summary: Get segments from communications
-      description: The list of segments involved in the session. Read-only. Nullable.
       operationId: communications.callRecords.sessions_ListSegments
       parameters:
         - name: callRecord-id
@@ -688,7 +685,6 @@ paths:
       tags:
         - communications.callRecord
       summary: Get segments from communications
-      description: The list of segments involved in the session. Read-only. Nullable.
       operationId: communications.callRecords.sessions_GetSegments
       parameters:
         - name: callRecord-id
@@ -1118,7 +1114,6 @@ paths:
       tags:
         - communications.call
       summary: Get audioRoutingGroups from communications
-      description: Read-only. Nullable.
       operationId: communications.calls_ListAudioRoutingGroups
       parameters:
         - name: call-id
@@ -1223,7 +1218,6 @@ paths:
       tags:
         - communications.call
       summary: Get audioRoutingGroups from communications
-      description: Read-only. Nullable.
       operationId: communications.calls_GetAudioRoutingGroups
       parameters:
         - name: call-id
@@ -1856,7 +1850,6 @@ paths:
       tags:
         - communications.call
       summary: Get operations from communications
-      description: Read-only. Nullable.
       operationId: communications.calls_ListOperations
       parameters:
         - name: call-id
@@ -1961,7 +1954,6 @@ paths:
       tags:
         - communications.call
       summary: Get operations from communications
-      description: Read-only. Nullable.
       operationId: communications.calls_GetOperations
       parameters:
         - name: call-id
@@ -2084,7 +2076,6 @@ paths:
       tags:
         - communications.call
       summary: Get participants from communications
-      description: Read-only. Nullable.
       operationId: communications.calls_ListParticipants
       parameters:
         - name: call-id
@@ -2198,7 +2189,6 @@ paths:
       tags:
         - communications.call
       summary: Get participants from communications
-      description: Read-only. Nullable.
       operationId: communications.calls_GetParticipants
       parameters:
         - name: call-id
@@ -2836,7 +2826,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Get attendanceReports from communications
-      description: The attendance reports of an online meeting. Read-only.
       operationId: communications.onlineMeetings_ListAttendanceReports
       parameters:
         - name: onlineMeeting-id
@@ -2943,7 +2932,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Get attendanceReports from communications
-      description: The attendance reports of an online meeting. Read-only.
       operationId: communications.onlineMeetings_GetAttendanceReports
       parameters:
         - name: onlineMeeting-id
@@ -3074,7 +3062,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Get attendanceRecords from communications
-      description: List of attendance records of an attendance report. Read-only.
       operationId: communications.onlineMeetings.attendanceReports_ListAttendanceRecords
       parameters:
         - name: onlineMeeting-id
@@ -3199,7 +3186,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Get attendanceRecords from communications
-      description: List of attendance records of an attendance report. Read-only.
       operationId: communications.onlineMeetings.attendanceReports_GetAttendanceRecords
       parameters:
         - name: onlineMeeting-id
@@ -3345,7 +3331,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Get attendeeReport for the navigation property onlineMeetings from communications
-      description: The content stream of the attendee report of a Microsoft Teams live event. Read-only.
       operationId: communications_GetOnlineMeetingsAttendeeReport
       parameters:
         - name: onlineMeeting-id
@@ -3370,7 +3355,6 @@ paths:
       tags:
         - communications.onlineMeeting
       summary: Update attendeeReport for the navigation property onlineMeetings in communications
-      description: The content stream of the attendee report of a Microsoft Teams live event. Read-only.
       operationId: communications_SetOnlineMeetingsAttendeeReport
       parameters:
         - name: onlineMeeting-id
@@ -4017,7 +4001,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Get attendanceReports from users
-      description: The attendance reports of an online meeting. Read-only.
       operationId: users.onlineMeetings_ListAttendanceReports
       parameters:
         - name: user-id
@@ -4138,7 +4121,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Get attendanceReports from users
-      description: The attendance reports of an online meeting. Read-only.
       operationId: users.onlineMeetings_GetAttendanceReports
       parameters:
         - name: user-id
@@ -4291,7 +4273,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Get attendanceRecords from users
-      description: List of attendance records of an attendance report. Read-only.
       operationId: users.onlineMeetings.attendanceReports_ListAttendanceRecords
       parameters:
         - name: user-id
@@ -4430,7 +4411,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Get attendanceRecords from users
-      description: List of attendance records of an attendance report. Read-only.
       operationId: users.onlineMeetings.attendanceReports_GetAttendanceRecords
       parameters:
         - name: user-id
@@ -4597,7 +4577,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Get attendeeReport for the navigation property onlineMeetings from users
-      description: The content stream of the attendee report of a Microsoft Teams live event. Read-only.
       operationId: users_GetOnlineMeetingsAttendeeReport
       parameters:
         - name: user-id
@@ -4629,7 +4608,6 @@ paths:
       tags:
         - users.onlineMeeting
       summary: Update attendeeReport for the navigation property onlineMeetings in users
-      description: The content stream of the attendee report of a Microsoft Teams live event. Read-only.
       operationId: users_SetOnlineMeetingsAttendeeReport
       parameters:
         - name: user-id
@@ -4795,45 +4773,37 @@ components:
             endDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'UTC time when the last user left the call. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
               format: date-time
             joinWebUrl:
               type: string
-              description: Meeting URL associated to the call. May not be available for a peerToPeer call record type.
               nullable: true
             lastModifiedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'UTC time when the call record was created. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
               format: date-time
             modalities:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.callRecords.modality'
-              description: 'List of all the modalities used in the call. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.'
             organizer:
               $ref: '#/components/schemas/microsoft.graph.identitySet'
             participants:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.identitySet'
-              description: List of distinct identities involved in the call.
             startDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'UTC time when the first user joined the call. The DatetimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
               format: date-time
             type:
               $ref: '#/components/schemas/microsoft.graph.callRecords.callType'
             version:
               type: integer
-              description: Monotonically increasing version of the call record. Higher version call records with the same id includes additional data compared to the lower version.
               format: int64
             sessions:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.callRecords.session'
-              description: 'List of sessions involved in the call. Peer-to-peer calls typically only have one session, whereas group calls typically have at least one session per participant. Read-only. Nullable.'
           additionalProperties:
             type: object
     microsoft.graph.callRecords.session:
@@ -4849,7 +4819,6 @@ components:
             endDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'UTC time when the last user left the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
               format: date-time
             failureInfo:
               $ref: '#/components/schemas/microsoft.graph.callRecords.failureInfo'
@@ -4857,17 +4826,14 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.callRecords.modality'
-              description: 'List of modalities present in the session. Possible values are: unknown, audio, video, videoBasedScreenSharing, data, screenSharing, unknownFutureValue.'
             startDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'UTC time when the first user joined the session. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
               format: date-time
             segments:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.callRecords.segment'
-              description: The list of segments involved in the session. Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.callRecords.segment:
@@ -4883,7 +4849,6 @@ components:
             endDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'UTC time when the segment ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
               format: date-time
             failureInfo:
               $ref: '#/components/schemas/microsoft.graph.callRecords.failureInfo'
@@ -4891,11 +4856,9 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.callRecords.media'
-              description: Media associated with this segment.
             startDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'UTC time when the segment started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
               format: date-time
           additionalProperties:
             type: object
@@ -4907,10 +4870,8 @@ components:
           properties:
             callbackUri:
               type: string
-              description: The callback URL on which callbacks will be delivered. Must be https.
             callChainId:
               type: string
-              description: A unique identifier for all the participant calls in a conference or a unique identifier for two participant calls in a P2P call.  This needs to be copied over from Microsoft.Graph.Call.CallChainId.
               nullable: true
             callOptions:
               $ref: '#/components/schemas/microsoft.graph.callOptions'
@@ -4918,7 +4879,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.callRoute'
-              description: The routing information on how the call was retargeted. Read-only.
             chatInfo:
               $ref: '#/components/schemas/microsoft.graph.chatInfo'
             direction:
@@ -4962,17 +4922,14 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.audioRoutingGroup'
-              description: Read-only. Nullable.
             operations:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.commsOperation'
-              description: Read-only. Nullable.
             participants:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.participant'
-              description: Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.audioRoutingGroup:
@@ -4986,7 +4943,6 @@ components:
               items:
                 type: string
                 nullable: true
-              description: List of receiving participant ids.
             routingMode:
               $ref: '#/components/schemas/microsoft.graph.routingMode'
             sources:
@@ -4994,7 +4950,6 @@ components:
               items:
                 type: string
                 nullable: true
-              description: List of source participant ids.
           additionalProperties:
             type: object
     microsoft.graph.mediaConfig:
@@ -5058,11 +5013,9 @@ components:
           properties:
             recordingAccessToken:
               type: string
-              description: The access token required to retrieve the recording.
               nullable: true
             recordingLocation:
               type: string
-              description: The location where the recording is located.
               nullable: true
           additionalProperties:
             type: object
@@ -5083,7 +5036,6 @@ components:
           nullable: true
         replacesCallId:
           type: string
-          description: Optional. The call which the target identity is currently a part of. This call will be dropped once the participant is added.
           nullable: true
       additionalProperties:
         type: object
@@ -5108,7 +5060,6 @@ components:
       properties:
         countryCode:
           type: string
-          description: The ISO 3166-1 Alpha-2 country code of the participant's best estimated physical location at the start of the call. Read-only.
           nullable: true
         endpointType:
           $ref: '#/components/schemas/microsoft.graph.endpointType'
@@ -5116,15 +5067,12 @@ components:
           $ref: '#/components/schemas/microsoft.graph.identitySet'
         languageId:
           type: string
-          description: The language culture string. Read-only.
           nullable: true
         participantId:
           type: string
-          description: The participant ID of the participant. Read-only.
           nullable: true
         region:
           type: string
-          description: 'The home region of the participant. This can be a country, a continent, or a larger geographic region. This does not change based on the participant''s current physical location. Read-only.'
           nullable: true
       additionalProperties:
         type: object
@@ -5159,7 +5107,6 @@ components:
           properties:
             clientContext:
               type: string
-              description: Unique Client Context string. Max limit is 256 chars.
               nullable: true
             resultInfo:
               $ref: '#/components/schemas/microsoft.graph.resultInfo'
@@ -5177,18 +5124,14 @@ components:
               $ref: '#/components/schemas/microsoft.graph.participantInfo'
             isInLobby:
               type: boolean
-              description: true if the participant is in lobby.
             isMuted:
               type: boolean
-              description: true if the participant is muted (client or server muted).
             mediaStreams:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.mediaStream'
-              description: The list of media streams.
             metadata:
               type: string
-              description: A blob of data provided by the participant in the roster.
               nullable: true
             recordingInfo:
               $ref: '#/components/schemas/microsoft.graph.recordingInfo'
@@ -5218,7 +5161,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.invitationParticipantInfo'
-              description: The participants to invite.
           additionalProperties:
             type: object
     microsoft.graph.teleconferenceDeviceQuality:
@@ -5228,44 +5170,34 @@ components:
         callChainId:
           pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
           type: string
-          description: A unique identifier for all  the participant calls in a conference or a unique identifier for two participant calls in P2P call. This needs to be copied over from Microsoft.Graph.Call.CallChainId.
           format: uuid
         cloudServiceDeploymentEnvironment:
           type: string
-          description: 'A geo-region where the service is deployed, such as ProdNoam.'
           nullable: true
         cloudServiceDeploymentId:
           type: string
-          description: A unique deployment identifier assigned by Azure.
           nullable: true
         cloudServiceInstanceName:
           type: string
-          description: 'The Azure deployed cloud service instance name, such as FrontEnd_IN_3.'
           nullable: true
         cloudServiceName:
           type: string
-          description: 'The Azure deployed cloud service name, such as contoso.cloudapp.net.'
           nullable: true
         deviceDescription:
           type: string
-          description: 'Any additional description, such as VTC Bldg 30/21.'
         deviceName:
           type: string
-          description: 'The user media agent name, such as Cisco SX80.'
         mediaLegId:
           pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
           type: string
-          description: A unique identifier for a specific media leg of a participant in a conference.  One participant can have multiple media leg identifiers if retargeting happens. CVI partner assigns this value.
           format: uuid
         mediaQualityList:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.teleconferenceDeviceMediaQuality'
-          description: 'The list of media qualities in a media session (call), such as audio quality, video quality, and/or screen sharing quality.'
         participantId:
           pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
           type: string
-          description: A unique identifier for a specific participant in a conference. The CVI partner needs to copy over Call.MyParticipantId to this property.
           format: uuid
       additionalProperties:
         type: object
@@ -5277,11 +5209,9 @@ components:
           properties:
             activity:
               type: string
-              description: 'The supplemental information to a user''s availability. Possible values are Available, Away, BeRightBack, Busy, DoNotDisturb, InACall, InAConferenceCall, Inactive, InAMeeting, Offline, OffWork, OutOfOffice, PresenceUnknown, Presenting, UrgentInterruptionsOnly.'
               nullable: true
             availability:
               type: string
-              description: 'The base presence information for a user. Possible values are Available, AvailableIdle,  Away, BeRightBack, Busy, BusyIdle, DoNotDisturb, Offline, PresenceUnknown'
               nullable: true
           additionalProperties:
             type: object
@@ -5293,11 +5223,9 @@ components:
           properties:
             allowAttendeeToEnableCamera:
               type: boolean
-              description: Indicates whether attendees can turn on their camera.
               nullable: true
             allowAttendeeToEnableMic:
               type: boolean
-              description: Indicates whether attendees can turn on their microphone.
               nullable: true
             allowedPresenters:
               $ref: '#/components/schemas/microsoft.graph.onlineMeetingPresenters'
@@ -5305,11 +5233,9 @@ components:
               $ref: '#/components/schemas/microsoft.graph.meetingChatMode'
             allowTeamworkReactions:
               type: boolean
-              description: Indicates whether Teams reactions are enabled for the meeting.
               nullable: true
             attendeeReport:
               type: string
-              description: The content stream of the attendee report of a Microsoft Teams live event. Read-only.
               format: base64url
               nullable: true
             audioConferencing:
@@ -5321,32 +5247,26 @@ components:
             creationDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: The meeting creation time in UTC. Read-only.
               format: date-time
               nullable: true
             endDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: The meeting end time in UTC.
               format: date-time
               nullable: true
             externalId:
               type: string
-              description: The external ID. A custom ID. Optional.
               nullable: true
             isBroadcast:
               type: boolean
-              description: Indicates if this is a Teams live event.
               nullable: true
             isEntryExitAnnounced:
               type: boolean
-              description: Indicates whether to announce when callers join or leave.
               nullable: true
             joinInformation:
               $ref: '#/components/schemas/microsoft.graph.itemBody'
             joinWebUrl:
               type: string
-              description: The join URL of the online meeting. Read-only.
               nullable: true
             lobbyBypassSettings:
               $ref: '#/components/schemas/microsoft.graph.lobbyBypassSettings'
@@ -5354,27 +5274,22 @@ components:
               $ref: '#/components/schemas/microsoft.graph.meetingParticipants'
             recordAutomatically:
               type: boolean
-              description: Indicates whether to record the meeting automatically.
               nullable: true
             startDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: The meeting start time in UTC.
               format: date-time
               nullable: true
             subject:
               type: string
-              description: The subject of the online meeting.
               nullable: true
             videoTeleconferenceId:
               type: string
-              description: The video teleconferencing ID. Read-only.
               nullable: true
             attendanceReports:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.meetingAttendanceReport'
-              description: The attendance reports of an online meeting. Read-only.
           additionalProperties:
             type: object
     microsoft.graph.meetingAttendanceReport:
@@ -5386,27 +5301,23 @@ components:
             meetingEndDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: UTC time when the meeting ended. Read-only.
               format: date-time
               nullable: true
             meetingStartDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: UTC time when the meeting started. Read-only.
               format: date-time
               nullable: true
             totalParticipantCount:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: Total number of participants. Read-only.
               format: int32
               nullable: true
             attendanceRecords:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.attendanceRecord'
-              description: List of attendance records of an attendance report. Read-only.
           additionalProperties:
             type: object
     microsoft.graph.attendanceRecord:
@@ -5419,22 +5330,18 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.attendanceInterval'
-              description: List of time periods between joining and leaving a meeting.
             emailAddress:
               type: string
-              description: Email address of the user associated with this atttendance record.
               nullable: true
             identity:
               $ref: '#/components/schemas/microsoft.graph.identity'
             role:
               type: string
-              description: 'Role of the attendee. Possible values are: None, Attendee, Presenter, and Organizer.'
               nullable: true
             totalAttendanceInSeconds:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: Total duration of the attendances in seconds.
               format: int32
               nullable: true
           additionalProperties:
@@ -5445,15 +5352,12 @@ components:
       properties:
         messageId:
           type: string
-          description: The unique identifier of a message in a Microsoft Teams channel.
           nullable: true
         replyChainMessageId:
           type: string
-          description: The ID of the reply message.
           nullable: true
         threadId:
           type: string
-          description: The unique identifier for a thread in Microsoft Teams.
           nullable: true
       additionalProperties:
         type: object
@@ -5465,7 +5369,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.meetingParticipantInfo'
-          description: Information of the meeting attendees.
         organizer:
           $ref: '#/components/schemas/microsoft.graph.meetingParticipantInfo'
       additionalProperties:
@@ -5476,7 +5379,6 @@ components:
       properties:
         id:
           type: string
-          description: Read-only.
       additionalProperties:
         type: object
     microsoft.graph.callRecords.modality:
@@ -5523,7 +5425,6 @@ components:
       properties:
         reason:
           type: string
-          description: Classification of why a call or portion of a call failed.
           nullable: true
         stage:
           $ref: '#/components/schemas/microsoft.graph.callRecords.failureStage'
@@ -5543,13 +5444,11 @@ components:
           $ref: '#/components/schemas/microsoft.graph.callRecords.networkInfo'
         label:
           type: string
-          description: How the media was identified during media negotiation stage.
           nullable: true
         streams:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.callRecords.mediaStream'
-          description: Network streams associated with this media.
       additionalProperties:
         type: object
     microsoft.graph.callOptions:
@@ -5585,13 +5484,11 @@ components:
       properties:
         observedParticipantId:
           type: string
-          description: The ID of the participant that is under observation. Read-only.
           nullable: true
         onBehalfOf:
           $ref: '#/components/schemas/microsoft.graph.identitySet'
         sourceParticipantId:
           type: string
-          description: The ID of the participant that triggered the incoming call. Read-only.
           nullable: true
         transferor:
           $ref: '#/components/schemas/microsoft.graph.identitySet'
@@ -5618,17 +5515,14 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The result code.
           format: int32
         message:
           type: string
-          description: The message.
           nullable: true
         subcode:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The result sub-code.
           format: int32
       additionalProperties:
         type: object
@@ -5652,7 +5546,6 @@ components:
       properties:
         sequenceId:
           type: integer
-          description: An incremental identifier used for ordering DTMF events.
           format: int64
         tone:
           $ref: '#/components/schemas/microsoft.graph.tone'
@@ -5665,7 +5558,6 @@ components:
         lastModifiedDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: The state modified time in UTC.
           format: date-time
           nullable: true
         state:
@@ -5704,16 +5596,13 @@ components:
           $ref: '#/components/schemas/microsoft.graph.mediaDirection'
         label:
           type: string
-          description: The media stream label.
           nullable: true
         mediaType:
           $ref: '#/components/schemas/microsoft.graph.modality'
         serverMuted:
           type: boolean
-          description: If the media is muted by the server.
         sourceId:
           type: string
-          description: The source ID.
       additionalProperties:
         type: object
     microsoft.graph.recordingInfo:
@@ -5733,118 +5622,97 @@ components:
         averageInboundJitter:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: The average inbound stream network jitter.
           format: duration
           nullable: true
         averageInboundPacketLossRateInPercentage:
           type: number
-          description: 'The average inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.'
           format: double
           nullable: true
         averageInboundRoundTripDelay:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: The average inbound stream network round trip delay.
           format: duration
           nullable: true
         averageOutboundJitter:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: The average outbound stream network jitter.
           format: duration
           nullable: true
         averageOutboundPacketLossRateInPercentage:
           type: number
-          description: 'The average outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.'
           format: double
           nullable: true
         averageOutboundRoundTripDelay:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: The average outbound stream network round trip delay.
           format: duration
           nullable: true
         channelIndex:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: 'The channel index of media. Indexing begins with 1.  If a media session contains 3 video modalities, channel indexes will be 1, 2, and 3.'
           format: int32
         inboundPackets:
           type: integer
-          description: The total number of the inbound packets.
           format: int64
           nullable: true
         localIPAddress:
           type: string
-          description: the local IP address for the media session.
           nullable: true
         localPort:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The local media port.
           format: int32
           nullable: true
         maximumInboundJitter:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: The maximum inbound stream network jitter.
           format: duration
           nullable: true
         maximumInboundPacketLossRateInPercentage:
           type: number
-          description: 'The maximum inbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.'
           format: double
           nullable: true
         maximumInboundRoundTripDelay:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: The maximum inbound stream network round trip delay.
           format: duration
           nullable: true
         maximumOutboundJitter:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: The maximum outbound stream network jitter.
           format: duration
           nullable: true
         maximumOutboundPacketLossRateInPercentage:
           type: number
-          description: 'The maximum outbound stream packet loss rate in percentage (0-100). For example, 0.01 means 0.01%.'
           format: double
           nullable: true
         maximumOutboundRoundTripDelay:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: The maximum outbound stream network round trip delay.
           format: duration
           nullable: true
         mediaDuration:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: 'The total modality duration. If the media enabled and disabled multiple times, MediaDuration will the summation of all of the durations.'
           format: duration
           nullable: true
         networkLinkSpeedInBytes:
           type: integer
-          description: The network link speed in bytes
           format: int64
           nullable: true
         outboundPackets:
           type: integer
-          description: The total number of the outbound packets.
           format: int64
           nullable: true
         remoteIPAddress:
           type: string
-          description: The remote IP address for the media session.
           nullable: true
         remotePort:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The remote media port.
           format: int32
           nullable: true
       additionalProperties:
@@ -5872,11 +5740,9 @@ components:
       properties:
         conferenceId:
           type: string
-          description: The conference id of the online meeting.
           nullable: true
         dialinUrl:
           type: string
-          description: A URL to the externally-accessible web page that contains dial-in information.
           nullable: true
         tollFreeNumber:
           type: string
@@ -5886,7 +5752,6 @@ components:
           items:
             type: string
             nullable: true
-          description: List of toll-free numbers that are displayed in the meeting invite.
         tollNumber:
           type: string
           nullable: true
@@ -5895,7 +5760,6 @@ components:
           items:
             type: string
             nullable: true
-          description: List of toll numbers that are displayed in the meeting invite.
       additionalProperties:
         type: object
     microsoft.graph.broadcastMeetingSettings:
@@ -5906,19 +5770,15 @@ components:
           $ref: '#/components/schemas/microsoft.graph.broadcastMeetingAudience'
         isAttendeeReportEnabled:
           type: boolean
-          description: Indicates whether attendee report is enabled for this Teams live event. Default value is false.
           nullable: true
         isQuestionAndAnswerEnabled:
           type: boolean
-          description: Indicates whether Q&A is enabled for this Teams live event. Default value is false.
           nullable: true
         isRecordingEnabled:
           type: boolean
-          description: Indicates whether recording is enabled for this Teams live event. Default value is false.
           nullable: true
         isVideoOnDemandEnabled:
           type: boolean
-          description: Indicates whether video on demand is enabled for this Teams live event. Default value is false.
           nullable: true
       additionalProperties:
         type: object
@@ -5928,7 +5788,6 @@ components:
       properties:
         content:
           type: string
-          description: The content of the item.
           nullable: true
         contentType:
           $ref: '#/components/schemas/microsoft.graph.bodyType'
@@ -5940,7 +5799,6 @@ components:
       properties:
         isDialInBypassEnabled:
           type: boolean
-          description: Specifies whether or not to always let dial-in callers bypass the lobby. Optional.
           nullable: true
         scope:
           $ref: '#/components/schemas/microsoft.graph.lobbyBypassScope'
@@ -5954,19 +5812,16 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: 'Duration of the meeting interval in seconds; that is, the difference between joinDateTime and leaveDateTime.'
           format: int32
           nullable: true
         joinDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: The time the attendee joined in UTC.
           format: date-time
           nullable: true
         leaveDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: The time the attendee left in UTC.
           format: date-time
           nullable: true
       additionalProperties:
@@ -5977,11 +5832,9 @@ components:
       properties:
         displayName:
           type: string
-          description: 'The identity''s display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won''t show up as having changed when using delta.'
           nullable: true
         id:
           type: string
-          description: Unique identifier for the identity.
           nullable: true
       additionalProperties:
         type: object
@@ -5995,7 +5848,6 @@ components:
           $ref: '#/components/schemas/microsoft.graph.onlineMeetingRole'
         upn:
           type: string
-          description: User principal name of the participant.
           nullable: true
       additionalProperties:
         type: object
@@ -6146,11 +5998,9 @@ components:
       properties:
         applicationVersion:
           type: string
-          description: Identifies the version of application software used by this endpoint.
           nullable: true
         headerValue:
           type: string
-          description: User-agent header value reported by this endpoint.
           nullable: true
       additionalProperties:
         type: object
@@ -6168,113 +6018,92 @@ components:
       properties:
         captureDeviceDriver:
           type: string
-          description: Name of the capture device driver used by the media endpoint.
           nullable: true
         captureDeviceName:
           type: string
-          description: Name of the capture device used by the media endpoint.
           nullable: true
         captureNotFunctioningEventRatio:
           type: number
-          description: Fraction of the call that the media endpoint detected the capture device was not working properly.
           format: float
           nullable: true
         cpuInsufficentEventRatio:
           type: number
-          description: Fraction of the call that the media endpoint detected the CPU resources available were insufficient and caused poor quality of the audio sent and received.
           format: float
           nullable: true
         deviceClippingEventRatio:
           type: number
-          description: Fraction of the call that the media endpoint detected clipping in the captured audio that caused poor quality of the audio being sent.
           format: float
           nullable: true
         deviceGlitchEventRatio:
           type: number
-          description: Fraction of the call that the media endpoint detected glitches or gaps in the audio played or captured that caused poor quality of the audio being sent or received.
           format: float
           nullable: true
         howlingEventCount:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Number of times during the call that the media endpoint detected howling or screeching audio.
           format: int32
           nullable: true
         initialSignalLevelRootMeanSquare:
           type: number
-          description: The root mean square (RMS) of the incoming signal of up to the first 30 seconds of the call.
           format: float
           nullable: true
         lowSpeechLevelEventRatio:
           type: number
-          description: Fraction of the call that the media endpoint detected low speech level that caused poor quality of the audio being sent.
           format: float
           nullable: true
         lowSpeechToNoiseEventRatio:
           type: number
-          description: Fraction of the call that the media endpoint detected low speech to noise level that caused poor quality of the audio being sent.
           format: float
           nullable: true
         micGlitchRate:
           type: number
-          description: Glitches per 5 minute interval for the media endpoint's microphone.
           format: float
           nullable: true
         receivedNoiseLevel:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Average energy level of received audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
           format: int32
           nullable: true
         receivedSignalLevel:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: 'Average energy level of received audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.'
           format: int32
           nullable: true
         renderDeviceDriver:
           type: string
-          description: Name of the render device driver used by the media endpoint.
           nullable: true
         renderDeviceName:
           type: string
-          description: Name of the render device used by the media endpoint.
           nullable: true
         renderMuteEventRatio:
           type: number
-          description: Fraction of the call that media endpoint detected device render is muted.
           format: float
           nullable: true
         renderNotFunctioningEventRatio:
           type: number
-          description: Fraction of the call that the media endpoint detected the render device was not working properly.
           format: float
           nullable: true
         renderZeroVolumeEventRatio:
           type: number
-          description: Fraction of the call that media endpoint detected device render volume is set to 0.
           format: float
           nullable: true
         sentNoiseLevel:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Average energy level of sent audio for audio classified as mono noise or left channel of stereo noise by the media endpoint.
           format: int32
           nullable: true
         sentSignalLevel:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: 'Average energy level of sent audio for audio classified as mono speech, or left channel of stereo speech by the media endpoint.'
           format: int32
           nullable: true
         speakerGlitchRate:
           type: number
-          description: Glitches per 5 minute internal for the media endpoint's loudspeaker.
           format: float
           nullable: true
       additionalProperties:
@@ -6285,72 +6114,58 @@ components:
       properties:
         bandwidthLowEventRatio:
           type: number
-          description: Fraction of the call that the media endpoint detected the available bandwidth or bandwidth policy was low enough to cause poor quality of the audio sent.
           format: float
           nullable: true
         basicServiceSetIdentifier:
           type: string
-          description: The wireless LAN basic service set identifier of the media endpoint used to connect to the network.
           nullable: true
         connectionType:
           $ref: '#/components/schemas/microsoft.graph.callRecords.networkConnectionType'
         delayEventRatio:
           type: number
-          description: Fraction of the call that the media endpoint detected the network delay was significant enough to impact the ability to have real-time two-way communication.
           format: float
           nullable: true
         dnsSuffix:
           type: string
-          description: DNS suffix associated with the network adapter of the media endpoint.
           nullable: true
         ipAddress:
           type: string
-          description: IP address of the media endpoint.
           nullable: true
         linkSpeed:
           type: integer
-          description: Link speed in bits per second reported by the network adapter used by the media endpoint.
           format: int64
           nullable: true
         macAddress:
           type: string
-          description: The media access control (MAC) address of the media endpoint's network device.
           nullable: true
         port:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Network port number used by media endpoint.
           format: int32
           nullable: true
         receivedQualityEventRatio:
           type: number
-          description: Fraction of the call that the media endpoint detected the network was causing poor quality of the audio received.
           format: float
           nullable: true
         reflexiveIPAddress:
           type: string
-          description: IP address of the media endpoint as seen by the media relay server. This is typically the public internet IP address associated to the endpoint.
           nullable: true
         relayIPAddress:
           type: string
-          description: IP address of the media relay server allocated by the media endpoint.
           nullable: true
         relayPort:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Network port number allocated on the media relay server by the media endpoint.
           format: int32
           nullable: true
         sentQualityEventRatio:
           type: number
-          description: Fraction of the call that the media endpoint detected the network was causing poor quality of the audio sent.
           format: float
           nullable: true
         subnet:
           type: string
-          description: Subnet used for media stream by the media endpoint.
           nullable: true
         wifiBand:
           $ref: '#/components/schemas/microsoft.graph.callRecords.wifiBand'
@@ -6358,23 +6173,19 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Estimated remaining battery charge in percentage reported by the media endpoint.
           format: int32
           nullable: true
         wifiChannel:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: WiFi channel used by the media endpoint.
           format: int32
           nullable: true
         wifiMicrosoftDriver:
           type: string
-          description: Name of the Microsoft WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
           nullable: true
         wifiMicrosoftDriverVersion:
           type: string
-          description: Version of the Microsoft WiFi driver used by the media endpoint.
           nullable: true
         wifiRadioType:
           $ref: '#/components/schemas/microsoft.graph.callRecords.wifiRadioType'
@@ -6382,16 +6193,13 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: WiFi signal strength in percentage reported by the media endpoint.
           format: int32
           nullable: true
         wifiVendorDriver:
           type: string
-          description: Name of the WiFi driver used by the media endpoint. Value may be localized based on the language used by endpoint.
           nullable: true
         wifiVendorDriverVersion:
           type: string
-          description: Version of the WiFi driver used by the media endpoint.
           nullable: true
       additionalProperties:
         type: object
@@ -6401,131 +6209,107 @@ components:
       properties:
         averageAudioDegradation:
           type: number
-          description: Average Network Mean Opinion Score degradation for stream. Represents how much the network loss and jitter has impacted the quality of received audio.
           format: float
           nullable: true
         averageAudioNetworkJitter:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: 'Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as ''PT1S'', where ''P'' is the duration designator, ''T'' is the time designator, and ''S'' is the second designator.'
           format: duration
           nullable: true
         averageBandwidthEstimate:
           type: integer
-          description: Average estimated bandwidth available between two endpoints in bits per second.
           format: int64
           nullable: true
         averageJitter:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: 'Average jitter for the stream computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as ''PT1S'', where ''P'' is the duration designator, ''T'' is the time designator, and ''S'' is the second designator.'
           format: duration
           nullable: true
         averagePacketLossRate:
           type: number
-          description: Average packet loss rate for stream.
           format: float
           nullable: true
         averageRatioOfConcealedSamples:
           type: number
-          description: Ratio of the number of audio frames with samples generated by packet loss concealment to the total number of audio frames.
           format: float
           nullable: true
         averageReceivedFrameRate:
           type: number
-          description: Average frames per second received for all video streams computed over the duration of the session.
           format: float
           nullable: true
         averageRoundTripTime:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: 'Average network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as ''PT1S'', where ''P'' is the duration designator, ''T'' is the time designator, and ''S'' is the second designator.'
           format: duration
           nullable: true
         averageVideoFrameLossPercentage:
           type: number
-          description: Average percentage of video frames lost as displayed to the user.
           format: float
           nullable: true
         averageVideoFrameRate:
           type: number
-          description: 'Average frames per second received for a video stream, computed over the duration of the session.'
           format: float
           nullable: true
         averageVideoPacketLossRate:
           type: number
-          description: 'Average fraction of packets lost, as specified in [RFC 3550][], computed over the duration of the session.'
           format: float
           nullable: true
         endDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'UTC time when the stream ended. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
           format: date-time
           nullable: true
         lowFrameRateRatio:
           type: number
-          description: Fraction of the call where frame rate is less than 7.5 frames per second.
           format: float
           nullable: true
         lowVideoProcessingCapabilityRatio:
           type: number
-          description: Fraction of the call that the client is running less than 70% expected video processing capability.
           format: float
           nullable: true
         maxAudioNetworkJitter:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: 'Maximum of audio network jitter computed over each of the 20 second windows during the session, denoted in [ISO 8601][] format. For example, 1 second is denoted as ''PT1S'', where ''P'' is the duration designator, ''T'' is the time designator, and ''S'' is the second designator.'
           format: duration
           nullable: true
         maxJitter:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: 'Maximum jitter for the stream computed as specified in RFC 3550, denoted in [ISO 8601][] format. For example, 1 second is denoted as ''PT1S'', where ''P'' is the duration designator, ''T'' is the time designator, and ''S'' is the second designator.'
           format: duration
           nullable: true
         maxPacketLossRate:
           type: number
-          description: Maximum packet loss rate for the stream.
           format: float
           nullable: true
         maxRatioOfConcealedSamples:
           type: number
-          description: Maximum ratio of packets concealed by the healer.
           format: float
           nullable: true
         maxRoundTripTime:
           pattern: '^-?P([0-9]+D)?(T([0-9]+H)?([0-9]+M)?([0-9]+([.][0-9]+)?S)?)?$'
           type: string
-          description: 'Maximum network propagation round-trip time computed as specified in [RFC 3550][], denoted in [ISO 8601][] format. For example, 1 second is denoted as ''PT1S'', where ''P'' is the duration designator, ''T'' is the time designator, and ''S'' is the second designator.'
           format: duration
           nullable: true
         packetUtilization:
           type: integer
-          description: Packet count for the stream.
           format: int64
           nullable: true
         postForwardErrorCorrectionPacketLossRate:
           type: number
-          description: Packet loss rate after FEC has been applied aggregated across all video streams and codecs.
           format: float
           nullable: true
         startDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'UTC time when the stream started. The DateTimeOffset type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z'
           format: date-time
           nullable: true
         streamDirection:
           $ref: '#/components/schemas/microsoft.graph.callRecords.mediaStreamDirection'
         streamId:
           type: string
-          description: Unique identifier for the stream.
           nullable: true
         wasMediaBypassed:
           type: boolean
-          description: 'True if the media stream bypassed the Mediation Server and went straight between client and PSTN Gateway/PBX, false otherwise.'
           nullable: true
       additionalProperties:
         type: object

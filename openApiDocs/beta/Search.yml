@@ -321,7 +321,6 @@ paths:
       tags:
         - external.externalConnection
       summary: Get groups from external
-      description: Read-only. Nullable.
       operationId: external.connections_ListGroups
       parameters:
         - name: externalConnection-id
@@ -425,7 +424,6 @@ paths:
       tags:
         - external.externalConnection
       summary: Get groups from external
-      description: Read-only. Nullable.
       operationId: external.connections_GetGroups
       parameters:
         - name: externalConnection-id
@@ -555,7 +553,6 @@ paths:
       tags:
         - external.externalConnection
       summary: Get members from external
-      description: 'A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.'
       operationId: external.connections.groups_ListMembers
       parameters:
         - name: externalConnection-id
@@ -668,7 +665,6 @@ paths:
       tags:
         - external.externalConnection
       summary: Get members from external
-      description: 'A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.'
       operationId: external.connections.groups_GetMembers
       parameters:
         - name: externalConnection-id
@@ -810,7 +806,6 @@ paths:
       tags:
         - external.externalConnection
       summary: Get items from external
-      description: Read-only. Nullable.
       operationId: external.connections_ListItems
       parameters:
         - name: externalConnection-id
@@ -915,7 +910,6 @@ paths:
       tags:
         - external.externalConnection
       summary: Get items from external
-      description: Read-only. Nullable.
       operationId: external.connections_GetItems
       parameters:
         - name: externalConnection-id
@@ -1038,7 +1032,6 @@ paths:
       tags:
         - external.externalConnection
       summary: Get operations from external
-      description: Read-only. Nullable.
       operationId: external.connections_ListOperations
       parameters:
         - name: externalConnection-id
@@ -1140,7 +1133,6 @@ paths:
       tags:
         - external.externalConnection
       summary: Get operations from external
-      description: Read-only. Nullable.
       operationId: external.connections_GetOperations
       parameters:
         - name: externalConnection-id
@@ -1311,7 +1303,6 @@ paths:
       tags:
         - external.externalConnection
       summary: Get schema from external
-      description: Read-only. Nullable.
       operationId: external.connections_GetSchema
       parameters:
         - name: externalConnection-id
@@ -1484,7 +1475,6 @@ paths:
       tags:
         - search.acronym
       summary: Get acronyms from search
-      description: Administrative answer in Microsoft Search results to define common acronyms in a organization.
       operationId: search_ListAcronyms
       parameters:
         - $ref: '#/components/parameters/top'
@@ -1586,7 +1576,6 @@ paths:
       tags:
         - search.acronym
       summary: Get acronyms from search
-      description: Administrative answer in Microsoft Search results to define common acronyms in a organization.
       operationId: search_GetAcronyms
       parameters:
         - name: acronym-id
@@ -1692,7 +1681,6 @@ paths:
       tags:
         - search.bookmark
       summary: Get bookmarks from search
-      description: Administrative answer in Microsoft Search results for common search queries in an organization.
       operationId: search_ListBookmarks
       parameters:
         - $ref: '#/components/parameters/top'
@@ -1821,7 +1809,6 @@ paths:
       tags:
         - search.bookmark
       summary: Get bookmarks from search
-      description: Administrative answer in Microsoft Search results for common search queries in an organization.
       operationId: search_GetBookmarks
       parameters:
         - name: bookmark-id
@@ -1974,7 +1961,6 @@ paths:
       tags:
         - search.qna
       summary: Get qnas from search
-      description: Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization.
       operationId: search_ListQnas
       parameters:
         - $ref: '#/components/parameters/top'
@@ -2097,7 +2083,6 @@ paths:
       tags:
         - search.qna
       summary: Get qnas from search
-      description: Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization.
       operationId: search_GetQnas
       parameters:
         - name: qna-id
@@ -2227,11 +2212,9 @@ components:
               $ref: '#/components/schemas/microsoft.graph.externalConnectors.configuration'
             connectorId:
               type: string
-              description: The Teams App ID. Optional.
               nullable: true
             description:
               type: string
-              description: Description of the connection displayed in the Microsoft 365 admin center. Optional.
               nullable: true
             ingestedItemsCount:
               type: integer
@@ -2239,7 +2222,6 @@ components:
               nullable: true
             name:
               type: string
-              description: The display name of the connection to be displayed in the Microsoft 365 admin center. Maximum length of 128 characters. Required.
               nullable: true
             searchSettings:
               $ref: '#/components/schemas/microsoft.graph.externalConnectors.searchSettings'
@@ -2249,17 +2231,14 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.externalConnectors.externalGroup'
-              description: Read-only. Nullable.
             items:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.externalConnectors.externalItem'
-              description: Read-only. Nullable.
             operations:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.externalConnectors.connectionOperation'
-              description: Read-only. Nullable.
             quota:
               $ref: '#/components/schemas/microsoft.graph.externalConnectors.connectionQuota'
             schema:
@@ -2274,17 +2253,14 @@ components:
           properties:
             description:
               type: string
-              description: The description of the external group. Optional.
               nullable: true
             displayName:
               type: string
-              description: The friendly name of the external group. Optional.
               nullable: true
             members:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.externalConnectors.identity'
-              description: 'A member added to an externalGroup. You can add Azure Active Directory users, Azure Active Directory groups, or an externalGroup as members.'
           additionalProperties:
             type: object
     microsoft.graph.externalConnectors.identity:
@@ -2307,7 +2283,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.externalConnectors.acl'
-              description: An array of access control entries. Each entry specifies the access granted to a user or group. Required.
             content:
               $ref: '#/components/schemas/microsoft.graph.externalConnectors.externalItemContent'
             properties:
@@ -2346,12 +2321,10 @@ components:
           properties:
             baseType:
               type: string
-              description: Must be set to microsoft.graph.externalConnector.externalItem. Required.
             properties:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.externalConnectors.property'
-              description: 'The properties defined for the items in the connection. The minimum number of properties is one, the maximum is 128.'
           additionalProperties:
             type: object
     microsoft.graph.searchEntity:
@@ -2364,17 +2337,14 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.search.acronym'
-              description: Administrative answer in Microsoft Search results to define common acronyms in a organization.
             bookmarks:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.search.bookmark'
-              description: Administrative answer in Microsoft Search results for common search queries in an organization.
             qnas:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.search.qna'
-              description: Administrative answer in Microsoft Search results which provide answers for specific search keywords in an organization.
           additionalProperties:
             type: object
     microsoft.graph.search.acronym:
@@ -2385,7 +2355,6 @@ components:
           properties:
             standsFor:
               type: string
-              description: What the acronym stands for.
               nullable: true
             state:
               $ref: '#/components/schemas/microsoft.graph.search.answerState'
@@ -2400,13 +2369,11 @@ components:
             availabilityEndDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Timestamp of when the bookmark will stop to appear as a search result. Set as null for always available.
               format: date-time
               nullable: true
             availabilityStartDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Timestamp of when the bookmark will start to appear as a search result. Set as null for always available.
               format: date-time
               nullable: true
             categories:
@@ -2414,16 +2381,13 @@ components:
               items:
                 type: string
                 nullable: true
-              description: 'Categories commonly used to describe this bookmark. For example, IT and HR.'
             groupIds:
               type: array
               items:
                 type: string
                 nullable: true
-              description: List of security groups able to view this bookmark.
             isSuggested:
               type: boolean
-              description: True if this bookmark was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only.
               nullable: true
             keywords:
               $ref: '#/components/schemas/microsoft.graph.search.answerKeyword'
@@ -2432,25 +2396,21 @@ components:
               items:
                 type: string
                 nullable: true
-              description: 'A list of language names that are geographically specific and that this bookmark can be viewed in. Each language tag value follows the pattern {language}-{REGION}. As an example, en-US is English as used in the United States. See supported language tags for the list of possible values.'
             platforms:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.devicePlatformType'
-              description: 'List of devices and operating systems able to view this bookmark. Possible values are: unknown, android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, androidASOP.'
             powerAppIds:
               type: array
               items:
                 type: string
                 nullable: true
-              description: 'List of Power Apps associated with this bookmark. If users add existing Power Apps to a bookmark, they can complete tasks, such as to enter vacation time or to report expenses on the search results page.'
             state:
               $ref: '#/components/schemas/microsoft.graph.search.answerState'
             targetedVariations:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.search.answerVariant'
-              description: 'Variations of a bookmark for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations.'
           additionalProperties:
             type: object
     microsoft.graph.searchRequest:
@@ -2462,38 +2422,31 @@ components:
           items:
             type: string
             nullable: true
-          description: 'Contains one or more filters to obtain search results aggregated and filtered to a specific value of a field. Optional.Build this filter based on a prior search that aggregates by the same field. From the response of the prior search, identify the searchBucket that filters results to the specific value of the field, use the string in its aggregationFilterToken property, and build an aggregation filter string in the format ''{field}:/''{aggregationFilterToken}/''''. If multiple values for the same field need to be provided, use the strings in its aggregationFilterToken property and build an aggregation filter string in the format ''{field}:or(/''{aggregationFilterToken1}/'',/''{aggregationFilterToken2}/'')''. For example, searching and aggregating drive items by file type returns a searchBucket for the file type docx in the response. You can conveniently use the aggregationFilterToken returned for this searchBucket in a subsequent search query and filter matches down to drive items of the docx file type. Example 1 and example 2 show the actual requests and responses.'
         aggregations:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.aggregationOption'
-          description: Specifies aggregations (also known as refiners) to be returned alongside search results. Optional.
         contentSources:
           type: array
           items:
             type: string
             nullable: true
-          description: 'Contains the connection to be targeted. Respects the following format : /external/connections/connectionid where connectionid is the ConnectionId defined in the Connectors Administration.  Note: contentSource is only applicable when entityType=externalItem. Optional.'
         enableTopResults:
           type: boolean
-          description: 'This triggers hybrid sort for messages: the first 3 messages are the most relevant. This property is only applicable to entityType=message. Optional.'
           nullable: true
         entityTypes:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.entityType'
-          description: 'One or more types of resources expected in the response. Possible values are: list, site, listItem, message, event, drive, driveItem, person, externalItem. See known limitations for those combinations of two or more entity types that are supported in the same search request. Required.'
         fields:
           type: array
           items:
             type: string
             nullable: true
-          description: 'Contains the fields to be returned for each resource object specified in entityTypes, allowing customization of the fields returned by default otherwise, including additional fields such as custom managed properties from SharePoint and OneDrive, or custom fields in externalItem from content that Microsoft Graph connectors bring in. The fields property can be using the semantic labels applied to properties. For example, if a property is label as title, you can retrieve it using the following syntax : label_title.Optional.'
         from:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Specifies the offset for the search results. Offset 0 returns the very first result. Optional.
           format: int32
         query:
           $ref: '#/components/schemas/microsoft.graph.searchQuery'
@@ -2505,13 +2458,11 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The size of the page to be retrieved. Optional.
           format: int32
         sortProperties:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.sortProperty'
-          description: Contains the ordered collection of fields and direction to sort results. There can be at most 5 sort properties in the collection. Optional.
         stored_fields:
           type: array
           items:
@@ -2530,7 +2481,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.searchHitsContainer'
-          description: A collection of search results.
         queryAlterationResponse:
           $ref: '#/components/schemas/microsoft.graph.alterationResponse'
         resultTemplates:
@@ -2540,7 +2490,6 @@ components:
           items:
             type: string
             nullable: true
-          description: Contains the search terms sent in the initial search query.
       additionalProperties:
         type: object
     microsoft.graph.search.qna:
@@ -2552,13 +2501,11 @@ components:
             availabilityEndDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Timestamp of when the qna will stop to appear as a search result. Set as null for always available.
               format: date-time
               nullable: true
             availabilityStartDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Timestamp of when the qna will start to appear as a search result. Set as null for always available.
               format: date-time
               nullable: true
             groupIds:
@@ -2566,10 +2513,8 @@ components:
               items:
                 type: string
                 nullable: true
-              description: List of security groups able to view this qna.
             isSuggested:
               type: boolean
-              description: True if this qna was suggested to the admin by a user or was mined and suggested by Microsoft. Read-only.
               nullable: true
             keywords:
               $ref: '#/components/schemas/microsoft.graph.search.answerKeyword'
@@ -2578,19 +2523,16 @@ components:
               items:
                 type: string
                 nullable: true
-              description: 'A list of language names that are geographically specific and that this QnA can be viewed in. Each language tag value follows the pattern {language}-{REGION}. As an example, en-US is English as used in the United States. See supported language tags for the list of possible values.'
             platforms:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.devicePlatformType'
-              description: 'List of devices and operating systems able to view this qna. Possible values are: unknown, android, androidForWork, ios, macOS, windowsPhone81, windowsPhone81AndLater, windows10AndLater, androidWorkProfile, androidASOP.'
             state:
               $ref: '#/components/schemas/microsoft.graph.search.answerState'
             targetedVariations:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.search.answerVariant'
-              description: 'Variations of a qna for different countries or devices. Use when you need to show different content to users based on their device, country/region, or both. The date and group settings will apply to all variations.'
           additionalProperties:
             type: object
     microsoft.graph.entity:
@@ -2599,7 +2541,6 @@ components:
       properties:
         id:
           type: string
-          description: Read-only.
       additionalProperties:
         type: object
     microsoft.graph.externalConnectors.configuration:
@@ -2611,7 +2552,6 @@ components:
           items:
             type: string
             nullable: true
-          description: A collection of application IDs for registered Azure Active Directory apps that are allowed to manage the externalConnection and to index content in the externalConnection.
       additionalProperties:
         type: object
     microsoft.graph.externalConnectors.searchSettings:
@@ -2622,7 +2562,6 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.externalConnectors.displayTemplate'
-          description: Enables the developer to define the appearance of the content and configure conditions that dictate when the template should be displayed.
       additionalProperties:
         type: object
     microsoft.graph.externalConnectors.connectionState:
@@ -2654,7 +2593,6 @@ components:
           $ref: '#/components/schemas/microsoft.graph.externalConnectors.aclType'
         value:
           type: string
-          description: 'The unique identifer of the identity. In case of Azure Active Directory identities, value is set to the object identifier of the user, group or tenant for types user, group and everyone (and everyoneExceptGuests) respectively. In case of external groups value is set to the ID of the externalGroup'
       additionalProperties:
         type: object
     microsoft.graph.externalConnectors.externalItemContent:
@@ -2665,7 +2603,6 @@ components:
           $ref: '#/components/schemas/microsoft.graph.externalConnectors.externalItemContentType'
         value:
           type: string
-          description: The content for the externalItem. Required.
           nullable: true
       additionalProperties:
         type: object
@@ -2680,22 +2617,18 @@ components:
       properties:
         code:
           type: string
-          description: Represents the error code.
           nullable: true
         details:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.publicErrorDetail'
-          description: Details of the error.
         innerError:
           $ref: '#/components/schemas/microsoft.graph.publicInnerError'
         message:
           type: string
-          description: A non-localized message for the developer.
           nullable: true
         target:
           type: string
-          description: The target of the error.
           nullable: true
       additionalProperties:
         type: object
@@ -2717,31 +2650,24 @@ components:
           items:
             type: string
             nullable: true
-          description: 'A set of aliases or a friendly names for the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, '', '', <, >, `, ^. Optional.'
         isQueryable:
           type: boolean
-          description: Specifies if the property is queryable. Queryable properties can be used in Keyword Query Language (KQL) queries. Optional.
           nullable: true
         isRefinable:
           type: boolean
-          description: Specifies if the property is refinable.  Refinable properties can be used to filter search results in the Search API and add a refiner control in the Microsoft Search user experience. Optional.
           nullable: true
         isRetrievable:
           type: boolean
-          description: Specifies if the property is retrievable. Retrievable properties are returned in the result set when items are returned by the search API. Retrievable properties are also available to add to the display template used to render search results. Optional.
           nullable: true
         isSearchable:
           type: boolean
-          description: Specifies if the property is searchable. Only properties of type String or StringCollection can be searchable. Non-searchable properties are not added to the search index. Optional.
           nullable: true
         labels:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.externalConnectors.label'
-          description: 'Specifies one or more well-known tags added against a property. Labels help Microsoft Search understand the semantics of the data in the connection. Adding appropriate labels would result in an enhanced search experience (e.g. better relevance). The possible values are: title, url, createdBy, lastModifiedBy, authors, createdDateTime, lastModifiedDateTime, fileName, fileExtension, unknownFutureValue. Optional.'
         name:
           type: string
-          description: 'The name of the property. Maximum 32 characters. Only alphanumeric characters allowed. For example, each string may not contain control characters, whitespace, or any of the following: :, ;, ,, (, ), [, ], {, }, %, $, +, !, *, =, &, ?, @, #, /, ~, '', '', <, >, `, ^.  Required.'
         type:
           $ref: '#/components/schemas/microsoft.graph.externalConnectors.propertyType'
       additionalProperties:
@@ -2754,22 +2680,18 @@ components:
           properties:
             description:
               type: string
-              description: Search answer description shown on search results page.
               nullable: true
             displayName:
               type: string
-              description: Search answer name displayed in search results.
             lastModifiedBy:
               $ref: '#/components/schemas/microsoft.graph.search.identitySet'
             lastModifiedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Timestamp of when the search answer is created or edited. Read-only.
               format: date-time
               nullable: true
             webUrl:
               type: string
-              description: 'Search answer URL link. When users click this search answer in search results, they will go to this URL.'
               nullable: true
           additionalProperties:
             type: object
@@ -2790,17 +2712,14 @@ components:
           items:
             type: string
             nullable: true
-          description: A collection of keywords used to trigger the search answer.
         matchSimilarKeywords:
           type: boolean
-          description: 'If true, indicates that the search term contains similar words to the keywords that should trigger the search answer.'
           nullable: true
         reservedKeywords:
           type: array
           items:
             type: string
             nullable: true
-          description: Unique keywords that will guarantee the search answer is triggered.
       additionalProperties:
         type: object
     microsoft.graph.devicePlatformType:
@@ -2824,11 +2743,9 @@ components:
       properties:
         description:
           type: string
-          description: Answer variation description shown on search results page.
           nullable: true
         displayName:
           type: string
-          description: Answer variation name displayed in search results.
           nullable: true
         languageTag:
           type: string
@@ -2837,7 +2754,6 @@ components:
           $ref: '#/components/schemas/microsoft.graph.devicePlatformType'
         webUrl:
           type: string
-          description: 'Answer variation URL link. When users click this answer variation in search results, they will go to this URL.'
           nullable: true
       additionalProperties:
         type: object
@@ -2849,12 +2765,10 @@ components:
           $ref: '#/components/schemas/microsoft.graph.bucketAggregationDefinition'
         field:
           type: string
-          description: Computes aggregation on the field while the field exists in current entity type. Required.
         size:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The number of searchBucket resources to be returned. This is not required when the range is provided manually in the search request. Optional.
           format: int32
           nullable: true
       additionalProperties:
@@ -2878,7 +2792,6 @@ components:
       properties:
         queryString:
           type: string
-          description: The search query containing the search terms. Required.
           nullable: true
         queryTemplate:
           type: string
@@ -2893,11 +2806,9 @@ components:
       properties:
         enableModification:
           type: boolean
-          description: 'Indicates whether spelling modifications are enabled. If enabled, the user will get the search results for the corrected query in case of no results for the original query with typos. The response will also include the spelling modification information in the queryAlterationResponse property. Optional.'
           nullable: true
         enableSuggestion:
           type: boolean
-          description: 'Indicates whether spelling suggestions are enabled. If enabled, the user will get the search results for the original search query and suggestions for spelling correction in the queryAlterationResponse property of the response for the typos in the query. Optional.'
           nullable: true
       additionalProperties:
         type: object
@@ -2907,7 +2818,6 @@ components:
       properties:
         enableResultTemplate:
           type: boolean
-          description: 'Indicates whether search display layouts are enabled. If enabled, the user will get the result template to render the search results content in the resultTemplates property of the response. The result template is based on Adaptive Cards. Optional.'
           nullable: true
       additionalProperties:
         type: object
@@ -2917,11 +2827,9 @@ components:
       properties:
         isDescending:
           type: boolean
-          description: 'True if the sort order is descending. Default is false, with the sort order as ascending. Optional.'
           nullable: true
         name:
           type: string
-          description: The name of the property to sort on. Required.
       additionalProperties:
         type: object
     microsoft.graph.searchHitsContainer:
@@ -2932,21 +2840,17 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.searchAggregation'
-          description: Contains the collection of aggregations computed based on the provided aggregationOption specified in the request.
         hits:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.searchHit'
-          description: A collection of the search results.
         moreResultsAvailable:
           type: boolean
-          description: 'Provides information if more results are available. Based on this information, you can adjust the from and size properties of the searchRequest accordingly.'
           nullable: true
         total:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: 'The total number of results. Note this is not the number of results on the page, but the total number of results satisfying the query.'
           format: int32
           nullable: true
       additionalProperties:
@@ -2957,7 +2861,6 @@ components:
       properties:
         originalQueryString:
           type: string
-          description: Defines the original user query string.
           nullable: true
         queryAlteration:
           $ref: '#/components/schemas/microsoft.graph.searchAlteration'
@@ -3083,20 +2986,17 @@ components:
       properties:
         id:
           type: string
-          description: 'The text identifier for the display template; for example, contosoTickets.'
         layout:
           $ref: '#/components/schemas/microsoft.graph.Json'
         priority:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Defines the priority of a display template. A display template with priority 1 is evaluated before a template with priority 4. Gaps in priority values are supported.
           format: int32
         rules:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.externalConnectors.propertyRule'
-          description: Specifies additional rules for selecting this display template based on the item schema. Optional.
       additionalProperties:
         type: object
     microsoft.graph.externalConnectors.accessType:
@@ -3136,15 +3036,12 @@ components:
       properties:
         code:
           type: string
-          description: The error code.
           nullable: true
         message:
           type: string
-          description: The error message.
           nullable: true
         target:
           type: string
-          description: The target of the error.
           nullable: true
       additionalProperties:
         type: object
@@ -3154,20 +3051,16 @@ components:
       properties:
         code:
           type: string
-          description: The error code.
           nullable: true
         details:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.publicErrorDetail'
-          description: A collection of error details.
         message:
           type: string
-          description: The error message.
           nullable: true
         target:
           type: string
-          description: The target of the error.
           nullable: true
       additionalProperties:
         type: object
@@ -3220,24 +3113,20 @@ components:
       properties:
         isDescending:
           type: boolean
-          description: 'True to specify the sort order as descending. The default is false, with the sort order as ascending. Optional.'
           nullable: true
         minimumCount:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The minimum number of items that should be present in the aggregation to be returned in a bucket. Optional.
           format: int32
           nullable: true
         prefixFilter:
           type: string
-          description: A filter to define a matching criteria. The key should start with the specified prefix to be returned in the response. Optional.
           nullable: true
         ranges:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.bucketAggregationRange'
-          description: Specifies the manual ranges to compute the aggregations. This is only valid for non-string refiners of date or numeric type. Optional.
         sortBy:
           $ref: '#/components/schemas/microsoft.graph.bucketAggregationSortProperty'
       additionalProperties:
@@ -3248,7 +3137,6 @@ components:
       properties:
         query:
           type: string
-          description: Contains the actual search terms of the request.
       additionalProperties:
         type: object
     microsoft.graph.searchAggregation:
@@ -3259,10 +3147,8 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.searchBucket'
-          description: Defines the actual buckets of the computed aggregation.
         field:
           type: string
-          description: Defines on which field the aggregation was computed on.
           nullable: true
       additionalProperties:
         type: object
@@ -3272,26 +3158,21 @@ components:
       properties:
         contentSource:
           type: string
-          description: The name of the content source which the externalItem is part of .
           nullable: true
         hitId:
           type: string
-          description: The internal identifier for the item.
           nullable: true
         rank:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The rank or the order of the result.
           format: int32
           nullable: true
         resultTemplateId:
           type: string
-          description: ID of the result template used to render the search result. This ID must map to a display layout in the resultTemplates dictionary that is also included in the searchResponse.
           nullable: true
         summary:
           type: string
-          description: 'A summary of the result, if a summary is available.'
           nullable: true
         _id:
           type: string
@@ -3317,17 +3198,14 @@ components:
       properties:
         alteredHighlightedQueryString:
           type: string
-          description: 'Defines the altered highlighted query string with spelling correction. The annotation around the corrected segment is: /ue000, /ue001.'
           nullable: true
         alteredQueryString:
           type: string
-          description: Defines the altered query string with spelling correction.
           nullable: true
         alteredQueryTokens:
           type: array
           items:
             $ref: '#/components/schemas/microsoft.graph.alteredQueryToken'
-          description: Represents changed segments related to an original user query.
       additionalProperties:
         type: object
     microsoft.graph.searchAlterationType:
@@ -3376,12 +3254,10 @@ components:
           $ref: '#/components/schemas/microsoft.graph.externalConnectors.ruleOperation'
         property:
           type: string
-          description: The property from the externalItem schema. Required.
         values:
           type: array
           items:
             type: string
-          description: A collection with one or many strings. The specified string(s) will be matched with the specified property using the specified operation. Required.
         valuesJoinedBy:
           $ref: '#/components/schemas/microsoft.graph.binaryOperator'
       additionalProperties:
@@ -3404,10 +3280,8 @@ components:
       properties:
         from:
           type: string
-          description: Defines the lower bound from which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
         to:
           type: string
-          description: Defines the upper bound up to which to compute the aggregation. This can be a numeric value or a string representation of a date using the YYYY-MM-DDTHH:mm:ss.sssZ format. Required.
       additionalProperties:
         type: object
     microsoft.graph.bucketAggregationSortProperty:
@@ -3424,18 +3298,15 @@ components:
       properties:
         aggregationFilterToken:
           type: string
-          description: 'A token containing the encoded filter to aggregate search matches by the specific key value. To use the filter, pass the token as part of the aggregationFilter property in a searchRequest object, in the format ''{field}:/''{aggregationFilterToken}/''''. See an example.'
           nullable: true
         count:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The approximate number of search matches that share the same value specified in the key property. Note that this number is not the exact number of matches.
           format: int32
           nullable: true
         key:
           type: string
-          description: The discrete value of the field that an aggregation was computed on.
           nullable: true
       additionalProperties:
         type: object
@@ -3447,19 +3318,16 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Defines the length of a changed segment.
           format: int32
           nullable: true
         offset:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: Defines the offset of a changed segment.
           format: int32
           nullable: true
         suggestion:
           type: string
-          description: Represents the corrected segment string.
           nullable: true
       additionalProperties:
         type: object

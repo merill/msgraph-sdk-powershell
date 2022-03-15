@@ -300,7 +300,6 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Get directReports from contacts
-      description: The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
       operationId: contacts_ListDirectReports
       parameters:
         - name: orgContact-id
@@ -369,7 +368,6 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Get directReports from contacts
-      description: The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
       operationId: contacts_GetDirectReports
       parameters:
         - name: orgContact-id
@@ -426,7 +424,6 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Get manager from contacts
-      description: The user or contact that is this contact's manager. Read-only. Supports $expand.
       operationId: contacts_GetManager
       parameters:
         - name: orgContact-id
@@ -476,7 +473,6 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Get memberOf from contacts
-      description: Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
       operationId: contacts_ListMemberOf
       parameters:
         - name: orgContact-id
@@ -545,7 +541,6 @@ paths:
       tags:
         - contacts.directoryObject
       summary: Get memberOf from contacts
-      description: Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
       operationId: contacts_GetMemberOf
       parameters:
         - name: orgContact-id
@@ -1915,7 +1910,6 @@ paths:
       tags:
         - devices.extension
       summary: Get extensions from devices
-      description: The collection of open extensions defined for the device. Read-only. Nullable.
       operationId: devices_ListExtensions
       parameters:
         - name: device-id
@@ -2011,7 +2005,6 @@ paths:
       tags:
         - devices.extension
       summary: Get extensions from devices
-      description: The collection of open extensions defined for the device. Read-only. Nullable.
       operationId: devices_GetExtensions
       parameters:
         - name: device-id
@@ -2131,7 +2124,6 @@ paths:
       tags:
         - devices.directoryObject
       summary: Get memberOf from devices
-      description: Groups that this device is a member of. Read-only. Nullable. Supports $expand.
       operationId: devices_ListMemberOf
       parameters:
         - name: device-id
@@ -2200,7 +2192,6 @@ paths:
       tags:
         - devices.directoryObject
       summary: Get memberOf from devices
-      description: Groups that this device is a member of. Read-only. Nullable. Supports $expand.
       operationId: devices_GetMemberOf
       parameters:
         - name: device-id
@@ -2465,7 +2456,6 @@ paths:
       tags:
         - devices.directoryObject
       summary: Get registeredOwners from devices
-      description: 'The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.'
       operationId: devices_ListRegisteredOwners
       parameters:
         - name: device-id
@@ -2534,7 +2524,6 @@ paths:
       tags:
         - devices.directoryObject
       summary: Get registeredOwners from devices
-      description: 'The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.'
       operationId: devices_GetRegisteredOwners
       parameters:
         - name: device-id
@@ -2591,7 +2580,6 @@ paths:
       tags:
         - devices.directoryObject
       summary: Get registeredUsers from devices
-      description: 'Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.'
       operationId: devices_ListRegisteredUsers
       parameters:
         - name: device-id
@@ -2660,7 +2648,6 @@ paths:
       tags:
         - devices.directoryObject
       summary: Get registeredUsers from devices
-      description: 'Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.'
       operationId: devices_GetRegisteredUsers
       parameters:
         - name: device-id
@@ -2717,7 +2704,6 @@ paths:
       tags:
         - devices.directoryObject
       summary: Get transitiveMemberOf from devices
-      description: Groups that the device is a member of. This operation is transitive. Supports $expand.
       operationId: devices_ListTransitiveMemberOf
       parameters:
         - name: device-id
@@ -2786,7 +2772,6 @@ paths:
       tags:
         - devices.directoryObject
       summary: Get transitiveMemberOf from devices
-      description: Groups that the device is a member of. This operation is transitive. Supports $expand.
       operationId: devices_GetTransitiveMemberOf
       parameters:
         - name: device-id
@@ -3028,7 +3013,6 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Get administrativeUnits from directory
-      description: Conceptual container for user and group directory objects.
       operationId: directory_ListAdministrativeUnits
       parameters:
         - $ref: '#/components/parameters/top'
@@ -3127,7 +3111,6 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Get administrativeUnits from directory
-      description: Conceptual container for user and group directory objects.
       operationId: directory_GetAdministrativeUnits
       parameters:
         - name: administrativeUnit-id
@@ -3249,7 +3232,6 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Get extensions from directory
-      description: The collection of open extensions defined for this administrative unit. Nullable.
       operationId: directory.administrativeUnits_ListExtensions
       parameters:
         - name: administrativeUnit-id
@@ -3345,7 +3327,6 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Get extensions from directory
-      description: The collection of open extensions defined for this administrative unit. Nullable.
       operationId: directory.administrativeUnits_GetExtensions
       parameters:
         - name: administrativeUnit-id
@@ -3465,7 +3446,6 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Get members from directory
-      description: Users and groups that are members of this administrative unit. Supports $expand.
       operationId: directory.administrativeUnits_ListMembers
       parameters:
         - name: administrativeUnit-id
@@ -3534,7 +3514,6 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Get members from directory
-      description: Users and groups that are members of this administrative unit. Supports $expand.
       operationId: directory.administrativeUnits_GetMembers
       parameters:
         - name: administrativeUnit-id
@@ -3591,7 +3570,6 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Get scopedRoleMembers from directory
-      description: Scoped-role members of this administrative unit.
       operationId: directory.administrativeUnits_ListScopedRoleMembers
       parameters:
         - name: administrativeUnit-id
@@ -3696,7 +3674,6 @@ paths:
       tags:
         - directory.administrativeUnit
       summary: Get scopedRoleMembers from directory
-      description: Scoped-role members of this administrative unit.
       operationId: directory.administrativeUnits_GetScopedRoleMembers
       parameters:
         - name: administrativeUnit-id
@@ -3843,7 +3820,6 @@ paths:
       tags:
         - directory.directoryObject
       summary: Get deletedItems from directory
-      description: Recently deleted items. Read-only. Nullable.
       operationId: directory_ListDeletedItems
       parameters:
         - $ref: '#/components/parameters/top'
@@ -3927,7 +3903,6 @@ paths:
       tags:
         - directory.directoryObject
       summary: Get deletedItems from directory
-      description: Recently deleted items. Read-only. Nullable.
       operationId: directory_GetDeletedItems
       parameters:
         - name: directoryObject-id
@@ -4237,7 +4212,6 @@ paths:
       tags:
         - directoryRoles.directoryObject
       summary: Get members from directoryRoles
-      description: 'Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand.'
       operationId: directoryRoles_ListMembers
       parameters:
         - name: directoryRole-id
@@ -4306,7 +4280,6 @@ paths:
       tags:
         - directoryRoles.directoryObject
       summary: Get members from directoryRoles
-      description: 'Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand.'
       operationId: directoryRoles_GetMembers
       parameters:
         - name: directoryRole-id
@@ -4571,7 +4544,6 @@ paths:
       tags:
         - directoryRoles.scopedRoleMembership
       summary: Get scopedMembers from directoryRoles
-      description: Members of this directory role that are scoped to administrative units. Read-only. Nullable.
       operationId: directoryRoles_ListScopedMembers
       parameters:
         - name: directoryRole-id
@@ -4676,7 +4648,6 @@ paths:
       tags:
         - directoryRoles.scopedRoleMembership
       summary: Get scopedMembers from directoryRoles
-      description: Members of this directory role that are scoped to administrative units. Read-only. Nullable.
       operationId: directoryRoles_GetScopedMembers
       parameters:
         - name: directoryRole-id
@@ -5709,7 +5680,6 @@ paths:
       tags:
         - domains.directoryObject
       summary: Get domainNameReferences from domains
-      description: 'Read-only, Nullable'
       operationId: domains_ListDomainNameReferences
       parameters:
         - name: domain-id
@@ -5778,7 +5748,6 @@ paths:
       tags:
         - domains.directoryObject
       summary: Get domainNameReferences from domains
-      description: 'Read-only, Nullable'
       operationId: domains_GetDomainNameReferences
       parameters:
         - name: domain-id
@@ -5893,7 +5862,6 @@ paths:
       tags:
         - domains.domainDnsRecord
       summary: Get serviceConfigurationRecords from domains
-      description: 'DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable'
       operationId: domains_ListServiceConfigurationRecords
       parameters:
         - name: domain-id
@@ -6004,7 +5972,6 @@ paths:
       tags:
         - domains.domainDnsRecord
       summary: Get serviceConfigurationRecords from domains
-      description: 'DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable'
       operationId: domains_GetServiceConfigurationRecords
       parameters:
         - name: domain-id
@@ -6129,7 +6096,6 @@ paths:
       tags:
         - domains.domainDnsRecord
       summary: Get verificationDnsRecords from domains
-      description: 'DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable'
       operationId: domains_ListVerificationDnsRecords
       parameters:
         - name: domain-id
@@ -6240,7 +6206,6 @@ paths:
       tags:
         - domains.domainDnsRecord
       summary: Get verificationDnsRecords from domains
-      description: 'DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable'
       operationId: domains_GetVerificationDnsRecords
       parameters:
         - name: domain-id
@@ -6775,7 +6740,6 @@ paths:
       tags:
         - organization.organizationalBranding
       summary: Get backgroundImage for the navigation property branding from organization
-      description: Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
       operationId: organization_GetBrandingBackgroundImage
       parameters:
         - name: organization-id
@@ -6800,7 +6764,6 @@ paths:
       tags:
         - organization.organizationalBranding
       summary: Update backgroundImage for the navigation property branding in organization
-      description: Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
       operationId: organization_SetBrandingBackgroundImage
       parameters:
         - name: organization-id
@@ -6829,7 +6792,6 @@ paths:
       tags:
         - organization.organizationalBranding
       summary: Get bannerLogo for the navigation property branding from organization
-      description: A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
       operationId: organization_GetBrandingBannerLogo
       parameters:
         - name: organization-id
@@ -6854,7 +6816,6 @@ paths:
       tags:
         - organization.organizationalBranding
       summary: Update bannerLogo for the navigation property branding in organization
-      description: A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
       operationId: organization_SetBrandingBannerLogo
       parameters:
         - name: organization-id
@@ -6883,7 +6844,6 @@ paths:
       tags:
         - organization.organizationalBranding
       summary: Get localizations from organization
-      description: Add different branding based on a locale.
       operationId: organization.branding_ListLocalizations
       parameters:
         - name: organization-id
@@ -7009,7 +6969,6 @@ paths:
       tags:
         - organization.organizationalBranding
       summary: Get localizations from organization
-      description: Add different branding based on a locale.
       operationId: organization.branding_GetLocalizations
       parameters:
         - name: organization-id
@@ -7139,7 +7098,6 @@ paths:
       tags:
         - organization.organizationalBranding
       summary: Get backgroundImage for the navigation property localizations from organization
-      description: Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
       operationId: organization.branding_GetLocalizationsBackgroundImage
       parameters:
         - name: organization-id
@@ -7171,7 +7129,6 @@ paths:
       tags:
         - organization.organizationalBranding
       summary: Update backgroundImage for the navigation property localizations in organization
-      description: Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
       operationId: organization.branding_SetLocalizationsBackgroundImage
       parameters:
         - name: organization-id
@@ -7207,7 +7164,6 @@ paths:
       tags:
         - organization.organizationalBranding
       summary: Get bannerLogo for the navigation property localizations from organization
-      description: A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
       operationId: organization.branding_GetLocalizationsBannerLogo
       parameters:
         - name: organization-id
@@ -7239,7 +7195,6 @@ paths:
       tags:
         - organization.organizationalBranding
       summary: Update bannerLogo for the navigation property localizations in organization
-      description: A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
       operationId: organization.branding_SetLocalizationsBannerLogo
       parameters:
         - name: organization-id
@@ -7275,7 +7230,6 @@ paths:
       tags:
         - organization.organizationalBranding
       summary: Get squareLogo for the navigation property localizations from organization
-      description: A square version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG no larger than 240 x 240 pixels and no more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
       operationId: organization.branding_GetLocalizationsSquareLogo
       parameters:
         - name: organization-id
@@ -7307,7 +7261,6 @@ paths:
       tags:
         - organization.organizationalBranding
       summary: Update squareLogo for the navigation property localizations in organization
-      description: A square version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG no larger than 240 x 240 pixels and no more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
       operationId: organization.branding_SetLocalizationsSquareLogo
       parameters:
         - name: organization-id
@@ -7343,7 +7296,6 @@ paths:
       tags:
         - organization.organizationalBranding
       summary: Get squareLogo for the navigation property branding from organization
-      description: A square version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG no larger than 240 x 240 pixels and no more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
       operationId: organization_GetBrandingSquareLogo
       parameters:
         - name: organization-id
@@ -7368,7 +7320,6 @@ paths:
       tags:
         - organization.organizationalBranding
       summary: Update squareLogo for the navigation property branding in organization
-      description: A square version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG no larger than 240 x 240 pixels and no more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
       operationId: organization_SetBrandingSquareLogo
       parameters:
         - name: organization-id
@@ -7397,7 +7348,6 @@ paths:
       tags:
         - organization.extension
       summary: Get extensions from organization
-      description: The collection of open extensions defined for the organization. Read-only. Nullable.
       operationId: organization_ListExtensions
       parameters:
         - name: organization-id
@@ -7493,7 +7443,6 @@ paths:
       tags:
         - organization.extension
       summary: Get extensions from organization
-      description: The collection of open extensions defined for the organization. Read-only. Nullable.
       operationId: organization_GetExtensions
       parameters:
         - name: organization-id
@@ -8149,7 +8098,6 @@ paths:
       tags:
         - users.scopedRoleMembership
       summary: Get scopedRoleMemberOf from users
-      description: The scoped-role administrative unit memberships for this user. Read-only. Nullable.
       operationId: users_ListScopedRoleMemberOf
       parameters:
         - name: user-id
@@ -8254,7 +8202,6 @@ paths:
       tags:
         - users.scopedRoleMembership
       summary: Get scopedRoleMemberOf from users
-      description: The scoped-role administrative unit memberships for this user. Read-only. Nullable.
       operationId: users_GetScopedRoleMemberOf
       parameters:
         - name: user-id
@@ -8384,76 +8331,60 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.physicalOfficeAddress'
-              description: Postal addresses for this organizational contact. For now a contact can only have one physical address.
             companyName:
               type: string
-              description: 'Name of the company that this organizational contact belong to. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).'
               nullable: true
             department:
               type: string
-              description: 'The name for the department in which the contact works. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).'
               nullable: true
             displayName:
               type: string
-              description: 'Display name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.'
               nullable: true
             givenName:
               type: string
-              description: 'First name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).'
               nullable: true
             jobTitle:
               type: string
-              description: 'Job title for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).'
               nullable: true
             mail:
               type: string
-              description: 'The SMTP address for the contact, for example, ''jeff@contoso.onmicrosoft.com''. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).'
               nullable: true
             mailNickname:
               type: string
-              description: 'Email alias (portion of email address pre-pending the @ symbol) for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values).'
               nullable: true
             onPremisesLastSyncDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'Date and time when this organizational contact was last synchronized from on-premises AD. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Supports $filter (eq, ne, not, ge, le, in).'
               format: date-time
               nullable: true
             onPremisesProvisioningErrors:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.onPremisesProvisioningError'
-              description: 'List of any synchronization provisioning errors for this organizational contact. Supports $filter (eq, not).'
             onPremisesSyncEnabled:
               type: boolean
-              description: 'true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced and now mastered in Exchange; null if this object has never been synced from an on-premises directory (default).  Supports $filter (eq, ne, not, in, and eq on null values).'
               nullable: true
             phones:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.phone'
-              description: 'List of phones for this organizational contact. Phone types can be mobile, business, and businessFax. Only one of each type can ever be present in the collection. Supports $filter (eq, ne, not, in).'
             proxyAddresses:
               type: array
               items:
                 type: string
-              description: 'For example: ''SMTP: bob@contoso.com'', ''smtp: bob@sales.contoso.com''. The any operator is required for filter expressions on multi-valued properties. Supports $filter (eq, not, ge, le, startsWith).'
             surname:
               type: string
-              description: 'Last name for this organizational contact. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values)'
               nullable: true
             directReports:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: The contact's direct reports. (The users and contacts that have their manager property set to this contact.) Read-only. Nullable. Supports $expand.
             manager:
               $ref: '#/components/schemas/microsoft.graph.directoryObject'
             memberOf:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: Groups that this contact is a member of. Read-only. Nullable. Supports $expand.
             transitiveMemberOf:
               type: array
               items:
@@ -8469,7 +8400,6 @@ components:
             deletedDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: Date and time when this object was deleted. Always null when the object hasn't been deleted.
               format: date-time
               nullable: true
           additionalProperties:
@@ -8482,23 +8412,18 @@ components:
           properties:
             appDisplayName:
               type: string
-              description: Display name of the application object on which this extension property is defined. Read-only.
               nullable: true
             dataType:
               type: string
-              description: Specifies the data type of the value the extension property can hold. Following values are supported. Not nullable. Binary - 256 bytes maximumBooleanDateTime - Must be specified in ISO 8601 format. Will be stored in UTC.Integer - 32-bit value.LargeInteger - 64-bit value.String - 256 characters maximum
             isSyncedFromOnPremises:
               type: boolean
-              description: Indicates if this extension property was synced from on-premises active directory using Azure AD Connect. Read-only.
               nullable: true
             name:
               type: string
-              description: Name of the extension property. Not nullable.
             targetObjects:
               type: array
               items:
                 type: string
-              description: Following values are supported. Not nullable. UserGroupOrganizationDeviceApplication
           additionalProperties:
             type: object
     microsoft.graph.contract:
@@ -8509,21 +8434,17 @@ components:
           properties:
             contractType:
               type: string
-              description: 'Type of contract. Possible values are:  SyndicationPartner, BreadthPartner, ResellerPartner. See more in the table below.'
               nullable: true
             customerId:
               pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
               type: string
-              description: The unique identifier for the customer tenant referenced by this partnership. Corresponds to the id property of the customer tenant's organization resource.
               format: uuid
               nullable: true
             defaultDomainName:
               type: string
-              description: A copy of the customer tenant's default domain name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's default domain name changes.
               nullable: true
             displayName:
               type: string
-              description: A copy of the customer tenant's display name. The copy is made when the partnership with the customer is established. It is not automatically updated if the customer tenant's display name changes.
               nullable: true
           additionalProperties:
             type: object
@@ -8535,117 +8456,93 @@ components:
           properties:
             accountEnabled:
               type: boolean
-              description: 'true if the account is enabled; otherwise, false. Required. Default is true.  Supports $filter (eq, ne, not, in). Only callers in Global Administrator and Cloud Device Administrator roles can set this property.'
               nullable: true
             alternativeSecurityIds:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.alternativeSecurityId'
-              description: 'For internal use only. Not nullable. Supports $filter (eq, not, ge, le).'
             approximateLastSignInDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only. Supports $filter (eq, ne, not, ge, le, and eq on null values) and $orderBy.'
               format: date-time
               nullable: true
             complianceExpirationDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The timestamp when the device is no longer deemed compliant. The timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.'
               format: date-time
               nullable: true
             deviceId:
               type: string
-              description: 'Unique identifier set by Azure Device Registration Service at the time of registration. Supports $filter (eq, ne, not, startsWith).'
               nullable: true
             deviceMetadata:
               type: string
-              description: For internal use only. Set to null.
               nullable: true
             deviceVersion:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: For internal use only.
               format: int32
               nullable: true
             displayName:
               type: string
-              description: 'The display name for the device. Required. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.'
               nullable: true
             isCompliant:
               type: boolean
-              description: 'true if the device complies with Mobile Device Management (MDM) policies; otherwise, false. Read-only. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).'
               nullable: true
             isManaged:
               type: boolean
-              description: 'true if the device is managed by a Mobile Device Management (MDM) app; otherwise, false. This can only be updated by Intune for any device OS type or by an approved MDM app for Windows OS devices. Supports $filter (eq, ne, not).'
               nullable: true
             mdmAppId:
               type: string
-              description: 'Application identifier used to register device into MDM. Read-only. Supports $filter (eq, ne, not, startsWith).'
               nullable: true
             onPremisesLastSyncDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The last time at which the object was synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z Read-only. Supports $filter (eq, ne, not, ge, le, in).'
               format: date-time
               nullable: true
             onPremisesSyncEnabled:
               type: boolean
-              description: 'true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced; null if this object has never been synced from an on-premises directory (default). Read-only. Supports $filter (eq, ne, not, in, and eq on null values).'
               nullable: true
             operatingSystem:
               type: string
-              description: 'The type of operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).'
               nullable: true
             operatingSystemVersion:
               type: string
-              description: 'The version of the operating system on the device. Required. Supports $filter (eq, ne, not, ge, le, startsWith, and eq on null values).'
               nullable: true
             physicalIds:
               type: array
               items:
                 type: string
-              description: 'For internal use only. Not nullable. Supports $filter (eq, not, ge, le, startsWith).'
             profileType:
               type: string
-              description: 'The profile type of the device. Possible values: RegisteredDevice (default), SecureVM, Printer, Shared, IoT.'
               nullable: true
             systemLabels:
               type: array
               items:
                 type: string
-              description: List of labels applied to the device by the system.
             trustType:
               type: string
-              description: 'Type of trust for the joined device. Read-only. Possible values:  Workplace (indicates bring your own personal devices), AzureAd (Cloud only joined devices), ServerAd (on-premises domain joined devices joined to Azure AD). For more details, see Introduction to device management in Azure Active Directory'
               nullable: true
             memberOf:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: Groups that this device is a member of. Read-only. Nullable. Supports $expand.
             registeredOwners:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: 'The user that cloud joined the device or registered their personal device. The registered owner is set at the time of registration. Currently, there can be only one owner. Read-only. Nullable. Supports $expand.'
             registeredUsers:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: 'Collection of registered users of the device. For cloud joined devices and registered personal devices, registered users are set to the same value as registered owners at the time of registration. Read-only. Nullable. Supports $expand.'
             transitiveMemberOf:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: Groups that the device is a member of. This operation is transitive. Supports $expand.
             extensions:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.extension'
-              description: The collection of open extensions defined for the device. Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.extension:
@@ -8665,12 +8562,10 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.administrativeUnit'
-              description: Conceptual container for user and group directory objects.
             deletedItems:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: Recently deleted items. Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.administrativeUnit:
@@ -8681,31 +8576,25 @@ components:
           properties:
             description:
               type: string
-              description: 'An optional description for the administrative unit. Supports $filter (eq, ne, in, startsWith), $search.'
               nullable: true
             displayName:
               type: string
-              description: 'Display name for the administrative unit. Supports $filter (eq, ne, not, ge, le, in, startsWith, and eq on null values), $search, and $orderBy.'
               nullable: true
             visibility:
               type: string
-              description: 'Controls whether the administrative unit and its members are hidden or public. Can be set to HiddenMembership. If not set (value is null), the default behavior is public. When set to HiddenMembership, only members of the administrative unit can list other members of the administrative unit.'
               nullable: true
             members:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: Users and groups that are members of this administrative unit. Supports $expand.
             scopedRoleMembers:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.scopedRoleMembership'
-              description: Scoped-role members of this administrative unit.
             extensions:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.extension'
-              description: The collection of open extensions defined for this administrative unit. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.scopedRoleMembership:
@@ -8716,10 +8605,8 @@ components:
           properties:
             administrativeUnitId:
               type: string
-              description: Unique identifier for the administrative unit that the directory role is scoped to
             roleId:
               type: string
-              description: Unique identifier for the directory role that the member is in.
             roleMemberInfo:
               $ref: '#/components/schemas/microsoft.graph.identity'
           additionalProperties:
@@ -8732,26 +8619,21 @@ components:
           properties:
             description:
               type: string
-              description: 'The description for the directory role. Read-only. Supports $filter (eq), $search, $select.'
               nullable: true
             displayName:
               type: string
-              description: 'The display name for the directory role. Read-only. Supports $filter (eq), $search, $select.'
               nullable: true
             roleTemplateId:
               type: string
-              description: 'The id of the directoryRoleTemplate that this role is based on. The property must be specified when activating a directory role in a tenant with a POST operation. After the directory role has been activated, the property is read only. Supports $filter (eq), $select.'
               nullable: true
             members:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: 'Users that are members of this directory role. HTTP Methods: GET, POST, DELETE. Read-only. Nullable. Supports $expand.'
             scopedMembers:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.scopedRoleMembership'
-              description: Members of this directory role that are scoped to administrative units. Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.directoryRoleTemplate:
@@ -8762,11 +8644,9 @@ components:
           properties:
             description:
               type: string
-              description: The description to set for the directory role. Read-only.
               nullable: true
             displayName:
               type: string
-              description: The display name to set for the directory role. Read-only.
               nullable: true
           additionalProperties:
             type: object
@@ -8778,26 +8658,19 @@ components:
           properties:
             authenticationType:
               type: string
-              description: Indicates the configured authentication type for the domain. The value is either Managed or Federated. Managed indicates a cloud managed domain where Azure AD performs user authentication. Federated indicates authentication is federated with an identity provider such as the tenant's on-premises Active Directory via Active Directory Federation Services. This property is read-only and is not nullable.
             availabilityStatus:
               type: string
-              description: 'This property is always null except when the verify action is used. When the verify action is used, a domain entity is returned in the response. The availabilityStatus property of the domain entity in the response is either AvailableImmediately or EmailVerifiedDomainTakeoverScheduled.'
               nullable: true
             isAdminManaged:
               type: boolean
-              description: 'The value of the property is false if the DNS record management of the domain has been delegated to Microsoft 365. Otherwise, the value is true. Not nullable'
             isDefault:
               type: boolean
-              description: true if this is the default domain that is used for user creation. There is only one default domain per company. Not nullable
             isInitial:
               type: boolean
-              description: true if this is the initial domain created by Microsoft Online Services (companyname.onmicrosoft.com). There is only one initial domain per company. Not nullable
             isRoot:
               type: boolean
-              description: 'true if the domain is a verified root domain. Otherwise, false if the domain is a subdomain or unverified. Not nullable'
             isVerified:
               type: boolean
-              description: true if the domain has completed domain ownership verification. Not nullable
             manufacturer:
               type: string
               nullable: true
@@ -8808,14 +8681,12 @@ components:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: 'Specifies the number of days before a user receives notification that their password will expire. If the property is not set, a default value of 14 days will be used.'
               format: int32
               nullable: true
             passwordValidityPeriodInDays:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: 'Specifies the length of time that a password is valid before it must be changed. If the property is not set, a default value of 90 days will be used.'
               format: int32
               nullable: true
             state:
@@ -8824,22 +8695,18 @@ components:
               type: array
               items:
                 type: string
-              description: 'The capabilities assigned to the domain. Can include 0, 1 or more of following values: Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune. The values which you can add/remove using Graph API include: Email, OfficeCommunicationsOnline, Yammer. Not nullable'
             domainNameReferences:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.directoryObject'
-              description: 'Read-only, Nullable'
             serviceConfigurationRecords:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.domainDnsRecord'
-              description: 'DNS records the customer adds to the DNS zone file of the domain before the domain can be used by Microsoft Online services. Read-only, Nullable'
             verificationDnsRecords:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.domainDnsRecord'
-              description: 'DNS records that the customer adds to the DNS zone file of the domain before the customer can complete domain ownership verification with Azure AD. Read-only, Nullable'
           additionalProperties:
             type: object
     microsoft.graph.domainDnsRecord:
@@ -8850,22 +8717,17 @@ components:
           properties:
             isOptional:
               type: boolean
-              description: 'If false, this record must be configured by the customer at the DNS host for Microsoft Online Services to operate correctly with the domain.'
             label:
               type: string
-              description: Value used when configuring the name of the DNS record at the DNS host.
             recordType:
               type: string
-              description: 'Indicates what type of DNS record this entity represents.The value can be one of the following: CName, Mx, Srv, TxtKey'
               nullable: true
             supportedService:
               type: string
-              description: 'Microsoft Online Service or feature that has a dependency on this DNS record.Can be one of the following values: null, Email, Sharepoint, EmailInternalRelayOnly, OfficeCommunicationsOnline, SharePointDefaultDomain, FullRedelegation, SharePointPublic, OrgIdAuthentication, Yammer, Intune'
             ttl:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: Value to use when configuring the time-to-live (ttl) property of the DNS record at the DNS host. Not nullable
               format: int32
           additionalProperties:
             type: object
@@ -8879,56 +8741,44 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.assignedPlan'
-              description: The collection of service plans associated with the tenant. Not nullable.
             businessPhones:
               type: array
               items:
                 type: string
-              description: 'Telephone number for the organization. Although this is a string collection, only one number can be set for this property.'
             city:
               type: string
-              description: City name of the address for the organization.
               nullable: true
             country:
               type: string
-              description: Country/region name of the address for the organization.
               nullable: true
             countryLetterCode:
               type: string
-              description: Country or region abbreviation for the organization in ISO 3166-2 format.
               nullable: true
             createdDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'Timestamp of when the organization was created. The value cannot be modified and is automatically populated when the organization is created. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.'
               format: date-time
               nullable: true
             displayName:
               type: string
-              description: The display name for the tenant.
               nullable: true
             marketingNotificationEmails:
               type: array
               items:
                 type: string
-              description: Not nullable.
             onPremisesLastSyncDateTime:
               pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
               type: string
-              description: 'The time and date at which the tenant was last synced with the on-premises directory. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z. Read-only.'
               format: date-time
               nullable: true
             onPremisesSyncEnabled:
               type: boolean
-              description: true if this object is synced from an on-premises directory; false if this object was originally synced from an on-premises directory but is no longer synced. Nullable. null if this object has never been synced from an on-premises directory (default).
               nullable: true
             postalCode:
               type: string
-              description: Postal code of the address for the organization.
               nullable: true
             preferredLanguage:
               type: string
-              description: 'The preferred language for the organization. Should follow ISO 639-1 Code; for example, en.'
               nullable: true
             privacyProfile:
               $ref: '#/components/schemas/microsoft.graph.privacyProfile'
@@ -8936,7 +8786,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.provisionedPlan'
-              description: Not nullable.
             securityComplianceNotificationMails:
               type: array
               items:
@@ -8947,17 +8796,14 @@ components:
                 type: string
             state:
               type: string
-              description: State name of the address for the organization.
               nullable: true
             street:
               type: string
-              description: Street name of the address for organization.
               nullable: true
             technicalNotificationMails:
               type: array
               items:
                 type: string
-              description: Not nullable.
             tenantType:
               type: string
               nullable: true
@@ -8965,7 +8811,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.verifiedDomain'
-              description: The collection of domains associated with this tenant. Not nullable.
             mobileDeviceManagementAuthority:
               $ref: '#/components/schemas/microsoft.graph.mdmAuthority'
             branding:
@@ -8974,12 +8819,10 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.certificateBasedAuthConfiguration'
-              description: Navigation property to manage certificate-based authentication configuration. Only a single instance of certificateBasedAuthConfiguration can be created in the collection.
             extensions:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.extension'
-              description: The collection of open extensions defined for the organization. Read-only. Nullable.
           additionalProperties:
             type: object
     microsoft.graph.organizationalBranding:
@@ -8992,7 +8835,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.organizationalBrandingLocalization'
-              description: Add different branding based on a locale.
           additionalProperties:
             type: object
     microsoft.graph.organizationalBrandingLocalization:
@@ -9010,17 +8852,14 @@ components:
           properties:
             appliesTo:
               type: string
-              description: 'For example, ''User'' or ''Company''.'
               nullable: true
             capabilityStatus:
               type: string
-              description: 'Possible values are: Enabled, Warning, Suspended, Deleted, LockedOut. The capabilityStatus is Enabled if the prepaidUnits property has at least 1 unit that is enabled, and LockedOut if the customer cancelled their subscription.'
               nullable: true
             consumedUnits:
               maximum: 2147483647
               minimum: -2147483648
               type: integer
-              description: The number of licenses that have been assigned.
               format: int32
               nullable: true
             prepaidUnits:
@@ -9029,16 +8868,13 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.servicePlanInfo'
-              description: Information about the service plans that are available with the SKU. Not nullable
             skuId:
               pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
               type: string
-              description: The unique identifier (GUID) for the service SKU.
               format: uuid
               nullable: true
             skuPartNumber:
               type: string
-              description: 'The SKU part number; for example: ''AAD_PREMIUM'' or ''RMSBASIC''. To get a list of commercial subscriptions that an organization has acquired, see List subscribedSkus.'
               nullable: true
           additionalProperties:
             type: object
@@ -9048,27 +8884,21 @@ components:
       properties:
         city:
           type: string
-          description: The city.
           nullable: true
         countryOrRegion:
           type: string
-          description: 'The country or region. It''s a free-format string value, for example, ''United States''.'
           nullable: true
         officeLocation:
           type: string
-          description: Office location such as building and office number for an organizational contact.
           nullable: true
         postalCode:
           type: string
-          description: The postal code.
           nullable: true
         state:
           type: string
-          description: The state.
           nullable: true
         street:
           type: string
-          description: The street.
           nullable: true
       additionalProperties:
         type: object
@@ -9078,21 +8908,17 @@ components:
       properties:
         category:
           type: string
-          description: 'Category of the provisioning error. Note: Currently, there is only one possible value. Possible value: PropertyConflict - indicates a property value is not unique. Other objects contain the same value for the property.'
           nullable: true
         occurredDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: The date and time at which the error occurred.
           format: date-time
           nullable: true
         propertyCausingError:
           type: string
-          description: 'Name of the directory property causing the error. Current possible values: UserPrincipalName or ProxyAddress'
           nullable: true
         value:
           type: string
-          description: Value of the property causing the error.
           nullable: true
       additionalProperties:
         type: object
@@ -9105,7 +8931,6 @@ components:
           nullable: true
         number:
           type: string
-          description: The phone number.
           nullable: true
         region:
           type: string
@@ -9120,7 +8945,6 @@ components:
       properties:
         id:
           type: string
-          description: Read-only.
       additionalProperties:
         type: object
     microsoft.graph.alternativeSecurityId:
@@ -9129,18 +8953,15 @@ components:
       properties:
         identityProvider:
           type: string
-          description: For internal use only
           nullable: true
         key:
           type: string
-          description: For internal use only
           format: base64url
           nullable: true
         type:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: For internal use only
           format: int32
           nullable: true
       additionalProperties:
@@ -9151,11 +8972,9 @@ components:
       properties:
         displayName:
           type: string
-          description: 'The identity''s display name. Note that this may not always be available or up to date. For example, if a user changes their display name, the API may show the new value in a future response, but the items associated with the user won''t show up as having changed when using delta.'
           nullable: true
         id:
           type: string
-          description: Unique identifier for the identity.
           nullable: true
       additionalProperties:
         type: object
@@ -9166,16 +8985,13 @@ components:
         lastActionDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'Timestamp for when the last activity occurred. The value is updated when an operation is scheduled, the asynchronous task starts, and when the operation completes.'
           format: date-time
           nullable: true
         operation:
           type: string
-          description: Type of asynchronous operation. The values can be ForceDelete or Verification
           nullable: true
         status:
           type: string
-          description: Current status of the operation.  Scheduled - Operation has been scheduled but has not started.  InProgress - Task has started and is in progress.  Failed - Operation has failed.
           nullable: true
       additionalProperties:
         type: object
@@ -9186,21 +9002,17 @@ components:
         assignedDateTime:
           pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
           type: string
-          description: 'The date and time at which the plan was assigned. The Timestamp type represents date and time information using ISO 8601 format and is always in UTC time. For example, midnight UTC on Jan 1, 2014 is 2014-01-01T00:00:00Z.'
           format: date-time
           nullable: true
         capabilityStatus:
           type: string
-          description: 'Condition of the capability assignment. The possible values are Enabled, Warning, Suspended, Deleted, LockedOut. See a detailed description of each value.'
           nullable: true
         service:
           type: string
-          description: 'The name of the service; for example, exchange.'
           nullable: true
         servicePlanId:
           pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
           type: string
-          description: 'A GUID that identifies the service plan. For a complete list of GUIDs and their equivalent friendly service names, see Product names and service plan identifiers for licensing.'
           format: uuid
           nullable: true
       additionalProperties:
@@ -9211,11 +9023,9 @@ components:
       properties:
         contactEmail:
           type: string
-          description: A valid smtp email address for the privacy statement contact. Not required.
           nullable: true
         statementUrl:
           type: string
-          description: A valid URL format that begins with http:// or https://. Maximum length is 255 characters. The URL that directs to the company's privacy statement. Not required.
           nullable: true
       additionalProperties:
         type: object
@@ -9225,15 +9035,12 @@ components:
       properties:
         capabilityStatus:
           type: string
-          description: 'For example, ''Enabled''.'
           nullable: true
         provisioningStatus:
           type: string
-          description: 'For example, ''Success''.'
           nullable: true
         service:
           type: string
-          description: 'The name of the service; for example, ''AccessControlS2S'''
           nullable: true
       additionalProperties:
         type: object
@@ -9243,23 +9050,18 @@ components:
       properties:
         capabilities:
           type: string
-          description: 'For example, ''Email'', ''OfficeCommunicationsOnline''.'
           nullable: true
         isDefault:
           type: boolean
-          description: 'true if this is the default domain associated with the tenant; otherwise, false.'
           nullable: true
         isInitial:
           type: boolean
-          description: 'true if this is the initial domain associated with the tenant; otherwise, false'
           nullable: true
         name:
           type: string
-          description: 'The domain name; for example, ''contoso.onmicrosoft.com'''
           nullable: true
         type:
           type: string
-          description: 'For example, ''Managed''.'
           nullable: true
       additionalProperties:
         type: object
@@ -9282,7 +9084,6 @@ components:
               type: array
               items:
                 $ref: '#/components/schemas/microsoft.graph.certificateAuthority'
-              description: Collection of certificate authorities which creates a trusted certificate chain.
           additionalProperties:
             type: object
     microsoft.graph.organizationalBrandingProperties:
@@ -9293,48 +9094,38 @@ components:
           properties:
             backgroundColor:
               type: string
-              description: 'Color that will appear in place of the background image in low-bandwidth connections. We recommend that you use the primary color of your banner logo or your organization color. Specify this in hexadecimal format, for example, white is #FFFFFF.'
               nullable: true
             backgroundImage:
               type: string
-              description: Image that appears as the background of the sign-in page. The allowed types are PNG or JPEG not smaller than 300 KB and not larger than 1920 × 1080 pixels. A smaller image will reduce bandwidth requirements and make the page load faster.
               format: base64url
               nullable: true
             backgroundImageRelativeUrl:
               type: string
-              description: A relative URL for the backgroundImage property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
               nullable: true
             bannerLogo:
               type: string
-              description: A banner version of your company logo that appears on the sign-in page. The allowed types are PNG or JPEG no larger than 36 × 245 pixels. We recommend using a transparent image with no padding around the logo.
               format: base64url
               nullable: true
             bannerLogoRelativeUrl:
               type: string
-              description: A relative url for the bannerLogo property that is combined with a CDN base URL from the cdnList to provide the read-only version served by a CDN. Read-only.
               nullable: true
             cdnList:
               type: array
               items:
                 type: string
                 nullable: true
-              description: A list of base URLs for all available CDN providers that are serving the assets of the current resource. Several CDN providers are used at the same time for high availability of read requests. Read-only.
             signInPageText:
               type: string
-              description: 'Text that appears at the bottom of the sign-in box. You can use this to communicate additional information, such as the phone number to your help desk or a legal statement. This text must be Unicode and not exceed 1024 characters.'
               nullable: true
             squareLogo:
               type: string
-              description: A square version of your company logo that appears in Windows 10 out-of-box experiences (OOBE) and when Windows Autopilot is enabled for deployment. Allowed types are PNG or JPEG no larger than 240 x 240 pixels and no more than 10 KB in size. We recommend using a transparent image with no padding around the logo.
               format: base64url
               nullable: true
             squareLogoRelativeUrl:
               type: string
-              description: A relative url for the squareLogo property that is combined with a CDN base URL from the cdnList to provide the version served by a CDN. Read-only.
               nullable: true
             usernameHintText:
               type: string
-              description: 'String that shows as the hint in the username textbox on the sign-in screen. This text must be a Unicode, without links or code, and can''t exceed 64 characters.'
               nullable: true
           additionalProperties:
             type: object
@@ -9346,21 +9137,18 @@ components:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The number of units that are enabled for the active subscription of the service SKU.
           format: int32
           nullable: true
         suspended:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: The number of units that are suspended because the subscription of the service SKU has been cancelled. The units cannot be assigned but can still be reactivated before they are deleted.
           format: int32
           nullable: true
         warning:
           maximum: 2147483647
           minimum: -2147483648
           type: integer
-          description: 'The number of units that are in warning status. When the subscription of the service SKU has expired, the customer has a grace period to renew their subscription before it is cancelled (moved to a suspended state).'
           format: int32
           nullable: true
       additionalProperties:
@@ -9371,21 +9159,17 @@ components:
       properties:
         appliesTo:
           type: string
-          description: The object the service plan can be assigned to. The possible values are:User - service plan can be assigned to individual users.Company - service plan can be assigned to the entire tenant.
           nullable: true
         provisioningStatus:
           type: string
-          description: 'The provisioning status of the service plan. The possible values are:Success - Service is fully provisioned.Disabled - Service has been disabled.ErrorStatus - The service plan has not been provisioned and is in an error state.PendingInput - Service is not yet provisioned; awaiting service confirmation.PendingActivation - Service is provisioned but requires explicit activation by administrator (for example, Intune_O365 service plan)PendingProvisioning - Microsoft has added a new service to the product SKU and it has not been activated in the tenant, yet.'
           nullable: true
         servicePlanId:
           pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
           type: string
-          description: The unique identifier of the service plan.
           format: uuid
           nullable: true
         servicePlanName:
           type: string
-          description: The name of the service plan.
           nullable: true
       additionalProperties:
         type: object
@@ -9586,25 +9370,19 @@ components:
       properties:
         certificate:
           type: string
-          description: Required. The base64 encoded string representing the public certificate.
           format: base64url
         certificateRevocationListUrl:
           type: string
-          description: The URL of the certificate revocation list.
           nullable: true
         deltaCertificateRevocationListUrl:
           type: string
-          description: The URL contains the list of all revoked certificates since the last time a full certificate revocaton list was created.
           nullable: true
         isRootAuthority:
           type: boolean
-          description: 'Required. true if the trusted certificate is a root authority, false if the trusted certificate is an intermediate authority.'
         issuer:
           type: string
-          description: 'The issuer of the certificate, calculated from the certificate value. Read-only.'
         issuerSki:
           type: string
-          description: 'The subject key identifier of the certificate, calculated from the certificate value. Read-only.'
       additionalProperties:
         type: object
     microsoft.graph.ODataErrors.MainError:
