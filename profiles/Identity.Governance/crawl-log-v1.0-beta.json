@@ -2121,6 +2121,86 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
     },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/parent": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignmentRequests": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignmentRequests/{governanceRoleAssignmentRequest-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignmentRequests/{governanceRoleAssignmentRequest-id}/resource": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignmentRequests/{governanceRoleAssignmentRequest-id}/roleDefinition": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignmentRequests/{governanceRoleAssignmentRequest-id}/roleDefinition/resource": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignmentRequests/{governanceRoleAssignmentRequest-id}/roleDefinition/roleSetting": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignmentRequests/{governanceRoleAssignmentRequest-id}/subject": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments/{governanceRoleAssignment-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments/{governanceRoleAssignment-id}/linkedEligibleRoleAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments/{governanceRoleAssignment-id}/resource": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments/{governanceRoleAssignment-id}/roleDefinition": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments/{governanceRoleAssignment-id}/roleDefinition/resource": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments/{governanceRoleAssignment-id}/roleDefinition/roleSetting": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments/{governanceRoleAssignment-id}/subject": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleDefinitions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleDefinitions/{governanceRoleDefinition-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleDefinitions/{governanceRoleDefinition-id}/resource": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/resource/roleDefinitions/{governanceRoleDefinition-id}/roleSetting": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
     "/privilegedAccess/{privilegedAccess-id}/resources/{governanceResource-id}/roleSettings/{governanceRoleSetting-id}/roleDefinition": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
@@ -2218,6 +2298,106 @@
       "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
     },
     "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/parent": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignmentRequests": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignmentRequests/{governanceRoleAssignmentRequest-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignmentRequests/{governanceRoleAssignmentRequest-id}/resource": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignmentRequests/{governanceRoleAssignmentRequest-id}/roleDefinition": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignmentRequests/{governanceRoleAssignmentRequest-id}/roleDefinition/resource": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignmentRequests/{governanceRoleAssignmentRequest-id}/roleDefinition/roleSetting": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignmentRequests/{governanceRoleAssignmentRequest-id}/subject": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments/{governanceRoleAssignment-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments/{governanceRoleAssignment-id}/linkedEligibleRoleAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments/{governanceRoleAssignment-id}/resource": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments/{governanceRoleAssignment-id}/roleDefinition": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments/{governanceRoleAssignment-id}/roleDefinition/resource": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments/{governanceRoleAssignment-id}/roleDefinition/roleSetting": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleAssignments/{governanceRoleAssignment-id}/subject": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleDefinitions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleDefinitions/{governanceRoleDefinition-id}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleDefinitions/{governanceRoleDefinition-id}/resource": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleDefinitions/{governanceRoleDefinition-id}/roleSetting": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleSettings": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleSettings/{governanceRoleSetting-id1}": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleSettings/{governanceRoleSetting-id1}/roleDefinition": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleSettings/{governanceRoleSetting-id1}/roleDefinition/resource": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
+    },
+    "/privilegedAccess/{privilegedAccess-id}/roleSettings/{governanceRoleSetting-id}/resource/roleSettings/{governanceRoleSetting-id1}/roleDefinition/roleSetting": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Identity.Governance.yml"
     },
