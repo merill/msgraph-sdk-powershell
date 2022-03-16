@@ -887,12 +887,10 @@ paths:
           in: query
           description: 'Usage: ids={ids}'
           required: true
-          content:
-            application/json:
-              schema:
-                type: array
-                items:
-                  type: string
+          schema:
+            type: array
+            items:
+              type: string
       responses:
         '200':
           description: Success
