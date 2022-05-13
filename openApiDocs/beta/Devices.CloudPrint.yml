@@ -722,6 +722,12 @@ paths:
               operationId: print.Printers.ListTaskTriggers
               parameters:
                 printer-id: $request.path.printer-id
+            getCapabilities:
+              operationId: print.printers.printer.getCapabilities
+            resetDefaults:
+              operationId: print.printers.printer.resetDefaults
+            restoreFactoryDefaults:
+              operationId: print.printers.printer.restoreFactoryDefaults
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3933,6 +3939,10 @@ paths:
           links:
             userRegistrationDetails:
               operationId: print.reports.AuthenticationMethods.ListUserRegistrationDetails
+            usersRegisteredByFeature:
+              operationId: print.reports.authenticationMethods.usersRegisteredByFeature
+            usersRegisteredByMethod:
+              operationId: print.reports.authenticationMethods.usersRegisteredByMethod
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

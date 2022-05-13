@@ -209,6 +209,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.androidDeviceOwnerEnrollmentProfile'
+          links:
+            createToken:
+              operationId: deviceManagement.androidDeviceOwnerEnrollmentProfiles.androidDeviceOwnerEnrollmentProfile.createToken
+            revokeToken:
+              operationId: deviceManagement.androidDeviceOwnerEnrollmentProfiles.androidDeviceOwnerEnrollmentProfile.revokeToken
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -429,6 +434,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.androidForWorkEnrollmentProfile'
+          links:
+            createToken:
+              operationId: deviceManagement.androidForWorkEnrollmentProfiles.androidForWorkEnrollmentProfile.createToken
+            revokeToken:
+              operationId: deviceManagement.androidForWorkEnrollmentProfiles.androidForWorkEnrollmentProfile.revokeToken
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -650,6 +660,8 @@ paths:
               operationId: deviceManagement.AppleUserInitiatedEnrollmentProfiles.ListAssignments
               parameters:
                 appleUserInitiatedEnrollmentProfile-id: $request.path.appleUserInitiatedEnrollmentProfile-id
+            setPriority:
+              operationId: deviceManagement.appleUserInitiatedEnrollmentProfiles.appleUserInitiatedEnrollmentProfile.setPriority
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1745,6 +1757,18 @@ paths:
               operationId: deviceManagement.DepOnboardingSettings.ListImportedAppleDeviceIdentities
               parameters:
                 depOnboardingSetting-id: $request.path.depOnboardingSetting-id
+            generateEncryptionPublicKey:
+              operationId: deviceManagement.depOnboardingSettings.depOnboardingSetting.generateEncryptionPublicKey
+            getEncryptionPublicKey:
+              operationId: deviceManagement.depOnboardingSettings.depOnboardingSetting.getEncryptionPublicKey
+            shareForSchoolDataSyncService:
+              operationId: deviceManagement.depOnboardingSettings.depOnboardingSetting.shareForSchoolDataSyncService
+            syncWithAppleDeviceEnrollmentProgram:
+              operationId: deviceManagement.depOnboardingSettings.depOnboardingSetting.syncWithAppleDeviceEnrollmentProgram
+            unshareForSchoolDataSyncService:
+              operationId: deviceManagement.depOnboardingSettings.depOnboardingSetting.unshareForSchoolDataSyncService
+            uploadDepToken:
+              operationId: deviceManagement.depOnboardingSettings.depOnboardingSetting.uploadDepToken
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2157,6 +2181,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.enrollmentProfile'
+          links:
+            exportMobileConfig:
+              operationId: deviceManagement.depOnboardingSettings.depOnboardingSetting.enrollmentProfiles.enrollmentProfile.exportMobileConfig
+            setDefaultProfile:
+              operationId: deviceManagement.depOnboardingSettings.depOnboardingSetting.enrollmentProfiles.enrollmentProfile.setDefaultProfile
+            updateDeviceProfileAssignment:
+              operationId: deviceManagement.depOnboardingSettings.depOnboardingSetting.enrollmentProfiles.enrollmentProfile.updateDeviceProfileAssignment
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2652,6 +2683,12 @@ paths:
               operationId: deviceManagement.DeviceEnrollmentConfigurations.ListAssignments
               parameters:
                 deviceEnrollmentConfiguration-id: $request.path.deviceEnrollmentConfiguration-id
+            assign:
+              operationId: deviceManagement.deviceEnrollmentConfigurations.deviceEnrollmentConfiguration.assign
+            createEnrollmentNotificationConfiguration:
+              operationId: deviceManagement.deviceEnrollmentConfigurations.deviceEnrollmentConfiguration.createEnrollmentNotificationConfiguration
+            setPriority:
+              operationId: deviceManagement.deviceEnrollmentConfigurations.deviceEnrollmentConfiguration.setPriority
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3765,6 +3802,8 @@ paths:
               operationId: deviceManagement.WindowsAutopilotDeploymentProfiles.ListAssignments
               parameters:
                 windowsAutopilotDeploymentProfile-id: $request.path.windowsAutopilotDeploymentProfile-id
+            assign:
+              operationId: deviceManagement.windowsAutopilotDeploymentProfiles.windowsAutopilotDeploymentProfile.assign
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4086,6 +4125,16 @@ paths:
               parameters:
                 windowsAutopilotDeploymentProfile-id: $request.path.windowsAutopilotDeploymentProfile-id
                 windowsAutopilotDeviceIdentity-id: $request.path.windowsAutopilotDeviceIdentity-id
+            assignResourceAccountToDevice:
+              operationId: deviceManagement.windowsAutopilotDeploymentProfiles.windowsAutopilotDeploymentProfile.assignedDevices.windowsAutopilotDeviceIdentity.assignResourceAccountToDevice
+            assignUserToDevice:
+              operationId: deviceManagement.windowsAutopilotDeploymentProfiles.windowsAutopilotDeploymentProfile.assignedDevices.windowsAutopilotDeviceIdentity.assignUserToDevice
+            unassignResourceAccountFromDevice:
+              operationId: deviceManagement.windowsAutopilotDeploymentProfiles.windowsAutopilotDeploymentProfile.assignedDevices.windowsAutopilotDeviceIdentity.unassignResourceAccountFromDevice
+            unassignUserFromDevice:
+              operationId: deviceManagement.windowsAutopilotDeploymentProfiles.windowsAutopilotDeploymentProfile.assignedDevices.windowsAutopilotDeviceIdentity.unassignUserFromDevice
+            updateDeviceProperties:
+              operationId: deviceManagement.windowsAutopilotDeploymentProfiles.windowsAutopilotDeploymentProfile.assignedDevices.windowsAutopilotDeviceIdentity.updateDeviceProperties
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4793,6 +4842,16 @@ paths:
               operationId: deviceManagement.WindowsAutopilotDeviceIdentities.GetIntendedDeploymentProfile
               parameters:
                 windowsAutopilotDeviceIdentity-id: $request.path.windowsAutopilotDeviceIdentity-id
+            assignResourceAccountToDevice:
+              operationId: deviceManagement.windowsAutopilotDeviceIdentities.windowsAutopilotDeviceIdentity.assignResourceAccountToDevice
+            assignUserToDevice:
+              operationId: deviceManagement.windowsAutopilotDeviceIdentities.windowsAutopilotDeviceIdentity.assignUserToDevice
+            unassignResourceAccountFromDevice:
+              operationId: deviceManagement.windowsAutopilotDeviceIdentities.windowsAutopilotDeviceIdentity.unassignResourceAccountFromDevice
+            unassignUserFromDevice:
+              operationId: deviceManagement.windowsAutopilotDeviceIdentities.windowsAutopilotDeviceIdentity.unassignUserFromDevice
+            updateDeviceProperties:
+              operationId: deviceManagement.windowsAutopilotDeviceIdentities.windowsAutopilotDeviceIdentity.updateDeviceProperties
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5038,6 +5097,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.windowsAutopilotSettings'
+          links:
+            sync:
+              operationId: deviceManagement.windowsAutopilotSettings.sync
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5248,6 +5310,8 @@ paths:
               operationId: deviceManagement.WindowsFeatureUpdateProfiles.ListAssignments
               parameters:
                 windowsFeatureUpdateProfile-id: $request.path.windowsFeatureUpdateProfile-id
+            assign:
+              operationId: deviceManagement.windowsFeatureUpdateProfiles.windowsFeatureUpdateProfile.assign
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5823,6 +5887,8 @@ paths:
               operationId: roleManagement.cloudPC.ResourceNamespaces.ListResourceActions
               parameters:
                 unifiedRbacResourceNamespace-id: $request.path.unifiedRbacResourceNamespace-id
+            importResourceActions:
+              operationId: roleManagement.cloudPC.resourceNamespaces.unifiedRbacResourceNamespace.importResourceActions
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7765,6 +7831,8 @@ paths:
               operationId: roleManagement.deviceManagement.ResourceNamespaces.ListResourceActions
               parameters:
                 unifiedRbacResourceNamespace-id: $request.path.unifiedRbacResourceNamespace-id
+            importResourceActions:
+              operationId: roleManagement.deviceManagement.resourceNamespaces.unifiedRbacResourceNamespace.importResourceActions
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9563,6 +9631,10 @@ paths:
               operationId: roleManagement.Directory.ListRoleEligibilityScheduleRequests
             roleEligibilitySchedules:
               operationId: roleManagement.Directory.ListRoleEligibilitySchedules
+            roleScheduleInstances:
+              operationId: roleManagement.directory.roleScheduleInstances
+            roleSchedules:
+              operationId: roleManagement.directory.roleSchedules
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9837,6 +9909,8 @@ paths:
               operationId: roleManagement.directory.ResourceNamespaces.ListResourceActions
               parameters:
                 unifiedRbacResourceNamespace-id: $request.path.unifiedRbacResourceNamespace-id
+            importResourceActions:
+              operationId: roleManagement.directory.resourceNamespaces.unifiedRbacResourceNamespace.importResourceActions
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11875,6 +11949,8 @@ paths:
               operationId: roleManagement.directory.RoleAssignmentScheduleRequests.GetTargetSchedule
               parameters:
                 unifiedRoleAssignmentScheduleRequest-id: $request.path.unifiedRoleAssignmentScheduleRequest-id
+            cancel:
+              operationId: roleManagement.directory.roleAssignmentScheduleRequests.unifiedRoleAssignmentScheduleRequest.cancel
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -13736,6 +13812,8 @@ paths:
               operationId: roleManagement.directory.RoleEligibilityScheduleRequests.GetTargetSchedule
               parameters:
                 unifiedRoleEligibilityScheduleRequest-id: $request.path.unifiedRoleEligibilityScheduleRequest-id
+            cancel:
+              operationId: roleManagement.directory.roleEligibilityScheduleRequests.unifiedRoleEligibilityScheduleRequest.cancel
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15011,6 +15089,10 @@ paths:
               operationId: roleManagement.EntitlementManagement.ListRoleEligibilityScheduleRequests
             roleEligibilitySchedules:
               operationId: roleManagement.EntitlementManagement.ListRoleEligibilitySchedules
+            roleScheduleInstances:
+              operationId: roleManagement.entitlementManagement.roleScheduleInstances
+            roleSchedules:
+              operationId: roleManagement.entitlementManagement.roleSchedules
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15285,6 +15367,8 @@ paths:
               operationId: roleManagement.entitlementManagement.ResourceNamespaces.ListResourceActions
               parameters:
                 unifiedRbacResourceNamespace-id: $request.path.unifiedRbacResourceNamespace-id
+            importResourceActions:
+              operationId: roleManagement.entitlementManagement.resourceNamespaces.unifiedRbacResourceNamespace.importResourceActions
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -17323,6 +17407,8 @@ paths:
               operationId: roleManagement.entitlementManagement.RoleAssignmentScheduleRequests.GetTargetSchedule
               parameters:
                 unifiedRoleAssignmentScheduleRequest-id: $request.path.unifiedRoleAssignmentScheduleRequest-id
+            cancel:
+              operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests.unifiedRoleAssignmentScheduleRequest.cancel
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -19184,6 +19270,8 @@ paths:
               operationId: roleManagement.entitlementManagement.RoleEligibilityScheduleRequests.GetTargetSchedule
               parameters:
                 unifiedRoleEligibilityScheduleRequest-id: $request.path.unifiedRoleEligibilityScheduleRequest-id
+            cancel:
+              operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests.unifiedRoleEligibilityScheduleRequest.cancel
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

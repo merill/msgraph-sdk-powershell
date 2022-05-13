@@ -358,6 +358,8 @@ paths:
               parameters:
                 group-id: $request.path.group-id
                 notebook-id: $request.path.notebook-id
+            copyNotebook:
+              operationId: groups.group.onenote.notebooks.notebook.copyNotebook
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1433,6 +1435,10 @@ paths:
                 notebook-id: $request.path.notebook-id
                 sectionGroup-id: $request.path.sectionGroup-id
                 onenoteSection-id: $request.path.onenoteSection-id
+            copyToNotebook:
+              operationId: groups.group.onenote.notebooks.notebook.sectionGroups.sectionGroup.sections.onenoteSection.copyToNotebook
+            copyToSectionGroup:
+              operationId: groups.group.onenote.notebooks.notebook.sectionGroups.sectionGroup.sections.onenoteSection.copyToSectionGroup
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1809,6 +1815,12 @@ paths:
                 sectionGroup-id: $request.path.sectionGroup-id
                 onenoteSection-id: $request.path.onenoteSection-id
                 onenotePage-id: $request.path.onenotePage-id
+            copyToSection:
+              operationId: groups.group.onenote.notebooks.notebook.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.copyToSection
+            onenotePatchContent:
+              operationId: groups.group.onenote.notebooks.notebook.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.onenotePatchContent
+            preview:
+              operationId: groups.group.onenote.notebooks.notebook.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.preview
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2708,6 +2720,10 @@ paths:
                 group-id: $request.path.group-id
                 notebook-id: $request.path.notebook-id
                 onenoteSection-id: $request.path.onenoteSection-id
+            copyToNotebook:
+              operationId: groups.group.onenote.notebooks.notebook.sections.onenoteSection.copyToNotebook
+            copyToSectionGroup:
+              operationId: groups.group.onenote.notebooks.notebook.sections.onenoteSection.copyToSectionGroup
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3047,6 +3063,12 @@ paths:
                 notebook-id: $request.path.notebook-id
                 onenoteSection-id: $request.path.onenoteSection-id
                 onenotePage-id: $request.path.onenotePage-id
+            copyToSection:
+              operationId: groups.group.onenote.notebooks.notebook.sections.onenoteSection.pages.onenotePage.copyToSection
+            onenotePatchContent:
+              operationId: groups.group.onenote.notebooks.notebook.sections.onenoteSection.pages.onenotePage.onenotePatchContent
+            preview:
+              operationId: groups.group.onenote.notebooks.notebook.sections.onenoteSection.pages.onenotePage.preview
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4098,6 +4120,12 @@ paths:
               parameters:
                 group-id: $request.path.group-id
                 onenotePage-id: $request.path.onenotePage-id
+            copyToSection:
+              operationId: groups.group.onenote.pages.onenotePage.copyToSection
+            onenotePatchContent:
+              operationId: groups.group.onenote.pages.onenotePage.onenotePatchContent
+            preview:
+              operationId: groups.group.onenote.pages.onenotePage.preview
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5606,6 +5634,10 @@ paths:
                 group-id: $request.path.group-id
                 sectionGroup-id: $request.path.sectionGroup-id
                 onenoteSection-id: $request.path.onenoteSection-id
+            copyToNotebook:
+              operationId: groups.group.onenote.sectionGroups.sectionGroup.sections.onenoteSection.copyToNotebook
+            copyToSectionGroup:
+              operationId: groups.group.onenote.sectionGroups.sectionGroup.sections.onenoteSection.copyToSectionGroup
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5945,6 +5977,12 @@ paths:
                 sectionGroup-id: $request.path.sectionGroup-id
                 onenoteSection-id: $request.path.onenoteSection-id
                 onenotePage-id: $request.path.onenotePage-id
+            copyToSection:
+              operationId: groups.group.onenote.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.copyToSection
+            onenotePatchContent:
+              operationId: groups.group.onenote.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.onenotePatchContent
+            preview:
+              operationId: groups.group.onenote.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.preview
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6753,6 +6791,10 @@ paths:
               parameters:
                 group-id: $request.path.group-id
                 onenoteSection-id: $request.path.onenoteSection-id
+            copyToNotebook:
+              operationId: groups.group.onenote.sections.onenoteSection.copyToNotebook
+            copyToSectionGroup:
+              operationId: groups.group.onenote.sections.onenoteSection.copyToSectionGroup
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7055,6 +7097,12 @@ paths:
                 group-id: $request.path.group-id
                 onenoteSection-id: $request.path.onenoteSection-id
                 onenotePage-id: $request.path.onenotePage-id
+            copyToSection:
+              operationId: groups.group.onenote.sections.onenoteSection.pages.onenotePage.copyToSection
+            onenotePatchContent:
+              operationId: groups.group.onenote.sections.onenoteSection.pages.onenotePage.onenotePatchContent
+            preview:
+              operationId: groups.group.onenote.sections.onenoteSection.pages.onenotePage.preview
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7935,6 +7983,8 @@ paths:
               parameters:
                 site-id: $request.path.site-id
                 notebook-id: $request.path.notebook-id
+            copyNotebook:
+              operationId: sites.site.onenote.notebooks.notebook.copyNotebook
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9010,6 +9060,10 @@ paths:
                 notebook-id: $request.path.notebook-id
                 sectionGroup-id: $request.path.sectionGroup-id
                 onenoteSection-id: $request.path.onenoteSection-id
+            copyToNotebook:
+              operationId: sites.site.onenote.notebooks.notebook.sectionGroups.sectionGroup.sections.onenoteSection.copyToNotebook
+            copyToSectionGroup:
+              operationId: sites.site.onenote.notebooks.notebook.sectionGroups.sectionGroup.sections.onenoteSection.copyToSectionGroup
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9386,6 +9440,12 @@ paths:
                 sectionGroup-id: $request.path.sectionGroup-id
                 onenoteSection-id: $request.path.onenoteSection-id
                 onenotePage-id: $request.path.onenotePage-id
+            copyToSection:
+              operationId: sites.site.onenote.notebooks.notebook.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.copyToSection
+            onenotePatchContent:
+              operationId: sites.site.onenote.notebooks.notebook.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.onenotePatchContent
+            preview:
+              operationId: sites.site.onenote.notebooks.notebook.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.preview
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10285,6 +10345,10 @@ paths:
                 site-id: $request.path.site-id
                 notebook-id: $request.path.notebook-id
                 onenoteSection-id: $request.path.onenoteSection-id
+            copyToNotebook:
+              operationId: sites.site.onenote.notebooks.notebook.sections.onenoteSection.copyToNotebook
+            copyToSectionGroup:
+              operationId: sites.site.onenote.notebooks.notebook.sections.onenoteSection.copyToSectionGroup
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10624,6 +10688,12 @@ paths:
                 notebook-id: $request.path.notebook-id
                 onenoteSection-id: $request.path.onenoteSection-id
                 onenotePage-id: $request.path.onenotePage-id
+            copyToSection:
+              operationId: sites.site.onenote.notebooks.notebook.sections.onenoteSection.pages.onenotePage.copyToSection
+            onenotePatchContent:
+              operationId: sites.site.onenote.notebooks.notebook.sections.onenoteSection.pages.onenotePage.onenotePatchContent
+            preview:
+              operationId: sites.site.onenote.notebooks.notebook.sections.onenoteSection.pages.onenotePage.preview
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11675,6 +11745,12 @@ paths:
               parameters:
                 site-id: $request.path.site-id
                 onenotePage-id: $request.path.onenotePage-id
+            copyToSection:
+              operationId: sites.site.onenote.pages.onenotePage.copyToSection
+            onenotePatchContent:
+              operationId: sites.site.onenote.pages.onenotePage.onenotePatchContent
+            preview:
+              operationId: sites.site.onenote.pages.onenotePage.preview
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -13183,6 +13259,10 @@ paths:
                 site-id: $request.path.site-id
                 sectionGroup-id: $request.path.sectionGroup-id
                 onenoteSection-id: $request.path.onenoteSection-id
+            copyToNotebook:
+              operationId: sites.site.onenote.sectionGroups.sectionGroup.sections.onenoteSection.copyToNotebook
+            copyToSectionGroup:
+              operationId: sites.site.onenote.sectionGroups.sectionGroup.sections.onenoteSection.copyToSectionGroup
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -13522,6 +13602,12 @@ paths:
                 sectionGroup-id: $request.path.sectionGroup-id
                 onenoteSection-id: $request.path.onenoteSection-id
                 onenotePage-id: $request.path.onenotePage-id
+            copyToSection:
+              operationId: sites.site.onenote.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.copyToSection
+            onenotePatchContent:
+              operationId: sites.site.onenote.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.onenotePatchContent
+            preview:
+              operationId: sites.site.onenote.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.preview
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -14330,6 +14416,10 @@ paths:
               parameters:
                 site-id: $request.path.site-id
                 onenoteSection-id: $request.path.onenoteSection-id
+            copyToNotebook:
+              operationId: sites.site.onenote.sections.onenoteSection.copyToNotebook
+            copyToSectionGroup:
+              operationId: sites.site.onenote.sections.onenoteSection.copyToSectionGroup
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -14632,6 +14722,12 @@ paths:
                 site-id: $request.path.site-id
                 onenoteSection-id: $request.path.onenoteSection-id
                 onenotePage-id: $request.path.onenotePage-id
+            copyToSection:
+              operationId: sites.site.onenote.sections.onenoteSection.pages.onenotePage.copyToSection
+            onenotePatchContent:
+              operationId: sites.site.onenote.sections.onenoteSection.pages.onenotePage.onenotePatchContent
+            preview:
+              operationId: sites.site.onenote.sections.onenoteSection.pages.onenotePage.preview
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15512,6 +15608,8 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 notebook-id: $request.path.notebook-id
+            copyNotebook:
+              operationId: users.user.onenote.notebooks.notebook.copyNotebook
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16587,6 +16685,10 @@ paths:
                 notebook-id: $request.path.notebook-id
                 sectionGroup-id: $request.path.sectionGroup-id
                 onenoteSection-id: $request.path.onenoteSection-id
+            copyToNotebook:
+              operationId: users.user.onenote.notebooks.notebook.sectionGroups.sectionGroup.sections.onenoteSection.copyToNotebook
+            copyToSectionGroup:
+              operationId: users.user.onenote.notebooks.notebook.sectionGroups.sectionGroup.sections.onenoteSection.copyToSectionGroup
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16963,6 +17065,12 @@ paths:
                 sectionGroup-id: $request.path.sectionGroup-id
                 onenoteSection-id: $request.path.onenoteSection-id
                 onenotePage-id: $request.path.onenotePage-id
+            copyToSection:
+              operationId: users.user.onenote.notebooks.notebook.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.copyToSection
+            onenotePatchContent:
+              operationId: users.user.onenote.notebooks.notebook.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.onenotePatchContent
+            preview:
+              operationId: users.user.onenote.notebooks.notebook.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.preview
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -17862,6 +17970,10 @@ paths:
                 user-id: $request.path.user-id
                 notebook-id: $request.path.notebook-id
                 onenoteSection-id: $request.path.onenoteSection-id
+            copyToNotebook:
+              operationId: users.user.onenote.notebooks.notebook.sections.onenoteSection.copyToNotebook
+            copyToSectionGroup:
+              operationId: users.user.onenote.notebooks.notebook.sections.onenoteSection.copyToSectionGroup
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -18201,6 +18313,12 @@ paths:
                 notebook-id: $request.path.notebook-id
                 onenoteSection-id: $request.path.onenoteSection-id
                 onenotePage-id: $request.path.onenotePage-id
+            copyToSection:
+              operationId: users.user.onenote.notebooks.notebook.sections.onenoteSection.pages.onenotePage.copyToSection
+            onenotePatchContent:
+              operationId: users.user.onenote.notebooks.notebook.sections.onenoteSection.pages.onenotePage.onenotePatchContent
+            preview:
+              operationId: users.user.onenote.notebooks.notebook.sections.onenoteSection.pages.onenotePage.preview
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -19252,6 +19370,12 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 onenotePage-id: $request.path.onenotePage-id
+            copyToSection:
+              operationId: users.user.onenote.pages.onenotePage.copyToSection
+            onenotePatchContent:
+              operationId: users.user.onenote.pages.onenotePage.onenotePatchContent
+            preview:
+              operationId: users.user.onenote.pages.onenotePage.preview
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -20760,6 +20884,10 @@ paths:
                 user-id: $request.path.user-id
                 sectionGroup-id: $request.path.sectionGroup-id
                 onenoteSection-id: $request.path.onenoteSection-id
+            copyToNotebook:
+              operationId: users.user.onenote.sectionGroups.sectionGroup.sections.onenoteSection.copyToNotebook
+            copyToSectionGroup:
+              operationId: users.user.onenote.sectionGroups.sectionGroup.sections.onenoteSection.copyToSectionGroup
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -21099,6 +21227,12 @@ paths:
                 sectionGroup-id: $request.path.sectionGroup-id
                 onenoteSection-id: $request.path.onenoteSection-id
                 onenotePage-id: $request.path.onenotePage-id
+            copyToSection:
+              operationId: users.user.onenote.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.copyToSection
+            onenotePatchContent:
+              operationId: users.user.onenote.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.onenotePatchContent
+            preview:
+              operationId: users.user.onenote.sectionGroups.sectionGroup.sections.onenoteSection.pages.onenotePage.preview
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -21907,6 +22041,10 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 onenoteSection-id: $request.path.onenoteSection-id
+            copyToNotebook:
+              operationId: users.user.onenote.sections.onenoteSection.copyToNotebook
+            copyToSectionGroup:
+              operationId: users.user.onenote.sections.onenoteSection.copyToSectionGroup
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -22209,6 +22347,12 @@ paths:
                 user-id: $request.path.user-id
                 onenoteSection-id: $request.path.onenoteSection-id
                 onenotePage-id: $request.path.onenotePage-id
+            copyToSection:
+              operationId: users.user.onenote.sections.onenoteSection.pages.onenotePage.copyToSection
+            onenotePatchContent:
+              operationId: users.user.onenote.sections.onenoteSection.pages.onenotePage.onenotePatchContent
+            preview:
+              operationId: users.user.onenote.sections.onenoteSection.pages.onenotePage.preview
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

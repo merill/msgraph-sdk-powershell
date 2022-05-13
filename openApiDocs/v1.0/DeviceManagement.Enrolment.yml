@@ -247,6 +247,10 @@ paths:
               operationId: deviceManagement.DeviceEnrollmentConfigurations.ListAssignments
               parameters:
                 deviceEnrollmentConfiguration-id: $request.path.deviceEnrollmentConfiguration-id
+            assign:
+              operationId: deviceManagement.deviceEnrollmentConfigurations.deviceEnrollmentConfiguration.assign
+            setPriority:
+              operationId: deviceManagement.deviceEnrollmentConfigurations.deviceEnrollmentConfiguration.setPriority
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -919,6 +923,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.windowsAutopilotDeviceIdentity'
+          links:
+            assignUserToDevice:
+              operationId: deviceManagement.windowsAutopilotDeviceIdentities.windowsAutopilotDeviceIdentity.assignUserToDevice
+            unassignUserFromDevice:
+              operationId: deviceManagement.windowsAutopilotDeviceIdentities.windowsAutopilotDeviceIdentity.unassignUserFromDevice
+            updateDeviceProperties:
+              operationId: deviceManagement.windowsAutopilotDeviceIdentities.windowsAutopilotDeviceIdentity.updateDeviceProperties
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2261,6 +2272,8 @@ paths:
               operationId: roleManagement.directory.RoleAssignmentScheduleRequests.GetTargetSchedule
               parameters:
                 unifiedRoleAssignmentScheduleRequest-id: $request.path.unifiedRoleAssignmentScheduleRequest-id
+            cancel:
+              operationId: roleManagement.directory.roleAssignmentScheduleRequests.unifiedRoleAssignmentScheduleRequest.cancel
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4122,6 +4135,8 @@ paths:
               operationId: roleManagement.directory.RoleEligibilityScheduleRequests.GetTargetSchedule
               parameters:
                 unifiedRoleEligibilityScheduleRequest-id: $request.path.unifiedRoleEligibilityScheduleRequest-id
+            cancel:
+              operationId: roleManagement.directory.roleEligibilityScheduleRequests.unifiedRoleEligibilityScheduleRequest.cancel
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6031,6 +6046,8 @@ paths:
               operationId: roleManagement.entitlementManagement.RoleAssignmentScheduleRequests.GetTargetSchedule
               parameters:
                 unifiedRoleAssignmentScheduleRequest-id: $request.path.unifiedRoleAssignmentScheduleRequest-id
+            cancel:
+              operationId: roleManagement.entitlementManagement.roleAssignmentScheduleRequests.unifiedRoleAssignmentScheduleRequest.cancel
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7892,6 +7909,8 @@ paths:
               operationId: roleManagement.entitlementManagement.RoleEligibilityScheduleRequests.GetTargetSchedule
               parameters:
                 unifiedRoleEligibilityScheduleRequest-id: $request.path.unifiedRoleEligibilityScheduleRequest-id
+            cancel:
+              operationId: roleManagement.entitlementManagement.roleEligibilityScheduleRequests.unifiedRoleEligibilityScheduleRequest.cancel
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

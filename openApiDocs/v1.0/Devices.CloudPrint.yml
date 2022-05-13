@@ -690,6 +690,8 @@ paths:
               operationId: print.Printers.ListTaskTriggers
               parameters:
                 printer-id: $request.path.printer-id
+            restoreFactoryDefaults:
+              operationId: print.printers.printer.restoreFactoryDefaults
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

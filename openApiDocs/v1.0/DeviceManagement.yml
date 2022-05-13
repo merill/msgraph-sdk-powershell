@@ -173,6 +173,10 @@ paths:
               operationId: deviceManagement.ListWindowsInformationProtectionAppLearningSummaries
             windowsInformationProtectionNetworkLearningSummaries:
               operationId: deviceManagement.ListWindowsInformationProtectionNetworkLearningSummaries
+            getEffectivePermissions:
+              operationId: deviceManagement.getEffectivePermissions
+            verifyWindowsEnrollmentAutoDiscovery:
+              operationId: deviceManagement.verifyWindowsEnrollmentAutoDiscovery
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1145,6 +1149,10 @@ paths:
               operationId: deviceManagement.DeviceCompliancePolicies.GetUserStatusOverview
               parameters:
                 deviceCompliancePolicy-id: $request.path.deviceCompliancePolicy-id
+            assign:
+              operationId: deviceManagement.deviceCompliancePolicies.deviceCompliancePolicy.assign
+            scheduleActionsForRules:
+              operationId: deviceManagement.deviceCompliancePolicies.deviceCompliancePolicy.scheduleActionsForRules
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3714,6 +3722,10 @@ paths:
               operationId: deviceManagement.DeviceConfigurations.GetUserStatusOverview
               parameters:
                 deviceConfiguration-id: $request.path.deviceConfiguration-id
+            assign:
+              operationId: deviceManagement.deviceConfigurations.deviceConfiguration.assign
+            getOmaSettingPlainTextValue:
+              operationId: deviceManagement.deviceConfigurations.deviceConfiguration.getOmaSettingPlainTextValue
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5334,6 +5346,42 @@ paths:
               operationId: deviceManagement.ManagedDevices.GetDeviceCategory
               parameters:
                 managedDevice-id: $request.path.managedDevice-id
+            bypassActivationLock:
+              operationId: deviceManagement.managedDevices.managedDevice.bypassActivationLock
+            cleanWindowsDevice:
+              operationId: deviceManagement.managedDevices.managedDevice.cleanWindowsDevice
+            deleteUserFromSharedAppleDevice:
+              operationId: deviceManagement.managedDevices.managedDevice.deleteUserFromSharedAppleDevice
+            disableLostMode:
+              operationId: deviceManagement.managedDevices.managedDevice.disableLostMode
+            locateDevice:
+              operationId: deviceManagement.managedDevices.managedDevice.locateDevice
+            logoutSharedAppleDeviceActiveUser:
+              operationId: deviceManagement.managedDevices.managedDevice.logoutSharedAppleDeviceActiveUser
+            rebootNow:
+              operationId: deviceManagement.managedDevices.managedDevice.rebootNow
+            recoverPasscode:
+              operationId: deviceManagement.managedDevices.managedDevice.recoverPasscode
+            remoteLock:
+              operationId: deviceManagement.managedDevices.managedDevice.remoteLock
+            requestRemoteAssistance:
+              operationId: deviceManagement.managedDevices.managedDevice.requestRemoteAssistance
+            resetPasscode:
+              operationId: deviceManagement.managedDevices.managedDevice.resetPasscode
+            retire:
+              operationId: deviceManagement.managedDevices.managedDevice.retire
+            shutDown:
+              operationId: deviceManagement.managedDevices.managedDevice.shutDown
+            syncDevice:
+              operationId: deviceManagement.managedDevices.managedDevice.syncDevice
+            updateWindowsDeviceAccount:
+              operationId: deviceManagement.managedDevices.managedDevice.updateWindowsDeviceAccount
+            windowsDefenderScan:
+              operationId: deviceManagement.managedDevices.managedDevice.windowsDefenderScan
+            windowsDefenderUpdateSignatures:
+              operationId: deviceManagement.managedDevices.managedDevice.windowsDefenderUpdateSignatures
+            wipe:
+              operationId: deviceManagement.managedDevices.managedDevice.wipe
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6120,6 +6168,8 @@ paths:
               operationId: deviceManagement.NotificationMessageTemplates.ListLocalizedNotificationMessages
               parameters:
                 notificationMessageTemplate-id: $request.path.notificationMessageTemplate-id
+            sendTestMessage:
+              operationId: deviceManagement.notificationMessageTemplates.notificationMessageTemplate.sendTestMessage
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

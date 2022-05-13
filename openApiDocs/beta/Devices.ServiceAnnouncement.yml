@@ -498,6 +498,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.serviceHealthIssue'
+          links:
+            incidentReport:
+              operationId: admin.serviceAnnouncement.healthOverviews.serviceHealth.issues.serviceHealthIssue.incidentReport
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -590,7 +593,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -786,6 +789,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.serviceHealthIssue'
+          links:
+            incidentReport:
+              operationId: admin.serviceAnnouncement.issues.serviceHealthIssue.incidentReport
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -857,7 +863,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:

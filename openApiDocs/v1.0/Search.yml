@@ -1376,6 +1376,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.searchEntity'
+          links:
+            query:
+              operationId: search.query
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

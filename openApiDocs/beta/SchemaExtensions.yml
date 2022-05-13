@@ -10,8 +10,8 @@ paths:
     get:
       tags:
         - schemaExtensions.schemaExtension
-      summary: Get entities from schemaExtensions
-      description: Add custom data to groups using schema extensions
+      summary: Add custom data to groups using schema extensions
+      description: "Imagine you're a developer in a Learning Management Software company called 'Graph Learn' that builds training courses and materials for businesses.  Microsoft 365 groups, with their rich collaborative experiences, \nis a fantastic way to deliver course content and record exercises among participants for both online courses and instructor-led courses.  You might want to make \nthose Microsoft 365 groups used for training courses easily identifiable as training courses, which will allow other developers to discover your groups and build rich experiences on top of your learning courses. For this scenario, this article will show you how to:"
       operationId: schemaExtensions.schemaExtension_ListSchemaExtension
       parameters:
         - $ref: '#/components/parameters/top'
@@ -83,8 +83,8 @@ paths:
     post:
       tags:
         - schemaExtensions.schemaExtension
-      summary: Add new entity to schemaExtensions
-      description: Create schemaExtension
+      summary: Create schemaExtension
+      description: "Create a new [schemaExtension](../resources/schemaextension.md) definition to extend a [supporting resource type](/graph/extensibility-overview#supported-resources). Schema extensions let you add strongly-typed custom data to a resource. The app that creates a schema extension is the owner app. Depending on the \n[state](/graph/extensibility-overview#schema-extensions-lifecycle) of the extension, the owner app, and only the owner app, may update or delete the extension.  See examples of how to [define a schema extension that describes a training course](/graph/extensibility-schema-groups#2-register-a-schema-extension-definition-that-describes-a-training-course), \nuse the schema extension definition to [create a new group with training course data](/graph/extensibility-schema-groups#3-create-a-new-group-with-extended-data), and \n[add training course data to an existing group](/graph/extensibility-schema-groups#4-add-update-or-remove-custom-data-in-an-existing-group)."
       operationId: schemaExtensions.schemaExtension_CreateSchemaExtension
       requestBody:
         description: New entity
@@ -185,8 +185,8 @@ paths:
     delete:
       tags:
         - schemaExtensions.schemaExtension
-      summary: Delete entity from schemaExtensions
-      description: Delete schemaExtension
+      summary: Delete schemaExtension
+      description: 'Delete the definition of a [schema extension](../resources/schemaextension.md). Only the app that created the schema extension (owner app) can delete the schema extension definition, and only when the extension is in the `InDevelopment` state. Deleting a schema extension definition does not affect accessing custom data that has been added to resource instances based on that definition.'
       operationId: schemaExtensions.schemaExtension_DeleteSchemaExtension
       parameters:
         - name: schemaExtension-id

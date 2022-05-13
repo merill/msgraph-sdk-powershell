@@ -10,8 +10,8 @@ paths:
     get:
       tags:
         - security.security
-      summary: Get security
-      description: security resource type
+      summary: security resource type
+      description: The security resource is the entry point for the Security object model. It returns a singleton security resource. It doesn't contain any usable properties.
       operationId: security.security_GetSecurity
       parameters:
         - name: $select
@@ -1596,6 +1596,10 @@ paths:
               operationId: security.cases.EdiscoveryCases.ListTags
               parameters:
                 ediscoveryCase-id: $request.path.ediscoveryCase-id
+            close:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.close
+            reopen:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.reopen
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1865,6 +1869,16 @@ paths:
               parameters:
                 ediscoveryCase-id: $request.path.ediscoveryCase-id
                 ediscoveryCustodian-id: $request.path.ediscoveryCustodian-id
+            activate:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.custodians.ediscoveryCustodian.activate
+            applyHold:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.custodians.ediscoveryCustodian.applyHold
+            release:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.custodians.ediscoveryCustodian.release
+            removeHold:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.custodians.ediscoveryCustodian.removeHold
+            updateIndex:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.custodians.ediscoveryCustodian.updateIndex
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4838,6 +4852,14 @@ paths:
               parameters:
                 ediscoveryCase-id: $request.path.ediscoveryCase-id
                 ediscoveryNoncustodialDataSource-id: $request.path.ediscoveryNoncustodialDataSource-id
+            applyHold:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.noncustodialDataSources.ediscoveryNoncustodialDataSource.applyHold
+            release:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.noncustodialDataSources.ediscoveryNoncustodialDataSource.release
+            removeHold:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.noncustodialDataSources.ediscoveryNoncustodialDataSource.removeHold
+            updateIndex:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.noncustodialDataSources.ediscoveryNoncustodialDataSource.updateIndex
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5725,6 +5747,10 @@ paths:
               parameters:
                 ediscoveryCase-id: $request.path.ediscoveryCase-id
                 ediscoveryReviewSet-id: $request.path.ediscoveryReviewSet-id
+            addToReviewSet:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.reviewSets.ediscoveryReviewSet.addToReviewSet
+            export:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.reviewSets.ediscoveryReviewSet.export
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6854,6 +6880,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.security.ediscoveryReviewSetQuery'
+          links:
+            applyTags:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.reviewSets.ediscoveryReviewSet.queries.ediscoveryReviewSetQuery.applyTags
+            export:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.reviewSets.ediscoveryReviewSet.queries.ediscoveryReviewSetQuery.export
+            run:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.reviewSets.ediscoveryReviewSet.queries.ediscoveryReviewSetQuery.run
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7318,6 +7351,10 @@ paths:
               parameters:
                 ediscoveryCase-id: $request.path.ediscoveryCase-id
                 ediscoverySearch-id: $request.path.ediscoverySearch-id
+            estimateStatistics:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.searches.ediscoverySearch.estimateStatistics
+            purgeData:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.searches.ediscoverySearch.purgeData
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -8234,6 +8271,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.security.ediscoveryCaseSettings'
+          links:
+            resetToDefault:
+              operationId: security.cases.ediscoveryCases.ediscoveryCase.settings.resetToDefault
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11541,6 +11581,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.securityAction'
+          links:
+            cancelSecurityAction:
+              operationId: security.securityActions.securityAction.cancelSecurityAction
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11852,6 +11895,10 @@ paths:
               operationId: security.SubjectRightsRequests.GetTeam
               parameters:
                 subjectRightsRequest-id: $request.path.subjectRightsRequest-id
+            getFinalAttachment:
+              operationId: security.subjectRightsRequests.subjectRightsRequest.getFinalAttachment
+            getFinalReport:
+              operationId: security.subjectRightsRequests.subjectRightsRequest.getFinalReport
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11923,7 +11970,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -11954,7 +12001,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:

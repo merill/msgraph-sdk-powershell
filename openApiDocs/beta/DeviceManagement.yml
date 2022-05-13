@@ -681,6 +681,38 @@ paths:
               operationId: deviceManagement.ListCertificateConnectorDetails
             userPfxCertificates:
               operationId: deviceManagement.ListUserPfxCertificates
+            enableAndroidDeviceAdministratorEnrollment:
+              operationId: deviceManagement.enableAndroidDeviceAdministratorEnrollment
+            enableLegacyPcManagement:
+              operationId: deviceManagement.enableLegacyPcManagement
+            enableUnlicensedAdminstrators:
+              operationId: deviceManagement.enableUnlicensedAdminstrators
+            evaluateAssignmentFilter:
+              operationId: deviceManagement.evaluateAssignmentFilter
+            getAssignedRoleDetails:
+              operationId: deviceManagement.getAssignedRoleDetails
+            getAssignmentFiltersStatusDetails:
+              operationId: deviceManagement.getAssignmentFiltersStatusDetails
+            getComanagedDevicesSummary:
+              operationId: deviceManagement.getComanagedDevicesSummary
+            getComanagementEligibleDevicesSummary:
+              operationId: deviceManagement.getComanagementEligibleDevicesSummary
+            getEffectivePermissions:
+              operationId: deviceManagement.getEffectivePermissions
+            getRoleScopeTagsByIds:
+              operationId: deviceManagement.getRoleScopeTagsByIds
+            getRoleScopeTagsByResource:
+              operationId: deviceManagement.getRoleScopeTagsByResource
+            getSuggestedEnrollmentLimit:
+              operationId: deviceManagement.getSuggestedEnrollmentLimit
+            scopedForResource:
+              operationId: deviceManagement.scopedForResource
+            sendCustomNotificationToCompanyPortal:
+              operationId: deviceManagement.sendCustomNotificationToCompanyPortal
+            userExperienceAnalyticsSummarizeWorkFromAnywhereDevices:
+              operationId: deviceManagement.userExperienceAnalyticsSummarizeWorkFromAnywhereDevices
+            verifyWindowsEnrollmentAutoDiscovery:
+              operationId: deviceManagement.verifyWindowsEnrollmentAutoDiscovery
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1256,6 +1288,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.androidForWorkSettings'
+          links:
+            completeSignup:
+              operationId: deviceManagement.androidForWorkSettings.completeSignup
+            requestSignupUrl:
+              operationId: deviceManagement.androidForWorkSettings.requestSignupUrl
+            syncApps:
+              operationId: deviceManagement.androidForWorkSettings.syncApps
+            unbind:
+              operationId: deviceManagement.androidForWorkSettings.unbind
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1345,6 +1386,21 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.androidManagedStoreAccountEnterpriseSettings'
+          links:
+            approveApps:
+              operationId: deviceManagement.androidManagedStoreAccountEnterpriseSettings.approveApps
+            completeSignup:
+              operationId: deviceManagement.androidManagedStoreAccountEnterpriseSettings.completeSignup
+            createGooglePlayWebToken:
+              operationId: deviceManagement.androidManagedStoreAccountEnterpriseSettings.createGooglePlayWebToken
+            requestSignupUrl:
+              operationId: deviceManagement.androidManagedStoreAccountEnterpriseSettings.requestSignupUrl
+            setAndroidDeviceOwnerFullyManagedEnrollmentState:
+              operationId: deviceManagement.androidManagedStoreAccountEnterpriseSettings.setAndroidDeviceOwnerFullyManagedEnrollmentState
+            syncApps:
+              operationId: deviceManagement.androidManagedStoreAccountEnterpriseSettings.syncApps
+            unbind:
+              operationId: deviceManagement.androidManagedStoreAccountEnterpriseSettings.unbind
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1730,6 +1786,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.deviceAndAppManagementAssignmentFilter'
+          links:
+            getSupportedProperties:
+              operationId: deviceManagement.assignmentFilters.deviceAndAppManagementAssignmentFilter.getSupportedProperties
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2764,6 +2823,88 @@ paths:
               operationId: deviceManagement.ComanagedDevices.GetWindowsProtectionState
               parameters:
                 managedDevice-id: $request.path.managedDevice-id
+            activateDeviceEsim:
+              operationId: deviceManagement.comanagedDevices.managedDevice.activateDeviceEsim
+            bypassActivationLock:
+              operationId: deviceManagement.comanagedDevices.managedDevice.bypassActivationLock
+            cleanWindowsDevice:
+              operationId: deviceManagement.comanagedDevices.managedDevice.cleanWindowsDevice
+            createDeviceLogCollectionRequest:
+              operationId: deviceManagement.comanagedDevices.managedDevice.createDeviceLogCollectionRequest
+            deleteUserFromSharedAppleDevice:
+              operationId: deviceManagement.comanagedDevices.managedDevice.deleteUserFromSharedAppleDevice
+            deprovision:
+              operationId: deviceManagement.comanagedDevices.managedDevice.deprovision
+            disable:
+              operationId: deviceManagement.comanagedDevices.managedDevice.disable
+            disableLostMode:
+              operationId: deviceManagement.comanagedDevices.managedDevice.disableLostMode
+            enableLostMode:
+              operationId: deviceManagement.comanagedDevices.managedDevice.enableLostMode
+            getCloudPcRemoteActionResults:
+              operationId: deviceManagement.comanagedDevices.managedDevice.getCloudPcRemoteActionResults
+            getCloudPcReviewStatus:
+              operationId: deviceManagement.comanagedDevices.managedDevice.getCloudPcReviewStatus
+            getFileVaultKey:
+              operationId: deviceManagement.comanagedDevices.managedDevice.getFileVaultKey
+            getNonCompliantSettings:
+              operationId: deviceManagement.comanagedDevices.managedDevice.getNonCompliantSettings
+            getOemWarranty:
+              operationId: deviceManagement.comanagedDevices.managedDevice.getOemWarranty
+            locateDevice:
+              operationId: deviceManagement.comanagedDevices.managedDevice.locateDevice
+            logoutSharedAppleDeviceActiveUser:
+              operationId: deviceManagement.comanagedDevices.managedDevice.logoutSharedAppleDeviceActiveUser
+            overrideComplianceState:
+              operationId: deviceManagement.comanagedDevices.managedDevice.overrideComplianceState
+            playLostModeSound:
+              operationId: deviceManagement.comanagedDevices.managedDevice.playLostModeSound
+            rebootNow:
+              operationId: deviceManagement.comanagedDevices.managedDevice.rebootNow
+            recoverPasscode:
+              operationId: deviceManagement.comanagedDevices.managedDevice.recoverPasscode
+            reenable:
+              operationId: deviceManagement.comanagedDevices.managedDevice.reenable
+            remoteLock:
+              operationId: deviceManagement.comanagedDevices.managedDevice.remoteLock
+            reprovisionCloudPc:
+              operationId: deviceManagement.comanagedDevices.managedDevice.reprovisionCloudPc
+            requestRemoteAssistance:
+              operationId: deviceManagement.comanagedDevices.managedDevice.requestRemoteAssistance
+            resetPasscode:
+              operationId: deviceManagement.comanagedDevices.managedDevice.resetPasscode
+            resizeCloudPc:
+              operationId: deviceManagement.comanagedDevices.managedDevice.resizeCloudPc
+            restoreCloudPc:
+              operationId: deviceManagement.comanagedDevices.managedDevice.restoreCloudPc
+            retire:
+              operationId: deviceManagement.comanagedDevices.managedDevice.retire
+            revokeAppleVppLicenses:
+              operationId: deviceManagement.comanagedDevices.managedDevice.revokeAppleVppLicenses
+            rotateBitLockerKeys:
+              operationId: deviceManagement.comanagedDevices.managedDevice.rotateBitLockerKeys
+            rotateFileVaultKey:
+              operationId: deviceManagement.comanagedDevices.managedDevice.rotateFileVaultKey
+            sendCustomNotificationToCompanyPortal:
+              operationId: deviceManagement.comanagedDevices.managedDevice.sendCustomNotificationToCompanyPortal
+            setCloudPcReviewStatus:
+              operationId: deviceManagement.comanagedDevices.managedDevice.setCloudPcReviewStatus
+            setDeviceName:
+              operationId: deviceManagement.comanagedDevices.managedDevice.setDeviceName
+            shutDown:
+              operationId: deviceManagement.comanagedDevices.managedDevice.shutDown
+            syncDevice:
+              operationId: deviceManagement.comanagedDevices.managedDevice.syncDevice
+            triggerConfigurationManagerAction:
+              operationId: deviceManagement.comanagedDevices.managedDevice.triggerConfigurationManagerAction
+            updateWindowsDeviceAccount:
+              operationId: deviceManagement.comanagedDevices.managedDevice.updateWindowsDeviceAccount
+            windowsDefenderScan:
+              operationId: deviceManagement.comanagedDevices.managedDevice.windowsDefenderScan
+            windowsDefenderUpdateSignatures:
+              operationId: deviceManagement.comanagedDevices.managedDevice.windowsDefenderUpdateSignatures
+            wipe:
+              operationId: deviceManagement.comanagedDevices.managedDevice.wipe
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3964,6 +4105,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.deviceLogCollectionResponse'
+          links:
+            createDownloadUrl:
+              operationId: deviceManagement.comanagedDevices.managedDevice.logCollectionRequests.deviceLogCollectionResponse.createDownloadUrl
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6348,6 +6492,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.dataSharingConsent'
+          links:
+            consentToDataSharing:
+              operationId: deviceManagement.dataSharingConsents.dataSharingConsent.consentToDataSharing
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7731,6 +7878,10 @@ paths:
               operationId: deviceManagement.DeviceCompliancePolicies.GetUserStatusOverview
               parameters:
                 deviceCompliancePolicy-id: $request.path.deviceCompliancePolicy-id
+            assign:
+              operationId: deviceManagement.deviceCompliancePolicies.deviceCompliancePolicy.assign
+            scheduleActionsForRules:
+              operationId: deviceManagement.deviceCompliancePolicies.deviceCompliancePolicy.scheduleActionsForRules
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10539,6 +10690,14 @@ paths:
               operationId: deviceManagement.DeviceConfigurations.GetUserStatusOverview
               parameters:
                 deviceConfiguration-id: $request.path.deviceConfiguration-id
+            assign:
+              operationId: deviceManagement.deviceConfigurations.deviceConfiguration.assign
+            assignedAccessMultiModeProfiles:
+              operationId: deviceManagement.deviceConfigurations.deviceConfiguration.assignedAccessMultiModeProfiles
+            getOmaSettingPlainTextValue:
+              operationId: deviceManagement.deviceConfigurations.deviceConfiguration.getOmaSettingPlainTextValue
+            windowsPrivacyAccessControls:
+              operationId: deviceManagement.deviceConfigurations.deviceConfiguration.windowsPrivacyAccessControls
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -12425,6 +12584,14 @@ paths:
               operationId: deviceManagement.DeviceHealthScripts.GetRunSummary
               parameters:
                 deviceHealthScript-id: $request.path.deviceHealthScript-id
+            assign:
+              operationId: deviceManagement.deviceHealthScripts.deviceHealthScript.assign
+            getGlobalScriptHighestAvailableVersion:
+              operationId: deviceManagement.deviceHealthScripts.deviceHealthScript.getGlobalScriptHighestAvailableVersion
+            getRemediationHistory:
+              operationId: deviceManagement.deviceHealthScripts.deviceHealthScript.getRemediationHistory
+            updateGlobalScript:
+              operationId: deviceManagement.deviceHealthScripts.deviceHealthScript.updateGlobalScript
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -13500,6 +13667,8 @@ paths:
               operationId: deviceManagement.DeviceManagementScripts.ListUserRunStates
               parameters:
                 deviceManagementScript-id: $request.path.deviceManagementScript-id
+            assign:
+              operationId: deviceManagement.deviceManagementScripts.deviceManagementScript.assign
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15453,6 +15622,8 @@ paths:
               operationId: deviceManagement.DeviceShellScripts.ListUserRunStates
               parameters:
                 deviceShellScript-id: $request.path.deviceShellScript-id
+            assign:
+              operationId: deviceManagement.deviceShellScripts.deviceShellScript.assign
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -17358,6 +17529,8 @@ paths:
               operationId: deviceManagement.EmbeddedSIMActivationCodePools.ListDeviceStates
               parameters:
                 embeddedSIMActivationCodePool-id: $request.path.embeddedSIMActivationCodePool-id
+            assign:
+              operationId: deviceManagement.embeddedSIMActivationCodePools.embeddedSIMActivationCodePool.assign
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -18043,6 +18216,10 @@ paths:
               operationId: deviceManagement.GroupPolicyConfigurations.ListDefinitionValues
               parameters:
                 groupPolicyConfiguration-id: $request.path.groupPolicyConfiguration-id
+            assign:
+              operationId: deviceManagement.groupPolicyConfigurations.groupPolicyConfiguration.assign
+            updateDefinitionValues:
+              operationId: deviceManagement.groupPolicyConfigurations.groupPolicyConfiguration.updateDefinitionValues
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -19329,6 +19506,16 @@ paths:
               operationId: deviceManagement.Intents.GetUserStateSummary
               parameters:
                 deviceManagementIntent-id: $request.path.deviceManagementIntent-id
+            assign:
+              operationId: deviceManagement.intents.deviceManagementIntent.assign
+            compare:
+              operationId: deviceManagement.intents.deviceManagementIntent.compare
+            createCopy:
+              operationId: deviceManagement.intents.deviceManagementIntent.createCopy
+            migrateToTemplate:
+              operationId: deviceManagement.intents.deviceManagementIntent.migrateToTemplate
+            updateSettings:
+              operationId: deviceManagement.intents.deviceManagementIntent.updateSettings
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -22816,6 +23003,88 @@ paths:
               operationId: deviceManagement.ManagedDevices.GetWindowsProtectionState
               parameters:
                 managedDevice-id: $request.path.managedDevice-id
+            activateDeviceEsim:
+              operationId: deviceManagement.managedDevices.managedDevice.activateDeviceEsim
+            bypassActivationLock:
+              operationId: deviceManagement.managedDevices.managedDevice.bypassActivationLock
+            cleanWindowsDevice:
+              operationId: deviceManagement.managedDevices.managedDevice.cleanWindowsDevice
+            createDeviceLogCollectionRequest:
+              operationId: deviceManagement.managedDevices.managedDevice.createDeviceLogCollectionRequest
+            deleteUserFromSharedAppleDevice:
+              operationId: deviceManagement.managedDevices.managedDevice.deleteUserFromSharedAppleDevice
+            deprovision:
+              operationId: deviceManagement.managedDevices.managedDevice.deprovision
+            disable:
+              operationId: deviceManagement.managedDevices.managedDevice.disable
+            disableLostMode:
+              operationId: deviceManagement.managedDevices.managedDevice.disableLostMode
+            enableLostMode:
+              operationId: deviceManagement.managedDevices.managedDevice.enableLostMode
+            getCloudPcRemoteActionResults:
+              operationId: deviceManagement.managedDevices.managedDevice.getCloudPcRemoteActionResults
+            getCloudPcReviewStatus:
+              operationId: deviceManagement.managedDevices.managedDevice.getCloudPcReviewStatus
+            getFileVaultKey:
+              operationId: deviceManagement.managedDevices.managedDevice.getFileVaultKey
+            getNonCompliantSettings:
+              operationId: deviceManagement.managedDevices.managedDevice.getNonCompliantSettings
+            getOemWarranty:
+              operationId: deviceManagement.managedDevices.managedDevice.getOemWarranty
+            locateDevice:
+              operationId: deviceManagement.managedDevices.managedDevice.locateDevice
+            logoutSharedAppleDeviceActiveUser:
+              operationId: deviceManagement.managedDevices.managedDevice.logoutSharedAppleDeviceActiveUser
+            overrideComplianceState:
+              operationId: deviceManagement.managedDevices.managedDevice.overrideComplianceState
+            playLostModeSound:
+              operationId: deviceManagement.managedDevices.managedDevice.playLostModeSound
+            rebootNow:
+              operationId: deviceManagement.managedDevices.managedDevice.rebootNow
+            recoverPasscode:
+              operationId: deviceManagement.managedDevices.managedDevice.recoverPasscode
+            reenable:
+              operationId: deviceManagement.managedDevices.managedDevice.reenable
+            remoteLock:
+              operationId: deviceManagement.managedDevices.managedDevice.remoteLock
+            reprovisionCloudPc:
+              operationId: deviceManagement.managedDevices.managedDevice.reprovisionCloudPc
+            requestRemoteAssistance:
+              operationId: deviceManagement.managedDevices.managedDevice.requestRemoteAssistance
+            resetPasscode:
+              operationId: deviceManagement.managedDevices.managedDevice.resetPasscode
+            resizeCloudPc:
+              operationId: deviceManagement.managedDevices.managedDevice.resizeCloudPc
+            restoreCloudPc:
+              operationId: deviceManagement.managedDevices.managedDevice.restoreCloudPc
+            retire:
+              operationId: deviceManagement.managedDevices.managedDevice.retire
+            revokeAppleVppLicenses:
+              operationId: deviceManagement.managedDevices.managedDevice.revokeAppleVppLicenses
+            rotateBitLockerKeys:
+              operationId: deviceManagement.managedDevices.managedDevice.rotateBitLockerKeys
+            rotateFileVaultKey:
+              operationId: deviceManagement.managedDevices.managedDevice.rotateFileVaultKey
+            sendCustomNotificationToCompanyPortal:
+              operationId: deviceManagement.managedDevices.managedDevice.sendCustomNotificationToCompanyPortal
+            setCloudPcReviewStatus:
+              operationId: deviceManagement.managedDevices.managedDevice.setCloudPcReviewStatus
+            setDeviceName:
+              operationId: deviceManagement.managedDevices.managedDevice.setDeviceName
+            shutDown:
+              operationId: deviceManagement.managedDevices.managedDevice.shutDown
+            syncDevice:
+              operationId: deviceManagement.managedDevices.managedDevice.syncDevice
+            triggerConfigurationManagerAction:
+              operationId: deviceManagement.managedDevices.managedDevice.triggerConfigurationManagerAction
+            updateWindowsDeviceAccount:
+              operationId: deviceManagement.managedDevices.managedDevice.updateWindowsDeviceAccount
+            windowsDefenderScan:
+              operationId: deviceManagement.managedDevices.managedDevice.windowsDefenderScan
+            windowsDefenderUpdateSignatures:
+              operationId: deviceManagement.managedDevices.managedDevice.windowsDefenderUpdateSignatures
+            wipe:
+              operationId: deviceManagement.managedDevices.managedDevice.wipe
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -24016,6 +24285,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.deviceLogCollectionResponse'
+          links:
+            createDownloadUrl:
+              operationId: deviceManagement.managedDevices.managedDevice.logCollectionRequests.deviceLogCollectionResponse.createDownloadUrl
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -26832,6 +27104,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.microsoftTunnelServerLogCollectionResponse'
+          links:
+            createDownloadUrl:
+              operationId: deviceManagement.microsoftTunnelServerLogCollectionResponses.microsoftTunnelServerLogCollectionResponse.createDownloadUrl
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -27069,6 +27344,8 @@ paths:
               operationId: deviceManagement.MicrosoftTunnelSites.ListMicrosoftTunnelServers
               parameters:
                 microsoftTunnelSite-id: $request.path.microsoftTunnelSite-id
+            requestUpgrade:
+              operationId: deviceManagement.microsoftTunnelSites.microsoftTunnelSite.requestUpgrade
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -27403,6 +27680,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.microsoftTunnelServer'
+          links:
+            createServerLogCollectionRequest:
+              operationId: deviceManagement.microsoftTunnelSites.microsoftTunnelSite.microsoftTunnelServers.microsoftTunnelServer.createServerLogCollectionRequest
+            getHealthMetrics:
+              operationId: deviceManagement.microsoftTunnelSites.microsoftTunnelSite.microsoftTunnelServers.microsoftTunnelServer.getHealthMetrics
+            getHealthMetricTimeSeries:
+              operationId: deviceManagement.microsoftTunnelSites.microsoftTunnelSite.microsoftTunnelServers.microsoftTunnelServer.getHealthMetricTimeSeries
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -27860,6 +28144,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.appLogCollectionRequest'
+          links:
+            createDownloadUrl:
+              operationId: deviceManagement.mobileAppTroubleshootingEvents.mobileAppTroubleshootingEvent.appLogCollectionRequests.appLogCollectionRequest.createDownloadUrl
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -28083,6 +28370,8 @@ paths:
               operationId: deviceManagement.NotificationMessageTemplates.ListLocalizedNotificationMessages
               parameters:
                 notificationMessageTemplate-id: $request.path.notificationMessageTemplate-id
+            sendTestMessage:
+              operationId: deviceManagement.notificationMessageTemplates.notificationMessageTemplate.sendTestMessage
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -28748,6 +29037,8 @@ paths:
               operationId: deviceManagement.ResourceAccessProfiles.ListAssignments
               parameters:
                 deviceManagementResourceAccessProfileBase-id: $request.path.deviceManagementResourceAccessProfileBase-id
+            assign:
+              operationId: deviceManagement.resourceAccessProfiles.deviceManagementResourceAccessProfileBase.assign
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -29498,6 +29789,10 @@ paths:
               operationId: deviceManagement.Templates.ListSettings
               parameters:
                 deviceManagementTemplate-id: $request.path.deviceManagementTemplate-id
+            compare:
+              operationId: deviceManagement.templates.deviceManagementTemplate.compare
+            createInstance:
+              operationId: deviceManagement.templates.deviceManagementTemplate.createInstance
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -30266,6 +30561,10 @@ paths:
               parameters:
                 deviceManagementTemplate-id: $request.path.deviceManagementTemplate-id
                 deviceManagementTemplate-id1: $request.path.deviceManagementTemplate-id1
+            compare:
+              operationId: deviceManagement.templates.deviceManagementTemplate.migratableTo.deviceManagementTemplate.compare
+            createInstance:
+              operationId: deviceManagement.templates.deviceManagementTemplate.migratableTo.deviceManagementTemplate.createInstance
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -36732,6 +37031,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.userExperienceAnalyticsDeviceScope'
+          links:
+            triggerDeviceScopeAction:
+              operationId: deviceManagement.userExperienceAnalyticsDeviceScope.triggerDeviceScopeAction
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -36941,6 +37243,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.userExperienceAnalyticsDeviceScope'
+          links:
+            triggerDeviceScopeAction:
+              operationId: deviceManagement.userExperienceAnalyticsDeviceScopes.userExperienceAnalyticsDeviceScope.triggerDeviceScopeAction
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -39004,6 +39309,8 @@ paths:
               operationId: deviceManagement.UserExperienceAnalyticsRegressionSummary.ListModelRegression
             operatingSystemRegression:
               operationId: deviceManagement.UserExperienceAnalyticsRegressionSummary.ListOperatingSystemRegression
+            summarizeDeviceRegressionPerformance:
+              operationId: deviceManagement.userExperienceAnalyticsRegressionSummary.summarizeDeviceRegressionPerformance
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

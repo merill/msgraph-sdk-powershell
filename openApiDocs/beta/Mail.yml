@@ -493,6 +493,10 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 mailFolder-id: $request.path.mailFolder-id
+            copy:
+              operationId: users.user.mailFolders.mailFolder.copy
+            move:
+              operationId: users.user.mailFolders.mailFolder.move
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -818,6 +822,10 @@ paths:
                 user-id: $request.path.user-id
                 mailFolder-id: $request.path.mailFolder-id
                 mailFolder-id1: $request.path.mailFolder-id1
+            copy:
+              operationId: users.user.mailFolders.mailFolder.childFolders.mailFolder.copy
+            move:
+              operationId: users.user.mailFolders.mailFolder.childFolders.mailFolder.move
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1571,6 +1579,26 @@ paths:
                 mailFolder-id: $request.path.mailFolder-id
                 mailFolder-id1: $request.path.mailFolder-id1
                 message-id: $request.path.message-id
+            copy:
+              operationId: users.user.mailFolders.mailFolder.childFolders.mailFolder.messages.message.copy
+            createForward:
+              operationId: users.user.mailFolders.mailFolder.childFolders.mailFolder.messages.message.createForward
+            createReply:
+              operationId: users.user.mailFolders.mailFolder.childFolders.mailFolder.messages.message.createReply
+            createReplyAll:
+              operationId: users.user.mailFolders.mailFolder.childFolders.mailFolder.messages.message.createReplyAll
+            forward:
+              operationId: users.user.mailFolders.mailFolder.childFolders.mailFolder.messages.message.forward
+            move:
+              operationId: users.user.mailFolders.mailFolder.childFolders.mailFolder.messages.message.move
+            reply:
+              operationId: users.user.mailFolders.mailFolder.childFolders.mailFolder.messages.message.reply
+            replyAll:
+              operationId: users.user.mailFolders.mailFolder.childFolders.mailFolder.messages.message.replyAll
+            send:
+              operationId: users.user.mailFolders.mailFolder.childFolders.mailFolder.messages.message.send
+            unsubscribe:
+              operationId: users.user.mailFolders.mailFolder.childFolders.mailFolder.messages.message.unsubscribe
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4876,6 +4904,26 @@ paths:
                 user-id: $request.path.user-id
                 mailFolder-id: $request.path.mailFolder-id
                 message-id: $request.path.message-id
+            copy:
+              operationId: users.user.mailFolders.mailFolder.messages.message.copy
+            createForward:
+              operationId: users.user.mailFolders.mailFolder.messages.message.createForward
+            createReply:
+              operationId: users.user.mailFolders.mailFolder.messages.message.createReply
+            createReplyAll:
+              operationId: users.user.mailFolders.mailFolder.messages.message.createReplyAll
+            forward:
+              operationId: users.user.mailFolders.mailFolder.messages.message.forward
+            move:
+              operationId: users.user.mailFolders.mailFolder.messages.message.move
+            reply:
+              operationId: users.user.mailFolders.mailFolder.messages.message.reply
+            replyAll:
+              operationId: users.user.mailFolders.mailFolder.messages.message.replyAll
+            send:
+              operationId: users.user.mailFolders.mailFolder.messages.message.send
+            unsubscribe:
+              operationId: users.user.mailFolders.mailFolder.messages.message.unsubscribe
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7555,6 +7603,26 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 message-id: $request.path.message-id
+            copy:
+              operationId: users.user.messages.message.copy
+            createForward:
+              operationId: users.user.messages.message.createForward
+            createReply:
+              operationId: users.user.messages.message.createReply
+            createReplyAll:
+              operationId: users.user.messages.message.createReplyAll
+            forward:
+              operationId: users.user.messages.message.forward
+            move:
+              operationId: users.user.messages.message.move
+            reply:
+              operationId: users.user.messages.message.reply
+            replyAll:
+              operationId: users.user.messages.message.replyAll
+            send:
+              operationId: users.user.messages.message.send
+            unsubscribe:
+              operationId: users.user.messages.message.unsubscribe
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

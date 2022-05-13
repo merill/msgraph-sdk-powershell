@@ -1967,6 +1967,8 @@ paths:
               operationId: identityGovernance.accessReviews.Definitions.ListInstances
               parameters:
                 accessReviewScheduleDefinition-id: $request.path.accessReviewScheduleDefinition-id
+            stop:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.stop
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2212,6 +2214,18 @@ paths:
               parameters:
                 accessReviewScheduleDefinition-id: $request.path.accessReviewScheduleDefinition-id
                 accessReviewInstance-id: $request.path.accessReviewInstance-id
+            acceptRecommendations:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.acceptRecommendations
+            applyDecisions:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.applyDecisions
+            batchRecordDecisions:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.batchRecordDecisions
+            resetDecisions:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.resetDecisions
+            sendReminder:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.sendReminder
+            stop:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.stop
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3565,6 +3579,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.accessReviewHistoryInstance'
+          links:
+            generateDownloadUri:
+              operationId: identityGovernance.accessReviews.historyDefinitions.accessReviewHistoryDefinition.instances.accessReviewHistoryInstance.generateDownloadUri
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5412,6 +5429,8 @@ paths:
               operationId: identityGovernance.entitlementManagement.AccessPackages.GetCatalog
               parameters:
                 accessPackage-id: $request.path.accessPackage-id
+            getApplicablePolicyRequirements:
+              operationId: identityGovernance.entitlementManagement.accessPackages.accessPackage.getApplicablePolicyRequirements
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6556,6 +6575,10 @@ paths:
               operationId: identityGovernance.entitlementManagement.AssignmentRequests.GetRequestor
               parameters:
                 accessPackageAssignmentRequest-id: $request.path.accessPackageAssignmentRequest-id
+            cancel:
+              operationId: identityGovernance.entitlementManagement.assignmentRequests.accessPackageAssignmentRequest.cancel
+            reprocess:
+              operationId: identityGovernance.entitlementManagement.assignmentRequests.accessPackageAssignmentRequest.reprocess
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7049,6 +7072,8 @@ paths:
               operationId: identityGovernance.entitlementManagement.Assignments.GetTarget
               parameters:
                 accessPackageAssignment-id: $request.path.accessPackageAssignment-id
+            reprocess:
+              operationId: identityGovernance.entitlementManagement.assignments.accessPackageAssignment.reprocess
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7759,6 +7784,8 @@ paths:
               parameters:
                 accessPackageCatalog-id: $request.path.accessPackageCatalog-id
                 accessPackage-id: $request.path.accessPackage-id
+            getApplicablePolicyRequirements:
+              operationId: identityGovernance.entitlementManagement.catalogs.accessPackageCatalog.accessPackages.accessPackage.getApplicablePolicyRequirements
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

@@ -10,8 +10,8 @@ paths:
     get:
       tags:
         - users.user
-      summary: Get entities from users
-      description: List users
+      summary: List users
+      description: 'Retrieve a list of [user](../resources/user.md) objects. This operation returns by default only a subset of the more commonly used properties for each user. These _default_ properties are noted in the [Properties](../resources/user.md#properties) section. To get properties that are _not_ returned by default, do a [GET operation](user-get.md) for the user and specify the properties in a `$select` OData query option.'
       operationId: users.user_ListUser
       parameters:
         - name: ConsistencyLevel
@@ -439,8 +439,8 @@ paths:
     post:
       tags:
         - users.user
-      summary: Add new entity to users
-      description: 'Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles'
+      summary: 'Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles'
+      description: 'In this tutorial, a fictitious company called Contoso Limited wishes to have its IT Helpdesk manage the lifecycle of employees’ access. The company has identified the Azure AD User Administrator role as the appropriate privileged role required by IT Helpdesk, and will use the PIM API to assign the role. You''ll create a role-assignable security group for IT Helpdesk and using the PIM API, assign the security group eligibility to the User Administrator role. By assigning the eligible role to a security group, Contoso has a more efficient way to manage administrator access to resources such as Azure AD roles. For example: Assigning eligibility instead of a persistently active User Administrator privilege allows the company to enforce **just-in-time access**, which grants temporary permissions to carry out the privileged tasks. After defining the role eligibility, the eligible group member then activates their assignment for a temporary period. All records of role activations will be auditable by the company.'
       operationId: users.user_CreateUser
       requestBody:
         description: New entity
@@ -463,8 +463,8 @@ paths:
     get:
       tags:
         - users.user
-      summary: Get entity from users by key
-      description: Helpers (examples that aren't included in the docs)
+      summary: Helpers (examples that aren't included in the docs)
+      description: ''
       operationId: users.user_GetUser
       parameters:
         - name: user-id
@@ -968,14 +968,80 @@ paths:
               operationId: users.GetTodo
               parameters:
                 user-id: $request.path.user-id
+            activateServicePlan:
+              operationId: users.user.activateServicePlan
+            assignLicense:
+              operationId: users.user.assignLicense
+            changePassword:
+              operationId: users.user.changePassword
+            checkMemberGroups:
+              operationId: users.user.checkMemberGroups
+            checkMemberObjects:
+              operationId: users.user.checkMemberObjects
+            exportDeviceAndAppManagementData:
+              operationId: users.user.exportDeviceAndAppManagementData
+            exportPersonalData:
+              operationId: users.user.exportPersonalData
+            findMeetingTimes:
+              operationId: users.user.findMeetingTimes
+            findRoomLists:
+              operationId: users.user.findRoomLists
+            findRooms:
+              operationId: users.user.findRooms
+            getEffectiveDeviceEnrollmentConfigurations:
+              operationId: users.user.getEffectiveDeviceEnrollmentConfigurations
+            getLoggedOnManagedDevices:
+              operationId: users.user.getLoggedOnManagedDevices
+            getMailTips:
+              operationId: users.user.getMailTips
+            getManagedAppDiagnosticStatuses:
+              operationId: users.user.getManagedAppDiagnosticStatuses
+            getManagedAppPolicies:
+              operationId: users.user.getManagedAppPolicies
+            getManagedDevicesWithAppFailures:
+              operationId: users.user.getManagedDevicesWithAppFailures
+            getManagedDevicesWithFailedOrPendingApps:
+              operationId: users.user.getManagedDevicesWithFailedOrPendingApps
+            getMemberGroups:
+              operationId: users.user.getMemberGroups
+            getMemberObjects:
+              operationId: users.user.getMemberObjects
+            invalidateAllRefreshTokens:
+              operationId: users.user.invalidateAllRefreshTokens
+            isManagedAppUserBlocked:
+              operationId: users.user.isManagedAppUserBlocked
+            reminderView:
+              operationId: users.user.reminderView
+            removeAllDevicesFromManagement:
+              operationId: users.user.removeAllDevicesFromManagement
+            reprocessLicenseAssignment:
+              operationId: users.user.reprocessLicenseAssignment
+            restore:
+              operationId: users.user.restore
+            revokeSignInSessions:
+              operationId: users.user.revokeSignInSessions
+            sendMail:
+              operationId: users.user.sendMail
+            translateExchangeIds:
+              operationId: users.user.translateExchangeIds
+            unblockManagedApps:
+              operationId: users.user.unblockManagedApps
+            wipeAndBlockManagedApps:
+              operationId: users.user.wipeAndBlockManagedApps
+            wipeManagedAppRegistrationByDeviceTag:
+              operationId: users.user.wipeManagedAppRegistrationByDeviceTag
+            wipeManagedAppRegistrationsByAzureAdDeviceId:
+              operationId: users.user.wipeManagedAppRegistrationsByAzureAdDeviceId
+            wipeManagedAppRegistrationsByDeviceTag:
+              operationId: users.user.wipeManagedAppRegistrationsByDeviceTag
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
     patch:
       tags:
         - users.user
-      summary: Update entity in users
-      description: 'Assign, update, or remove custom security attributes using the Microsoft Graph API (Preview)'
+      summary: 'Assign, update, or remove custom security attributes using the Microsoft Graph API (Preview)'
+      description: 'This article provides examples of how to assign, update, or remove different types of custom security attributes for users and applications (service principals). Custom security attributes can be assigned or updated only through a `PATCH` operation in an [Update user](/graph/api/user-update?view=graph-rest-beta&preserve-view=true) or [Update servicePrincipal](/graph/api/serviceprincipal-update?view=graph-rest-beta&preserve-view=true) request.'
       operationId: users.user_UpdateUser
       parameters:
         - name: user-id
@@ -1001,8 +1067,8 @@ paths:
     delete:
       tags:
         - users.user
-      summary: Delete entity from users
-      description: 'Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles'
+      summary: 'Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles'
+      description: 'In this tutorial, a fictitious company called Contoso Limited wishes to have its IT Helpdesk manage the lifecycle of employees’ access. The company has identified the Azure AD User Administrator role as the appropriate privileged role required by IT Helpdesk, and will use the PIM API to assign the role. You''ll create a role-assignable security group for IT Helpdesk and using the PIM API, assign the security group eligibility to the User Administrator role. By assigning the eligible role to a security group, Contoso has a more efficient way to manage administrator access to resources such as Azure AD roles. For example: Assigning eligibility instead of a persistently active User Administrator privilege allows the company to enforce **just-in-time access**, which grants temporary permissions to carry out the privileged tasks. After defining the role eligibility, the eligible group member then activates their assignment for a temporary period. All records of role activations will be auditable by the company.'
       operationId: users.user_DeleteUser
       parameters:
         - name: user-id
@@ -2340,6 +2406,10 @@ paths:
               operationId: users.Outlook.ListTasks
               parameters:
                 user-id: $request.path.user-id
+            supportedLanguages:
+              operationId: users.user.outlook.supportedLanguages
+            supportedTimeZones:
+              operationId: users.user.outlook.supportedTimeZones
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3575,6 +3645,8 @@ paths:
                 user-id: $request.path.user-id
                 outlookTaskFolder-id: $request.path.outlookTaskFolder-id
                 outlookTask-id: $request.path.outlookTask-id
+            complete:
+              operationId: users.user.outlook.taskFolders.outlookTaskFolder.tasks.outlookTask.complete
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5871,6 +5943,8 @@ paths:
                 outlookTaskGroup-id: $request.path.outlookTaskGroup-id
                 outlookTaskFolder-id: $request.path.outlookTaskFolder-id
                 outlookTask-id: $request.path.outlookTask-id
+            complete:
+              operationId: users.user.outlook.taskGroups.outlookTaskGroup.taskFolders.outlookTaskFolder.tasks.outlookTask.complete
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7176,6 +7250,8 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 outlookTask-id: $request.path.outlookTask-id
+            complete:
+              operationId: users.user.outlook.tasks.outlookTask.complete
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

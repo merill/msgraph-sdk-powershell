@@ -2808,8 +2808,8 @@ paths:
     get:
       tags:
         - planner.planner
-      summary: Get planner
-      description: planner resource type
+      summary: planner resource type
+      description: The **planner** resource is the entry point for the Planner object model. It returns a singleton **planner** resource.  It doesn't contain any usable properties.
       operationId: planner.planner_GetPlanner
       parameters:
         - name: $select

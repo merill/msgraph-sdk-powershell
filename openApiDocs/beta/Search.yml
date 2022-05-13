@@ -1458,6 +1458,8 @@ paths:
               operationId: search.ListBookmarks
             qnas:
               operationId: search.ListQnas
+            query:
+              operationId: search.query
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

@@ -31,7 +31,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -62,7 +62,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -1017,6 +1017,10 @@ paths:
               operationId: admin.windows.updates.deployments.Audience.ListMembers
               parameters:
                 deployment-id: $request.path.deployment-id
+            updateAudience:
+              operationId: admin.windows.updates.deployments.deployment.audience.updateAudience
+            updateAudienceById:
+              operationId: admin.windows.updates.deployments.deployment.audience.updateAudienceById
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1219,6 +1223,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.windowsUpdates.updatableAsset'
+          links:
+            addMembers:
+              operationId: admin.windows.updates.deployments.deployment.audience.exclusions.updatableAsset.addMembers
+            addMembersById:
+              operationId: admin.windows.updates.deployments.deployment.audience.exclusions.updatableAsset.addMembersById
+            removeMembers:
+              operationId: admin.windows.updates.deployments.deployment.audience.exclusions.updatableAsset.removeMembers
+            removeMembersById:
+              operationId: admin.windows.updates.deployments.deployment.audience.exclusions.updatableAsset.removeMembersById
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1759,6 +1772,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.windowsUpdates.updatableAsset'
+          links:
+            addMembers:
+              operationId: admin.windows.updates.deployments.deployment.audience.members.updatableAsset.addMembers
+            addMembersById:
+              operationId: admin.windows.updates.deployments.deployment.audience.members.updatableAsset.addMembersById
+            removeMembers:
+              operationId: admin.windows.updates.deployments.deployment.audience.members.updatableAsset.removeMembers
+            removeMembersById:
+              operationId: admin.windows.updates.deployments.deployment.audience.members.updatableAsset.removeMembersById
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2376,6 +2398,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.windowsUpdates.updatableAsset'
+          links:
+            addMembers:
+              operationId: admin.windows.updates.updatableAssets.updatableAsset.addMembers
+            addMembersById:
+              operationId: admin.windows.updates.updatableAssets.updatableAsset.addMembersById
+            removeMembers:
+              operationId: admin.windows.updates.updatableAssets.updatableAsset.removeMembers
+            removeMembersById:
+              operationId: admin.windows.updates.updatableAssets.updatableAsset.removeMembersById
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

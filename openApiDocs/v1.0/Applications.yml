@@ -10,8 +10,8 @@ paths:
     get:
       tags:
         - applications.application
-      summary: Get entities from applications
-      description: List applications
+      summary: List applications
+      description: 'Get the list of [applications](../resources/application.md) in this organization.'
       operationId: applications.application_ListApplication
       parameters:
         - name: ConsistencyLevel
@@ -185,8 +185,8 @@ paths:
     post:
       tags:
         - applications.application
-      summary: Add new entity to applications
-      description: Create application
+      summary: Create application
+      description: 'Create a new [application](../resources/application.md) object.'
       operationId: applications.application_CreateApplication
       requestBody:
         description: New entity
@@ -209,8 +209,8 @@ paths:
     get:
       tags:
         - applications.application
-      summary: Get entity from applications by key
-      description: Get application
+      summary: Get application
+      description: 'Get the properties and relationships of an [application](../resources/application.md) object.'
       operationId: applications.application_GetApplication
       parameters:
         - name: application-id
@@ -320,14 +320,36 @@ paths:
               operationId: applications.ListTokenLifetimePolicies
               parameters:
                 application-id: $request.path.application-id
+            addKey:
+              operationId: applications.application.addKey
+            addPassword:
+              operationId: applications.application.addPassword
+            checkMemberGroups:
+              operationId: applications.application.checkMemberGroups
+            checkMemberObjects:
+              operationId: applications.application.checkMemberObjects
+            getMemberGroups:
+              operationId: applications.application.getMemberGroups
+            getMemberObjects:
+              operationId: applications.application.getMemberObjects
+            removeKey:
+              operationId: applications.application.removeKey
+            removePassword:
+              operationId: applications.application.removePassword
+            restore:
+              operationId: applications.application.restore
+            setVerifiedPublisher:
+              operationId: applications.application.setVerifiedPublisher
+            unsetVerifiedPublisher:
+              operationId: applications.application.unsetVerifiedPublisher
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
     patch:
       tags:
         - applications.application
-      summary: Update entity in applications
-      description: Configure required Azure AD Graph permissions for an app registration
+      summary: Configure required Azure AD Graph permissions for an app registration
+      description: 'However, your app might still temporarily require Azure AD Graph permissions to access resources. This article describes the following four methods for configuring required Azure AD Graph permissions for your app registration:'
       operationId: applications.application_UpdateApplication
       parameters:
         - name: application-id
@@ -353,8 +375,8 @@ paths:
     delete:
       tags:
         - applications.application
-      summary: Delete entity from applications
-      description: Delete application
+      summary: Delete application
+      description: 'Deletes an application. When deleted, apps are moved to a temporary container and can be restored within 30 days. After that time, they are permanently deleted.'
       operationId: applications.application_DeleteApplication
       parameters:
         - name: application-id
@@ -1848,8 +1870,8 @@ paths:
     get:
       tags:
         - applicationTemplates.applicationTemplate
-      summary: Get entities from applicationTemplates
-      description: List applicationTemplates
+      summary: List applicationTemplates
+      description: 'Retrieve a list of [applicationTemplate](../resources/applicationtemplate.md) objects from the Azure AD application gallery.'
       operationId: applicationTemplates.applicationTemplate_ListApplicationTemplate
       parameters:
         - $ref: '#/components/parameters/top'
@@ -1953,8 +1975,8 @@ paths:
     get:
       tags:
         - applicationTemplates.applicationTemplate
-      summary: Get entity from applicationTemplates by key
-      description: Get applicationTemplate
+      summary: Get applicationTemplate
+      description: 'Retrieve the properties of an [applicationTemplate](../resources/applicationtemplate.md) object.'
       operationId: applicationTemplates.applicationTemplate_GetApplicationTemplate
       parameters:
         - name: applicationTemplate-id
@@ -2003,6 +2025,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.applicationTemplate'
+          links:
+            instantiate:
+              operationId: applicationTemplates.applicationTemplate.instantiate
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2345,8 +2370,8 @@ paths:
     get:
       tags:
         - servicePrincipals.servicePrincipal
-      summary: Get entities from servicePrincipals
-      description: Configure required Azure AD Graph permissions for an app registration
+      summary: Configure required Azure AD Graph permissions for an app registration
+      description: 'However, your app might still temporarily require Azure AD Graph permissions to access resources. This article describes the following four methods for configuring required Azure AD Graph permissions for your app registration:'
       operationId: servicePrincipals.servicePrincipal_ListServicePrincipal
       parameters:
         - name: ConsistencyLevel
@@ -2539,8 +2564,8 @@ paths:
     post:
       tags:
         - servicePrincipals.servicePrincipal
-      summary: Add new entity to servicePrincipals
-      description: Create servicePrincipal
+      summary: Create servicePrincipal
+      description: 'Create a new [servicePrincipal](../resources/serviceprincipal.md) object.'
       operationId: servicePrincipals.servicePrincipal_CreateServicePrincipal
       requestBody:
         description: New entity
@@ -2563,8 +2588,8 @@ paths:
     get:
       tags:
         - servicePrincipals.servicePrincipal
-      summary: Get entity from servicePrincipals by key
-      description: Get servicePrincipal
+      summary: Get servicePrincipal
+      description: 'Retrieve the properties and relationships of a [servicePrincipal](../resources/serviceprincipal.md) object.'
       operationId: servicePrincipals.servicePrincipal_GetServicePrincipal
       parameters:
         - name: servicePrincipal-id
@@ -2723,14 +2748,34 @@ paths:
               operationId: servicePrincipals.ListTransitiveMemberOf
               parameters:
                 servicePrincipal-id: $request.path.servicePrincipal-id
+            addKey:
+              operationId: servicePrincipals.servicePrincipal.addKey
+            addPassword:
+              operationId: servicePrincipals.servicePrincipal.addPassword
+            addTokenSigningCertificate:
+              operationId: servicePrincipals.servicePrincipal.addTokenSigningCertificate
+            checkMemberGroups:
+              operationId: servicePrincipals.servicePrincipal.checkMemberGroups
+            checkMemberObjects:
+              operationId: servicePrincipals.servicePrincipal.checkMemberObjects
+            getMemberGroups:
+              operationId: servicePrincipals.servicePrincipal.getMemberGroups
+            getMemberObjects:
+              operationId: servicePrincipals.servicePrincipal.getMemberObjects
+            removeKey:
+              operationId: servicePrincipals.servicePrincipal.removeKey
+            removePassword:
+              operationId: servicePrincipals.servicePrincipal.removePassword
+            restore:
+              operationId: servicePrincipals.servicePrincipal.restore
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
     patch:
       tags:
         - servicePrincipals.servicePrincipal
-      summary: Update entity in servicePrincipals
-      description: 'Assign, update, or remove custom security attributes using the Microsoft Graph API (Preview)'
+      summary: 'Assign, update, or remove custom security attributes using the Microsoft Graph API (Preview)'
+      description: 'This article provides examples of how to assign, update, or remove different types of custom security attributes for users and applications (service principals). Custom security attributes can be assigned or updated only through a `PATCH` operation in an [Update user](/graph/api/user-update?view=graph-rest-beta&preserve-view=true) or [Update servicePrincipal](/graph/api/serviceprincipal-update?view=graph-rest-beta&preserve-view=true) request.'
       operationId: servicePrincipals.servicePrincipal_UpdateServicePrincipal
       parameters:
         - name: servicePrincipal-id
@@ -2756,8 +2801,8 @@ paths:
     delete:
       tags:
         - servicePrincipals.servicePrincipal
-      summary: Delete entity from servicePrincipals
-      description: Delete servicePrincipal
+      summary: Delete servicePrincipal
+      description: 'Delete a [servicePrincipal](../resources/serviceprincipal.md) object.'
       operationId: servicePrincipals.servicePrincipal_DeleteServicePrincipal
       parameters:
         - name: servicePrincipal-id
@@ -3552,6 +3597,468 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/servicePrincipals/{servicePrincipal-id}/createdObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.addKey':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action addKey
+      operationId: servicePrincipals.createdObjects.microsoft.graph.servicePrincipal_addKey
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyCredential:
+                  $ref: '#/components/schemas/microsoft.graph.keyCredential'
+                passwordCredential:
+                  $ref: '#/components/schemas/microsoft.graph.passwordCredential'
+                proof:
+                  type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.keyCredential'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/createdObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.addPassword':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action addPassword
+      operationId: servicePrincipals.createdObjects.microsoft.graph.servicePrincipal_addPassword
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                passwordCredential:
+                  $ref: '#/components/schemas/microsoft.graph.passwordCredential'
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.passwordCredential'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/createdObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.addTokenSigningCertificate':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action addTokenSigningCertificate
+      operationId: servicePrincipals.createdObjects.microsoft.graph.servicePrincipal_addTokenSigningCertificate
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                displayName:
+                  type: string
+                  nullable: true
+                endDateTime:
+                  pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+                  type: string
+                  format: date-time
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.selfSignedCertificate'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/createdObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.checkMemberGroups':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action checkMemberGroups
+      operationId: servicePrincipals.createdObjects.microsoft.graph.servicePrincipal_checkMemberGroups
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                groupIds:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/createdObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.checkMemberObjects':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action checkMemberObjects
+      operationId: servicePrincipals.createdObjects.microsoft.graph.servicePrincipal_checkMemberObjects
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/createdObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.getMemberGroups':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action getMemberGroups
+      operationId: servicePrincipals.createdObjects.microsoft.graph.servicePrincipal_getMemberGroups
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/createdObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.getMemberObjects':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action getMemberObjects
+      operationId: servicePrincipals.createdObjects.microsoft.graph.servicePrincipal_getMemberObjects
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/createdObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.removeKey':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action removeKey
+      operationId: servicePrincipals.createdObjects.microsoft.graph.servicePrincipal_removeKey
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+                proof:
+                  type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/createdObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.removePassword':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action removePassword
+      operationId: servicePrincipals.createdObjects.microsoft.graph.servicePrincipal_removePassword
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/createdObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.restore':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action restore
+      operationId: servicePrincipals.createdObjects.microsoft.graph.servicePrincipal_restore
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/servicePrincipals/{servicePrincipal-id}/delegatedPermissionClassifications':
     get:
       tags:
@@ -4298,6 +4805,468 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/servicePrincipals/{servicePrincipal-id}/memberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.addKey':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action addKey
+      operationId: servicePrincipals.memberOf.microsoft.graph.servicePrincipal_addKey
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyCredential:
+                  $ref: '#/components/schemas/microsoft.graph.keyCredential'
+                passwordCredential:
+                  $ref: '#/components/schemas/microsoft.graph.passwordCredential'
+                proof:
+                  type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.keyCredential'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/memberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.addPassword':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action addPassword
+      operationId: servicePrincipals.memberOf.microsoft.graph.servicePrincipal_addPassword
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                passwordCredential:
+                  $ref: '#/components/schemas/microsoft.graph.passwordCredential'
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.passwordCredential'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/memberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.addTokenSigningCertificate':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action addTokenSigningCertificate
+      operationId: servicePrincipals.memberOf.microsoft.graph.servicePrincipal_addTokenSigningCertificate
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                displayName:
+                  type: string
+                  nullable: true
+                endDateTime:
+                  pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+                  type: string
+                  format: date-time
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.selfSignedCertificate'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/memberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.checkMemberGroups':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action checkMemberGroups
+      operationId: servicePrincipals.memberOf.microsoft.graph.servicePrincipal_checkMemberGroups
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                groupIds:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/memberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.checkMemberObjects':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action checkMemberObjects
+      operationId: servicePrincipals.memberOf.microsoft.graph.servicePrincipal_checkMemberObjects
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/memberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.getMemberGroups':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action getMemberGroups
+      operationId: servicePrincipals.memberOf.microsoft.graph.servicePrincipal_getMemberGroups
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/memberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.getMemberObjects':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action getMemberObjects
+      operationId: servicePrincipals.memberOf.microsoft.graph.servicePrincipal_getMemberObjects
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/memberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.removeKey':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action removeKey
+      operationId: servicePrincipals.memberOf.microsoft.graph.servicePrincipal_removeKey
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+                proof:
+                  type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/memberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.removePassword':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action removePassword
+      operationId: servicePrincipals.memberOf.microsoft.graph.servicePrincipal_removePassword
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/memberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.restore':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action restore
+      operationId: servicePrincipals.memberOf.microsoft.graph.servicePrincipal_restore
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/servicePrincipals/{servicePrincipal-id}/microsoft.graph.addKey':
     post:
       tags:
@@ -4962,6 +5931,468 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/servicePrincipals/{servicePrincipal-id}/ownedObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.addKey':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action addKey
+      operationId: servicePrincipals.ownedObjects.microsoft.graph.servicePrincipal_addKey
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyCredential:
+                  $ref: '#/components/schemas/microsoft.graph.keyCredential'
+                passwordCredential:
+                  $ref: '#/components/schemas/microsoft.graph.passwordCredential'
+                proof:
+                  type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.keyCredential'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/ownedObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.addPassword':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action addPassword
+      operationId: servicePrincipals.ownedObjects.microsoft.graph.servicePrincipal_addPassword
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                passwordCredential:
+                  $ref: '#/components/schemas/microsoft.graph.passwordCredential'
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.passwordCredential'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/ownedObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.addTokenSigningCertificate':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action addTokenSigningCertificate
+      operationId: servicePrincipals.ownedObjects.microsoft.graph.servicePrincipal_addTokenSigningCertificate
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                displayName:
+                  type: string
+                  nullable: true
+                endDateTime:
+                  pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+                  type: string
+                  format: date-time
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.selfSignedCertificate'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/ownedObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.checkMemberGroups':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action checkMemberGroups
+      operationId: servicePrincipals.ownedObjects.microsoft.graph.servicePrincipal_checkMemberGroups
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                groupIds:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/ownedObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.checkMemberObjects':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action checkMemberObjects
+      operationId: servicePrincipals.ownedObjects.microsoft.graph.servicePrincipal_checkMemberObjects
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/ownedObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.getMemberGroups':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action getMemberGroups
+      operationId: servicePrincipals.ownedObjects.microsoft.graph.servicePrincipal_getMemberGroups
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/ownedObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.getMemberObjects':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action getMemberObjects
+      operationId: servicePrincipals.ownedObjects.microsoft.graph.servicePrincipal_getMemberObjects
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/ownedObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.removeKey':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action removeKey
+      operationId: servicePrincipals.ownedObjects.microsoft.graph.servicePrincipal_removeKey
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+                proof:
+                  type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/ownedObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.removePassword':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action removePassword
+      operationId: servicePrincipals.ownedObjects.microsoft.graph.servicePrincipal_removePassword
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/ownedObjects/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.restore':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action restore
+      operationId: servicePrincipals.ownedObjects.microsoft.graph.servicePrincipal_restore
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/servicePrincipals/{servicePrincipal-id}/owners':
     get:
       tags:
@@ -5088,6 +6519,468 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/servicePrincipals/{servicePrincipal-id}/owners/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.addKey':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action addKey
+      operationId: servicePrincipals.owners.microsoft.graph.servicePrincipal_addKey
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyCredential:
+                  $ref: '#/components/schemas/microsoft.graph.keyCredential'
+                passwordCredential:
+                  $ref: '#/components/schemas/microsoft.graph.passwordCredential'
+                proof:
+                  type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.keyCredential'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/owners/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.addPassword':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action addPassword
+      operationId: servicePrincipals.owners.microsoft.graph.servicePrincipal_addPassword
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                passwordCredential:
+                  $ref: '#/components/schemas/microsoft.graph.passwordCredential'
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.passwordCredential'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/owners/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.addTokenSigningCertificate':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action addTokenSigningCertificate
+      operationId: servicePrincipals.owners.microsoft.graph.servicePrincipal_addTokenSigningCertificate
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                displayName:
+                  type: string
+                  nullable: true
+                endDateTime:
+                  pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+                  type: string
+                  format: date-time
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.selfSignedCertificate'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/owners/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.checkMemberGroups':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action checkMemberGroups
+      operationId: servicePrincipals.owners.microsoft.graph.servicePrincipal_checkMemberGroups
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                groupIds:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/owners/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.checkMemberObjects':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action checkMemberObjects
+      operationId: servicePrincipals.owners.microsoft.graph.servicePrincipal_checkMemberObjects
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/owners/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.getMemberGroups':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action getMemberGroups
+      operationId: servicePrincipals.owners.microsoft.graph.servicePrincipal_getMemberGroups
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/owners/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.getMemberObjects':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action getMemberObjects
+      operationId: servicePrincipals.owners.microsoft.graph.servicePrincipal_getMemberObjects
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/owners/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.removeKey':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action removeKey
+      operationId: servicePrincipals.owners.microsoft.graph.servicePrincipal_removeKey
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+                proof:
+                  type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/owners/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.removePassword':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action removePassword
+      operationId: servicePrincipals.owners.microsoft.graph.servicePrincipal_removePassword
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/owners/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.restore':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action restore
+      operationId: servicePrincipals.owners.microsoft.graph.servicePrincipal_restore
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/servicePrincipals/{servicePrincipal-id}/tokenIssuancePolicies':
     get:
       tags:
@@ -5516,6 +7409,468 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/servicePrincipals/{servicePrincipal-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.addKey':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action addKey
+      operationId: servicePrincipals.transitiveMemberOf.microsoft.graph.servicePrincipal_addKey
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyCredential:
+                  $ref: '#/components/schemas/microsoft.graph.keyCredential'
+                passwordCredential:
+                  $ref: '#/components/schemas/microsoft.graph.passwordCredential'
+                proof:
+                  type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.keyCredential'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.addPassword':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action addPassword
+      operationId: servicePrincipals.transitiveMemberOf.microsoft.graph.servicePrincipal_addPassword
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                passwordCredential:
+                  $ref: '#/components/schemas/microsoft.graph.passwordCredential'
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.passwordCredential'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.addTokenSigningCertificate':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action addTokenSigningCertificate
+      operationId: servicePrincipals.transitiveMemberOf.microsoft.graph.servicePrincipal_addTokenSigningCertificate
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                displayName:
+                  type: string
+                  nullable: true
+                endDateTime:
+                  pattern: '^[0-9]{4,}-(0[1-9]|1[012])-(0[1-9]|[12][0-9]|3[01])T([01][0-9]|2[0-3]):[0-5][0-9]:[0-5][0-9]([.][0-9]{1,12})?(Z|[+-][0-9][0-9]:[0-9][0-9])$'
+                  type: string
+                  format: date-time
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.selfSignedCertificate'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.checkMemberGroups':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action checkMemberGroups
+      operationId: servicePrincipals.transitiveMemberOf.microsoft.graph.servicePrincipal_checkMemberGroups
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                groupIds:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.checkMemberObjects':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action checkMemberObjects
+      operationId: servicePrincipals.transitiveMemberOf.microsoft.graph.servicePrincipal_checkMemberObjects
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.getMemberGroups':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action getMemberGroups
+      operationId: servicePrincipals.transitiveMemberOf.microsoft.graph.servicePrincipal_getMemberGroups
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.getMemberObjects':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action getMemberObjects
+      operationId: servicePrincipals.transitiveMemberOf.microsoft.graph.servicePrincipal_getMemberObjects
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.removeKey':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action removeKey
+      operationId: servicePrincipals.transitiveMemberOf.microsoft.graph.servicePrincipal_removeKey
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+                proof:
+                  type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.removePassword':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action removePassword
+      operationId: servicePrincipals.transitiveMemberOf.microsoft.graph.servicePrincipal_removePassword
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                keyId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/servicePrincipals/{servicePrincipal-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.servicePrincipal/microsoft.graph.restore':
+    post:
+      tags:
+        - servicePrincipals.Actions
+      summary: Invoke action restore
+      operationId: servicePrincipals.transitiveMemberOf.microsoft.graph.servicePrincipal_restore
+      parameters:
+        - name: servicePrincipal-id
+          in: path
+          description: 'key: id of servicePrincipal'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: servicePrincipal
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   /servicePrincipals/microsoft.graph.delta():
     get:
       tags:
@@ -6527,50 +8882,6 @@ components:
           type: object
           additionalProperties:
             type: object
-    microsoft.graph.delegatedPermissionClassification:
-      allOf:
-        - $ref: '#/components/schemas/microsoft.graph.entity'
-        - title: delegatedPermissionClassification
-          type: object
-          properties:
-            classification:
-              $ref: '#/components/schemas/microsoft.graph.permissionClassificationType'
-            permissionId:
-              type: string
-              description: The unique identifier (id) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
-              nullable: true
-            permissionName:
-              type: string
-              description: The claim value (value) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Does not support $filter.
-              nullable: true
-          additionalProperties:
-            type: object
-    microsoft.graph.endpoint:
-      allOf:
-        - $ref: '#/components/schemas/microsoft.graph.directoryObject'
-        - title: endpoint
-          type: object
-          properties:
-            capability:
-              type: string
-              description: 'Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.'
-            providerId:
-              type: string
-              description: Application id of the publishing underlying service. Not nullable. Read-only.
-              nullable: true
-            providerName:
-              type: string
-              description: Name of the publishing underlying service. Read-only.
-              nullable: true
-            providerResourceId:
-              type: string
-              description: 'For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.'
-              nullable: true
-            uri:
-              type: string
-              description: URL of the published resource. Not nullable. Read-only.
-          additionalProperties:
-            type: object
     microsoft.graph.selfSignedCertificate:
       title: selfSignedCertificate
       type: object
@@ -6621,6 +8932,50 @@ components:
           nullable: true
       additionalProperties:
         type: object
+    microsoft.graph.delegatedPermissionClassification:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.entity'
+        - title: delegatedPermissionClassification
+          type: object
+          properties:
+            classification:
+              $ref: '#/components/schemas/microsoft.graph.permissionClassificationType'
+            permissionId:
+              type: string
+              description: The unique identifier (id) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Required on create. Does not support $filter.
+              nullable: true
+            permissionName:
+              type: string
+              description: The claim value (value) for the delegated permission listed in the publishedPermissionScopes collection of the servicePrincipal. Does not support $filter.
+              nullable: true
+          additionalProperties:
+            type: object
+    microsoft.graph.endpoint:
+      allOf:
+        - $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        - title: endpoint
+          type: object
+          properties:
+            capability:
+              type: string
+              description: 'Describes the capability that is associated with this resource. (e.g. Messages, Conversations, etc.) Not nullable. Read-only.'
+            providerId:
+              type: string
+              description: Application id of the publishing underlying service. Not nullable. Read-only.
+              nullable: true
+            providerName:
+              type: string
+              description: Name of the publishing underlying service. Read-only.
+              nullable: true
+            providerResourceId:
+              type: string
+              description: 'For Microsoft 365 groups, this is set to a well-known name for the resource (e.g. Yammer.FeedURL etc.). Not nullable. Read-only.'
+              nullable: true
+            uri:
+              type: string
+              description: URL of the published resource. Not nullable. Read-only.
+          additionalProperties:
+            type: object
     microsoft.graph.oAuth2PermissionGrant:
       allOf:
         - $ref: '#/components/schemas/microsoft.graph.entity'

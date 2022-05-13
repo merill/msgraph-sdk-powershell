@@ -587,8 +587,8 @@ paths:
     get:
       tags:
         - chats.chat
-      summary: Get entities from chats
-      description: List chats
+      summary: List chats
+      description: 'Retrieve the list of [chats](../resources/chat.md) that the user is part of.'
       operationId: chats.chat_ListChat
       parameters:
         - $ref: '#/components/parameters/top'
@@ -674,8 +674,8 @@ paths:
     post:
       tags:
         - chats.chat
-      summary: Add new entity to chats
-      description: Create chat
+      summary: Create chat
+      description: 'Create a new [chat](../resources/chat.md) object.'
       operationId: chats.chat_CreateChat
       requestBody:
         description: New entity
@@ -771,6 +771,8 @@ paths:
               operationId: chats.ListTabs
               parameters:
                 chat-id: $request.path.chat-id
+            sendActivityNotification:
+              operationId: chats.chat.sendActivityNotification
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -992,6 +994,8 @@ paths:
               parameters:
                 chat-id: $request.path.chat-id
                 teamsAppInstallation-id: $request.path.teamsAppInstallation-id
+            upgrade:
+              operationId: chats.chat.installedApps.teamsAppInstallation.upgrade
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3549,6 +3553,12 @@ paths:
               parameters:
                 group-id: $request.path.group-id
                 channel-id: $request.path.channel-id
+            completeMigration:
+              operationId: groups.group.team.channels.channel.completeMigration
+            provisionEmail:
+              operationId: groups.group.team.channels.channel.provisionEmail
+            removeEmail:
+              operationId: groups.group.team.channels.channel.removeEmail
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6246,6 +6256,8 @@ paths:
               parameters:
                 group-id: $request.path.group-id
                 teamsAppInstallation-id: $request.path.teamsAppInstallation-id
+            upgrade:
+              operationId: groups.group.team.installedApps.teamsAppInstallation.upgrade
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7006,6 +7018,12 @@ paths:
               operationId: groups.team.PrimaryChannel.ListTabs
               parameters:
                 group-id: $request.path.group-id
+            completeMigration:
+              operationId: groups.group.team.primaryChannel.completeMigration
+            provisionEmail:
+              operationId: groups.group.team.primaryChannel.provisionEmail
+            removeEmail:
+              operationId: groups.group.team.primaryChannel.removeEmail
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9128,6 +9146,8 @@ paths:
               operationId: groups.team.Schedule.ListTimesOff
               parameters:
                 group-id: $request.path.group-id
+            share:
+              operationId: groups.group.team.schedule.share
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11400,8 +11420,8 @@ paths:
     get:
       tags:
         - teams.team
-      summary: Get entities from teams
-      description: List teams
+      summary: List teams
+      description: 'List all [teams](../resources/team.md) in an organization.'
       operationId: teams.team_ListTeam
       parameters:
         - $ref: '#/components/parameters/top'
@@ -11513,8 +11533,8 @@ paths:
     post:
       tags:
         - teams.team
-      summary: Add new entity to teams
-      description: Create team
+      summary: Create team
+      description: 'Create a new [team](../resources/team.md).'
       operationId: teams.team_CreateTeam
       requestBody:
         description: New entity
@@ -11537,8 +11557,8 @@ paths:
     get:
       tags:
         - teams.team
-      summary: Get entity from teams by key
-      description: Get team
+      summary: Get team
+      description: 'Retrieve the properties and relationships of the specified [team](../resources/team.md).'
       operationId: teams.team_GetTeam
       parameters:
         - name: team-id
@@ -11641,14 +11661,24 @@ paths:
               operationId: teams.GetSchedule
               parameters:
                 team-id: $request.path.team-id
+            archive:
+              operationId: teams.team.archive
+            clone:
+              operationId: teams.team.clone
+            completeMigration:
+              operationId: teams.team.completeMigration
+            sendActivityNotification:
+              operationId: teams.team.sendActivityNotification
+            unarchive:
+              operationId: teams.team.unarchive
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
     patch:
       tags:
         - teams.team
-      summary: Update entity in teams
-      description: Update team
+      summary: Update team
+      description: 'Update the properties of the specified [team](../resources/team.md).'
       operationId: teams.team_UpdateTeam
       parameters:
         - name: team-id
@@ -11909,6 +11939,12 @@ paths:
               parameters:
                 team-id: $request.path.team-id
                 channel-id: $request.path.channel-id
+            completeMigration:
+              operationId: teams.team.channels.channel.completeMigration
+            provisionEmail:
+              operationId: teams.team.channels.channel.provisionEmail
+            removeEmail:
+              operationId: teams.team.channels.channel.removeEmail
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -14861,6 +14897,8 @@ paths:
               parameters:
                 team-id: $request.path.team-id
                 teamsAppInstallation-id: $request.path.teamsAppInstallation-id
+            upgrade:
+              operationId: teams.team.installedApps.teamsAppInstallation.upgrade
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15861,6 +15899,12 @@ paths:
               operationId: teams.PrimaryChannel.ListTabs
               parameters:
                 team-id: $request.path.team-id
+            completeMigration:
+              operationId: teams.team.primaryChannel.completeMigration
+            provisionEmail:
+              operationId: teams.team.primaryChannel.provisionEmail
+            removeEmail:
+              operationId: teams.team.primaryChannel.removeEmail
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -18164,6 +18208,8 @@ paths:
               operationId: teams.Schedule.ListTimesOff
               parameters:
                 team-id: $request.path.team-id
+            share:
+              operationId: teams.team.schedule.share
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -21250,6 +21296,8 @@ paths:
                 user-id: $request.path.user-id
                 chat-id: $request.path.chat-id
                 teamsAppInstallation-id: $request.path.teamsAppInstallation-id
+            upgrade:
+              operationId: users.user.chats.chat.installedApps.teamsAppInstallation.upgrade
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -24050,6 +24098,12 @@ paths:
                 user-id: $request.path.user-id
                 team-id: $request.path.team-id
                 channel-id: $request.path.channel-id
+            completeMigration:
+              operationId: users.user.joinedTeams.team.channels.channel.completeMigration
+            provisionEmail:
+              operationId: users.user.joinedTeams.team.channels.channel.provisionEmail
+            removeEmail:
+              operationId: users.user.joinedTeams.team.channels.channel.removeEmail
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -27072,6 +27126,8 @@ paths:
                 user-id: $request.path.user-id
                 team-id: $request.path.team-id
                 teamsAppInstallation-id: $request.path.teamsAppInstallation-id
+            upgrade:
+              operationId: users.user.joinedTeams.team.installedApps.teamsAppInstallation.upgrade
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -27943,6 +27999,12 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 team-id: $request.path.team-id
+            completeMigration:
+              operationId: users.user.joinedTeams.team.primaryChannel.completeMigration
+            provisionEmail:
+              operationId: users.user.joinedTeams.team.primaryChannel.provisionEmail
+            removeEmail:
+              operationId: users.user.joinedTeams.team.primaryChannel.removeEmail
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -30349,6 +30411,8 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 team-id: $request.path.team-id
+            share:
+              operationId: users.user.joinedTeams.team.schedule.share
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -33006,6 +33070,8 @@ paths:
               operationId: users.Teamwork.ListInstalledApps
               parameters:
                 user-id: $request.path.user-id
+            sendActivityNotification:
+              operationId: users.user.teamwork.sendActivityNotification
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

@@ -61,6 +61,8 @@ paths:
               operationId: communications.ListOnlineMeetings
             presences:
               operationId: communications.ListPresences
+            getPresencesByUserId:
+              operationId: communications.getPresencesByUserId
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1092,6 +1094,36 @@ paths:
               operationId: communications.Calls.ListParticipants
               parameters:
                 call-id: $request.path.call-id
+            addLargeGalleryView:
+              operationId: communications.calls.call.addLargeGalleryView
+            answer:
+              operationId: communications.calls.call.answer
+            cancelMediaProcessing:
+              operationId: communications.calls.call.cancelMediaProcessing
+            changeScreenSharingRole:
+              operationId: communications.calls.call.changeScreenSharingRole
+            keepAlive:
+              operationId: communications.calls.call.keepAlive
+            mute:
+              operationId: communications.calls.call.mute
+            playPrompt:
+              operationId: communications.calls.call.playPrompt
+            record:
+              operationId: communications.calls.call.record
+            recordResponse:
+              operationId: communications.calls.call.recordResponse
+            redirect:
+              operationId: communications.calls.call.redirect
+            reject:
+              operationId: communications.calls.call.reject
+            subscribeToTone:
+              operationId: communications.calls.call.subscribeToTone
+            transfer:
+              operationId: communications.calls.call.transfer
+            unmute:
+              operationId: communications.calls.call.unmute
+            updateRecordingStatus:
+              operationId: communications.calls.call.updateRecordingStatus
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2631,6 +2663,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.participant'
+          links:
+            mute:
+              operationId: communications.calls.call.participants.participant.mute
+            startHoldMusic:
+              operationId: communications.calls.call.participants.participant.startHoldMusic
+            stopHoldMusic:
+              operationId: communications.calls.call.participants.participant.stopHoldMusic
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4845,6 +4884,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.presence'
+          links:
+            clearPresence:
+              operationId: communications.presences.presence.clearPresence
+            clearUserPreferredPresence:
+              operationId: communications.presences.presence.clearUserPreferredPresence
+            setPresence:
+              operationId: communications.presences.presence.setPresence
+            setUserPreferredPresence:
+              operationId: communications.presences.presence.setUserPreferredPresence
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7035,6 +7083,15 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.presence'
+          links:
+            clearPresence:
+              operationId: users.user.presence.clearPresence
+            clearUserPreferredPresence:
+              operationId: users.user.presence.clearUserPreferredPresence
+            setPresence:
+              operationId: users.user.presence.setPresence
+            setUserPreferredPresence:
+              operationId: users.user.presence.setUserPreferredPresence
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

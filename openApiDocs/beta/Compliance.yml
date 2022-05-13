@@ -376,6 +376,10 @@ paths:
               operationId: compliance.ediscovery.Cases.ListTags
               parameters:
                 case-id: $request.path.case-id
+            close:
+              operationId: compliance.ediscovery.cases.case.close
+            reopen:
+              operationId: compliance.ediscovery.cases.case.reopen
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -651,6 +655,16 @@ paths:
               parameters:
                 case-id: $request.path.case-id
                 custodian-id: $request.path.custodian-id
+            activate:
+              operationId: compliance.ediscovery.cases.case.custodians.custodian.activate
+            applyHold:
+              operationId: compliance.ediscovery.cases.case.custodians.custodian.applyHold
+            release:
+              operationId: compliance.ediscovery.cases.case.custodians.custodian.release
+            removeHold:
+              operationId: compliance.ediscovery.cases.case.custodians.custodian.removeHold
+            updateIndex:
+              operationId: compliance.ediscovery.cases.case.custodians.custodian.updateIndex
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4211,6 +4225,14 @@ paths:
               parameters:
                 case-id: $request.path.case-id
                 noncustodialDataSource-id: $request.path.noncustodialDataSource-id
+            applyHold:
+              operationId: compliance.ediscovery.cases.case.noncustodialDataSources.noncustodialDataSource.applyHold
+            release:
+              operationId: compliance.ediscovery.cases.case.noncustodialDataSources.noncustodialDataSource.release
+            removeHold:
+              operationId: compliance.ediscovery.cases.case.noncustodialDataSources.noncustodialDataSource.removeHold
+            updateIndex:
+              operationId: compliance.ediscovery.cases.case.noncustodialDataSources.noncustodialDataSource.updateIndex
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5032,6 +5054,10 @@ paths:
               parameters:
                 case-id: $request.path.case-id
                 reviewSet-id: $request.path.reviewSet-id
+            addToReviewSet:
+              operationId: compliance.ediscovery.cases.case.reviewSets.reviewSet.addToReviewSet
+            export:
+              operationId: compliance.ediscovery.cases.case.reviewSets.reviewSet.export
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5387,6 +5413,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.ediscovery.reviewSetQuery'
+          links:
+            applyTags:
+              operationId: compliance.ediscovery.cases.case.reviewSets.reviewSet.queries.reviewSetQuery.applyTags
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5568,6 +5597,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.ediscovery.caseSettings'
+          links:
+            resetToDefault:
+              operationId: compliance.ediscovery.cases.case.settings.resetToDefault
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5868,6 +5900,10 @@ paths:
               parameters:
                 case-id: $request.path.case-id
                 sourceCollection-id: $request.path.sourceCollection-id
+            estimateStatistics:
+              operationId: compliance.ediscovery.cases.case.sourceCollections.sourceCollection.estimateStatistics
+            purgeData:
+              operationId: compliance.ediscovery.cases.case.sourceCollections.sourceCollection.purgeData
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

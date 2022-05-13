@@ -10,8 +10,8 @@ paths:
     get:
       tags:
         - drives.drive
-      summary: Get entities from drives
-      description: Helpers (examples that aren't included in the docs)
+      summary: Helpers (examples that aren't included in the docs)
+      description: ''
       operationId: drives.drive_ListDrive
       parameters:
         - $ref: '#/components/parameters/top'
@@ -149,8 +149,8 @@ paths:
     get:
       tags:
         - drives.drive
-      summary: Get entity from drives by key
-      description: Helpers (examples that aren't included in the docs)
+      summary: Helpers (examples that aren't included in the docs)
+      description: ''
       operationId: drives.drive_GetDrive
       parameters:
         - name: drive-id
@@ -254,6 +254,12 @@ paths:
               operationId: drives.ListSpecial
               parameters:
                 drive-id: $request.path.drive-id
+            recent:
+              operationId: drives.drive.recent
+            search:
+              operationId: drives.drive.search
+            sharedWithMe:
+              operationId: drives.drive.sharedWithMe
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2276,6 +2282,8 @@ paths:
               parameters:
                 drive-id: $request.path.drive-id
                 driveItem-id: $request.path.driveItem-id
+            getActivitiesByInterval:
+              operationId: drives.drive.items.driveItem.listItem.getActivitiesByInterval
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3061,6 +3069,8 @@ paths:
                 drive-id: $request.path.drive-id
                 driveItem-id: $request.path.driveItem-id
                 listItemVersion-id: $request.path.listItemVersion-id
+            restoreVersion:
+              operationId: drives.drive.items.driveItem.listItem.versions.listItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3531,6 +3541,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.permission'
+          links:
+            grant:
+              operationId: drives.drive.items.driveItem.permissions.permission.grant
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4441,6 +4454,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
+          links:
+            restoreVersion:
+              operationId: drives.drive.items.driveItem.versions.driveItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5493,6 +5509,16 @@ paths:
               parameters:
                 drive-id: $request.path.drive-id
                 contentType-id: $request.path.contentType-id
+            associateWithHubSites:
+              operationId: drives.drive.list.contentTypes.contentType.associateWithHubSites
+            copyToDefaultContentLocation:
+              operationId: drives.drive.list.contentTypes.contentType.copyToDefaultContentLocation
+            isPublished:
+              operationId: drives.drive.list.contentTypes.contentType.isPublished
+            publish:
+              operationId: drives.drive.list.contentTypes.contentType.publish
+            unpublish:
+              operationId: drives.drive.list.contentTypes.contentType.unpublish
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7566,6 +7592,8 @@ paths:
               parameters:
                 drive-id: $request.path.drive-id
                 listItem-id: $request.path.listItem-id
+            getActivitiesByInterval:
+              operationId: drives.drive.list.items.listItem.getActivitiesByInterval
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -8351,6 +8379,8 @@ paths:
                 drive-id: $request.path.drive-id
                 listItem-id: $request.path.listItem-id
                 listItemVersion-id: $request.path.listItemVersion-id
+            restoreVersion:
+              operationId: drives.drive.list.items.listItem.versions.listItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10056,6 +10086,8 @@ paths:
               operationId: drives.root.ListItem.ListVersions
               parameters:
                 drive-id: $request.path.drive-id
+            getActivitiesByInterval:
+              operationId: drives.drive.root.listItem.getActivitiesByInterval
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10729,6 +10761,8 @@ paths:
               parameters:
                 drive-id: $request.path.drive-id
                 listItemVersion-id: $request.path.listItemVersion-id
+            restoreVersion:
+              operationId: drives.drive.root.listItem.versions.listItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11136,6 +11170,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.permission'
+          links:
+            grant:
+              operationId: drives.drive.root.permissions.permission.grant
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11934,6 +11971,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
+          links:
+            restoreVersion:
+              operationId: drives.drive.root.versions.driveItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15129,6 +15169,8 @@ paths:
                 group-id: $request.path.group-id
                 drive-id: $request.path.drive-id
                 driveItem-id: $request.path.driveItem-id
+            getActivitiesByInterval:
+              operationId: groups.group.drives.drive.items.driveItem.listItem.getActivitiesByInterval
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15913,6 +15955,8 @@ paths:
                 drive-id: $request.path.drive-id
                 driveItem-id: $request.path.driveItem-id
                 listItemVersion-id: $request.path.listItemVersion-id
+            restoreVersion:
+              operationId: groups.group.drives.drive.items.driveItem.listItem.versions.listItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16405,6 +16449,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.permission'
+          links:
+            grant:
+              operationId: groups.group.drives.drive.items.driveItem.permissions.permission.grant
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -17355,6 +17402,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
+          links:
+            restoreVersion:
+              operationId: groups.group.drives.drive.items.driveItem.versions.driveItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -18500,6 +18550,16 @@ paths:
                 group-id: $request.path.group-id
                 drive-id: $request.path.drive-id
                 contentType-id: $request.path.contentType-id
+            associateWithHubSites:
+              operationId: groups.group.drives.drive.list.contentTypes.contentType.associateWithHubSites
+            copyToDefaultContentLocation:
+              operationId: groups.group.drives.drive.list.contentTypes.contentType.copyToDefaultContentLocation
+            isPublished:
+              operationId: groups.group.drives.drive.list.contentTypes.contentType.isPublished
+            publish:
+              operationId: groups.group.drives.drive.list.contentTypes.contentType.publish
+            unpublish:
+              operationId: groups.group.drives.drive.list.contentTypes.contentType.unpublish
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -20472,6 +20532,8 @@ paths:
                 group-id: $request.path.group-id
                 drive-id: $request.path.drive-id
                 listItem-id: $request.path.listItem-id
+            getActivitiesByInterval:
+              operationId: groups.group.drives.drive.list.items.listItem.getActivitiesByInterval
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -21256,6 +21318,8 @@ paths:
                 drive-id: $request.path.drive-id
                 listItem-id: $request.path.listItem-id
                 listItemVersion-id: $request.path.listItemVersion-id
+            restoreVersion:
+              operationId: groups.group.drives.drive.list.items.listItem.versions.listItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -23035,6 +23099,8 @@ paths:
               parameters:
                 group-id: $request.path.group-id
                 drive-id: $request.path.drive-id
+            getActivitiesByInterval:
+              operationId: groups.group.drives.drive.root.listItem.getActivitiesByInterval
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -23721,6 +23787,8 @@ paths:
                 group-id: $request.path.group-id
                 drive-id: $request.path.drive-id
                 listItemVersion-id: $request.path.listItemVersion-id
+            restoreVersion:
+              operationId: groups.group.drives.drive.root.listItem.versions.listItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -24157,6 +24225,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.permission'
+          links:
+            grant:
+              operationId: groups.group.drives.drive.root.permissions.permission.grant
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -25002,6 +25073,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
+          links:
+            restoreVersion:
+              operationId: groups.group.drives.drive.root.versions.driveItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -25618,8 +25692,8 @@ paths:
     get:
       tags:
         - shares.sharedDriveItem
-      summary: Get entities from shares
-      description: Accessing shared DriveItems
+      summary: Accessing shared DriveItems
+      description: 'Access a shared [DriveItem](../resources/driveitem.md) or a collection of shared items by using a **shareId** or sharing URL. To use a sharing URL with this API, your app needs to [transform the URL into a sharing token](#encoding-sharing-urls).'
       operationId: shares.sharedDriveItem_ListSharedDriveItem
       parameters:
         - $ref: '#/components/parameters/top'
@@ -25747,8 +25821,8 @@ paths:
     get:
       tags:
         - shares.sharedDriveItem
-      summary: Get entity from shares by key
-      description: Accessing shared DriveItems
+      summary: Accessing shared DriveItems
+      description: 'Access a shared [DriveItem](../resources/driveitem.md) or a collection of shared items by using a **shareId** or sharing URL. To use a sharing URL with this API, your app needs to [transform the URL into a sharing token](#encoding-sharing-urls).'
       operationId: shares.sharedDriveItem_GetSharedDriveItem
       parameters:
         - name: sharedDriveItem-id
@@ -27374,6 +27448,16 @@ paths:
               parameters:
                 sharedDriveItem-id: $request.path.sharedDriveItem-id
                 contentType-id: $request.path.contentType-id
+            associateWithHubSites:
+              operationId: shares.sharedDriveItem.list.contentTypes.contentType.associateWithHubSites
+            copyToDefaultContentLocation:
+              operationId: shares.sharedDriveItem.list.contentTypes.contentType.copyToDefaultContentLocation
+            isPublished:
+              operationId: shares.sharedDriveItem.list.contentTypes.contentType.isPublished
+            publish:
+              operationId: shares.sharedDriveItem.list.contentTypes.contentType.publish
+            unpublish:
+              operationId: shares.sharedDriveItem.list.contentTypes.contentType.unpublish
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -29447,6 +29531,8 @@ paths:
               parameters:
                 sharedDriveItem-id: $request.path.sharedDriveItem-id
                 listItem-id: $request.path.listItem-id
+            getActivitiesByInterval:
+              operationId: shares.sharedDriveItem.list.items.listItem.getActivitiesByInterval
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -30232,6 +30318,8 @@ paths:
                 sharedDriveItem-id: $request.path.sharedDriveItem-id
                 listItem-id: $request.path.listItem-id
                 listItemVersion-id: $request.path.listItemVersion-id
+            restoreVersion:
+              operationId: shares.sharedDriveItem.list.items.listItem.versions.listItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -31106,6 +31194,8 @@ paths:
               operationId: shares.ListItem.ListVersions
               parameters:
                 sharedDriveItem-id: $request.path.sharedDriveItem-id
+            getActivitiesByInterval:
+              operationId: shares.sharedDriveItem.listItem.getActivitiesByInterval
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -31779,6 +31869,8 @@ paths:
               parameters:
                 sharedDriveItem-id: $request.path.sharedDriveItem-id
                 listItemVersion-id: $request.path.listItemVersion-id
+            restoreVersion:
+              operationId: shares.sharedDriveItem.listItem.versions.listItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -32050,6 +32142,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.permission'
+          links:
+            grant:
+              operationId: shares.sharedDriveItem.permission.grant
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -35133,6 +35228,8 @@ paths:
                 user-id: $request.path.user-id
                 drive-id: $request.path.drive-id
                 driveItem-id: $request.path.driveItem-id
+            getActivitiesByInterval:
+              operationId: users.user.drives.drive.items.driveItem.listItem.getActivitiesByInterval
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -35917,6 +36014,8 @@ paths:
                 drive-id: $request.path.drive-id
                 driveItem-id: $request.path.driveItem-id
                 listItemVersion-id: $request.path.listItemVersion-id
+            restoreVersion:
+              operationId: users.user.drives.drive.items.driveItem.listItem.versions.listItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -36409,6 +36508,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.permission'
+          links:
+            grant:
+              operationId: users.user.drives.drive.items.driveItem.permissions.permission.grant
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -37359,6 +37461,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
+          links:
+            restoreVersion:
+              operationId: users.user.drives.drive.items.driveItem.versions.driveItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -38504,6 +38609,16 @@ paths:
                 user-id: $request.path.user-id
                 drive-id: $request.path.drive-id
                 contentType-id: $request.path.contentType-id
+            associateWithHubSites:
+              operationId: users.user.drives.drive.list.contentTypes.contentType.associateWithHubSites
+            copyToDefaultContentLocation:
+              operationId: users.user.drives.drive.list.contentTypes.contentType.copyToDefaultContentLocation
+            isPublished:
+              operationId: users.user.drives.drive.list.contentTypes.contentType.isPublished
+            publish:
+              operationId: users.user.drives.drive.list.contentTypes.contentType.publish
+            unpublish:
+              operationId: users.user.drives.drive.list.contentTypes.contentType.unpublish
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -40476,6 +40591,8 @@ paths:
                 user-id: $request.path.user-id
                 drive-id: $request.path.drive-id
                 listItem-id: $request.path.listItem-id
+            getActivitiesByInterval:
+              operationId: users.user.drives.drive.list.items.listItem.getActivitiesByInterval
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -41260,6 +41377,8 @@ paths:
                 drive-id: $request.path.drive-id
                 listItem-id: $request.path.listItem-id
                 listItemVersion-id: $request.path.listItemVersion-id
+            restoreVersion:
+              operationId: users.user.drives.drive.list.items.listItem.versions.listItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -43039,6 +43158,8 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 drive-id: $request.path.drive-id
+            getActivitiesByInterval:
+              operationId: users.user.drives.drive.root.listItem.getActivitiesByInterval
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -43725,6 +43846,8 @@ paths:
                 user-id: $request.path.user-id
                 drive-id: $request.path.drive-id
                 listItemVersion-id: $request.path.listItemVersion-id
+            restoreVersion:
+              operationId: users.user.drives.drive.root.listItem.versions.listItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -44161,6 +44284,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.permission'
+          links:
+            grant:
+              operationId: users.user.drives.drive.root.permissions.permission.grant
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -45006,6 +45132,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.driveItemVersion'
+          links:
+            restoreVersion:
+              operationId: users.user.drives.drive.root.versions.driveItemVersion.restoreVersion
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

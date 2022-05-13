@@ -105,6 +105,8 @@ paths:
               operationId: deviceAppManagement.ListTargetedManagedAppConfigurations
             windowsInformationProtectionPolicies:
               operationId: deviceAppManagement.ListWindowsInformationProtectionPolicies
+            syncMicrosoftStoreForBusinessApps:
+              operationId: deviceAppManagement.syncMicrosoftStoreForBusinessApps
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2348,6 +2350,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.managedAppPolicy'
+          links:
+            targetApps:
+              operationId: deviceAppManagement.managedAppPolicies.managedAppPolicy.targetApps
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2995,6 +3000,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.managedAppPolicy'
+          links:
+            targetApps:
+              operationId: deviceAppManagement.managedAppRegistrations.managedAppRegistration.appliedPolicies.managedAppPolicy.targetApps
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3438,6 +3446,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.managedAppPolicy'
+          links:
+            targetApps:
+              operationId: deviceAppManagement.managedAppRegistrations.managedAppRegistration.intendedPolicies.managedAppPolicy.targetApps
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4353,6 +4364,8 @@ paths:
               operationId: deviceAppManagement.ManagedEBooks.ListUserStateSummary
               parameters:
                 managedEBook-id: $request.path.managedEBook-id
+            assign:
+              operationId: deviceAppManagement.managedEBooks.managedEBook.assign
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6248,6 +6261,8 @@ paths:
               operationId: deviceAppManagement.MobileAppConfigurations.GetUserStatusSummary
               parameters:
                 managedDeviceMobileAppConfiguration-id: $request.path.managedDeviceMobileAppConfiguration-id
+            assign:
+              operationId: deviceAppManagement.mobileAppConfigurations.managedDeviceMobileAppConfiguration.assign
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7443,6 +7458,8 @@ paths:
               operationId: deviceAppManagement.MobileApps.ListCategories
               parameters:
                 mobileApp-id: $request.path.mobileApp-id
+            assign:
+              operationId: deviceAppManagement.mobileApps.mobileApp.assign
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -8072,6 +8089,10 @@ paths:
               operationId: deviceAppManagement.TargetedManagedAppConfigurations.GetDeploymentSummary
               parameters:
                 targetedManagedAppConfiguration-id: $request.path.targetedManagedAppConfiguration-id
+            assign:
+              operationId: deviceAppManagement.targetedManagedAppConfigurations.targetedManagedAppConfiguration.assign
+            targetApps:
+              operationId: deviceAppManagement.targetedManagedAppConfigurations.targetedManagedAppConfiguration.targetApps
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -8914,6 +8935,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.vppToken'
+          links:
+            syncLicenses:
+              operationId: deviceAppManagement.vppTokens.vppToken.syncLicenses
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10156,6 +10180,42 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 managedDevice-id: $request.path.managedDevice-id
+            bypassActivationLock:
+              operationId: users.user.managedDevices.managedDevice.bypassActivationLock
+            cleanWindowsDevice:
+              operationId: users.user.managedDevices.managedDevice.cleanWindowsDevice
+            deleteUserFromSharedAppleDevice:
+              operationId: users.user.managedDevices.managedDevice.deleteUserFromSharedAppleDevice
+            disableLostMode:
+              operationId: users.user.managedDevices.managedDevice.disableLostMode
+            locateDevice:
+              operationId: users.user.managedDevices.managedDevice.locateDevice
+            logoutSharedAppleDeviceActiveUser:
+              operationId: users.user.managedDevices.managedDevice.logoutSharedAppleDeviceActiveUser
+            rebootNow:
+              operationId: users.user.managedDevices.managedDevice.rebootNow
+            recoverPasscode:
+              operationId: users.user.managedDevices.managedDevice.recoverPasscode
+            remoteLock:
+              operationId: users.user.managedDevices.managedDevice.remoteLock
+            requestRemoteAssistance:
+              operationId: users.user.managedDevices.managedDevice.requestRemoteAssistance
+            resetPasscode:
+              operationId: users.user.managedDevices.managedDevice.resetPasscode
+            retire:
+              operationId: users.user.managedDevices.managedDevice.retire
+            shutDown:
+              operationId: users.user.managedDevices.managedDevice.shutDown
+            syncDevice:
+              operationId: users.user.managedDevices.managedDevice.syncDevice
+            updateWindowsDeviceAccount:
+              operationId: users.user.managedDevices.managedDevice.updateWindowsDeviceAccount
+            windowsDefenderScan:
+              operationId: users.user.managedDevices.managedDevice.windowsDefenderScan
+            windowsDefenderUpdateSignatures:
+              operationId: users.user.managedDevices.managedDevice.windowsDefenderUpdateSignatures
+            wipe:
+              operationId: users.user.managedDevices.managedDevice.wipe
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

@@ -17,6 +17,630 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
     },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
     "/users/{user-id}/calendar/calendarView/{event-id}/exceptionOccurrences/{event-id1}/instances/microsoft.graph.delta()": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
@@ -201,6 +825,266 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
     },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
     "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/listItem/microsoft.graph.getActivitiesByInterval(startDateTime='{startDateTime}',endDateTime='{endDateTime}',interval='{interval}')": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
@@ -361,6 +1245,162 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
     },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
     "/users/{user-id}/joinedGroups/{group-id}/onenote/notebooks/{notebook-id}/sectionGroups/{sectionGroup-id}/sections/{onenoteSection-id}/pages/{onenotePage-id}/microsoft.graph.preview()": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
@@ -382,6 +1422,58 @@
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
     },
     "/users/{user-id}/joinedGroups/{group-id}/onenote/sections/{onenoteSection-id}/pages/{onenotePage-id}/microsoft.graph.preview()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
     },
@@ -469,6 +1561,110 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
     },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
     "/users/{user-id}/mailFolders/{mailFolder-id}/childFolders/{mailFolder-id1}/messages/microsoft.graph.delta()": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
@@ -502,6 +1698,58 @@
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
     },
     "/users/{user-id}/managedDevices/{managedDevice-id}/microsoft.graph.getOemWarranty()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
     },
@@ -646,6 +1894,58 @@
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
     },
     "/users/{user-id}/todo/lists/microsoft.graph.delta()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportDeviceAndAppManagementData(skip={skip},top={top})": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRoomLists()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findRooms(RoomList='{RoomList}')": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getEffectiveDeviceEnrollmentConfigurations()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getLoggedOnManagedDevices()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppDiagnosticStatuses()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedAppPolicies()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithAppFailures()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getManagedDevicesWithFailedOrPendingApps()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.isManagedAppUserBlocked()": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reminderView(StartDateTime='{StartDateTime}',EndDateTime='{EndDateTime}')": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Functions.yml"
     },

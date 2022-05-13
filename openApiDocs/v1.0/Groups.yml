@@ -10,8 +10,8 @@ paths:
     get:
       tags:
         - groupLifecyclePolicies.groupLifecyclePolicy
-      summary: Get entities from groupLifecyclePolicies
-      description: List groupLifecyclePolicies
+      summary: List groupLifecyclePolicies
+      description: 'List all the [groupLifecyclePolicies](../resources/grouplifecyclepolicy.md).'
       operationId: groupLifecyclePolicies.groupLifecyclePolicy_ListGroupLifecyclePolicy
       parameters:
         - $ref: '#/components/parameters/top'
@@ -77,8 +77,8 @@ paths:
     post:
       tags:
         - groupLifecyclePolicies.groupLifecyclePolicy
-      summary: Add new entity to groupLifecyclePolicies
-      description: Create groupLifecyclePolicy
+      summary: Create groupLifecyclePolicy
+      description: 'Creates a new [groupLifecyclePolicy](../resources/grouplifecyclepolicy.md).'
       operationId: groupLifecyclePolicies.groupLifecyclePolicy_CreateGroupLifecyclePolicy
       requestBody:
         description: New entity
@@ -101,8 +101,8 @@ paths:
     get:
       tags:
         - groupLifecyclePolicies.groupLifecyclePolicy
-      summary: Get entity from groupLifecyclePolicies by key
-      description: Get groupLifecyclePolicy
+      summary: Get groupLifecyclePolicy
+      description: 'Retrieve the properties and relationships of a [groupLifecyclePolicies](../resources/grouplifecyclepolicy.md) object.'
       operationId: groupLifecyclePolicies.groupLifecyclePolicy_GetGroupLifecyclePolicy
       parameters:
         - name: groupLifecyclePolicy-id
@@ -146,14 +146,19 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.groupLifecyclePolicy'
+          links:
+            addGroup:
+              operationId: groupLifecyclePolicies.groupLifecyclePolicy.addGroup
+            removeGroup:
+              operationId: groupLifecyclePolicies.groupLifecyclePolicy.removeGroup
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
     patch:
       tags:
         - groupLifecyclePolicies.groupLifecyclePolicy
-      summary: Update entity in groupLifecyclePolicies
-      description: Update groupLifecyclePolicy
+      summary: Update groupLifecyclePolicy
+      description: 'Update the properties of a groupLifecyclePolicy[groupLifecyclePolicy resource type](../resources/grouplifecyclepolicy.md) object.'
       operationId: groupLifecyclePolicies.groupLifecyclePolicy_UpdateGroupLifecyclePolicy
       parameters:
         - name: groupLifecyclePolicy-id
@@ -179,8 +184,8 @@ paths:
     delete:
       tags:
         - groupLifecyclePolicies.groupLifecyclePolicy
-      summary: Delete entity from groupLifecyclePolicies
-      description: Delete groupLifecyclePolicy
+      summary: Delete groupLifecyclePolicy
+      description: 'Delete a [groupLifecyclePolicy](../resources/grouplifecyclepolicy.md).'
       operationId: groupLifecyclePolicies.groupLifecyclePolicy_DeleteGroupLifecyclePolicy
       parameters:
         - name: groupLifecyclePolicy-id
@@ -289,8 +294,8 @@ paths:
     get:
       tags:
         - groups.group
-      summary: Get entities from groups
-      description: Add custom data to groups using schema extensions
+      summary: Add custom data to groups using schema extensions
+      description: "Imagine you're a developer in a Learning Management Software company called 'Graph Learn' that builds training courses and materials for businesses.  Microsoft 365 groups, with their rich collaborative experiences, \nis a fantastic way to deliver course content and record exercises among participants for both online courses and instructor-led courses.  You might want to make \nthose Microsoft 365 groups used for training courses easily identifiable as training courses, which will allow other developers to discover your groups and build rich experiences on top of your learning courses. For this scenario, this article will show you how to:"
       operationId: groups.group_ListGroup
       parameters:
         - name: ConsistencyLevel
@@ -527,8 +532,8 @@ paths:
     post:
       tags:
         - groups.group
-      summary: Add new entity to groups
-      description: 'Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles'
+      summary: 'Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles'
+      description: 'In this tutorial, a fictitious company called Contoso Limited wishes to have its IT Helpdesk manage the lifecycle of employees’ access. The company has identified the Azure AD User Administrator role as the appropriate privileged role required by IT Helpdesk, and will use the PIM API to assign the role. You''ll create a role-assignable security group for IT Helpdesk and using the PIM API, assign the security group eligibility to the User Administrator role. By assigning the eligible role to a security group, Contoso has a more efficient way to manage administrator access to resources such as Azure AD roles. For example: Assigning eligibility instead of a persistently active User Administrator privilege allows the company to enforce **just-in-time access**, which grants temporary permissions to carry out the privileged tasks. After defining the role eligibility, the eligible group member then activates their assignment for a temporary period. All records of role activations will be auditable by the company.'
       operationId: groups.group_CreateGroup
       requestBody:
         description: New entity
@@ -551,8 +556,8 @@ paths:
     get:
       tags:
         - groups.group
-      summary: Get entity from groups by key
-      description: Get group
+      summary: Get group
+      description: 'Get the properties and relationships of a [group](../resources/group.md) object. This operation returns by default only a subset of all the available properties, as noted in the [Properties](../resources/group.md#properties) section. To get properties that are _not_ returned by default, specify them in a `$select` OData query option. The **hasMembersWithLicenseErrors** property is an exception and is not returned in the `$select` query. Because the **group** resource supports [extensions](/graph/extensibility-overview), you can also use the `GET` operation to get custom properties and extension data in a **group** instance.'
       operationId: groups.group_GetGroup
       parameters:
         - name: group-id
@@ -795,14 +800,42 @@ paths:
               operationId: groups.GetTeam
               parameters:
                 group-id: $request.path.group-id
+            addFavorite:
+              operationId: groups.group.addFavorite
+            assignLicense:
+              operationId: groups.group.assignLicense
+            checkGrantedPermissionsForApp:
+              operationId: groups.group.checkGrantedPermissionsForApp
+            checkMemberGroups:
+              operationId: groups.group.checkMemberGroups
+            checkMemberObjects:
+              operationId: groups.group.checkMemberObjects
+            getMemberGroups:
+              operationId: groups.group.getMemberGroups
+            getMemberObjects:
+              operationId: groups.group.getMemberObjects
+            removeFavorite:
+              operationId: groups.group.removeFavorite
+            renew:
+              operationId: groups.group.renew
+            resetUnseenCount:
+              operationId: groups.group.resetUnseenCount
+            restore:
+              operationId: groups.group.restore
+            subscribeByMail:
+              operationId: groups.group.subscribeByMail
+            unsubscribeByMail:
+              operationId: groups.group.unsubscribeByMail
+            validateProperties:
+              operationId: groups.group.validateProperties
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
     patch:
       tags:
         - groups.group
-      summary: Update entity in groups
-      description: Update group
+      summary: Update group
+      description: 'Update the properties of a [group](../resources/group.md) object.'
       operationId: groups.group_UpdateGroup
       parameters:
         - name: group-id
@@ -828,8 +861,8 @@ paths:
     delete:
       tags:
         - groups.group
-      summary: Delete entity from groups
-      description: 'Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles'
+      summary: 'Tutorial: Use the Privileged Identity Management (PIM) API to assign Azure AD roles'
+      description: 'In this tutorial, a fictitious company called Contoso Limited wishes to have its IT Helpdesk manage the lifecycle of employees’ access. The company has identified the Azure AD User Administrator role as the appropriate privileged role required by IT Helpdesk, and will use the PIM API to assign the role. You''ll create a role-assignable security group for IT Helpdesk and using the PIM API, assign the security group eligibility to the User Administrator role. By assigning the eligible role to a security group, Contoso has a more efficient way to manage administrator access to resources such as Azure AD roles. For example: Assigning eligibility instead of a persistently active User Administrator privilege allows the company to enforce **just-in-time access**, which grants temporary permissions to carry out the privileged tasks. After defining the role eligibility, the eligible group member then activates their assignment for a temporary period. All records of role activations will be auditable by the company.'
       operationId: groups.group_DeleteGroup
       parameters:
         - name: group-id
@@ -3833,6 +3866,8 @@ paths:
                 group-id: $request.path.group-id
                 conversation-id: $request.path.conversation-id
                 conversationThread-id: $request.path.conversationThread-id
+            reply:
+              operationId: groups.group.conversations.conversation.threads.conversationThread.reply
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4254,6 +4289,10 @@ paths:
                 conversation-id: $request.path.conversation-id
                 conversationThread-id: $request.path.conversationThread-id
                 post-id: $request.path.post-id
+            forward:
+              operationId: groups.group.conversations.conversation.threads.conversationThread.posts.post.forward
+            reply:
+              operationId: groups.group.conversations.conversation.threads.conversationThread.posts.post.reply
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5191,6 +5230,10 @@ paths:
                 conversation-id: $request.path.conversation-id
                 conversationThread-id: $request.path.conversationThread-id
                 post-id: $request.path.post-id
+            forward:
+              operationId: groups.group.conversations.conversation.threads.conversationThread.posts.post.inReplyTo.forward
+            reply:
+              operationId: groups.group.conversations.conversation.threads.conversationThread.posts.post.inReplyTo.reply
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9693,6 +9736,544 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/groups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.addFavorite':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action addFavorite
+      operationId: groups.memberOf.microsoft.graph.group_addFavorite
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.assignLicense':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action assignLicense
+      operationId: groups.memberOf.microsoft.graph.group_assignLicense
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                addLicenses:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/microsoft.graph.assignedLicense'
+                removeLicenses:
+                  type: array
+                  items:
+                    pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                    type: string
+                    format: uuid
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.group'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkGrantedPermissionsForApp':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkGrantedPermissionsForApp
+      operationId: groups.memberOf.microsoft.graph.group_checkGrantedPermissionsForApp
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.resourceSpecificPermissionGrant'
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkMemberGroups':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkMemberGroups
+      operationId: groups.memberOf.microsoft.graph.group_checkMemberGroups
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                groupIds:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkMemberObjects':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkMemberObjects
+      operationId: groups.memberOf.microsoft.graph.group_checkMemberObjects
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.getMemberGroups':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action getMemberGroups
+      operationId: groups.memberOf.microsoft.graph.group_getMemberGroups
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.getMemberObjects':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action getMemberObjects
+      operationId: groups.memberOf.microsoft.graph.group_getMemberObjects
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.removeFavorite':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action removeFavorite
+      operationId: groups.memberOf.microsoft.graph.group_removeFavorite
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.renew':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action renew
+      operationId: groups.memberOf.microsoft.graph.group_renew
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.resetUnseenCount':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action resetUnseenCount
+      operationId: groups.memberOf.microsoft.graph.group_resetUnseenCount
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.restore':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action restore
+      operationId: groups.memberOf.microsoft.graph.group_restore
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.subscribeByMail':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action subscribeByMail
+      operationId: groups.memberOf.microsoft.graph.group_subscribeByMail
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.unsubscribeByMail':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action unsubscribeByMail
+      operationId: groups.memberOf.microsoft.graph.group_unsubscribeByMail
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.validateProperties':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action validateProperties
+      operationId: groups.memberOf.microsoft.graph.group_validateProperties
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                displayName:
+                  type: string
+                  nullable: true
+                mailNickname:
+                  type: string
+                  nullable: true
+                onBehalfOfUserId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/groups/{group-id}/members':
     get:
       tags:
@@ -9819,6 +10400,544 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/groups/{group-id}/members/{directoryObject-id}/microsoft.graph.group/microsoft.graph.addFavorite':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action addFavorite
+      operationId: groups.members.microsoft.graph.group_addFavorite
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/members/{directoryObject-id}/microsoft.graph.group/microsoft.graph.assignLicense':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action assignLicense
+      operationId: groups.members.microsoft.graph.group_assignLicense
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                addLicenses:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/microsoft.graph.assignedLicense'
+                removeLicenses:
+                  type: array
+                  items:
+                    pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                    type: string
+                    format: uuid
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.group'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/members/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkGrantedPermissionsForApp':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkGrantedPermissionsForApp
+      operationId: groups.members.microsoft.graph.group_checkGrantedPermissionsForApp
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.resourceSpecificPermissionGrant'
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/members/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkMemberGroups':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkMemberGroups
+      operationId: groups.members.microsoft.graph.group_checkMemberGroups
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                groupIds:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/members/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkMemberObjects':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkMemberObjects
+      operationId: groups.members.microsoft.graph.group_checkMemberObjects
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/members/{directoryObject-id}/microsoft.graph.group/microsoft.graph.getMemberGroups':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action getMemberGroups
+      operationId: groups.members.microsoft.graph.group_getMemberGroups
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/members/{directoryObject-id}/microsoft.graph.group/microsoft.graph.getMemberObjects':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action getMemberObjects
+      operationId: groups.members.microsoft.graph.group_getMemberObjects
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/members/{directoryObject-id}/microsoft.graph.group/microsoft.graph.removeFavorite':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action removeFavorite
+      operationId: groups.members.microsoft.graph.group_removeFavorite
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/members/{directoryObject-id}/microsoft.graph.group/microsoft.graph.renew':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action renew
+      operationId: groups.members.microsoft.graph.group_renew
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/members/{directoryObject-id}/microsoft.graph.group/microsoft.graph.resetUnseenCount':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action resetUnseenCount
+      operationId: groups.members.microsoft.graph.group_resetUnseenCount
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/members/{directoryObject-id}/microsoft.graph.group/microsoft.graph.restore':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action restore
+      operationId: groups.members.microsoft.graph.group_restore
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/members/{directoryObject-id}/microsoft.graph.group/microsoft.graph.subscribeByMail':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action subscribeByMail
+      operationId: groups.members.microsoft.graph.group_subscribeByMail
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/members/{directoryObject-id}/microsoft.graph.group/microsoft.graph.unsubscribeByMail':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action unsubscribeByMail
+      operationId: groups.members.microsoft.graph.group_unsubscribeByMail
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/members/{directoryObject-id}/microsoft.graph.group/microsoft.graph.validateProperties':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action validateProperties
+      operationId: groups.members.microsoft.graph.group_validateProperties
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                displayName:
+                  type: string
+                  nullable: true
+                mailNickname:
+                  type: string
+                  nullable: true
+                onBehalfOfUserId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/groups/{group-id}/membersWithLicenseErrors':
     get:
       tags:
@@ -9945,6 +11064,544 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/groups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.group/microsoft.graph.addFavorite':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action addFavorite
+      operationId: groups.membersWithLicenseErrors.microsoft.graph.group_addFavorite
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.group/microsoft.graph.assignLicense':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action assignLicense
+      operationId: groups.membersWithLicenseErrors.microsoft.graph.group_assignLicense
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                addLicenses:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/microsoft.graph.assignedLicense'
+                removeLicenses:
+                  type: array
+                  items:
+                    pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                    type: string
+                    format: uuid
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.group'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkGrantedPermissionsForApp':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkGrantedPermissionsForApp
+      operationId: groups.membersWithLicenseErrors.microsoft.graph.group_checkGrantedPermissionsForApp
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.resourceSpecificPermissionGrant'
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkMemberGroups':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkMemberGroups
+      operationId: groups.membersWithLicenseErrors.microsoft.graph.group_checkMemberGroups
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                groupIds:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkMemberObjects':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkMemberObjects
+      operationId: groups.membersWithLicenseErrors.microsoft.graph.group_checkMemberObjects
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.group/microsoft.graph.getMemberGroups':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action getMemberGroups
+      operationId: groups.membersWithLicenseErrors.microsoft.graph.group_getMemberGroups
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.group/microsoft.graph.getMemberObjects':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action getMemberObjects
+      operationId: groups.membersWithLicenseErrors.microsoft.graph.group_getMemberObjects
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.group/microsoft.graph.removeFavorite':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action removeFavorite
+      operationId: groups.membersWithLicenseErrors.microsoft.graph.group_removeFavorite
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.group/microsoft.graph.renew':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action renew
+      operationId: groups.membersWithLicenseErrors.microsoft.graph.group_renew
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.group/microsoft.graph.resetUnseenCount':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action resetUnseenCount
+      operationId: groups.membersWithLicenseErrors.microsoft.graph.group_resetUnseenCount
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.group/microsoft.graph.restore':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action restore
+      operationId: groups.membersWithLicenseErrors.microsoft.graph.group_restore
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.group/microsoft.graph.subscribeByMail':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action subscribeByMail
+      operationId: groups.membersWithLicenseErrors.microsoft.graph.group_subscribeByMail
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.group/microsoft.graph.unsubscribeByMail':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action unsubscribeByMail
+      operationId: groups.membersWithLicenseErrors.microsoft.graph.group_unsubscribeByMail
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.group/microsoft.graph.validateProperties':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action validateProperties
+      operationId: groups.membersWithLicenseErrors.microsoft.graph.group_validateProperties
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                displayName:
+                  type: string
+                  nullable: true
+                mailNickname:
+                  type: string
+                  nullable: true
+                onBehalfOfUserId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/groups/{group-id}/microsoft.graph.addFavorite':
     post:
       tags:
@@ -11945,6 +13602,544 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/groups/{group-id}/owners/{directoryObject-id}/microsoft.graph.group/microsoft.graph.addFavorite':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action addFavorite
+      operationId: groups.owners.microsoft.graph.group_addFavorite
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/owners/{directoryObject-id}/microsoft.graph.group/microsoft.graph.assignLicense':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action assignLicense
+      operationId: groups.owners.microsoft.graph.group_assignLicense
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                addLicenses:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/microsoft.graph.assignedLicense'
+                removeLicenses:
+                  type: array
+                  items:
+                    pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                    type: string
+                    format: uuid
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.group'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/owners/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkGrantedPermissionsForApp':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkGrantedPermissionsForApp
+      operationId: groups.owners.microsoft.graph.group_checkGrantedPermissionsForApp
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.resourceSpecificPermissionGrant'
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/owners/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkMemberGroups':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkMemberGroups
+      operationId: groups.owners.microsoft.graph.group_checkMemberGroups
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                groupIds:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/owners/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkMemberObjects':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkMemberObjects
+      operationId: groups.owners.microsoft.graph.group_checkMemberObjects
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/owners/{directoryObject-id}/microsoft.graph.group/microsoft.graph.getMemberGroups':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action getMemberGroups
+      operationId: groups.owners.microsoft.graph.group_getMemberGroups
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/owners/{directoryObject-id}/microsoft.graph.group/microsoft.graph.getMemberObjects':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action getMemberObjects
+      operationId: groups.owners.microsoft.graph.group_getMemberObjects
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/owners/{directoryObject-id}/microsoft.graph.group/microsoft.graph.removeFavorite':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action removeFavorite
+      operationId: groups.owners.microsoft.graph.group_removeFavorite
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/owners/{directoryObject-id}/microsoft.graph.group/microsoft.graph.renew':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action renew
+      operationId: groups.owners.microsoft.graph.group_renew
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/owners/{directoryObject-id}/microsoft.graph.group/microsoft.graph.resetUnseenCount':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action resetUnseenCount
+      operationId: groups.owners.microsoft.graph.group_resetUnseenCount
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/owners/{directoryObject-id}/microsoft.graph.group/microsoft.graph.restore':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action restore
+      operationId: groups.owners.microsoft.graph.group_restore
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/owners/{directoryObject-id}/microsoft.graph.group/microsoft.graph.subscribeByMail':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action subscribeByMail
+      operationId: groups.owners.microsoft.graph.group_subscribeByMail
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/owners/{directoryObject-id}/microsoft.graph.group/microsoft.graph.unsubscribeByMail':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action unsubscribeByMail
+      operationId: groups.owners.microsoft.graph.group_unsubscribeByMail
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/owners/{directoryObject-id}/microsoft.graph.group/microsoft.graph.validateProperties':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action validateProperties
+      operationId: groups.owners.microsoft.graph.group_validateProperties
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                displayName:
+                  type: string
+                  nullable: true
+                mailNickname:
+                  type: string
+                  nullable: true
+                onBehalfOfUserId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/groups/{group-id}/permissionGrants':
     get:
       tags:
@@ -15992,6 +18187,8 @@ paths:
               parameters:
                 group-id: $request.path.group-id
                 conversationThread-id: $request.path.conversationThread-id
+            reply:
+              operationId: groups.group.threads.conversationThread.reply
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16366,6 +18563,10 @@ paths:
                 group-id: $request.path.group-id
                 conversationThread-id: $request.path.conversationThread-id
                 post-id: $request.path.post-id
+            forward:
+              operationId: groups.group.threads.conversationThread.posts.post.forward
+            reply:
+              operationId: groups.group.threads.conversationThread.posts.post.reply
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -17200,6 +19401,10 @@ paths:
                 group-id: $request.path.group-id
                 conversationThread-id: $request.path.conversationThread-id
                 post-id: $request.path.post-id
+            forward:
+              operationId: groups.group.threads.conversationThread.posts.post.inReplyTo.forward
+            reply:
+              operationId: groups.group.threads.conversationThread.posts.post.inReplyTo.reply
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -19399,6 +21604,544 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/groups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.addFavorite':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action addFavorite
+      operationId: groups.transitiveMemberOf.microsoft.graph.group_addFavorite
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.assignLicense':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action assignLicense
+      operationId: groups.transitiveMemberOf.microsoft.graph.group_assignLicense
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                addLicenses:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/microsoft.graph.assignedLicense'
+                removeLicenses:
+                  type: array
+                  items:
+                    pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                    type: string
+                    format: uuid
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.group'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkGrantedPermissionsForApp':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkGrantedPermissionsForApp
+      operationId: groups.transitiveMemberOf.microsoft.graph.group_checkGrantedPermissionsForApp
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.resourceSpecificPermissionGrant'
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkMemberGroups':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkMemberGroups
+      operationId: groups.transitiveMemberOf.microsoft.graph.group_checkMemberGroups
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                groupIds:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkMemberObjects':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkMemberObjects
+      operationId: groups.transitiveMemberOf.microsoft.graph.group_checkMemberObjects
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.getMemberGroups':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action getMemberGroups
+      operationId: groups.transitiveMemberOf.microsoft.graph.group_getMemberGroups
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.getMemberObjects':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action getMemberObjects
+      operationId: groups.transitiveMemberOf.microsoft.graph.group_getMemberObjects
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.removeFavorite':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action removeFavorite
+      operationId: groups.transitiveMemberOf.microsoft.graph.group_removeFavorite
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.renew':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action renew
+      operationId: groups.transitiveMemberOf.microsoft.graph.group_renew
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.resetUnseenCount':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action resetUnseenCount
+      operationId: groups.transitiveMemberOf.microsoft.graph.group_resetUnseenCount
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.restore':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action restore
+      operationId: groups.transitiveMemberOf.microsoft.graph.group_restore
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.subscribeByMail':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action subscribeByMail
+      operationId: groups.transitiveMemberOf.microsoft.graph.group_subscribeByMail
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.unsubscribeByMail':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action unsubscribeByMail
+      operationId: groups.transitiveMemberOf.microsoft.graph.group_unsubscribeByMail
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.group/microsoft.graph.validateProperties':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action validateProperties
+      operationId: groups.transitiveMemberOf.microsoft.graph.group_validateProperties
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                displayName:
+                  type: string
+                  nullable: true
+                mailNickname:
+                  type: string
+                  nullable: true
+                onBehalfOfUserId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   '/groups/{group-id}/transitiveMembers':
     get:
       tags:
@@ -19523,6 +22266,544 @@ paths:
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
+  '/groups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.group/microsoft.graph.addFavorite':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action addFavorite
+      operationId: groups.transitiveMembers.microsoft.graph.group_addFavorite
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.group/microsoft.graph.assignLicense':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action assignLicense
+      operationId: groups.transitiveMembers.microsoft.graph.group_assignLicense
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                addLicenses:
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/microsoft.graph.assignedLicense'
+                removeLicenses:
+                  type: array
+                  items:
+                    pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                    type: string
+                    format: uuid
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.group'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkGrantedPermissionsForApp':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkGrantedPermissionsForApp
+      operationId: groups.transitiveMembers.microsoft.graph.group_checkGrantedPermissionsForApp
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/microsoft.graph.resourceSpecificPermissionGrant'
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkMemberGroups':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkMemberGroups
+      operationId: groups.transitiveMembers.microsoft.graph.group_checkMemberGroups
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                groupIds:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.group/microsoft.graph.checkMemberObjects':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action checkMemberObjects
+      operationId: groups.transitiveMembers.microsoft.graph.group_checkMemberObjects
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                ids:
+                  type: array
+                  items:
+                    type: string
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.group/microsoft.graph.getMemberGroups':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action getMemberGroups
+      operationId: groups.transitiveMembers.microsoft.graph.group_getMemberGroups
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.group/microsoft.graph.getMemberObjects':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action getMemberObjects
+      operationId: groups.transitiveMembers.microsoft.graph.group_getMemberObjects
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                securityEnabledOnly:
+                  type: boolean
+                  default: false
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  value:
+                    type: array
+                    items:
+                      type: string
+                additionalProperties:
+                  type: object
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.group/microsoft.graph.removeFavorite':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action removeFavorite
+      operationId: groups.transitiveMembers.microsoft.graph.group_removeFavorite
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.group/microsoft.graph.renew':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action renew
+      operationId: groups.transitiveMembers.microsoft.graph.group_renew
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.group/microsoft.graph.resetUnseenCount':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action resetUnseenCount
+      operationId: groups.transitiveMembers.microsoft.graph.group_resetUnseenCount
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.group/microsoft.graph.restore':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action restore
+      operationId: groups.transitiveMembers.microsoft.graph.group_restore
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/microsoft.graph.directoryObject'
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.group/microsoft.graph.subscribeByMail':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action subscribeByMail
+      operationId: groups.transitiveMembers.microsoft.graph.group_subscribeByMail
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.group/microsoft.graph.unsubscribeByMail':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action unsubscribeByMail
+      operationId: groups.transitiveMembers.microsoft.graph.group_unsubscribeByMail
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
+  '/groups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.group/microsoft.graph.validateProperties':
+    post:
+      tags:
+        - groups.Actions
+      summary: Invoke action validateProperties
+      operationId: groups.transitiveMembers.microsoft.graph.group_validateProperties
+      parameters:
+        - name: group-id
+          in: path
+          description: 'key: id of group'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: group
+        - name: directoryObject-id
+          in: path
+          description: 'key: id of directoryObject'
+          required: true
+          schema:
+            type: string
+          x-ms-docs-key-type: directoryObject
+      requestBody:
+        description: Action parameters
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                displayName:
+                  type: string
+                  nullable: true
+                mailNickname:
+                  type: string
+                  nullable: true
+                onBehalfOfUserId:
+                  pattern: '^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$'
+                  type: string
+                  format: uuid
+                  nullable: true
+              additionalProperties:
+                type: object
+        required: true
+      responses:
+        '204':
+          description: Success
+        default:
+          $ref: '#/components/responses/error'
+      x-ms-docs-operation-type: action
   /groups/microsoft.graph.delta():
     get:
       tags:

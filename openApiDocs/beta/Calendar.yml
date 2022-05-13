@@ -82,6 +82,10 @@ paths:
               operationId: groups.Calendar.ListSingleValueExtendedProperties
               parameters:
                 group-id: $request.path.group-id
+            allowedCalendarSharingRoles:
+              operationId: groups.group.calendar.allowedCalendarSharingRoles
+            getSchedule:
+              operationId: groups.group.calendar.getSchedule
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -712,6 +716,20 @@ paths:
               parameters:
                 group-id: $request.path.group-id
                 event-id: $request.path.event-id
+            accept:
+              operationId: groups.group.calendar.calendarView.event.accept
+            cancel:
+              operationId: groups.group.calendar.calendarView.event.cancel
+            decline:
+              operationId: groups.group.calendar.calendarView.event.decline
+            dismissReminder:
+              operationId: groups.group.calendar.calendarView.event.dismissReminder
+            forward:
+              operationId: groups.group.calendar.calendarView.event.forward
+            snoozeReminder:
+              operationId: groups.group.calendar.calendarView.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.calendar.calendarView.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1546,6 +1564,20 @@ paths:
                 group-id: $request.path.group-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: groups.group.calendar.calendarView.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: groups.group.calendar.calendarView.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: groups.group.calendar.calendarView.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: groups.group.calendar.calendarView.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: groups.group.calendar.calendarView.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: groups.group.calendar.calendarView.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.calendar.calendarView.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2718,6 +2750,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: groups.group.calendar.calendarView.event.exceptionOccurrences.event.instances.event.accept
+            cancel:
+              operationId: groups.group.calendar.calendarView.event.exceptionOccurrences.event.instances.event.cancel
+            decline:
+              operationId: groups.group.calendar.calendarView.event.exceptionOccurrences.event.instances.event.decline
+            dismissReminder:
+              operationId: groups.group.calendar.calendarView.event.exceptionOccurrences.event.instances.event.dismissReminder
+            forward:
+              operationId: groups.group.calendar.calendarView.event.exceptionOccurrences.event.instances.event.forward
+            snoozeReminder:
+              operationId: groups.group.calendar.calendarView.event.exceptionOccurrences.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.calendar.calendarView.event.exceptionOccurrences.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5438,6 +5484,20 @@ paths:
                 group-id: $request.path.group-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: groups.group.calendar.calendarView.event.instances.event.accept
+            cancel:
+              operationId: groups.group.calendar.calendarView.event.instances.event.cancel
+            decline:
+              operationId: groups.group.calendar.calendarView.event.instances.event.decline
+            dismissReminder:
+              operationId: groups.group.calendar.calendarView.event.instances.event.dismissReminder
+            forward:
+              operationId: groups.group.calendar.calendarView.event.instances.event.forward
+            snoozeReminder:
+              operationId: groups.group.calendar.calendarView.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.calendar.calendarView.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6361,6 +6421,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: groups.group.calendar.calendarView.event.instances.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: groups.group.calendar.calendarView.event.instances.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: groups.group.calendar.calendarView.event.instances.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: groups.group.calendar.calendarView.event.instances.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: groups.group.calendar.calendarView.event.instances.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: groups.group.calendar.calendarView.event.instances.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.calendar.calendarView.event.instances.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9598,6 +9672,20 @@ paths:
               parameters:
                 group-id: $request.path.group-id
                 event-id: $request.path.event-id
+            accept:
+              operationId: groups.group.calendar.events.event.accept
+            cancel:
+              operationId: groups.group.calendar.events.event.cancel
+            decline:
+              operationId: groups.group.calendar.events.event.decline
+            dismissReminder:
+              operationId: groups.group.calendar.events.event.dismissReminder
+            forward:
+              operationId: groups.group.calendar.events.event.forward
+            snoozeReminder:
+              operationId: groups.group.calendar.events.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.calendar.events.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10432,6 +10520,20 @@ paths:
                 group-id: $request.path.group-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: groups.group.calendar.events.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: groups.group.calendar.events.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: groups.group.calendar.events.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: groups.group.calendar.events.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: groups.group.calendar.events.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: groups.group.calendar.events.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.calendar.events.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11604,6 +11706,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: groups.group.calendar.events.event.exceptionOccurrences.event.instances.event.accept
+            cancel:
+              operationId: groups.group.calendar.events.event.exceptionOccurrences.event.instances.event.cancel
+            decline:
+              operationId: groups.group.calendar.events.event.exceptionOccurrences.event.instances.event.decline
+            dismissReminder:
+              operationId: groups.group.calendar.events.event.exceptionOccurrences.event.instances.event.dismissReminder
+            forward:
+              operationId: groups.group.calendar.events.event.exceptionOccurrences.event.instances.event.forward
+            snoozeReminder:
+              operationId: groups.group.calendar.events.event.exceptionOccurrences.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.calendar.events.event.exceptionOccurrences.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -14324,6 +14440,20 @@ paths:
                 group-id: $request.path.group-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: groups.group.calendar.events.event.instances.event.accept
+            cancel:
+              operationId: groups.group.calendar.events.event.instances.event.cancel
+            decline:
+              operationId: groups.group.calendar.events.event.instances.event.decline
+            dismissReminder:
+              operationId: groups.group.calendar.events.event.instances.event.dismissReminder
+            forward:
+              operationId: groups.group.calendar.events.event.instances.event.forward
+            snoozeReminder:
+              operationId: groups.group.calendar.events.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.calendar.events.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15247,6 +15377,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: groups.group.calendar.events.event.instances.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: groups.group.calendar.events.event.instances.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: groups.group.calendar.events.event.instances.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: groups.group.calendar.events.event.instances.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: groups.group.calendar.events.event.instances.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: groups.group.calendar.events.event.instances.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.calendar.events.event.instances.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -18948,6 +19092,20 @@ paths:
               parameters:
                 group-id: $request.path.group-id
                 event-id: $request.path.event-id
+            accept:
+              operationId: groups.group.calendarView.event.accept
+            cancel:
+              operationId: groups.group.calendarView.event.cancel
+            decline:
+              operationId: groups.group.calendarView.event.decline
+            dismissReminder:
+              operationId: groups.group.calendarView.event.dismissReminder
+            forward:
+              operationId: groups.group.calendarView.event.forward
+            snoozeReminder:
+              operationId: groups.group.calendarView.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.calendarView.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -19782,6 +19940,20 @@ paths:
                 group-id: $request.path.group-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: groups.group.calendarView.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: groups.group.calendarView.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: groups.group.calendarView.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: groups.group.calendarView.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: groups.group.calendarView.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: groups.group.calendarView.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.calendarView.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -20954,6 +21126,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: groups.group.calendarView.event.exceptionOccurrences.event.instances.event.accept
+            cancel:
+              operationId: groups.group.calendarView.event.exceptionOccurrences.event.instances.event.cancel
+            decline:
+              operationId: groups.group.calendarView.event.exceptionOccurrences.event.instances.event.decline
+            dismissReminder:
+              operationId: groups.group.calendarView.event.exceptionOccurrences.event.instances.event.dismissReminder
+            forward:
+              operationId: groups.group.calendarView.event.exceptionOccurrences.event.instances.event.forward
+            snoozeReminder:
+              operationId: groups.group.calendarView.event.exceptionOccurrences.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.calendarView.event.exceptionOccurrences.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -23674,6 +23860,20 @@ paths:
                 group-id: $request.path.group-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: groups.group.calendarView.event.instances.event.accept
+            cancel:
+              operationId: groups.group.calendarView.event.instances.event.cancel
+            decline:
+              operationId: groups.group.calendarView.event.instances.event.decline
+            dismissReminder:
+              operationId: groups.group.calendarView.event.instances.event.dismissReminder
+            forward:
+              operationId: groups.group.calendarView.event.instances.event.forward
+            snoozeReminder:
+              operationId: groups.group.calendarView.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.calendarView.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -24597,6 +24797,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: groups.group.calendarView.event.instances.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: groups.group.calendarView.event.instances.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: groups.group.calendarView.event.instances.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: groups.group.calendarView.event.instances.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: groups.group.calendarView.event.instances.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: groups.group.calendarView.event.instances.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.calendarView.event.instances.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -27834,6 +28048,20 @@ paths:
               parameters:
                 group-id: $request.path.group-id
                 event-id: $request.path.event-id
+            accept:
+              operationId: groups.group.events.event.accept
+            cancel:
+              operationId: groups.group.events.event.cancel
+            decline:
+              operationId: groups.group.events.event.decline
+            dismissReminder:
+              operationId: groups.group.events.event.dismissReminder
+            forward:
+              operationId: groups.group.events.event.forward
+            snoozeReminder:
+              operationId: groups.group.events.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.events.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -28668,6 +28896,20 @@ paths:
                 group-id: $request.path.group-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: groups.group.events.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: groups.group.events.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: groups.group.events.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: groups.group.events.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: groups.group.events.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: groups.group.events.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.events.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -29840,6 +30082,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: groups.group.events.event.exceptionOccurrences.event.instances.event.accept
+            cancel:
+              operationId: groups.group.events.event.exceptionOccurrences.event.instances.event.cancel
+            decline:
+              operationId: groups.group.events.event.exceptionOccurrences.event.instances.event.decline
+            dismissReminder:
+              operationId: groups.group.events.event.exceptionOccurrences.event.instances.event.dismissReminder
+            forward:
+              operationId: groups.group.events.event.exceptionOccurrences.event.instances.event.forward
+            snoozeReminder:
+              operationId: groups.group.events.event.exceptionOccurrences.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.events.event.exceptionOccurrences.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -32560,6 +32816,20 @@ paths:
                 group-id: $request.path.group-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: groups.group.events.event.instances.event.accept
+            cancel:
+              operationId: groups.group.events.event.instances.event.cancel
+            decline:
+              operationId: groups.group.events.event.instances.event.decline
+            dismissReminder:
+              operationId: groups.group.events.event.instances.event.dismissReminder
+            forward:
+              operationId: groups.group.events.event.instances.event.forward
+            snoozeReminder:
+              operationId: groups.group.events.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.events.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -33483,6 +33753,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: groups.group.events.event.instances.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: groups.group.events.event.instances.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: groups.group.events.event.instances.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: groups.group.events.event.instances.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: groups.group.events.event.instances.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: groups.group.events.event.instances.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: groups.group.events.event.instances.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -36382,8 +36666,8 @@ paths:
     get:
       tags:
         - places.place
-      summary: Get entities from places
-      description: Get place
+      summary: Get place
+      description: 'Get the properties and relationships of a [place](../resources/place.md) object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the [place](../resources/place.md) object. '
       operationId: places.place_ListPlace
       parameters:
         - $ref: '#/components/parameters/top'
@@ -36475,8 +36759,8 @@ paths:
     get:
       tags:
         - places.place
-      summary: Get entity from places by key
-      description: Get place
+      summary: Get place
+      description: 'Get the properties and relationships of a [place](../resources/place.md) object specified by either its ID or email address.  The **place** object can be one of the following types: Both **room** and **roomList** are derived from the [place](../resources/place.md) object. '
       operationId: places.place_GetPlace
       parameters:
         - name: place-id
@@ -36650,6 +36934,10 @@ paths:
               operationId: users.Calendar.ListSingleValueExtendedProperties
               parameters:
                 user-id: $request.path.user-id
+            allowedCalendarSharingRoles:
+              operationId: users.user.calendar.allowedCalendarSharingRoles
+            getSchedule:
+              operationId: users.user.calendar.getSchedule
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -37280,6 +37568,20 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 event-id: $request.path.event-id
+            accept:
+              operationId: users.user.calendar.calendarView.event.accept
+            cancel:
+              operationId: users.user.calendar.calendarView.event.cancel
+            decline:
+              operationId: users.user.calendar.calendarView.event.decline
+            dismissReminder:
+              operationId: users.user.calendar.calendarView.event.dismissReminder
+            forward:
+              operationId: users.user.calendar.calendarView.event.forward
+            snoozeReminder:
+              operationId: users.user.calendar.calendarView.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendar.calendarView.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -38114,6 +38416,20 @@ paths:
                 user-id: $request.path.user-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.calendar.calendarView.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.calendar.calendarView.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.calendar.calendarView.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.calendar.calendarView.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.calendar.calendarView.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.calendar.calendarView.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendar.calendarView.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -39286,6 +39602,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.calendar.calendarView.event.exceptionOccurrences.event.instances.event.accept
+            cancel:
+              operationId: users.user.calendar.calendarView.event.exceptionOccurrences.event.instances.event.cancel
+            decline:
+              operationId: users.user.calendar.calendarView.event.exceptionOccurrences.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.calendar.calendarView.event.exceptionOccurrences.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.calendar.calendarView.event.exceptionOccurrences.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.calendar.calendarView.event.exceptionOccurrences.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendar.calendarView.event.exceptionOccurrences.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -42006,6 +42336,20 @@ paths:
                 user-id: $request.path.user-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.calendar.calendarView.event.instances.event.accept
+            cancel:
+              operationId: users.user.calendar.calendarView.event.instances.event.cancel
+            decline:
+              operationId: users.user.calendar.calendarView.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.calendar.calendarView.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.calendar.calendarView.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.calendar.calendarView.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendar.calendarView.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -42929,6 +43273,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.calendar.calendarView.event.instances.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.calendar.calendarView.event.instances.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.calendar.calendarView.event.instances.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.calendar.calendarView.event.instances.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.calendar.calendarView.event.instances.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.calendar.calendarView.event.instances.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendar.calendarView.event.instances.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -46166,6 +46524,20 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 event-id: $request.path.event-id
+            accept:
+              operationId: users.user.calendar.events.event.accept
+            cancel:
+              operationId: users.user.calendar.events.event.cancel
+            decline:
+              operationId: users.user.calendar.events.event.decline
+            dismissReminder:
+              operationId: users.user.calendar.events.event.dismissReminder
+            forward:
+              operationId: users.user.calendar.events.event.forward
+            snoozeReminder:
+              operationId: users.user.calendar.events.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendar.events.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -47000,6 +47372,20 @@ paths:
                 user-id: $request.path.user-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.calendar.events.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.calendar.events.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.calendar.events.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.calendar.events.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.calendar.events.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.calendar.events.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendar.events.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -48172,6 +48558,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.calendar.events.event.exceptionOccurrences.event.instances.event.accept
+            cancel:
+              operationId: users.user.calendar.events.event.exceptionOccurrences.event.instances.event.cancel
+            decline:
+              operationId: users.user.calendar.events.event.exceptionOccurrences.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.calendar.events.event.exceptionOccurrences.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.calendar.events.event.exceptionOccurrences.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.calendar.events.event.exceptionOccurrences.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendar.events.event.exceptionOccurrences.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -50892,6 +51292,20 @@ paths:
                 user-id: $request.path.user-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.calendar.events.event.instances.event.accept
+            cancel:
+              operationId: users.user.calendar.events.event.instances.event.cancel
+            decline:
+              operationId: users.user.calendar.events.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.calendar.events.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.calendar.events.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.calendar.events.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendar.events.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -51815,6 +52229,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.calendar.events.event.instances.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.calendar.events.event.instances.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.calendar.events.event.instances.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.calendar.events.event.instances.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.calendar.events.event.instances.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.calendar.events.event.instances.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendar.events.event.instances.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -55611,6 +56039,10 @@ paths:
                 user-id: $request.path.user-id
                 calendarGroup-id: $request.path.calendarGroup-id
                 calendar-id: $request.path.calendar-id
+            allowedCalendarSharingRoles:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.allowedCalendarSharingRoles
+            getSchedule:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.getSchedule
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -56371,6 +56803,20 @@ paths:
                 calendarGroup-id: $request.path.calendarGroup-id
                 calendar-id: $request.path.calendar-id
                 event-id: $request.path.event-id
+            accept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.accept
+            cancel:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.cancel
+            decline:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.decline
+            dismissReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.dismissReminder
+            forward:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.forward
+            snoozeReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -57383,6 +57829,20 @@ paths:
                 calendar-id: $request.path.calendar-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -58803,6 +59263,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.exceptionOccurrences.event.instances.event.accept
+            cancel:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.exceptionOccurrences.event.instances.event.cancel
+            decline:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.exceptionOccurrences.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.exceptionOccurrences.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.exceptionOccurrences.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.exceptionOccurrences.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.exceptionOccurrences.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -62121,6 +62595,20 @@ paths:
                 calendar-id: $request.path.calendar-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.instances.event.accept
+            cancel:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.instances.event.cancel
+            decline:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -63222,6 +63710,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.instances.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.instances.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.instances.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.instances.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.instances.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.instances.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.calendarView.event.instances.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -67197,6 +67699,20 @@ paths:
                 calendarGroup-id: $request.path.calendarGroup-id
                 calendar-id: $request.path.calendar-id
                 event-id: $request.path.event-id
+            accept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.accept
+            cancel:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.cancel
+            decline:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.decline
+            dismissReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.dismissReminder
+            forward:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.forward
+            snoozeReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -68209,6 +68725,20 @@ paths:
                 calendar-id: $request.path.calendar-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -69629,6 +70159,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.exceptionOccurrences.event.instances.event.accept
+            cancel:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.exceptionOccurrences.event.instances.event.cancel
+            decline:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.exceptionOccurrences.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.exceptionOccurrences.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.exceptionOccurrences.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.exceptionOccurrences.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.exceptionOccurrences.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -72947,6 +73491,20 @@ paths:
                 calendar-id: $request.path.calendar-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.instances.event.accept
+            cancel:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.instances.event.cancel
+            decline:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -74048,6 +74606,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.instances.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.instances.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.instances.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.instances.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.instances.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.instances.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendarGroups.calendarGroup.calendars.calendar.events.event.instances.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -78429,6 +79001,10 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 calendar-id: $request.path.calendar-id
+            allowedCalendarSharingRoles:
+              operationId: users.user.calendars.calendar.allowedCalendarSharingRoles
+            getSchedule:
+              operationId: users.user.calendars.calendar.getSchedule
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -79136,6 +79712,20 @@ paths:
                 user-id: $request.path.user-id
                 calendar-id: $request.path.calendar-id
                 event-id: $request.path.event-id
+            accept:
+              operationId: users.user.calendars.calendar.calendarView.event.accept
+            cancel:
+              operationId: users.user.calendars.calendar.calendarView.event.cancel
+            decline:
+              operationId: users.user.calendars.calendar.calendarView.event.decline
+            dismissReminder:
+              operationId: users.user.calendars.calendar.calendarView.event.dismissReminder
+            forward:
+              operationId: users.user.calendars.calendar.calendarView.event.forward
+            snoozeReminder:
+              operationId: users.user.calendars.calendar.calendarView.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendars.calendar.calendarView.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -80059,6 +80649,20 @@ paths:
                 calendar-id: $request.path.calendar-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.calendars.calendar.calendarView.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.calendars.calendar.calendarView.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.calendars.calendar.calendarView.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.calendars.calendar.calendarView.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.calendars.calendar.calendarView.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.calendars.calendar.calendarView.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendars.calendar.calendarView.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -81355,6 +81959,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.calendars.calendar.calendarView.event.exceptionOccurrences.event.instances.event.accept
+            cancel:
+              operationId: users.user.calendars.calendar.calendarView.event.exceptionOccurrences.event.instances.event.cancel
+            decline:
+              operationId: users.user.calendars.calendar.calendarView.event.exceptionOccurrences.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.calendars.calendar.calendarView.event.exceptionOccurrences.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.calendars.calendar.calendarView.event.exceptionOccurrences.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.calendars.calendar.calendarView.event.exceptionOccurrences.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendars.calendar.calendarView.event.exceptionOccurrences.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -84374,6 +84992,20 @@ paths:
                 calendar-id: $request.path.calendar-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.calendars.calendar.calendarView.event.instances.event.accept
+            cancel:
+              operationId: users.user.calendars.calendar.calendarView.event.instances.event.cancel
+            decline:
+              operationId: users.user.calendars.calendar.calendarView.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.calendars.calendar.calendarView.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.calendars.calendar.calendarView.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.calendars.calendar.calendarView.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendars.calendar.calendarView.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -85386,6 +86018,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.calendars.calendar.calendarView.event.instances.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.calendars.calendar.calendarView.event.instances.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.calendars.calendar.calendarView.event.instances.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.calendars.calendar.calendarView.event.instances.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.calendars.calendar.calendarView.event.instances.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.calendars.calendar.calendarView.event.instances.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendars.calendar.calendarView.event.instances.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -88992,6 +89638,20 @@ paths:
                 user-id: $request.path.user-id
                 calendar-id: $request.path.calendar-id
                 event-id: $request.path.event-id
+            accept:
+              operationId: users.user.calendars.calendar.events.event.accept
+            cancel:
+              operationId: users.user.calendars.calendar.events.event.cancel
+            decline:
+              operationId: users.user.calendars.calendar.events.event.decline
+            dismissReminder:
+              operationId: users.user.calendars.calendar.events.event.dismissReminder
+            forward:
+              operationId: users.user.calendars.calendar.events.event.forward
+            snoozeReminder:
+              operationId: users.user.calendars.calendar.events.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendars.calendar.events.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -89915,6 +90575,20 @@ paths:
                 calendar-id: $request.path.calendar-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.calendars.calendar.events.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.calendars.calendar.events.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.calendars.calendar.events.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.calendars.calendar.events.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.calendars.calendar.events.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.calendars.calendar.events.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendars.calendar.events.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -91211,6 +91885,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.calendars.calendar.events.event.exceptionOccurrences.event.instances.event.accept
+            cancel:
+              operationId: users.user.calendars.calendar.events.event.exceptionOccurrences.event.instances.event.cancel
+            decline:
+              operationId: users.user.calendars.calendar.events.event.exceptionOccurrences.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.calendars.calendar.events.event.exceptionOccurrences.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.calendars.calendar.events.event.exceptionOccurrences.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.calendars.calendar.events.event.exceptionOccurrences.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendars.calendar.events.event.exceptionOccurrences.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -94230,6 +94918,20 @@ paths:
                 calendar-id: $request.path.calendar-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.calendars.calendar.events.event.instances.event.accept
+            cancel:
+              operationId: users.user.calendars.calendar.events.event.instances.event.cancel
+            decline:
+              operationId: users.user.calendars.calendar.events.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.calendars.calendar.events.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.calendars.calendar.events.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.calendars.calendar.events.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendars.calendar.events.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -95242,6 +95944,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.calendars.calendar.events.event.instances.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.calendars.calendar.events.event.instances.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.calendars.calendar.events.event.instances.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.calendars.calendar.events.event.instances.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.calendars.calendar.events.event.instances.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.calendars.calendar.events.event.instances.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendars.calendar.events.event.instances.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -99354,6 +100070,20 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 event-id: $request.path.event-id
+            accept:
+              operationId: users.user.calendarView.event.accept
+            cancel:
+              operationId: users.user.calendarView.event.cancel
+            decline:
+              operationId: users.user.calendarView.event.decline
+            dismissReminder:
+              operationId: users.user.calendarView.event.dismissReminder
+            forward:
+              operationId: users.user.calendarView.event.forward
+            snoozeReminder:
+              operationId: users.user.calendarView.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendarView.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -100188,6 +100918,20 @@ paths:
                 user-id: $request.path.user-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.calendarView.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.calendarView.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.calendarView.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.calendarView.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.calendarView.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.calendarView.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendarView.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -101360,6 +102104,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.calendarView.event.exceptionOccurrences.event.instances.event.accept
+            cancel:
+              operationId: users.user.calendarView.event.exceptionOccurrences.event.instances.event.cancel
+            decline:
+              operationId: users.user.calendarView.event.exceptionOccurrences.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.calendarView.event.exceptionOccurrences.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.calendarView.event.exceptionOccurrences.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.calendarView.event.exceptionOccurrences.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendarView.event.exceptionOccurrences.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -104080,6 +104838,20 @@ paths:
                 user-id: $request.path.user-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.calendarView.event.instances.event.accept
+            cancel:
+              operationId: users.user.calendarView.event.instances.event.cancel
+            decline:
+              operationId: users.user.calendarView.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.calendarView.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.calendarView.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.calendarView.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendarView.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -105003,6 +105775,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.calendarView.event.instances.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.calendarView.event.instances.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.calendarView.event.instances.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.calendarView.event.instances.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.calendarView.event.instances.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.calendarView.event.instances.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.calendarView.event.instances.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -108240,6 +109026,20 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 event-id: $request.path.event-id
+            accept:
+              operationId: users.user.events.event.accept
+            cancel:
+              operationId: users.user.events.event.cancel
+            decline:
+              operationId: users.user.events.event.decline
+            dismissReminder:
+              operationId: users.user.events.event.dismissReminder
+            forward:
+              operationId: users.user.events.event.forward
+            snoozeReminder:
+              operationId: users.user.events.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.events.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -109074,6 +109874,20 @@ paths:
                 user-id: $request.path.user-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.events.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.events.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.events.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.events.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.events.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.events.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.events.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -110246,6 +111060,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.events.event.exceptionOccurrences.event.instances.event.accept
+            cancel:
+              operationId: users.user.events.event.exceptionOccurrences.event.instances.event.cancel
+            decline:
+              operationId: users.user.events.event.exceptionOccurrences.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.events.event.exceptionOccurrences.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.events.event.exceptionOccurrences.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.events.event.exceptionOccurrences.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.events.event.exceptionOccurrences.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -112966,6 +113794,20 @@ paths:
                 user-id: $request.path.user-id
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
+            accept:
+              operationId: users.user.events.event.instances.event.accept
+            cancel:
+              operationId: users.user.events.event.instances.event.cancel
+            decline:
+              operationId: users.user.events.event.instances.event.decline
+            dismissReminder:
+              operationId: users.user.events.event.instances.event.dismissReminder
+            forward:
+              operationId: users.user.events.event.instances.event.forward
+            snoozeReminder:
+              operationId: users.user.events.event.instances.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.events.event.instances.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -113889,6 +114731,20 @@ paths:
                 event-id: $request.path.event-id
                 event-id1: $request.path.event-id1
                 event-id2: $request.path.event-id2
+            accept:
+              operationId: users.user.events.event.instances.event.exceptionOccurrences.event.accept
+            cancel:
+              operationId: users.user.events.event.instances.event.exceptionOccurrences.event.cancel
+            decline:
+              operationId: users.user.events.event.instances.event.exceptionOccurrences.event.decline
+            dismissReminder:
+              operationId: users.user.events.event.instances.event.exceptionOccurrences.event.dismissReminder
+            forward:
+              operationId: users.user.events.event.instances.event.exceptionOccurrences.event.forward
+            snoozeReminder:
+              operationId: users.user.events.event.instances.event.exceptionOccurrences.event.snoozeReminder
+            tentativelyAccept:
+              operationId: users.user.events.event.instances.event.exceptionOccurrences.event.tentativelyAccept
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

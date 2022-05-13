@@ -1001,6 +1001,10 @@ paths:
               parameters:
                 educationClass-id: $request.path.educationClass-id
                 educationAssignment-id: $request.path.educationAssignment-id
+            publish:
+              operationId: education.classes.educationClass.assignments.educationAssignment.publish
+            setUpResourcesFolder:
+              operationId: education.classes.educationClass.assignments.educationAssignment.setUpResourcesFolder
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2057,6 +2061,16 @@ paths:
                 educationClass-id: $request.path.educationClass-id
                 educationAssignment-id: $request.path.educationAssignment-id
                 educationSubmission-id: $request.path.educationSubmission-id
+            reassign:
+              operationId: education.classes.educationClass.assignments.educationAssignment.submissions.educationSubmission.reassign
+            return:
+              operationId: education.classes.educationClass.assignments.educationAssignment.submissions.educationSubmission.return
+            setUpResourcesFolder:
+              operationId: education.classes.educationClass.assignments.educationAssignment.submissions.educationSubmission.setUpResourcesFolder
+            submit:
+              operationId: education.classes.educationClass.assignments.educationAssignment.submissions.educationSubmission.submit
+            unsubmit:
+              operationId: education.classes.educationClass.assignments.educationAssignment.submissions.educationSubmission.unsubmit
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4832,6 +4846,10 @@ paths:
               operationId: education.me.Assignments.ListSubmissions
               parameters:
                 educationAssignment-id: $request.path.educationAssignment-id
+            publish:
+              operationId: education.me.assignments.educationAssignment.publish
+            setUpResourcesFolder:
+              operationId: education.me.assignments.educationAssignment.setUpResourcesFolder
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5738,6 +5756,16 @@ paths:
               parameters:
                 educationAssignment-id: $request.path.educationAssignment-id
                 educationSubmission-id: $request.path.educationSubmission-id
+            reassign:
+              operationId: education.me.assignments.educationAssignment.submissions.educationSubmission.reassign
+            return:
+              operationId: education.me.assignments.educationAssignment.submissions.educationSubmission.return
+            setUpResourcesFolder:
+              operationId: education.me.assignments.educationAssignment.submissions.educationSubmission.setUpResourcesFolder
+            submit:
+              operationId: education.me.assignments.educationAssignment.submissions.educationSubmission.submit
+            unsubmit:
+              operationId: education.me.assignments.educationAssignment.submissions.educationSubmission.unsubmit
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9067,6 +9095,16 @@ paths:
               operationId: education.SynchronizationProfiles.GetProfileStatus
               parameters:
                 educationSynchronizationProfile-id: $request.path.educationSynchronizationProfile-id
+            pause:
+              operationId: education.synchronizationProfiles.educationSynchronizationProfile.pause
+            reset:
+              operationId: education.synchronizationProfiles.educationSynchronizationProfile.reset
+            resume:
+              operationId: education.synchronizationProfiles.educationSynchronizationProfile.resume
+            start:
+              operationId: education.synchronizationProfiles.educationSynchronizationProfile.start
+            uploadUrl:
+              operationId: education.synchronizationProfiles.educationSynchronizationProfile.uploadUrl
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10211,6 +10249,10 @@ paths:
               parameters:
                 educationUser-id: $request.path.educationUser-id
                 educationAssignment-id: $request.path.educationAssignment-id
+            publish:
+              operationId: education.users.educationUser.assignments.educationAssignment.publish
+            setUpResourcesFolder:
+              operationId: education.users.educationUser.assignments.educationAssignment.setUpResourcesFolder
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11267,6 +11309,16 @@ paths:
                 educationUser-id: $request.path.educationUser-id
                 educationAssignment-id: $request.path.educationAssignment-id
                 educationSubmission-id: $request.path.educationSubmission-id
+            reassign:
+              operationId: education.users.educationUser.assignments.educationAssignment.submissions.educationSubmission.reassign
+            return:
+              operationId: education.users.educationUser.assignments.educationAssignment.submissions.educationSubmission.return
+            setUpResourcesFolder:
+              operationId: education.users.educationUser.assignments.educationAssignment.submissions.educationSubmission.setUpResourcesFolder
+            submit:
+              operationId: education.users.educationUser.assignments.educationAssignment.submissions.educationSubmission.submit
+            unsubmit:
+              operationId: education.users.educationUser.assignments.educationAssignment.submissions.educationSubmission.unsubmit
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

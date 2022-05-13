@@ -10,8 +10,8 @@ paths:
     get:
       tags:
         - dataPolicyOperations.dataPolicyOperation
-      summary: Get entities from dataPolicyOperations
-      description: Get dataPolicyOperation
+      summary: Get dataPolicyOperation
+      description: Retrieve the properties of the dataPolicyOperation object.
       operationId: dataPolicyOperations.dataPolicyOperation_ListDataPolicyOperation
       parameters:
         - $ref: '#/components/parameters/top'
@@ -109,8 +109,8 @@ paths:
     get:
       tags:
         - dataPolicyOperations.dataPolicyOperation
-      summary: Get entity from dataPolicyOperations by key
-      description: Get dataPolicyOperation
+      summary: Get dataPolicyOperation
+      description: Retrieve the properties of the dataPolicyOperation object.
       operationId: dataPolicyOperations.dataPolicyOperation_GetDataPolicyOperation
       parameters:
         - name: dataPolicyOperation-id
@@ -1116,8 +1116,8 @@ paths:
     get:
       tags:
         - identityProviders.identityProvider
-      summary: Get entities from identityProviders
-      description: List identityProviders (deprecated)
+      summary: List identityProviders (deprecated)
+      description: 'Retrieve a list of [identityProviders](../resources/identityprovider.md) objects.'
       operationId: identityProviders.identityProvider_ListIdentityProvider
       parameters:
         - $ref: '#/components/parameters/top'
@@ -1192,8 +1192,8 @@ paths:
     post:
       tags:
         - identityProviders.identityProvider
-      summary: Add new entity to identityProviders
-      description: Create identityProvider (deprecated)
+      summary: Create identityProvider (deprecated)
+      description: 'Create a new [identityProvider](../resources/identityprovider.md) object.'
       operationId: identityProviders.identityProvider_CreateIdentityProvider
       requestBody:
         description: New entity
@@ -1222,8 +1222,8 @@ paths:
     get:
       tags:
         - identityProviders.identityProvider
-      summary: Get entity from identityProviders by key
-      description: Get identityProvider (deprecated)
+      summary: Get identityProvider (deprecated)
+      description: 'Retrieve the properties and relationships of an [identityProvider](../resources/identityprovider.md).'
       operationId: identityProviders.identityProvider_GetIdentityProvider
       parameters:
         - name: identityProvider-id
@@ -1312,8 +1312,8 @@ paths:
     delete:
       tags:
         - identityProviders.identityProvider
-      summary: Delete entity from identityProviders
-      description: Delete identityProvider (deprecated)
+      summary: Delete identityProvider (deprecated)
+      description: 'Delete an [identityProvider](../resources/identityprovider.md).'
       operationId: identityProviders.identityProvider_DeleteIdentityProvider
       parameters:
         - name: identityProvider-id
@@ -1434,6 +1434,14 @@ paths:
               operationId: informationProtection.GetPolicy
             threatAssessmentRequests:
               operationId: informationProtection.ListThreatAssessmentRequests
+            decryptBuffer:
+              operationId: informationProtection.decryptBuffer
+            encryptBuffer:
+              operationId: informationProtection.encryptBuffer
+            signDigest:
+              operationId: informationProtection.signDigest
+            verifySignature:
+              operationId: informationProtection.verifySignature
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -3794,8 +3802,8 @@ paths:
     post:
       tags:
         - invitations.invitation
-      summary: Add new entity to invitations
-      description: 'Tutorial: Use the access reviews API to review guest access to your Microsoft 365 groups'
+      summary: 'Tutorial: Use the access reviews API to review guest access to your Microsoft 365 groups'
+      description: Let's assume that you've granted access to external users (also called *guest users*) to resources in your organization through Microsoft 365 groups. This tutorial will guide you to review their access to the Microsoft 365 groups in your tenant.
       operationId: invitations.invitation_CreateInvitation
       requestBody:
         description: New entity
@@ -4444,8 +4452,8 @@ paths:
     get:
       tags:
         - oauth2PermissionGrants.oAuth2PermissionGrant
-      summary: Get entities from oauth2PermissionGrants
-      description: List oauth2PermissionGrants (delegated permission grants)
+      summary: List oauth2PermissionGrants (delegated permission grants)
+      description: 'Retrieve a list of [oAuth2PermissionGrant](../resources/oauth2permissiongrant.md) objects, representing delegated permissions which have been granted for client applications to access APIs on behalf of signed-in users.'
       operationId: oauth2PermissionGrants.oAuth2PermissionGrant_ListOAuth2PermissionGrant
       parameters:
         - $ref: '#/components/parameters/top'
@@ -4523,8 +4531,8 @@ paths:
     post:
       tags:
         - oauth2PermissionGrants.oAuth2PermissionGrant
-      summary: Add new entity to oauth2PermissionGrants
-      description: Create oAuth2PermissionGrant (a delegated permission grant)
+      summary: Create oAuth2PermissionGrant (a delegated permission grant)
+      description: 'Create a delegated permission grant, represented by an [oAuth2PermissionGrant](../resources/oauth2permissiongrant.md) object. A delegated permission grant authorizes a client service principal (representing a client application) to access a resource service principal (representing an API), on behalf of a signed-in user, for the level of access limited by the delegated permissions which were granted.'
       operationId: oauth2PermissionGrants.oAuth2PermissionGrant_CreateOAuth2PermissionGrant
       requestBody:
         description: New entity
@@ -7109,6 +7117,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.crossTenantAccessPolicyConfigurationDefault'
+          links:
+            resetToSystemDefault:
+              operationId: policies.crossTenantAccessPolicy.default.resetToSystemDefault
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -12666,8 +12677,8 @@ paths:
     get:
       tags:
         - riskDetections.riskDetection
-      summary: Get entities from riskDetections
-      description: List riskDetection
+      summary: List riskDetection
+      description: Retrieve the properties of a collection of **riskDetection** objects.
       operationId: riskDetections.riskDetection_ListRiskDetection
       parameters:
         - $ref: '#/components/parameters/top'
@@ -12923,8 +12934,8 @@ paths:
     get:
       tags:
         - riskyUsers.riskyUser
-      summary: Get entities from riskyUsers
-      description: List riskyUsers
+      summary: List riskyUsers
+      description: Retrieve the properties and relationships of a collection of **riskyUser** objects.
       operationId: riskyUsers.riskyUser_ListRiskyUser
       parameters:
         - $ref: '#/components/parameters/top'
@@ -13030,8 +13041,8 @@ paths:
     get:
       tags:
         - riskyUsers.riskyUser
-      summary: Get entity from riskyUsers by key
-      description: Get riskyUser
+      summary: Get riskyUser
+      description: Retrieve the properties and relationships of a **riskyUser** object.
       operationId: riskyUsers.riskyUser_GetRiskyUser
       parameters:
         - name: riskyUser-id
@@ -13660,6 +13671,17 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.trustFrameworkKeySet'
+          links:
+            generateKey:
+              operationId: trustFramework.keySets.trustFrameworkKeySet.generateKey
+            getActiveKey:
+              operationId: trustFramework.keySets.trustFrameworkKeySet.getActiveKey
+            uploadCertificate:
+              operationId: trustFramework.keySets.trustFrameworkKeySet.uploadCertificate
+            uploadPkcs12:
+              operationId: trustFramework.keySets.trustFrameworkKeySet.uploadPkcs12
+            uploadSecret:
+              operationId: trustFramework.keySets.trustFrameworkKeySet.uploadSecret
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -14919,6 +14941,13 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.authenticationMethod'
+          links:
+            disableSmsSignIn:
+              operationId: users.user.authentication.methods.authenticationMethod.disableSmsSignIn
+            enableSmsSignIn:
+              operationId: users.user.authentication.methods.authenticationMethod.enableSmsSignIn
+            resetPassword:
+              operationId: users.user.authentication.methods.authenticationMethod.resetPassword
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation

@@ -10,8 +10,8 @@ paths:
     get:
       tags:
         - accessReviews.accessReview
-      summary: Get entities from accessReviews
-      description: List accessReviews
+      summary: List accessReviews
+      description: 'Retrieve the [accessReview](../resources/accessreview.md) objects for a particular [businessFlowTemplate](../resources/businessflowtemplate.md). A list of zero or more **accessReview** objects are returned, for each one-time and recurring access review that was created with that business flow template.  Note that business flow template IDs are case sensitive. If many access reviews match the filter, to improve efficiency and avoid timeouts, retrieve the result set in pages, by including both the `$top` query parameter with a page size, for example 100, and the `$skip=0` query parameter in the request. These parameters can be included even when you do not anticipate that the request will span multiple pages. When a result set spans multiple pages, Microsoft Graph returns that page with an `@odata.nextLink` property in the response that contains a URL to the next page of results. If that property is present, continue making additional requests with the `@odata.nextLink` URL in each response, until all the results are returned, as described in [paging Microsoft Graph data in your app](/graph/paging). The **accessReview** objects returned by this API will not include nested structure properties such as **settings**, or relationships.  To retrieve an access review settings or relationships, use the [get accessReview](accessreview-get.md) API.'
       operationId: accessReviews.accessReview_ListAccessReview
       parameters:
         - $ref: '#/components/parameters/top'
@@ -106,8 +106,8 @@ paths:
     post:
       tags:
         - accessReviews.accessReview
-      summary: Add new entity to accessReviews
-      description: Create accessReview
+      summary: Create accessReview
+      description: 'In the Azure AD [access reviews](../resources/accessreviews-root.md) feature, create a new [accessReview](../resources/accessreview.md) object. Before making this request, the caller must have previously [retrieved the list of business flow templates](businessflowtemplate-list.md), to have the value of **businessFlowTemplateId** to include in the request. After making this request, the caller should [create a programControl](programcontrol-create.md), to link the access review to a program.  '
       operationId: accessReviews.accessReview_CreateAccessReview
       requestBody:
         description: New entity
@@ -130,8 +130,8 @@ paths:
     get:
       tags:
         - accessReviews.accessReview
-      summary: Get entity from accessReviews by key
-      description: Get accessReview
+      summary: Get accessReview
+      description: 'In the Azure AD [access reviews](../resources/accessreviews-root.md) feature, retrieve an [accessReview](../resources/accessreview.md) object.   To retrieve the reviewers of the access review, use the [list accessReview reviewers](accessreview-listreviewers.md) API. To retrieve the decisions of the access review, use the [list accessReview decisions](accessreview-listdecisions.md) API, or the [list my accessReview decisions](accessreview-listmydecisions.md) API. If this is a recurring access review, no decisions will be associated with the recurring access review series. Instead, use the `instances` relationship of that series to retrieve an [accessReview](../resources/accessreview.md) collection of the past, current, and future instances of the access review. Each past and current instance will have decisions.'
       operationId: accessReviews.accessReview_GetAccessReview
       parameters:
         - name: accessReview-id
@@ -207,14 +207,22 @@ paths:
               operationId: accessReviews.ListReviewers
               parameters:
                 accessReview-id: $request.path.accessReview-id
+            applyDecisions:
+              operationId: accessReviews.accessReview.applyDecisions
+            resetDecisions:
+              operationId: accessReviews.accessReview.resetDecisions
+            sendReminder:
+              operationId: accessReviews.accessReview.sendReminder
+            stop:
+              operationId: accessReviews.accessReview.stop
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
     patch:
       tags:
         - accessReviews.accessReview
-      summary: Update entity in accessReviews
-      description: Update accessReview
+      summary: Update accessReview
+      description: 'In the Azure AD [access reviews](../resources/accessreviews-root.md) feature, update an existing [accessReview](../resources/accessreview.md) object to change one or more of its properties. This API is not intended to change the reviewers or decisions of a review.  To change the reviewers, use the [addReviewer](accessreview-addreviewer.md) or [removeReviewer](accessreview-removereviewer.md) APIs.  To stop an already-started one-time review, or an already-started instance of a recurring review, early, use the [stop](accessreview-stop.md) API. To apply the decisions to the target group or app access rights, use the [apply](accessreview-apply.md) API. '
       operationId: accessReviews.accessReview_UpdateAccessReview
       parameters:
         - name: accessReview-id
@@ -240,8 +248,8 @@ paths:
     delete:
       tags:
         - accessReviews.accessReview
-      summary: Delete entity from accessReviews
-      description: Delete accessReview
+      summary: Delete accessReview
+      description: 'In the Azure AD [access reviews](../resources/accessreviews-root.md) feature, delete an [accessReview](../resources/accessreview.md) object.'
       operationId: accessReviews.accessReview_DeleteAccessReview
       parameters:
         - name: accessReview-id
@@ -3821,8 +3829,8 @@ paths:
     get:
       tags:
         - businessFlowTemplates.businessFlowTemplate
-      summary: Get entities from businessFlowTemplates
-      description: List businessFlowTemplates
+      summary: List businessFlowTemplates
+      description: 'In the Azure AD [access reviews](../resources/accessreviews-root.md) feature, list all the [businessFlowTemplate](../resources/businessflowtemplate.md) objects.'
       operationId: businessFlowTemplates.businessFlowTemplate_ListBusinessFlowTemplate
       parameters:
         - $ref: '#/components/parameters/top'
@@ -4723,6 +4731,18 @@ paths:
               operationId: identityGovernance.accessReviews.decisions.Instance.ListStages
               parameters:
                 accessReviewInstanceDecisionItem-id: $request.path.accessReviewInstanceDecisionItem-id
+            acceptRecommendations:
+              operationId: identityGovernance.accessReviews.decisions.accessReviewInstanceDecisionItem.instance.acceptRecommendations
+            applyDecisions:
+              operationId: identityGovernance.accessReviews.decisions.accessReviewInstanceDecisionItem.instance.applyDecisions
+            batchRecordDecisions:
+              operationId: identityGovernance.accessReviews.decisions.accessReviewInstanceDecisionItem.instance.batchRecordDecisions
+            resetDecisions:
+              operationId: identityGovernance.accessReviews.decisions.accessReviewInstanceDecisionItem.instance.resetDecisions
+            sendReminder:
+              operationId: identityGovernance.accessReviews.decisions.accessReviewInstanceDecisionItem.instance.sendReminder
+            stop:
+              operationId: identityGovernance.accessReviews.decisions.accessReviewInstanceDecisionItem.instance.stop
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6026,6 +6046,8 @@ paths:
               parameters:
                 accessReviewInstanceDecisionItem-id: $request.path.accessReviewInstanceDecisionItem-id
                 accessReviewStage-id: $request.path.accessReviewStage-id
+            stop:
+              operationId: identityGovernance.accessReviews.decisions.accessReviewInstanceDecisionItem.instance.stages.accessReviewStage.stop
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7135,6 +7157,8 @@ paths:
               operationId: identityGovernance.accessReviews.Definitions.ListInstances
               parameters:
                 accessReviewScheduleDefinition-id: $request.path.accessReviewScheduleDefinition-id
+            stop:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.stop
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -7402,6 +7426,18 @@ paths:
               parameters:
                 accessReviewScheduleDefinition-id: $request.path.accessReviewScheduleDefinition-id
                 accessReviewInstance-id: $request.path.accessReviewInstance-id
+            acceptRecommendations:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.acceptRecommendations
+            applyDecisions:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.applyDecisions
+            batchRecordDecisions:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.batchRecordDecisions
+            resetDecisions:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.resetDecisions
+            sendReminder:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.sendReminder
+            stop:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.stop
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -8454,6 +8490,18 @@ paths:
                 accessReviewScheduleDefinition-id: $request.path.accessReviewScheduleDefinition-id
                 accessReviewInstance-id: $request.path.accessReviewInstance-id
                 accessReviewInstanceDecisionItem-id: $request.path.accessReviewInstanceDecisionItem-id
+            acceptRecommendations:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.decisions.accessReviewInstanceDecisionItem.instance.acceptRecommendations
+            applyDecisions:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.decisions.accessReviewInstanceDecisionItem.instance.applyDecisions
+            batchRecordDecisions:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.decisions.accessReviewInstanceDecisionItem.instance.batchRecordDecisions
+            resetDecisions:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.decisions.accessReviewInstanceDecisionItem.instance.resetDecisions
+            sendReminder:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.decisions.accessReviewInstanceDecisionItem.instance.sendReminder
+            stop:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.decisions.accessReviewInstanceDecisionItem.instance.stop
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9369,6 +9417,8 @@ paths:
                 accessReviewInstance-id: $request.path.accessReviewInstance-id
                 accessReviewInstanceDecisionItem-id: $request.path.accessReviewInstanceDecisionItem-id
                 accessReviewStage-id: $request.path.accessReviewStage-id
+            stop:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.decisions.accessReviewInstanceDecisionItem.instance.stages.accessReviewStage.stop
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11003,6 +11053,8 @@ paths:
                 accessReviewScheduleDefinition-id: $request.path.accessReviewScheduleDefinition-id
                 accessReviewInstance-id: $request.path.accessReviewInstance-id
                 accessReviewStage-id: $request.path.accessReviewStage-id
+            stop:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.stages.accessReviewStage.stop
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -11889,6 +11941,18 @@ paths:
                 accessReviewInstance-id: $request.path.accessReviewInstance-id
                 accessReviewStage-id: $request.path.accessReviewStage-id
                 accessReviewInstanceDecisionItem-id: $request.path.accessReviewInstanceDecisionItem-id
+            acceptRecommendations:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.stages.accessReviewStage.decisions.accessReviewInstanceDecisionItem.instance.acceptRecommendations
+            applyDecisions:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.stages.accessReviewStage.decisions.accessReviewInstanceDecisionItem.instance.applyDecisions
+            batchRecordDecisions:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.stages.accessReviewStage.decisions.accessReviewInstanceDecisionItem.instance.batchRecordDecisions
+            resetDecisions:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.stages.accessReviewStage.decisions.accessReviewInstanceDecisionItem.instance.resetDecisions
+            sendReminder:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.stages.accessReviewStage.decisions.accessReviewInstanceDecisionItem.instance.sendReminder
+            stop:
+              operationId: identityGovernance.accessReviews.definitions.accessReviewScheduleDefinition.instances.accessReviewInstance.stages.accessReviewStage.decisions.accessReviewInstanceDecisionItem.instance.stop
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -14254,6 +14318,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.accessReviewHistoryInstance'
+          links:
+            generateDownloadUri:
+              operationId: identityGovernance.accessReviews.historyDefinitions.accessReviewHistoryDefinition.instances.accessReviewHistoryInstance.generateDownloadUri
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16970,6 +17037,10 @@ paths:
               operationId: identityGovernance.entitlementManagement.AccessPackageAssignmentRequests.GetRequestor
               parameters:
                 accessPackageAssignmentRequest-id: $request.path.accessPackageAssignmentRequest-id
+            cancel:
+              operationId: identityGovernance.entitlementManagement.accessPackageAssignmentRequests.accessPackageAssignmentRequest.cancel
+            reprocess:
+              operationId: identityGovernance.entitlementManagement.accessPackageAssignmentRequests.accessPackageAssignmentRequest.reprocess
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -20926,6 +20997,8 @@ paths:
               operationId: identityGovernance.entitlementManagement.AccessPackageAssignments.GetTarget
               parameters:
                 accessPackageAssignment-id: $request.path.accessPackageAssignment-id
+            reprocess:
+              operationId: identityGovernance.entitlementManagement.accessPackageAssignments.accessPackageAssignment.reprocess
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -21071,6 +21144,8 @@ paths:
               operationId: identityGovernance.entitlementManagement.accessPackageAssignments.AccessPackage.ListIncompatibleGroups
               parameters:
                 accessPackageAssignment-id: $request.path.accessPackageAssignment-id
+            getApplicablePolicyRequirements:
+              operationId: identityGovernance.entitlementManagement.accessPackageAssignments.accessPackageAssignment.accessPackage.getApplicablePolicyRequirements
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -27183,6 +27258,10 @@ paths:
               parameters:
                 accessPackageAssignment-id: $request.path.accessPackageAssignment-id
                 accessPackageAssignmentRequest-id: $request.path.accessPackageAssignmentRequest-id
+            cancel:
+              operationId: identityGovernance.entitlementManagement.accessPackageAssignments.accessPackageAssignment.accessPackageAssignmentRequests.accessPackageAssignmentRequest.cancel
+            reprocess:
+              operationId: identityGovernance.entitlementManagement.accessPackageAssignments.accessPackageAssignment.accessPackageAssignmentRequests.accessPackageAssignmentRequest.reprocess
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -38209,6 +38288,8 @@ paths:
               parameters:
                 accessPackageCatalog-id: $request.path.accessPackageCatalog-id
                 accessPackage-id: $request.path.accessPackage-id
+            getApplicablePolicyRequirements:
+              operationId: identityGovernance.entitlementManagement.accessPackageCatalogs.accessPackageCatalog.accessPackages.accessPackage.getApplicablePolicyRequirements
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -50777,6 +50858,8 @@ paths:
               operationId: identityGovernance.entitlementManagement.AccessPackages.ListIncompatibleGroups
               parameters:
                 accessPackage-id: $request.path.accessPackage-id
+            getApplicablePolicyRequirements:
+              operationId: identityGovernance.entitlementManagement.accessPackages.accessPackage.getApplicablePolicyRequirements
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -65588,8 +65671,8 @@ paths:
     get:
       tags:
         - privilegedApproval.privilegedApproval
-      summary: Get entities from privilegedApproval
-      description: List privilegedApproval
+      summary: List privilegedApproval
+      description: 'Retrieve a list of privilegedapproval objects. To filter the results from the query, use the standard OData ``$filter`` expressions in the URIs.'
       operationId: privilegedApproval.privilegedApproval_ListPrivilegedApproval
       parameters:
         - $ref: '#/components/parameters/top'
@@ -65677,8 +65760,8 @@ paths:
     post:
       tags:
         - privilegedApproval.privilegedApproval
-      summary: Add new entity to privilegedApproval
-      description: Create privilegedApproval
+      summary: Create privilegedApproval
+      description: Use this API to create a new privilegedApproval.
       operationId: privilegedApproval.privilegedApproval_CreatePrivilegedApproval
       requestBody:
         description: New entity
@@ -65701,8 +65784,8 @@ paths:
     get:
       tags:
         - privilegedApproval.privilegedApproval
-      summary: Get entity from privilegedApproval by key
-      description: Get privilegedApproval
+      summary: Get privilegedApproval
+      description: Retrieve the properties and relationships of privilegedapproval object.
       operationId: privilegedApproval.privilegedApproval_GetPrivilegedApproval
       parameters:
         - name: privilegedApproval-id
@@ -65771,8 +65854,8 @@ paths:
     patch:
       tags:
         - privilegedApproval.privilegedApproval
-      summary: Update entity in privilegedApproval
-      description: Update privilegedapproval
+      summary: Update privilegedapproval
+      description: Update the properties of privilegedapproval object.
       operationId: privilegedApproval.privilegedApproval_UpdatePrivilegedApproval
       parameters:
         - name: privilegedApproval-id
@@ -66398,8 +66481,8 @@ paths:
     get:
       tags:
         - privilegedOperationEvents.privilegedOperationEvent
-      summary: Get entities from privilegedOperationEvents
-      description: List privilegedOperationEvents
+      summary: List privilegedOperationEvents
+      description: 'Retrieve a list of [privilegedOperationEvent](../resources/privilegedoperationevent.md) objects, which represent the audit events that are generated by Privileged Identity Management for the role operations. For the details about the audit event, refer [privilegedOperationEvent](../resources/privilegedoperationevent.md). To filter the query results, use the standard OData ``$filter`` expression.'
       operationId: privilegedOperationEvents.privilegedOperationEvent_ListPrivilegedOperationEvent
       parameters:
         - $ref: '#/components/parameters/top'
@@ -66633,8 +66716,8 @@ paths:
     get:
       tags:
         - privilegedRoleAssignmentRequests.privilegedRoleAssignmentRequest
-      summary: Get entities from privilegedRoleAssignmentRequests
-      description: List privilegedRoleAssignmentRequests
+      summary: List privilegedRoleAssignmentRequests
+      description: 'Retrieve a collection of [privilegedRoleAssignmentRequest](../resources/privilegedroleassignmentrequest.md).  **Note:** This requester must have at least one role assignment on the resource.'
       operationId: privilegedRoleAssignmentRequests.privilegedRoleAssignmentRequest_ListPrivilegedRoleAssignmentRequest
       parameters:
         - $ref: '#/components/parameters/top'
@@ -66726,8 +66809,8 @@ paths:
     post:
       tags:
         - privilegedRoleAssignmentRequests.privilegedRoleAssignmentRequest
-      summary: Add new entity to privilegedRoleAssignmentRequests
-      description: Create privilegedRoleAssignmentRequest
+      summary: Create privilegedRoleAssignmentRequest
+      description: 'Create a [privilegedroleassignmentrequest](../resources/privilegedroleassignmentrequest.md) object.'
       operationId: privilegedRoleAssignmentRequests.privilegedRoleAssignmentRequest_CreatePrivilegedRoleAssignmentRequest
       requestBody:
         description: New entity
@@ -66809,6 +66892,8 @@ paths:
               operationId: privilegedRoleAssignmentRequests.GetRoleInfo
               parameters:
                 privilegedRoleAssignmentRequest-id: $request.path.privilegedRoleAssignmentRequest-id
+            cancel:
+              operationId: privilegedRoleAssignmentRequests.privilegedRoleAssignmentRequest.cancel
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -67398,8 +67483,8 @@ paths:
     get:
       tags:
         - privilegedRoleAssignments.privilegedRoleAssignment
-      summary: Get entities from privilegedRoleAssignments
-      description: List privilegedRoleAssignments
+      summary: List privilegedRoleAssignments
+      description: 'Retrieve a list of [privilegedRoleAssignment](../resources/privilegedroleassignment.md) objects, which correspond to all role assignments for the organization.'
       operationId: privilegedRoleAssignments.privilegedRoleAssignment_ListPrivilegedRoleAssignment
       parameters:
         - $ref: '#/components/parameters/top'
@@ -67473,8 +67558,8 @@ paths:
     post:
       tags:
         - privilegedRoleAssignments.privilegedRoleAssignment
-      summary: Add new entity to privilegedRoleAssignments
-      description: Create privilegedRoleAssignment
+      summary: Create privilegedRoleAssignment
+      description: 'Use this API to create a new  [privilegedRoleAssignment](../resources/privilegedroleassignment.md).'
       operationId: privilegedRoleAssignments.privilegedRoleAssignment_CreatePrivilegedRoleAssignment
       requestBody:
         description: New entity
@@ -67497,8 +67582,8 @@ paths:
     get:
       tags:
         - privilegedRoleAssignments.privilegedRoleAssignment
-      summary: Get entity from privilegedRoleAssignments by key
-      description: Get privilegedRoleAssignment
+      summary: Get privilegedRoleAssignment
+      description: Retrieve the properties and relationships of privilegedRoleAssignment object.
       operationId: privilegedRoleAssignments.privilegedRoleAssignment_GetPrivilegedRoleAssignment
       parameters:
         - name: privilegedRoleAssignment-id
@@ -67551,6 +67636,10 @@ paths:
               operationId: privilegedRoleAssignments.GetRoleInfo
               parameters:
                 privilegedRoleAssignment-id: $request.path.privilegedRoleAssignment-id
+            makeEligible:
+              operationId: privilegedRoleAssignments.privilegedRoleAssignment.makeEligible
+            makePermanent:
+              operationId: privilegedRoleAssignments.privilegedRoleAssignment.makePermanent
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -67583,8 +67672,8 @@ paths:
     delete:
       tags:
         - privilegedRoleAssignments.privilegedRoleAssignment
-      summary: Delete entity from privilegedRoleAssignments
-      description: Delete privilegedRoleAssignment
+      summary: Delete privilegedRoleAssignment
+      description: 'Delete [privilegedRoleAssignment](../resources/privilegedroleassignment.md).'
       operationId: privilegedRoleAssignments.privilegedRoleAssignment_DeletePrivilegedRoleAssignment
       parameters:
         - name: privilegedRoleAssignment-id
@@ -68184,8 +68273,8 @@ paths:
     get:
       tags:
         - privilegedRoles.privilegedRole
-      summary: Get entities from privilegedRoles
-      description: List privilegedRoles
+      summary: List privilegedRoles
+      description: 'Retrieve a list of [privilegedRole](../resources/privilegedrole.md) objects. To filter the results from the query, use the standard OData ``$filter`` expressions in the URIs.'
       operationId: privilegedRoles.privilegedRole_ListPrivilegedRole
       parameters:
         - $ref: '#/components/parameters/top'
@@ -68274,8 +68363,8 @@ paths:
     get:
       tags:
         - privilegedRoles.privilegedRole
-      summary: Get entity from privilegedRoles by key
-      description: Get privilegedRole
+      summary: Get privilegedRole
+      description: 'Retrieve the properties and relationships of [privilegedRole](../resources/privilegedrole.md) object. '
       operationId: privilegedRoles.privilegedRole_GetPrivilegedRole
       parameters:
         - name: privilegedRole-id
@@ -68336,6 +68425,10 @@ paths:
               operationId: privilegedRoles.GetSummary
               parameters:
                 privilegedRole-id: $request.path.privilegedRole-id
+            selfActivate:
+              operationId: privilegedRoles.privilegedRole.selfActivate
+            selfDeactivate:
+              operationId: privilegedRoles.privilegedRole.selfDeactivate
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -68828,8 +68921,8 @@ paths:
     get:
       tags:
         - programControls.programControl
-      summary: Get entities from programControls
-      description: List programControls
+      summary: List programControls
+      description: 'In the Azure AD [access reviews](../resources/accessreviews-root.md) feature, list all the [programControl](../resources/programcontrol.md) objects, across all programs in the tenant.'
       operationId: programControls.programControl_ListProgramControl
       parameters:
         - $ref: '#/components/parameters/top'
@@ -68912,8 +69005,8 @@ paths:
     post:
       tags:
         - programControls.programControl
-      summary: Add new entity to programControls
-      description: Create programControl
+      summary: Create programControl
+      description: 'In the Azure AD [access reviews](../resources/accessreviews-root.md) feature, create a new [programControl](../resources/programcontrol.md) object.  This links an access review to a program. Prior to making this request, the caller must have previously'
       operationId: programControls.programControl_CreateProgramControl
       requestBody:
         description: New entity
@@ -69024,8 +69117,8 @@ paths:
     delete:
       tags:
         - programControls.programControl
-      summary: Delete entity from programControls
-      description: Delete programControl
+      summary: Delete programControl
+      description: 'In the Azure AD [access reviews](../resources/accessreviews-root.md) feature, delete a [programControl](../resources/programcontrol.md) object.  This unlinks an access review from a program.'
       operationId: programControls.programControl_DeleteProgramControl
       parameters:
         - name: programControl-id
@@ -69416,8 +69509,8 @@ paths:
     get:
       tags:
         - programControlTypes.programControlType
-      summary: Get entities from programControlTypes
-      description: List programControlTypes
+      summary: List programControlTypes
+      description: 'In the Azure AD [access reviews](../resources/accessreviews-root.md) feature, list all the [programControlType](../resources/programcontroltype.md) objects.'
       operationId: programControlTypes.programControlType_ListProgramControlType
       parameters:
         - $ref: '#/components/parameters/top'
@@ -69603,8 +69696,8 @@ paths:
     get:
       tags:
         - programs.program
-      summary: Get entities from programs
-      description: List programs
+      summary: List programs
+      description: 'In the Azure AD [access reviews](../resources/accessreviews-root.md) feature, list all the [program](../resources/program.md) objects.'
       operationId: programs.program_ListProgram
       parameters:
         - $ref: '#/components/parameters/top'
@@ -69669,8 +69762,8 @@ paths:
     post:
       tags:
         - programs.program
-      summary: Add new entity to programs
-      description: Create program
+      summary: Create program
+      description: 'In the Azure AD [access reviews](../resources/accessreviews-root.md) feature, create a new [program](../resources/program.md) object.'
       operationId: programs.program_CreateProgram
       requestBody:
         description: New entity
@@ -69749,8 +69842,8 @@ paths:
     patch:
       tags:
         - programs.program
-      summary: Update entity in programs
-      description: Update program
+      summary: Update program
+      description: 'In the Azure AD [access reviews](../resources/accessreviews-root.md) feature, update an existing [program](../resources/program.md) object.'
       operationId: programs.program_UpdateProgram
       parameters:
         - name: program-id
@@ -69776,8 +69869,8 @@ paths:
     delete:
       tags:
         - programs.program
-      summary: Delete entity from programs
-      description: Delete program
+      summary: Delete program
+      description: 'In the Azure AD [access reviews](../resources/accessreviews-root.md) feature, delete a [program](../resources/program.md) object. Do not delete a program which still has `programControl` linked to it, those access reviews should first be deleted or unlinked from the program and linked to a different program.  Also, please note that the built-in default program cannot be deleted.'
       operationId: programs.program_DeleteProgram
       parameters:
         - name: program-id

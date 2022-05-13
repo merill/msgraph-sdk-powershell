@@ -10,8 +10,8 @@ paths:
     get:
       tags:
         - auditLogs.auditLogRoot
-      summary: Get auditLogs
-      description: auditLogRoot resource type
+      summary: auditLogRoot resource type
+      description: Contains different types of audit logs. This resources returns a singleton auditLog resource. It doesn't contain any usable properties.
       operationId: auditLogs.auditLogRoot_GetAuditLogRoot
       parameters:
         - name: $select
@@ -1139,6 +1139,38 @@ paths:
           links:
             exportJobs:
               operationId: deviceManagement.Reports.ListExportJobs
+            getCachedReport:
+              operationId: deviceManagement.reports.getCachedReport
+            getCompliancePolicyNonComplianceReport:
+              operationId: deviceManagement.reports.getCompliancePolicyNonComplianceReport
+            getCompliancePolicyNonComplianceSummaryReport:
+              operationId: deviceManagement.reports.getCompliancePolicyNonComplianceSummaryReport
+            getComplianceSettingNonComplianceReport:
+              operationId: deviceManagement.reports.getComplianceSettingNonComplianceReport
+            getConfigurationPolicyNonComplianceReport:
+              operationId: deviceManagement.reports.getConfigurationPolicyNonComplianceReport
+            getConfigurationPolicyNonComplianceSummaryReport:
+              operationId: deviceManagement.reports.getConfigurationPolicyNonComplianceSummaryReport
+            getConfigurationSettingNonComplianceReport:
+              operationId: deviceManagement.reports.getConfigurationSettingNonComplianceReport
+            getDeviceManagementIntentPerSettingContributingProfiles:
+              operationId: deviceManagement.reports.getDeviceManagementIntentPerSettingContributingProfiles
+            getDeviceManagementIntentSettingsReport:
+              operationId: deviceManagement.reports.getDeviceManagementIntentSettingsReport
+            getDeviceNonComplianceReport:
+              operationId: deviceManagement.reports.getDeviceNonComplianceReport
+            getHistoricalReport:
+              operationId: deviceManagement.reports.getHistoricalReport
+            getPolicyNonComplianceMetadata:
+              operationId: deviceManagement.reports.getPolicyNonComplianceMetadata
+            getPolicyNonComplianceReport:
+              operationId: deviceManagement.reports.getPolicyNonComplianceReport
+            getPolicyNonComplianceSummaryReport:
+              operationId: deviceManagement.reports.getPolicyNonComplianceSummaryReport
+            getReportFilters:
+              operationId: deviceManagement.reports.getReportFilters
+            getSettingNonComplianceReport:
+              operationId: deviceManagement.reports.getSettingNonComplianceReport
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1452,6 +1484,156 @@ paths:
               operationId: reports.ListMonthlyPrintUsageByPrinter
             monthlyPrintUsageByUser:
               operationId: reports.ListMonthlyPrintUsageByUser
+            deviceConfigurationDeviceActivity:
+              operationId: reports.deviceConfigurationDeviceActivity
+            deviceConfigurationUserActivity:
+              operationId: reports.deviceConfigurationUserActivity
+            getEmailActivityCounts:
+              operationId: reports.getEmailActivityCounts
+            getEmailActivityUserCounts:
+              operationId: reports.getEmailActivityUserCounts
+            getEmailActivityUserDetail:
+              operationId: reports.getEmailActivityUserDetail
+            getEmailAppUsageAppsUserCounts:
+              operationId: reports.getEmailAppUsageAppsUserCounts
+            getEmailAppUsageUserCounts:
+              operationId: reports.getEmailAppUsageUserCounts
+            getEmailAppUsageUserDetail:
+              operationId: reports.getEmailAppUsageUserDetail
+            getEmailAppUsageVersionsUserCounts:
+              operationId: reports.getEmailAppUsageVersionsUserCounts
+            getGroupArchivedPrintJobs:
+              operationId: reports.getGroupArchivedPrintJobs
+            getMailboxUsageDetail:
+              operationId: reports.getMailboxUsageDetail
+            getMailboxUsageMailboxCounts:
+              operationId: reports.getMailboxUsageMailboxCounts
+            getMailboxUsageQuotaStatusMailboxCounts:
+              operationId: reports.getMailboxUsageQuotaStatusMailboxCounts
+            getMailboxUsageStorage:
+              operationId: reports.getMailboxUsageStorage
+            getOffice365ActivationCounts:
+              operationId: reports.getOffice365ActivationCounts
+            getOffice365ActivationsUserCounts:
+              operationId: reports.getOffice365ActivationsUserCounts
+            getOffice365ActivationsUserDetail:
+              operationId: reports.getOffice365ActivationsUserDetail
+            getOffice365ActiveUserCounts:
+              operationId: reports.getOffice365ActiveUserCounts
+            getOffice365ActiveUserDetail:
+              operationId: reports.getOffice365ActiveUserDetail
+            getOffice365GroupsActivityCounts:
+              operationId: reports.getOffice365GroupsActivityCounts
+            getOffice365GroupsActivityDetail:
+              operationId: reports.getOffice365GroupsActivityDetail
+            getOffice365GroupsActivityFileCounts:
+              operationId: reports.getOffice365GroupsActivityFileCounts
+            getOffice365GroupsActivityGroupCounts:
+              operationId: reports.getOffice365GroupsActivityGroupCounts
+            getOffice365GroupsActivityStorage:
+              operationId: reports.getOffice365GroupsActivityStorage
+            getOffice365ServicesUserCounts:
+              operationId: reports.getOffice365ServicesUserCounts
+            getOneDriveActivityFileCounts:
+              operationId: reports.getOneDriveActivityFileCounts
+            getOneDriveActivityUserCounts:
+              operationId: reports.getOneDriveActivityUserCounts
+            getOneDriveActivityUserDetail:
+              operationId: reports.getOneDriveActivityUserDetail
+            getOneDriveUsageAccountCounts:
+              operationId: reports.getOneDriveUsageAccountCounts
+            getOneDriveUsageAccountDetail:
+              operationId: reports.getOneDriveUsageAccountDetail
+            getOneDriveUsageFileCounts:
+              operationId: reports.getOneDriveUsageFileCounts
+            getOneDriveUsageStorage:
+              operationId: reports.getOneDriveUsageStorage
+            getPrinterArchivedPrintJobs:
+              operationId: reports.getPrinterArchivedPrintJobs
+            getSharePointActivityFileCounts:
+              operationId: reports.getSharePointActivityFileCounts
+            getSharePointActivityPages:
+              operationId: reports.getSharePointActivityPages
+            getSharePointActivityUserCounts:
+              operationId: reports.getSharePointActivityUserCounts
+            getSharePointActivityUserDetail:
+              operationId: reports.getSharePointActivityUserDetail
+            getSharePointSiteUsageDetail:
+              operationId: reports.getSharePointSiteUsageDetail
+            getSharePointSiteUsageFileCounts:
+              operationId: reports.getSharePointSiteUsageFileCounts
+            getSharePointSiteUsagePages:
+              operationId: reports.getSharePointSiteUsagePages
+            getSharePointSiteUsageSiteCounts:
+              operationId: reports.getSharePointSiteUsageSiteCounts
+            getSharePointSiteUsageStorage:
+              operationId: reports.getSharePointSiteUsageStorage
+            getSkypeForBusinessActivityCounts:
+              operationId: reports.getSkypeForBusinessActivityCounts
+            getSkypeForBusinessActivityUserCounts:
+              operationId: reports.getSkypeForBusinessActivityUserCounts
+            getSkypeForBusinessActivityUserDetail:
+              operationId: reports.getSkypeForBusinessActivityUserDetail
+            getSkypeForBusinessDeviceUsageDistributionUserCounts:
+              operationId: reports.getSkypeForBusinessDeviceUsageDistributionUserCounts
+            getSkypeForBusinessDeviceUsageUserCounts:
+              operationId: reports.getSkypeForBusinessDeviceUsageUserCounts
+            getSkypeForBusinessDeviceUsageUserDetail:
+              operationId: reports.getSkypeForBusinessDeviceUsageUserDetail
+            getSkypeForBusinessOrganizerActivityCounts:
+              operationId: reports.getSkypeForBusinessOrganizerActivityCounts
+            getSkypeForBusinessOrganizerActivityMinuteCounts:
+              operationId: reports.getSkypeForBusinessOrganizerActivityMinuteCounts
+            getSkypeForBusinessOrganizerActivityUserCounts:
+              operationId: reports.getSkypeForBusinessOrganizerActivityUserCounts
+            getSkypeForBusinessParticipantActivityCounts:
+              operationId: reports.getSkypeForBusinessParticipantActivityCounts
+            getSkypeForBusinessParticipantActivityMinuteCounts:
+              operationId: reports.getSkypeForBusinessParticipantActivityMinuteCounts
+            getSkypeForBusinessParticipantActivityUserCounts:
+              operationId: reports.getSkypeForBusinessParticipantActivityUserCounts
+            getSkypeForBusinessPeerToPeerActivityCounts:
+              operationId: reports.getSkypeForBusinessPeerToPeerActivityCounts
+            getSkypeForBusinessPeerToPeerActivityMinuteCounts:
+              operationId: reports.getSkypeForBusinessPeerToPeerActivityMinuteCounts
+            getSkypeForBusinessPeerToPeerActivityUserCounts:
+              operationId: reports.getSkypeForBusinessPeerToPeerActivityUserCounts
+            getTeamsDeviceUsageDistributionUserCounts:
+              operationId: reports.getTeamsDeviceUsageDistributionUserCounts
+            getTeamsDeviceUsageUserCounts:
+              operationId: reports.getTeamsDeviceUsageUserCounts
+            getTeamsDeviceUsageUserDetail:
+              operationId: reports.getTeamsDeviceUsageUserDetail
+            getTeamsUserActivityCounts:
+              operationId: reports.getTeamsUserActivityCounts
+            getTeamsUserActivityUserCounts:
+              operationId: reports.getTeamsUserActivityUserCounts
+            getTeamsUserActivityUserDetail:
+              operationId: reports.getTeamsUserActivityUserDetail
+            getUserArchivedPrintJobs:
+              operationId: reports.getUserArchivedPrintJobs
+            getYammerActivityCounts:
+              operationId: reports.getYammerActivityCounts
+            getYammerActivityUserCounts:
+              operationId: reports.getYammerActivityUserCounts
+            getYammerActivityUserDetail:
+              operationId: reports.getYammerActivityUserDetail
+            getYammerDeviceUsageDistributionUserCounts:
+              operationId: reports.getYammerDeviceUsageDistributionUserCounts
+            getYammerDeviceUsageUserCounts:
+              operationId: reports.getYammerDeviceUsageUserCounts
+            getYammerDeviceUsageUserDetail:
+              operationId: reports.getYammerDeviceUsageUserDetail
+            getYammerGroupsActivityCounts:
+              operationId: reports.getYammerGroupsActivityCounts
+            getYammerGroupsActivityDetail:
+              operationId: reports.getYammerGroupsActivityDetail
+            getYammerGroupsActivityGroupCounts:
+              operationId: reports.getYammerGroupsActivityGroupCounts
+            managedDeviceEnrollmentFailureDetails:
+              operationId: reports.managedDeviceEnrollmentFailureDetails
+            managedDeviceEnrollmentTopFailures:
+              operationId: reports.managedDeviceEnrollmentTopFailures
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -1920,7 +2102,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -1949,7 +2131,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -1980,7 +2162,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -2009,7 +2191,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -2038,7 +2220,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -2067,7 +2249,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -2098,7 +2280,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -2127,7 +2309,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -2156,7 +2338,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -2234,7 +2416,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -2263,7 +2445,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -2292,7 +2474,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -2321,7 +2503,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -3544,7 +3726,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -3573,7 +3755,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -3604,7 +3786,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -3633,7 +3815,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -3662,7 +3844,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -3691,7 +3873,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -3722,7 +3904,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:
@@ -3751,7 +3933,7 @@ paths:
         '200':
           description: Success
           content:
-            application/json:
+            application/octet-stream:
               schema:
                 type: object
                 properties:

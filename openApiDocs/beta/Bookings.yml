@@ -10,8 +10,8 @@ paths:
     get:
       tags:
         - bookingBusinesses.bookingBusiness
-      summary: Get entities from bookingBusinesses
-      description: List bookingBusinesses
+      summary: List bookingBusinesses
+      description: 'Get a collection of [bookingBusiness](../resources/bookingbusiness.md) objects that has been created for the tenant. This operation returns only the **id** and **displayName** of each Microsoft Bookings business in the collection. For performance considerations, it does not return other properties. You can get the other properties of a Bookings business by specifying its **id** in a [GET](bookingbusiness-get.md) operation. You can also query for Bookings businesses by specifying a string in a `query` parameter to do substring matching among the businesses of a tenant. See an [example](#request-2) below.'
       operationId: bookingBusinesses.bookingBusiness_ListBookingBusiness
       parameters:
         - $ref: '#/components/parameters/top'
@@ -113,8 +113,8 @@ paths:
     post:
       tags:
         - bookingBusinesses.bookingBusiness
-      summary: Add new entity to bookingBusinesses
-      description: Create bookingBusiness
+      summary: Create bookingBusiness
+      description: 'Create a new Microsoft Bookings business in a tenant. This is the first step in setting up a Bookings business where you must specify the business display name. You can include other information such as business address, web site address, and scheduling policy, or set that information later by [updating](bookingbusiness-update.md) the **bookingBusiness**.'
       operationId: bookingBusinesses.bookingBusiness_CreateBookingBusiness
       requestBody:
         description: New entity
@@ -227,6 +227,12 @@ paths:
               operationId: bookingBusinesses.ListStaffMembers
               parameters:
                 bookingBusiness-id: $request.path.bookingBusiness-id
+            getStaffAvailability:
+              operationId: bookingBusinesses.bookingBusiness.getStaffAvailability
+            publish:
+              operationId: bookingBusinesses.bookingBusiness.publish
+            unpublish:
+              operationId: bookingBusinesses.bookingBusiness.unpublish
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -569,6 +575,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.bookingAppointment'
+          links:
+            cancel:
+              operationId: bookingBusinesses.bookingBusiness.appointments.bookingAppointment.cancel
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -990,6 +999,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.bookingAppointment'
+          links:
+            cancel:
+              operationId: bookingBusinesses.bookingBusiness.calendarView.bookingAppointment.cancel
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2194,8 +2206,8 @@ paths:
     get:
       tags:
         - bookingCurrencies.bookingCurrency
-      summary: Get entities from bookingCurrencies
-      description: List bookingCurrencies
+      summary: List bookingCurrencies
+      description: 'Get a list of [bookingCurrency](../resources/bookingcurrency.md) objects available to a Microsoft Bookings business.'
       operationId: bookingCurrencies.bookingCurrency_ListBookingCurrency
       parameters:
         - $ref: '#/components/parameters/top'

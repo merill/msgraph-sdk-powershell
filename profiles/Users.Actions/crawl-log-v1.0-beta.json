@@ -13,6 +13,1062 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
     },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/microsoftAuthenticatorMethods/{microsoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/passwordlessMicrosoftAuthenticatorMethods/{passwordlessMicrosoftAuthenticatorAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/authentication/windowsHelloForBusinessMethods/{windowsHelloForBusinessAuthenticationMethod-id}/device/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
     "/users/{user-id}/calendar/calendarView/{event-id}/attachments/microsoft.graph.createUploadSession": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
@@ -1209,6 +2265,446 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
     },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredOwners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/registeredUsers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/devices/{device-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/directReports/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
     "/users/{user-id}/drives/{drive-id}/items/{driveItem-id}/listItem/documentSetVersions/{documentSetVersion-id}/microsoft.graph.restore": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
@@ -2237,6 +3733,270 @@
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
     },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/members/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/membersWithLicenseErrors/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
     "/users/{user-id}/joinedGroups/{group-id}/onenote/notebooks/{notebook-id}/microsoft.graph.copyNotebook": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
@@ -2314,6 +4074,94 @@
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
     },
     "/users/{user-id}/joinedGroups/{group-id}/onenote/sections/{onenoteSection-id}/pages/{onenotePage-id}/microsoft.graph.onenotePatchContent": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/owners/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
     },
@@ -2590,6 +4438,182 @@
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
     },
     "/users/{user-id}/joinedGroups/{group-id}/threads/{conversationThread-id}/posts/{post-id}/microsoft.graph.reply": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/joinedGroups/{group-id}/transitiveMembers/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
     },
@@ -2894,6 +4918,94 @@
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
     },
     "/users/{user-id}/managedDevices/microsoft.graph.moveDevicesToOU": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/memberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
     },
@@ -3294,6 +5406,94 @@
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
     },
     "/users/{user-id}/teamwork/microsoft.graph.sendActivityNotification": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.activateServicePlan": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.assignLicense": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.changePassword": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.checkMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.exportPersonalData": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.findMeetingTimes": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMailTips": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberGroups": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.getMemberObjects": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.invalidateAllRefreshTokens": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.removeAllDevicesFromManagement": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.reprocessLicenseAssignment": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.restore": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.revokeSignInSessions": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.sendMail": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.translateExchangeIds": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.unblockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeAndBlockManagedApps": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationByDeviceTag": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByAzureAdDeviceId": {
+      "apiVersion": "v1.0-beta",
+      "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
+    },
+    "/users/{user-id}/transitiveMemberOf/{directoryObject-id}/microsoft.graph.user/microsoft.graph.wipeManagedAppRegistrationsByDeviceTag": {
       "apiVersion": "v1.0-beta",
       "originalLocation": "/openApiDocs/beta/Users.Actions.yml"
     },

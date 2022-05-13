@@ -150,6 +150,8 @@ paths:
               operationId: deviceAppManagement.ListDeviceAppManagementTasks
             wdacSupplementalPolicies:
               operationId: deviceAppManagement.ListWdacSupplementalPolicies
+            syncMicrosoftStoreForBusinessApps:
+              operationId: deviceAppManagement.syncMicrosoftStoreForBusinessApps
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2191,6 +2193,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.deviceAppManagementTask'
+          links:
+            updateStatus:
+              operationId: deviceAppManagement.deviceAppManagementTasks.deviceAppManagementTask.updateStatus
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -2688,6 +2693,8 @@ paths:
               operationId: deviceAppManagement.IosLobAppProvisioningConfigurations.ListUserStatuses
               parameters:
                 iosLobAppProvisioningConfiguration-id: $request.path.iosLobAppProvisioningConfiguration-id
+            assign:
+              operationId: deviceAppManagement.iosLobAppProvisioningConfigurations.iosLobAppProvisioningConfiguration.assign
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -4745,6 +4752,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.managedAppPolicy'
+          links:
+            targetApps:
+              operationId: deviceAppManagement.managedAppPolicies.managedAppPolicy.targetApps
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5412,6 +5422,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.managedAppPolicy'
+          links:
+            targetApps:
+              operationId: deviceAppManagement.managedAppRegistrations.managedAppRegistration.appliedPolicies.managedAppPolicy.targetApps
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -5859,6 +5872,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.managedAppPolicy'
+          links:
+            targetApps:
+              operationId: deviceAppManagement.managedAppRegistrations.managedAppRegistration.intendedPolicies.managedAppPolicy.targetApps
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -6970,6 +6986,8 @@ paths:
               operationId: deviceAppManagement.ManagedEBooks.ListUserStateSummary
               parameters:
                 managedEBook-id: $request.path.managedEBook-id
+            assign:
+              operationId: deviceAppManagement.managedEBooks.managedEBook.assign
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -9042,6 +9060,8 @@ paths:
               operationId: deviceAppManagement.MobileAppConfigurations.GetUserStatusSummary
               parameters:
                 managedDeviceMobileAppConfiguration-id: $request.path.managedDeviceMobileAppConfiguration-id
+            assign:
+              operationId: deviceAppManagement.mobileAppConfigurations.managedDeviceMobileAppConfiguration.assign
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -10300,6 +10320,12 @@ paths:
               operationId: deviceAppManagement.MobileApps.ListUserStatuses
               parameters:
                 mobileApp-id: $request.path.mobileApp-id
+            assign:
+              operationId: deviceAppManagement.mobileApps.mobileApp.assign
+            getRelatedAppStates:
+              operationId: deviceAppManagement.mobileApps.mobileApp.getRelatedAppStates
+            updateRelationships:
+              operationId: deviceAppManagement.mobileApps.mobileApp.updateRelationships
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -12811,6 +12837,8 @@ paths:
               operationId: deviceAppManagement.PolicySets.ListItems
               parameters:
                 policySet-id: $request.path.policySet-id
+            update:
+              operationId: deviceAppManagement.policySets.policySet.update
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -13900,6 +13928,10 @@ paths:
               operationId: deviceAppManagement.TargetedManagedAppConfigurations.GetDeploymentSummary
               parameters:
                 targetedManagedAppConfiguration-id: $request.path.targetedManagedAppConfiguration-id
+            assign:
+              operationId: deviceAppManagement.targetedManagedAppConfigurations.targetedManagedAppConfiguration.assign
+            targetApps:
+              operationId: deviceAppManagement.targetedManagedAppConfigurations.targetedManagedAppConfiguration.targetApps
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -14813,6 +14845,11 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.vppToken'
+          links:
+            revokeLicenses:
+              operationId: deviceAppManagement.vppTokens.vppToken.revokeLicenses
+            syncLicenses:
+              operationId: deviceAppManagement.vppTokens.vppToken.syncLicenses
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -15157,6 +15194,8 @@ paths:
               operationId: deviceAppManagement.WdacSupplementalPolicies.ListDeviceStatuses
               parameters:
                 windowsDefenderApplicationControlSupplementalPolicy-id: $request.path.windowsDefenderApplicationControlSupplementalPolicy-id
+            assign:
+              operationId: deviceAppManagement.wdacSupplementalPolicies.windowsDefenderApplicationControlSupplementalPolicy.assign
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16064,6 +16103,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.windowsInformationProtectionDeviceRegistration'
+          links:
+            wipe:
+              operationId: deviceAppManagement.windowsInformationProtectionDeviceRegistrations.windowsInformationProtectionDeviceRegistration.wipe
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -16985,6 +17027,8 @@ paths:
               operationId: officeConfiguration.ClientConfigurations.ListAssignments
               parameters:
                 officeClientConfiguration-id: $request.path.officeClientConfiguration-id
+            assign:
+              operationId: officeConfiguration.clientConfigurations.officeClientConfiguration.assign
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -17637,6 +17681,12 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 deviceEnrollmentConfiguration-id: $request.path.deviceEnrollmentConfiguration-id
+            assign:
+              operationId: users.user.deviceEnrollmentConfigurations.deviceEnrollmentConfiguration.assign
+            createEnrollmentNotificationConfiguration:
+              operationId: users.user.deviceEnrollmentConfigurations.deviceEnrollmentConfiguration.createEnrollmentNotificationConfiguration
+            setPriority:
+              operationId: users.user.deviceEnrollmentConfigurations.deviceEnrollmentConfiguration.setPriority
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -18973,6 +19023,88 @@ paths:
               parameters:
                 user-id: $request.path.user-id
                 managedDevice-id: $request.path.managedDevice-id
+            activateDeviceEsim:
+              operationId: users.user.managedDevices.managedDevice.activateDeviceEsim
+            bypassActivationLock:
+              operationId: users.user.managedDevices.managedDevice.bypassActivationLock
+            cleanWindowsDevice:
+              operationId: users.user.managedDevices.managedDevice.cleanWindowsDevice
+            createDeviceLogCollectionRequest:
+              operationId: users.user.managedDevices.managedDevice.createDeviceLogCollectionRequest
+            deleteUserFromSharedAppleDevice:
+              operationId: users.user.managedDevices.managedDevice.deleteUserFromSharedAppleDevice
+            deprovision:
+              operationId: users.user.managedDevices.managedDevice.deprovision
+            disable:
+              operationId: users.user.managedDevices.managedDevice.disable
+            disableLostMode:
+              operationId: users.user.managedDevices.managedDevice.disableLostMode
+            enableLostMode:
+              operationId: users.user.managedDevices.managedDevice.enableLostMode
+            getCloudPcRemoteActionResults:
+              operationId: users.user.managedDevices.managedDevice.getCloudPcRemoteActionResults
+            getCloudPcReviewStatus:
+              operationId: users.user.managedDevices.managedDevice.getCloudPcReviewStatus
+            getFileVaultKey:
+              operationId: users.user.managedDevices.managedDevice.getFileVaultKey
+            getNonCompliantSettings:
+              operationId: users.user.managedDevices.managedDevice.getNonCompliantSettings
+            getOemWarranty:
+              operationId: users.user.managedDevices.managedDevice.getOemWarranty
+            locateDevice:
+              operationId: users.user.managedDevices.managedDevice.locateDevice
+            logoutSharedAppleDeviceActiveUser:
+              operationId: users.user.managedDevices.managedDevice.logoutSharedAppleDeviceActiveUser
+            overrideComplianceState:
+              operationId: users.user.managedDevices.managedDevice.overrideComplianceState
+            playLostModeSound:
+              operationId: users.user.managedDevices.managedDevice.playLostModeSound
+            rebootNow:
+              operationId: users.user.managedDevices.managedDevice.rebootNow
+            recoverPasscode:
+              operationId: users.user.managedDevices.managedDevice.recoverPasscode
+            reenable:
+              operationId: users.user.managedDevices.managedDevice.reenable
+            remoteLock:
+              operationId: users.user.managedDevices.managedDevice.remoteLock
+            reprovisionCloudPc:
+              operationId: users.user.managedDevices.managedDevice.reprovisionCloudPc
+            requestRemoteAssistance:
+              operationId: users.user.managedDevices.managedDevice.requestRemoteAssistance
+            resetPasscode:
+              operationId: users.user.managedDevices.managedDevice.resetPasscode
+            resizeCloudPc:
+              operationId: users.user.managedDevices.managedDevice.resizeCloudPc
+            restoreCloudPc:
+              operationId: users.user.managedDevices.managedDevice.restoreCloudPc
+            retire:
+              operationId: users.user.managedDevices.managedDevice.retire
+            revokeAppleVppLicenses:
+              operationId: users.user.managedDevices.managedDevice.revokeAppleVppLicenses
+            rotateBitLockerKeys:
+              operationId: users.user.managedDevices.managedDevice.rotateBitLockerKeys
+            rotateFileVaultKey:
+              operationId: users.user.managedDevices.managedDevice.rotateFileVaultKey
+            sendCustomNotificationToCompanyPortal:
+              operationId: users.user.managedDevices.managedDevice.sendCustomNotificationToCompanyPortal
+            setCloudPcReviewStatus:
+              operationId: users.user.managedDevices.managedDevice.setCloudPcReviewStatus
+            setDeviceName:
+              operationId: users.user.managedDevices.managedDevice.setDeviceName
+            shutDown:
+              operationId: users.user.managedDevices.managedDevice.shutDown
+            syncDevice:
+              operationId: users.user.managedDevices.managedDevice.syncDevice
+            triggerConfigurationManagerAction:
+              operationId: users.user.managedDevices.managedDevice.triggerConfigurationManagerAction
+            updateWindowsDeviceAccount:
+              operationId: users.user.managedDevices.managedDevice.updateWindowsDeviceAccount
+            windowsDefenderScan:
+              operationId: users.user.managedDevices.managedDevice.windowsDefenderScan
+            windowsDefenderUpdateSignatures:
+              operationId: users.user.managedDevices.managedDevice.windowsDefenderUpdateSignatures
+            wipe:
+              operationId: users.user.managedDevices.managedDevice.wipe
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -20349,6 +20481,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.deviceLogCollectionResponse'
+          links:
+            createDownloadUrl:
+              operationId: users.user.managedDevices.managedDevice.logCollectionRequests.deviceLogCollectionResponse.createDownloadUrl
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
@@ -23513,6 +23648,9 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/microsoft.graph.appLogCollectionRequest'
+          links:
+            createDownloadUrl:
+              operationId: users.user.mobileAppTroubleshootingEvents.mobileAppTroubleshootingEvent.appLogCollectionRequests.appLogCollectionRequest.createDownloadUrl
         default:
           $ref: '#/components/responses/error'
       x-ms-docs-operation-type: operation
