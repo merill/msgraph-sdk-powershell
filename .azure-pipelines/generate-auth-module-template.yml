@@ -63,7 +63,7 @@ jobs:
       projects: '$(System.DefaultWorkingDirectory)/src/Authentication/Authentication.Test/*.csproj'
       testRunTitle: 'Run Enabled Tests'
 
-  - task: RoslynAnalyzers@3
+  - task: RoslynAnalyzers@2
     inputs:
         userProvideBuildInfo: 'msBuildInfo'
         msBuildVersion: '16.0'
